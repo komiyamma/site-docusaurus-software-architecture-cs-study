@@ -146,11 +146,10 @@ const sidebars: SidebarsConfig = {
   stateMachineCsSidebar: generateProjectSidebar('state_machine_cs'),
 
   aclCsSidebar: generateProjectSidebar('acl_cs'),
+  capCsSidebar: generateProjectSidebar('cap_cs'),
   abTcbCsSidebar: generateProjectSidebar('ab_tcb_cs'),
-
   dbcCsSidebar: generateProjectSidebar('dbc_cs'),
 
-  capCsSidebar: generateProjectSidebar('cap_cs'),
 };
 
 export default sidebars;
