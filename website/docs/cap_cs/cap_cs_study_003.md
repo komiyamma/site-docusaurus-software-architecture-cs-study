@@ -59,22 +59,22 @@
 
 ```mermaid
 sequenceDiagram
-    participant Student as 学生🙋‍♀️
+    participant 学生 as 学生🙋‍♀️
     participant API as CampusCafe API🧾
-    participant Stock as 在庫DB📦
-    participant Payment as 決済サービス💳
-    participant Notif as 通知サービス🔔
+    participant 在庫 as 在庫DB📦
+    participant 決済 as 決済サービス💳
+    participant 通知 as 通知サービス🔔
     
-    Student->>API: 注文する🛒
-    API->>Stock: 在庫確保リクエスト
-    Stock-->>API: 確保OK✅
-    API->>Payment: 決済リクエスト
-    Payment-->>API: 決済成功💳
+    学生->>API: 注文する🛒
+    API->>在庫: 在庫確保リクエスト
+    在庫-->>API: 確保OK✅
+    API->>決済: 決済リクエスト
+    決済-->>API: 決済成功💳
     API->>API: 注文を「確定」に
-    API-->>Student: 注文確定🎉
+    API-->>学生: 注文確定🎉
     Note over API: 調理が進む🍳
-    API->>Notif: 完成通知リクエスト
-    Notif-->>Student: プッシュ通知🔔
+    API->>通知: 完成通知リクエスト
+    通知-->>学生: プッシュ通知🔔
 ```
 
 1. 学生が注文する🛒➡️🧾

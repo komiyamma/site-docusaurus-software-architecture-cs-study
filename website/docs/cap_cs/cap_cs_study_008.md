@@ -203,8 +203,8 @@ record PlaceOrder(string ItemId, int Qty);
 
 ### 8.5.3 動かしてみよう🚀
 
-1. StockApi 起動 (http://localhost:5101)
-2. OrderApi 起動 (http://localhost:5100)
+1. StockApi 起動（[http://localhost:5101）](http://localhost:5101）)
+2. OrderApi 起動（[http://localhost:5100）](http://localhost:5100）)
 3. 注文を叩く👇
 
 ```powershell

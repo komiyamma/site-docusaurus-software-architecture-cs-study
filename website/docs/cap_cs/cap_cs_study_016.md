@@ -4,23 +4,23 @@
 
 ```mermaid
 sequenceDiagram
-    participant Order as 注文サービス🛒
+    participant OS as 注文サービス🛒
     participant Bus as メッセージング基盤📬
-    participant Notif as 通知サービス🔔
+    participant NS as 通知サービス🔔
 
-    Note over Order: 1. 注文キャンセル発生
-    Order->>Bus: イベント: OrderCancelled (Seq=1)
+    Note over OS: 1. 注文キャンセル発生
+    OS->>Bus: イベント: OrderCancelled (Seq=1)
     
-    Note over Order: 2. その後、何らかの理由で<br/>支払い完了メッセージ送信
-    Order->>Bus: イベント: OrderPaid (Seq=2)
+    Note over OS: 2. その後、何らかの理由で<br/>支払い完了メッセージ送信
+    OS->>Bus: イベント: OrderPaid (Seq=2)
     
     Note over Bus: ネットワーク遅延や並列処理により<br/>順番が入れ替わる🔀
     
-    Bus->>Notif: イベント: OrderPaid (Seq=2) 受信
-    Note over Notif: 支払い完了通知を送信🚨<br/>(キャンセルしたはずなのに!?)
+    Bus->>NS: イベント: OrderPaid (Seq=2) 受信
+    Note over NS: 支払い完了通知を送信🚨<br/>(キャンセルしたはずなのに!?)
     
-    Bus->>Notif: イベント: OrderCancelled (Seq=1) 受信
-    Note over Notif: キャンセル通知を送信🛑
+    Bus->>NS: イベント: OrderCancelled (Seq=1) 受信
+    Note over NS: キャンセル通知を送信🛑
 ```
 
 

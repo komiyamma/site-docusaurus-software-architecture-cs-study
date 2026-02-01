@@ -32,24 +32,24 @@
 
 ```mermaid
 sequenceDiagram
-    participant Order as 注文サービス🛒
-    participant Bus as イベントバス📬
-    participant Stock as 在庫サービス📦
-    participant Notif as 通知サービス🔔
+    participant OS as 注文サービス🛒
+    participant EB as イベントバス📬
+    participant SS as 在庫サービス📦
+    participant NS as 通知サービス🔔
 
-    Note over Order, Notif: 同期：順に待つ (密結合)
-    Order->>Stock: 在庫確保🙏
-    Stock-->>Order: OK✅
-    Order->>Notif: 通知して🙏
-    Notif-->>Order: OK✅
+    Note over OS, NS: 同期：順に待つ (密結合)
+    OS->>SS: 在庫確保🙏
+    SS-->>OS: OK✅
+    OS->>NS: 通知して🙏
+    NS-->>OS: OK✅
     
-    Note over Order, Notif: イベント駆動：事実を投げて終わり (疎結合)
-    Order->>Bus: イベント: OrderPaid📣
-    Note right of Order: 注文サービスはこれで完了!✨
+    Note over OS, NS: イベント駆動：事実を投げて終わり (疎結合)
+    OS->>EB: イベント: OrderPaid📣
+    Note right of OS: 注文サービスはこれで完了!✨
     
     par 並列処理
-        Bus->>Stock: イベント受信 📦
-        Bus->>Notif: イベント受信 🔔
+        EB->>SS: イベント受信 📦
+        EB->>NS: イベント受信 🔔
     end
 ```
 

@@ -19,17 +19,17 @@ Outbox（トランザクショナルOutbox）パターンは、
 
 ```mermaid
 sequenceDiagram
-    participant Order as 注文サービス🛒
+    participant OS as 注文サービス🛒
     participant DB as 注文DB🗃️
     participant Bus as メッセージング📬
 
-    Note over Order: 1. 注文を保存
-    Order->>DB: INSERT Order
-    DB-->>Order: OK✅
+    Note over OS: 1. 注文を保存
+    OS->>DB: INSERT Order
+    DB-->>OS: OK✅
     
-    Note over Order: 2. イベントを送信しようと...
-    Order-xBus: Publish OrderPlaced
-    Note right of Order: 送信直前にクラッシュ! 💥
+    Note over OS: 2. イベントを送信しようと...
+    OS-xBus: Publish OrderPlaced
+    Note right of OS: 送信直前にクラッシュ! 💥
     
     Note over DB, Bus: 結果：DBには注文があるが、<br/>後続サービス(支払い・在庫)が動かない!😱
 ```

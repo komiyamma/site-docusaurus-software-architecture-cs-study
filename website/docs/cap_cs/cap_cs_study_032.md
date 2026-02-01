@@ -84,29 +84,29 @@ Sagaは実装の前に、**どこをCP寄り／AP寄りにするか**を決め�
 
 ```mermaid
 sequenceDiagram
-    participant Order as 注文Saga🧑‍✈️
-    participant Stock as 在庫📦
-    participant Payment as 決済💳
+    participant OS as 注文Saga🧑‍✈️
+    participant SS as 在庫📦
+    participant PS as 決済💳
     
     rect rgb(230, 255, 230)
-        Note over Order, Payment: 【正常系】
-        Order->>Stock: 在庫確保依頼
-        Stock-->>Order: 確保OK✅
-        Order->>Payment: 決済実行
-        Payment-->>Order: 決済完了✅
-        Note over Order: 注文確定🎉
+        Note over OS, PS: 【正常系】
+        OS->>SS: 在庫確保依頼
+        SS-->>OS: 確保OK✅
+        OS->>PS: 決済実行
+        PS-->>OS: 決済完了✅
+        Note over OS: 注文確定🎉
     end
     
     rect rgb(255, 230, 230)
-        Note over Order, Payment: 【異常系 & 補償】
-        Order->>Stock: 在庫確保依頼
-        Stock-->>Order: 確保OK✅
-        Order->>Payment: 決済実行
-        Payment-->>Order: 失敗!💥
+        Note over OS, PS: 【異常系 & 補償】
+        OS->>SS: 在庫確保依頼
+        SS-->>OS: 確保OK✅
+        OS->>PS: 決済実行
+        PS-->>OS: 失敗!💥
         
-        Order->>Stock: 在庫戻し (補償) ↩️
-        Stock-->>Order: 戻し完了✅
-        Note over Order: 注文失敗/キャンセル🛑
+        OS->>SS: 在庫戻し (補償) ↩️
+        SS-->>OS: 戻し完了✅
+        Note over OS: 注文失敗/キャンセル🛑
     end
 ```
 
