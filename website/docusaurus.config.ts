@@ -313,6 +313,12 @@ const config: Config = {
         },
         {
           type: 'docSidebar',
+          sidebarId: 'capCsSidebar',
+          position: 'left',
+          label: 'CAPの肌感覚 C#版',
+        },
+        {
+          type: 'docSidebar',
           sidebarId: 'abTcbCsSidebar',
           position: 'left',
           label: '集約と境界 C#版',
@@ -322,12 +328,6 @@ const config: Config = {
           sidebarId: 'dbcCsSidebar',
           position: 'left',
           label: 'DbC C#版',
-        },
-        {
-          type: 'docSidebar',
-          sidebarId: 'capCsSidebar',
-          position: 'left',
-          label: 'CAPの肌感覚 C#版',
         },
 
         {
