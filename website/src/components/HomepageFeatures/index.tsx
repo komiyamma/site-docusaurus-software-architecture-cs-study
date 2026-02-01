@@ -293,6 +293,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/dbc_cs/dbc_cs_index',
   },
+  {
+    title: 'CAPの肌感覚 C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        最終的整合性と分散の基本を学びます。<br/>
+        「学食モバイルオーダー」を題材に、<br/>
+        CAP判断から冪等性、Outboxパターンまで。<br/>
+      </>
+    ),
+    link: '/docs/cap_cs/cap_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

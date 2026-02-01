@@ -102,6 +102,7 @@ const config: Config = {
           "docs/acl_cs",
           "docs/ab_tcb_cs",
           "docs/dbc_cs",
+          "docs/cap_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -321,6 +322,12 @@ const config: Config = {
           sidebarId: 'dbcCsSidebar',
           position: 'left',
           label: 'DbC C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'capCsSidebar',
+          position: 'left',
+          label: 'CAPの肌感覚 C#版',
         },
 
         {
