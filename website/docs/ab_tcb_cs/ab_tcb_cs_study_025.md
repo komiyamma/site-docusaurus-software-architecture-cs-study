@@ -223,6 +223,7 @@ public async Task<Guid> HandleWithExplicitTxAsync(string itemName, int quantity,
         throw;
     }
 }
+```
 
 ```mermaid
 sequenceDiagram

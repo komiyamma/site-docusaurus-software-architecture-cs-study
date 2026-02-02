@@ -193,19 +193,6 @@ public static class OrderStateMachine
     }
 }
 
-```mermaid
-flowchart LR
-    S1[Submitted] -- "Cancel<br/>(始まってない)" --> OK[Cancelled ✅]
-    S1 -- "Cancel<br/>(調理開始後)" --> NG[Rejected 🚫]
-    
-    subgraph Guard ["ガード条件の境界テスト"]
-        direction TB
-        B["調理開始フラグ"]
-        B -- false --> OK
-        B -- true --> NG
-    end
-```
-
 public class OrderStateMachineTests
 {
     [Fact]
@@ -236,6 +223,21 @@ public class OrderStateMachineTests
     }
 }
 ```
+
+```mermaid
+flowchart LR
+    S1[Submitted] -- "Cancel<br/>(始まってない)" --> OK[Cancelled ✅]
+    S1 -- "Cancel<br/>(調理開始後)" --> NG[Rejected 🚫]
+    
+    subgraph Guard ["ガード条件の境界テスト"]
+        direction TB
+        B["調理開始フラグ"]
+        B -- false --> OK
+        B -- true --> NG
+    end
+```
+
+
 
 ポイント💡
 

@@ -259,6 +259,7 @@ public sealed class OutboxDispatcher : BackgroundService
         }
     }
 }
+```
 
 ※このDispatcherは「同じメッセージを2回送る可能性」が普通にあります（落ちるタイミング次第）😇
 だから次が超重要👇

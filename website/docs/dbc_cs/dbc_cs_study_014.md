@@ -190,6 +190,7 @@ if (!result.IsSuccess)
 
 Email email = result.Value!;
 Console.WriteLine($"OK: {email.Value}");
+```
 
 ```mermaid
 flowchart LR
@@ -202,7 +203,6 @@ flowchart LR
     
     style Success fill:#c8e6c9,stroke:#2e7d32
     style Failure fill:#f8bbd0,stroke:#c2185b
-```
 ```
 
 ✅ 分岐が自然！

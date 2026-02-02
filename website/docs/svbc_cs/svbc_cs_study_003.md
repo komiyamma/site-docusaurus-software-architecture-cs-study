@@ -157,7 +157,6 @@ public sealed class TextNormalizer
         => NormalizationCore.Normalize(input);
 }
 
-```csharp
 internal static class NormalizationCore
 {
     internal static string Normalize(string input)

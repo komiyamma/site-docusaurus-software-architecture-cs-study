@@ -249,15 +249,6 @@ public class SignUpValidatorTests
         Assert.Contains(vr.Errors, e => e.Code == "Email.Required");
     }
 
-```mermaid
-graph LR
-  Spec[仕様書 📜] --> Code[Validator実装 💻]
-  Code --> Test[テストケース 🧪]
-  Test --> Code
-  style Code fill:#e1f5fe,stroke:#01579b
-  style Test fill:#e8f5e9,stroke:#1b5e20
-```
-
     [Fact]
     public void Password_min_length_12()
     {
@@ -267,6 +258,15 @@ graph LR
         Assert.Contains(vr.Errors, e => e.Code == "Password.MinLength");
     }
 }
+```
+
+```mermaid
+graph LR
+  Spec[仕様書 📜] --> Code[Validator実装 💻]
+  Code --> Test[テストケース 🧪]
+  Test --> Code
+  style Code fill:#e1f5fe,stroke:#01579b
+  style Test fill:#e8f5e9,stroke:#1b5e20
 ```
 
 ---

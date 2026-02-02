@@ -229,6 +229,7 @@ public sealed class OrderStateMachine
         }
     }
 }
+```
 
 ```mermaid
 flowchart TD

@@ -139,6 +139,7 @@ app.MapGet("/todos/{id:guid}", (Guid id) =>
     return Results.Ok(new { id, title = "dummy", isDone = false });
 })
 .WithName("GetTodoById");
+```
 
 ## 1) コマンド（更新系）の基本：状態を変えて 201 Created を返す 🏗️
 ```mermaid
@@ -150,6 +151,8 @@ flowchart TD
 ```
 
 前回は「読み取り (Query)」だったけど、今回は「書き込み (Command)」だよ！
+
+```typescript
 app.MapPost("/todos", async (
     CreateTodoRequest req,
     ICommandHandler<CreateTodoCommand, CreateTodoResult> handler,

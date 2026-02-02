@@ -284,6 +284,7 @@ var a = Money.CreateOrThrow(100m, "JPY");
 var b = Money.CreateOrThrow(100m, "JPY");
 
 Console.WriteLine(a == b); // True ✅（値が同じ）
+```
 
 ```mermaid
 flowchart LR
@@ -299,7 +300,6 @@ flowchart LR
     ObjB -- "結果: True" --> Match((一致!✨))
     
     style Match fill:#c8e6c9,stroke:#2e7d32
-```
 ```
 
 ---

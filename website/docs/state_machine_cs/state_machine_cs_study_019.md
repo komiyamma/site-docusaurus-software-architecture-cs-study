@@ -206,29 +206,11 @@ public sealed class Order
                 To: OrderState.Paid,
                 Guard: (o, e) => ((PayCommand)e).Amount > 0,
                 GuardFailMessageKey: "pay.amount.must_be_positive"),
-
-```csharp
             [(OrderState.Submitted, typeof(CancelCommand))] = new(OrderState.Cancelled),
         };
     }
 
     public TransitionResult TryFire(IOrderEvent ev)
-    {
-```
-
-```mermaid
-flowchart TD
-    Try["TryFire(Event)"] --> Find{"テーブルに<br/>(状態, 型) はある？"}
-    Find -- No --> F1["InvalidTransition ❌"]
-    Find -- Yes --> Guard{"ガード条件は<br/>満たされている？"}
-    
-    Guard -- No --> F2["GuardRejected ❌"]
-    Guard -- Yes --> Succ["状態を更新 ✅<br/>Success を返す"]
-```
-
-```csharp
-    public TransitionResult TryFire(IOrderEvent ev)
-```
 
         var key = (State, ev.GetType());
         var eventName = ev.GetType().Name;
@@ -259,6 +241,16 @@ flowchart TD
         return TransitionResult.Success(eventName, from, State);
     }
 }
+```
+
+```mermaid
+flowchart TD
+    Try["TryFire(Event)"] --> Find{"テーブルに<br/>(状態, 型) はある？"}
+    Find -- No --> F1["InvalidTransition ❌"]
+    Find -- Yes --> Guard{"ガード条件は<br/>入れられている？"}
+    
+    Guard -- No --> F2["GuardRejected ❌"]
+    Guard -- Yes --> Succ["状態を更新 ✅<br/>Success を返す"]
 ```
 
 これで、呼び出し側はこう書けるよ👇

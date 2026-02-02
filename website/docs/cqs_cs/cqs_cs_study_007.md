@@ -316,26 +316,6 @@ app.MapDelete("/todos/{id:guid}", (Guid id) =>
 
 app.Run();
 
-```mermaid
-flowchart LR
-    subgraph Browser [クライアント]
-        GET_Todos["GET /todos"]
-        POST_Add["POST /todos"]
-    end
-    subgraph MyAPI [Minimal API]
-        EndpointGet{MapGet}
-        EndpointPost{MapPost}
-    end
-    subgraph Logic [CQS関数]
-        Q_List["GetTodos()"]
-        C_Add["AddTodo()"]
-    end
-
-    GET_Todos --> EndpointGet --> Q_List
-    POST_Add --> EndpointPost --> C_Add
-```
-
-
 record CreateTodoRequest(string? Title);
 
 sealed class TodoItem
@@ -391,6 +371,26 @@ bool DeleteTodo(Guid id)
     return true;
 }
 ```
+
+```mermaid
+flowchart LR
+    subgraph Browser [クライアント]
+        GET_Todos["GET /todos"]
+        POST_Add["POST /todos"]
+    end
+    subgraph MyAPI [Minimal API]
+        EndpointGet{MapGet}
+        EndpointPost{MapPost}
+    end
+    subgraph Logic [CQS関数]
+        Q_List["GetTodos()"]
+        C_Add["AddTodo()"]
+    end
+
+    GET_Todos --> EndpointGet --> Q_List
+    POST_Add --> EndpointPost --> C_Add
+```
+
 
 ---
 

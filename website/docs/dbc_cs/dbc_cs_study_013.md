@@ -108,6 +108,7 @@ public sealed class BankAccount
 }
 
 public readonly record struct Transaction(decimal Amount, DateTimeOffset At);
+```
 
 ```mermaid
 flowchart TD
@@ -119,7 +120,6 @@ flowchart TD
     style Capture fill:#e1f5fe,stroke:#01579b
     style Update fill:#fff9c4,stroke:#fbc02d
     style Verify fill:#c8e6c9,stroke:#2e7d32
-```
 ```
 
 ### ここがポイント💡🌸
