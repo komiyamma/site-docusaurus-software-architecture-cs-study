@@ -12,7 +12,7 @@
 
 ## 14.3 ドメインイベントの構成要素📦🧩
 
-![イベントの構成要素](./picture/de_cs_study_014_packet.png)
+![イベントの構成要素](./picture/de_cs_study_014_event_list.png)
 
 ドメインイベントには、最低限以下の情報を含めます。
 ドメインイベント（Domain Event）＝ **ドメイン（業務）の中で起きた、意味のある“事実”** 🔔🕒
@@ -208,7 +208,7 @@ public sealed record OrderPaid(
 
 ## 14.1 ドメインイベントって何？🔔✨
 
-![事実としてのイベント](./picture/de_cs_study_014_fact_tag.png)
+![事実としてのイベント](./picture/de_cs_study_014_mark_as_paid.png)
 
 ドメインイベントは、ドメイン内で**「何かが起きた」という事実**を表すオブジェクトです。
 * 目的は通知じゃなく、まず **事実をちゃんと表現すること** 📣✅

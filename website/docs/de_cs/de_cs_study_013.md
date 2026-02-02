@@ -19,7 +19,7 @@
 
 ### 13.2 集約ルート（Aggregate Root）：唯一の入り口🚪✨
 
-![集約ルートの役割](./picture/de_cs_study_013_root.png)
+![集約ルートの役割](./picture/de_cs_study_013_references.png)
 
 集約の外部から直接いじれるのは、**「集約ルート（Aggregate Root）」**と呼ばれる親クラスだけです。
 * **子エンティティ**：集約ルートの中にいる子たち👶

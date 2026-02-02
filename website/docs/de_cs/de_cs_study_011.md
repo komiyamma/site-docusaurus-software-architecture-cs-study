@@ -14,7 +14,7 @@
 
 ### 11.2 エンティティ（Entity）：IDが命🧬✨
 
-![エンティティの同一性](./picture/de_cs_study_011_identity.png)
+![エンティティの同一性](./picture/de_cs_study_011_id_vs_object.png)
 
 エンティティは、**「ID（識別子）が同じなら、中身が多少変わっても同じもの」**として扱うオブジェクトです。
 
@@ -28,7 +28,7 @@
 
 ### 11.3 値オブジェクト（ValueObject）：中身がすべて💎✨
 
-![値オブジェクトの同一性](./picture/de_cs_study_011_value.png)
+![値オブジェクトの同一性](./picture/de_cs_study_011_vo.png)
 
 値オブジェクトは、**「中身（値）が同じなら、同じもの」**として扱うオブジェクトです。
 

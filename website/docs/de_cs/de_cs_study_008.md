@@ -27,6 +27,8 @@ C# Dev Kitはソリューション表示・デバッグ・テストの体験を�
 
 ## 8.2 .NET SDKが入ってるか確認しよ✅⌨️
 
+![ターミナルの確認](./picture/de_cs_study_008_terminal.png)
+
 VS Codeのターミナル（PowerShell）で、これを打つだけ👇✨
 
 ```bash
@@ -41,6 +43,8 @@ dotnet --list-sdks
 ---
 
 ## 8.3 VS CodeにC#を“生やす”🌱🧠
+
+![VS Codeの設定](./picture/de_cs_study_008_vscode.png)
 
 ### 拡張機能の入れ方（いちばん簡単）✨
 
