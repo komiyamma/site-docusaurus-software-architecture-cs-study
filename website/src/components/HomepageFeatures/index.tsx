@@ -317,6 +317,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/es_cs/es_cs_index',
   },
+  {
+    title: 'ドメインイベント C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        「起きた事実」を扱うドメインイベントを学びます。<br/>
+        巨大メソッドの回避、関心の分離、<br/>
+        そしてOutboxパターンによる信頼性の確保まで。
+      </>
+    ),
+    link: '/docs/de_cs/de_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
