@@ -305,6 +305,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/dbc_cs/dbc_cs_index',
   },
+  {
+    title: 'ES C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        C#で学ぶイベントソーシング（ES）。<br/>
+        「状態」ではなく「出来事」を積む設計。<br/>
+        不変条件、Rehydrate、Projectionまで実践習得。<br/>
+      </>
+    ),
+    link: '/docs/es_cs/es_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
