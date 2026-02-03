@@ -261,6 +261,8 @@ public sealed class EfOrderRepository : IOrderRepository
         };
 }
 
+```
+
 ```mermaid
 graph TD
     subgraph Domain ["Domain (純粋)"]
@@ -277,7 +279,6 @@ graph TD
     Mapper -- "保存" --> Row
     Row -- "復元" --> Mapper
     Mapper -- "マッピング" --> DO
-```
 ```
 
 ### ここでの学びポイント📌
@@ -322,6 +323,8 @@ public sealed class PlaceOrderHandler
         return order.Id;
     }
 }
+
+```
 
 ```mermaid
 sequenceDiagram

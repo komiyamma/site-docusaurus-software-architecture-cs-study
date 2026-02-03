@@ -291,6 +291,7 @@ public sealed class PlaceOrder
         return order.Id;
     }
 }
+```
 
 ```mermaid
 sequenceDiagram
@@ -306,7 +307,6 @@ sequenceDiagram
     Dom-->>App: 注文オブジェクト
     App->>Infra: 3. 具体的な処理 (Charge / Save / Send)
     App-->>UI: 注文IDを返却
-```
 ```
 
 ---

@@ -213,7 +213,6 @@ app.MapPost("/orders", async (PlaceOrderUseCase useCase, CancellationToken ct) =
     return Results.Ok(new { message = "order placed!" });
 });
 
-```csharp
 app.Run();
 ```
 
@@ -233,7 +232,6 @@ graph TD
     
     Register -- "配線🔌" --> UseCase
     Gateway -- "注入される" --> UseCase
-```
 ```
 
 ### AddScoped / AddSingleton / AddTransientって？🧠🧁
