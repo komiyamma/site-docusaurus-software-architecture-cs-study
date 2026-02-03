@@ -151,9 +151,7 @@ const sidebars: SidebarsConfig = {
   dbcCsSidebar: generateProjectSidebar('dbc_cs'),
   esCsSidebar: generateProjectSidebar('es_cs'),
   deCsSidebar: generateProjectSidebar('de_cs'),
-
   bcCsSidebar: generateProjectSidebar('bc_cs'),
-
   idemCsSidebar: generateProjectSidebar('idem_cs'),
 };
 
