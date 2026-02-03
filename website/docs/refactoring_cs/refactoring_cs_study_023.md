@@ -11,8 +11,6 @@
 
 ![](./picture/refactoring_cs_study_023_dry.png)
 
-![refactoring_cs_study_023_dry_concept](./picture/refactoring_cs_study_023_dry_concept.png)
-
 DRY（Don’t Repeat Yourself）は、ざっくり言うと👇
 
 * ❌ 同じ行が2回出たら即共通化！

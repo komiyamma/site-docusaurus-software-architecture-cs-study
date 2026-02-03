@@ -12,10 +12,6 @@
 
 ![](./picture/refactoring_cs_study_021_smells.png)
 
-![](./picture/refactoring_cs_study_021_smells.png)
-
-![refactoring_cs_study_021_smells_intro](./picture/refactoring_cs_study_021_smells_intro.png)
-
 **コードスメル**は、プログラムの動きが間違っている（バグ）とは限らないけど、
 「このままだとツラくなりそう…😵‍💫」という**品質の問題のサイン**のことだよ〜📌✨ ([ウィキペディア][1])
 

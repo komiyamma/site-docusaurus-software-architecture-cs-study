@@ -23,10 +23,6 @@
 
 ![](./picture/refactoring_cs_study_036_di.png)
 
-![](./picture/refactoring_cs_study_036_di.png)
-
-![refactoring_cs_study_036_di_manual](./picture/refactoring_cs_study_036_di_manual.png)
-
 DI（Dependency Injection）は、
 **必要な道具（依存）を、外から渡してあげる**やり方だよ🎁
 

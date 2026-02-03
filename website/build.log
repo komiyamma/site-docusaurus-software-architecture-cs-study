@@ -6,17 +6,55 @@
 - ja
 - en
 [INFO] [ja] Creating an optimized production build...
-Warn: `blogDir` doesn't exist: "G:\repogitory\site-docusaurus-software-architecture-study\website\blog".
 [90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Client
 [90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32m笨・[39m Server: Compiled successfully in 1.99s
-[90m[[90mwebpackbar[90m][39m [32m笨・[39m Client: Compiled successfully in 21.13s
-[SUCCESS] Generated static files in "build".
-[INFO] [en] Creating an optimized production build...
-Warn: `blogDir` doesn't exist: "G:\repogitory\site-docusaurus-software-architecture-study\website\blog".
-[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Client
-[90m[[90mwebpackbar[90m][39m [36m邃ｹ[39m Compiling Server
-[90m[[90mwebpackbar[90m][39m [32m笨・[39m Server: Compiled successfully in 19.54s
-[90m[[90mwebpackbar[90m][39m [32m笨・[39m Client: Compiled successfully in 29.23s
-[SUCCESS] Generated static files in "build\en".
-[INFO] Use `npm run serve` command to test your build locally.
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Server: Compiled with some errors in 3.78s
+[90m[[90mwebpackbar[90m][39m [32m笨・[39m Client: Compiled with some errors in 55.58s
+[ERROR] Client bundle compiled with errors therefore further build is impossible.
+Error: MDX compilation failed for file "G:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\refactoring_cs\refactoring_cs_study_021.md"
+Cause: Markdown image with URL `./picture/refactoring_cs_study_021_smells_intro.png` in source file "docs/refactoring_cs/refactoring_cs_study_021.md" (17:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `./picture/refactoring_cs_study_021_smells_intro.png` in source file "docs/refactoring_cs/refactoring_cs_study_021.md" (17:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 2)
+
+--------------------------
+
+Error: MDX compilation failed for file "G:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\refactoring_cs\refactoring_cs_study_023.md"
+Cause: Markdown image with URL `./picture/refactoring_cs_study_023_dry_concept.png` in source file "docs/refactoring_cs/refactoring_cs_study_023.md" (14:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `./picture/refactoring_cs_study_023_dry_concept.png` in source file "docs/refactoring_cs/refactoring_cs_study_023.md" (14:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 1)
+
+--------------------------
+
+Error: MDX compilation failed for file "G:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\refactoring_cs\refactoring_cs_study_036.md"
+Cause: Markdown image with URL `./picture/refactoring_cs_study_036_di_manual.png` in source file "docs/refactoring_cs/refactoring_cs_study_036.md" (28:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `./picture/refactoring_cs_study_036_di_manual.png` in source file "docs/refactoring_cs/refactoring_cs_study_036.md" (28:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 2)
+
+--------------------------
+
+Error: MDX compilation failed for file "G:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\refactoring_cs\refactoring_cs_study_038.md"
+Cause: Markdown image with URL `./picture/refactoring_cs_study_038_io_boundary.png` in source file "docs/refactoring_cs/refactoring_cs_study_038.md" (42:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `./picture/refactoring_cs_study_038_io_boundary.png` in source file "docs/refactoring_cs/refactoring_cs_study_038.md" (42:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 1)
+
+--------------------------
+
+Error: MDX compilation failed for file "G:\repogitory\site-docusaurus-software-architecture-cs-study\website\docs\refactoring_cs\refactoring_cs_study_040.md"
+Cause: Markdown image with URL `./picture/refactoring_cs_study_040_legacy_case.png` in source file "docs/refactoring_cs/refactoring_cs_study_040.md" (32:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+Details:
+Error: Markdown image with URL `./picture/refactoring_cs_study_040_legacy_case.png` in source file "docs/refactoring_cs/refactoring_cs_study_040.md" (32:1) couldn't be resolved to an existing local image file.
+To ignore this error, use the `siteConfig.markdown.hooks.onBrokenMarkdownImages` option, or apply the `pathname://` protocol to the broken image URLs.
+    at async Promise.all (index 1)

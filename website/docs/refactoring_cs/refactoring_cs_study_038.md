@@ -39,7 +39,7 @@ I/Oとロジックが混ざると、こうなるよ👇
 
 ## 合言葉はこれ！🪄✨「外は薄く、中は濃く」
 
-![refactoring_cs_study_038_io_boundary](./picture/refactoring_cs_study_038_io_boundary.png)
+![refactoring_cs_study_038_boundary](./picture/refactoring_cs_study_038_boundary.png)
 
 * 外側（I/O）：**薄くする**（入力を整えて渡す、結果を整えて出す）🧻
 * 内側（コア）：**濃くする**（仕様・ルール・計算の本体）🍫

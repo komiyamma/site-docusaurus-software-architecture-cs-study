@@ -29,7 +29,7 @@
 
 ## Before：レガシー版（わざと読みにくい）🫠💥
 
-![refactoring_cs_study_040_legacy_case](./picture/refactoring_cs_study_040_legacy_case.png)
+![refactoring_cs_study_040_legacy](./picture/refactoring_cs_study_040_legacy.png)
 
 ```csharp
 using System.Text;
