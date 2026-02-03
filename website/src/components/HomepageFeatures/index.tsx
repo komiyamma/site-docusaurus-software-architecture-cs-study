@@ -377,6 +377,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/refactoring_cs/refactoring_cs_index',
   },
+  {
+    title: 'モジュラーモノリス C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        「モノリスのまま内部を分割」する設計手法を学びます。<br/>
+        境界設計、Outboxパターン、ドメインイベント、<br/>
+        そして冪等性まで、実践的な構成を習得。<br/>
+      </>
+    ),
+    link: '/docs/mod_mono_cs/mod_mono_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

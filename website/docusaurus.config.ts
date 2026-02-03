@@ -109,6 +109,7 @@ const config: Config = {
           "docs/idem_cs",
           "docs/saga_cs",
           "docs/refactoring_cs",
+          "docs/mod_mono_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -370,6 +371,12 @@ const config: Config = {
           sidebarId: 'refactoringCsSidebar',
           position: 'left',
           label: 'Refactoring C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'modMonoCsSidebar',
+          position: 'left',
+          label: 'モジュラーモノリス C#版',
         },
 
         {

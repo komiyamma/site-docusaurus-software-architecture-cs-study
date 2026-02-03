@@ -155,6 +155,7 @@ const sidebars: SidebarsConfig = {
   idemCsSidebar: generateProjectSidebar('idem_cs'),
   sagaCsSidebar: generateProjectSidebar('saga_cs'),
   refactoringCsSidebar: generateProjectSidebar('refactoring_cs'),
+  modMonoCsSidebar: generateProjectSidebar('mod_mono_cs'),
 };
 
 export default sidebars;
