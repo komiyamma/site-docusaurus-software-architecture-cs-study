@@ -107,6 +107,7 @@ const config: Config = {
           "docs/de_cs",
           "docs/bc_cs",
           "docs/idem_cs",
+          "docs/saga_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -356,6 +357,12 @@ const config: Config = {
           sidebarId: 'idemCsSidebar',
           position: 'left',
           label: '冪等性 (Idempotency) C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'sagaCsSidebar',
+          position: 'left',
+          label: 'Saga C#版',
         },
 
         {

@@ -353,6 +353,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/idem_cs/idem_cs_index',
   },
+  {
+    title: 'Saga C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        分散システムでの長期間実行プロセス（Saga）を学びます。<br/>
+        失敗時の補償トランザクション、状態管理、<br/>
+        冪等性、Outboxパターンなど実践的なパターンを習得。<br/>
+      </>
+    ),
+    link: '/docs/saga_cs/saga_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
