@@ -12,7 +12,7 @@
 
 ## 1) まず結論：TDDが強いのは「純粋ロジック」💪🍰
 
-![画像を挿入予定](./picture/tdd_cs_study_004_red_intent.png)
+![画像を挿入予定](./picture/tdd_cs_study_004_red.png)
 
 TDDが得意なのは、ざっくり言うとこういうやつ👇
 

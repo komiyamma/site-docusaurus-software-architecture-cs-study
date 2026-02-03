@@ -7,7 +7,7 @@
 
 ## 0. この章のゴール🎯
 
-![画像を挿入予定](./picture/tdd_cs_study_029_dependency.png)
+![画像を挿入予定](./picture/tdd_cs_study_029_dependency_isolation.png)
 
 読み終わったら、これができるようになるよ😊✨
 

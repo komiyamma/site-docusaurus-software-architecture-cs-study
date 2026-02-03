@@ -2,7 +2,7 @@
 
 ## この章のゴール🎯
 
-![画像を挿入予定](./picture/tdd_cs_study_020_triangulation_2.png)
+![画像を挿入予定](./picture/tdd_cs_study_020_deterministic.png)
 
 * 「最初はベタでもOK」→ **2つ目の例で“ルール化（一般化）”する**流れが体に入る🧠✨
 * **“一般化が早すぎて複雑化”**を避けられるようになる🚧💦

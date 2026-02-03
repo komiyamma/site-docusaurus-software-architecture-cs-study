@@ -9,7 +9,7 @@
 
 ### 1) ねらい（この章のゴール）🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_011_aaa.png)
+![画像を挿入予定](./picture/tdd_cs_study_011_one_assert.png)
 
 この章が終わったら、あなたはこうなれる！😊
 

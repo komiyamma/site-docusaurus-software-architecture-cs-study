@@ -10,7 +10,7 @@
 
 ## 1) 今日のお題：ハッピーアワー割引☕️🎟️
 
-![画像を挿入予定](./picture/tdd_cs_study_030_interface.png)
+![画像を挿入予定](./picture/tdd_cs_study_030_interface_abstraction.png)
 
 「15:00〜16:59 の間は **10%割引**！」みたいなルール、よくあるよね😊
 でも、実装で **DateTime.Now を直で読む**と…テストが地獄になるの😭💥

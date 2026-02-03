@@ -7,7 +7,7 @@
 
 ## 1) 例外テストって、なんで必要？🤔💥
 
-![画像を挿入予定](./picture/tdd_cs_study_022_exception.png)
+![画像を挿入予定](./picture/tdd_cs_study_022_gold_master.png)
 
 普通のテスト（正常系）だけだと…
 

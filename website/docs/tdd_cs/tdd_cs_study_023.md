@@ -17,7 +17,7 @@
 
 ## 1) この章でできるようになること🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_023_smell.png)
+![画像を挿入予定](./picture/tdd_cs_study_023_safety_net.png)
 
 ### ゴール✅
 

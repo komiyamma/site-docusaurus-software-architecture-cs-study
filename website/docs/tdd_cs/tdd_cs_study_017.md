@@ -10,7 +10,7 @@ TDDでいちばん心が折れるのって、**「さっき通ったのに、た
 
 ### この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_017_determinism.png)
+![画像を挿入予定](./picture/tdd_cs_study_017_setup.png)
 
 できるようになること👇
 

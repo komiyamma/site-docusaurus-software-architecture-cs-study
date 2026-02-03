@@ -6,7 +6,7 @@
 
 ## 1) この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_019_fake_it_2.png)
+![画像を挿入予定](./picture/tdd_cs_study_019_isolation.png)
 
 読み終わったら、これができるようになるよ👇😊
 

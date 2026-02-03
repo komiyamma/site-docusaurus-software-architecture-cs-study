@@ -10,7 +10,7 @@ xUnit は v3 系が正式リリースされてるよ🧪 ([xunit.net][2])
 
 ## 1) この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_025_test_refactor.png)
+![画像を挿入予定](./picture/tdd_cs_study_025_dry_trap.png)
 
 章末にこうなれたら勝ち〜！😆🎉
 

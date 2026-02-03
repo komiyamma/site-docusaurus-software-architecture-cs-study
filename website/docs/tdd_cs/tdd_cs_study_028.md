@@ -7,7 +7,7 @@
 
 ## 1) 今日のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_028_srp.png)
+![画像を挿入予定](./picture/tdd_cs_study_028_clean_code_goal.png)
 
 章の終わりに、こうなれたら勝ち！🏆
 

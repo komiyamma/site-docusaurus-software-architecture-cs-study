@@ -6,7 +6,7 @@
 
 ## この章のゴール🎯💖
 
-![画像を挿入予定](./picture/tdd_cs_study_016_data_creation.png)
+![画像を挿入予定](./picture/tdd_cs_study_016_parameterized_test.png)
 
 * **Arrange（準備）が長すぎるテスト**を、読みやすく整えられる✨
 * 「テスト用データはこう作る！」の**基本パターン**を持てる🧠

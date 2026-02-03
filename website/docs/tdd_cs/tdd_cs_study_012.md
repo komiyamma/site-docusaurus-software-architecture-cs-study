@@ -9,7 +9,7 @@
 
 ## 1) Assertってなに？（超ざっくり）👀✅
 
-![画像を挿入予定](./picture/tdd_cs_study_012_assert.png)
+![画像を挿入予定](./picture/tdd_cs_study_012_naming.png)
 
 Assertは、テストの中で **「期待（仕様）と現実（実行結果）を比べて、違ったら落とす」** ところです💥
 つまり Assert が“仕様の本体”になりやすい！📘✨

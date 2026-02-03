@@ -8,7 +8,7 @@ TDDって回せるようになってくると、最後に効いてくるのが�
 
 ## 1) この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_013_naming.png)
+![画像を挿入予定](./picture/tdd_cs_study_013_suite.png)
 
 読み終わったら、こうなってたらOK！
 

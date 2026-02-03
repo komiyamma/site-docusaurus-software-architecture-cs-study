@@ -20,7 +20,7 @@
 
 ## まず結論：読めるテストは「見出し＋本文」📰📘
 
-![画像を挿入予定](./picture/tdd_cs_study_005_green_pass.png)
+![画像を挿入予定](./picture/tdd_cs_study_005_green.png)
 
 仕様書っぽいテストは、だいたいこの2層でできてるよ〜😊
 

@@ -8,7 +8,7 @@
 
 ## 今日のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_027_decision_table.png)
+![画像を挿入予定](./picture/tdd_cs_study_027_yagni_focus.png)
 
 * ✅ 仕様の「条件」と「結果（アクション）」を分解できる
 * ✅ 決定表を作って、**抜け・重なり**を見つけられる👀

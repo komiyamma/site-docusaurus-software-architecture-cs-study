@@ -19,7 +19,7 @@ C#まわりは **C# Dev Kit** が中心になるよ〜🧰✨（ソリューシ�
 
 ## 2) まずは「ミニ構成」だけ覚える📦🧠（これで迷子激減！）
 
-![画像を挿入予定](./picture/tdd_cs_study_010_obvious_impl.png)
+![画像を挿入予定](./picture/tdd_cs_study_010_obvious_implementation.png)
 
 VS Codeは“フォルダの開き方”で迷子になりがちだから、構成を最小に固定しよ😊
 

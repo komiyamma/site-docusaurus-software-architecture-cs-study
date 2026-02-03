@@ -7,7 +7,7 @@ TDDの **Red→Green→Refactor** のうち、今日は **Refactor（整理整�
 
 ## 1) この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_024_refactor_safe.png)
+![画像を挿入予定](./picture/tdd_cs_study_024_code_smell.png)
 
 読み終わる頃に、こうなってたら勝ちです💪💕
 

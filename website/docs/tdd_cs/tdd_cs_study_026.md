@@ -7,7 +7,7 @@
 
 ## 今日のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_026_cafe_2.png)
+![画像を挿入予定](./picture/tdd_cs_study_026_kiss_simplicity.png)
 
 * 割引（%）を追加してもテストで守れる🛡️
 * クーポン（固定額）を追加してもテストで守れる🎫

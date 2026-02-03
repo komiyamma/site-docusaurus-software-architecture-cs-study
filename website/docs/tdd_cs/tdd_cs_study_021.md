@@ -8,7 +8,7 @@
 
 ### この章のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_021_obvious.png)
+![画像を挿入予定](./picture/tdd_cs_study_021_legacy_reform.png)
 
 * 「いまは **明白な実装でいってOK**」を判断できる😊🔍
 * **仮実装 / 三角測量 / 明白な実装**を、状況で使い分けられる🚦📐🌼

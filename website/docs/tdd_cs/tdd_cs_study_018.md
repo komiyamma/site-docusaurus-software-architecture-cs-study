@@ -22,7 +22,7 @@
 
 ## 1) 今日のゴール🥅✨
 
-![画像を挿入予定](./picture/tdd_cs_study_018_exercise_1.png)
+![画像を挿入予定](./picture/tdd_cs_study_018_cleanup.png)
 
 できたら勝ち！🎉
 

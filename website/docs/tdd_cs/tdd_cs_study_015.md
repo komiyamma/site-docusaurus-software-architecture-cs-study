@@ -6,7 +6,7 @@
 
 ### 1) 今日のゴール🏁✨
 
-![画像を挿入予定](./picture/tdd_cs_study_015_parameterized.png)
+![画像を挿入予定](./picture/tdd_cs_study_015_exception_test.png)
 
 この章が終わったら、こんな感じになれるよ💪😊
 

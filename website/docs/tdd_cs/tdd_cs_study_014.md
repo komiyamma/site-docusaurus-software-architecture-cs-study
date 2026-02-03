@@ -7,7 +7,7 @@ TDDって回転が命だから、**“読むのがしんどいテスト”**が�
 
 ## 今日のゴール🎯✨
 
-![画像を挿入予定](./picture/tdd_cs_study_014_single_intent.png)
+![画像を挿入予定](./picture/tdd_cs_study_014_boundaries.png)
 
 読み終わったら、こんなことができるようになるよ💪😊
 
