@@ -153,6 +153,8 @@ const sidebars: SidebarsConfig = {
   deCsSidebar: generateProjectSidebar('de_cs'),
 
   bcCsSidebar: generateProjectSidebar('bc_cs'),
+
+  idemCsSidebar: generateProjectSidebar('idem_cs'),
 };
 
 export default sidebars;

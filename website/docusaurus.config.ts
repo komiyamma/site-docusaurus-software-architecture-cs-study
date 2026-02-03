@@ -106,6 +106,7 @@ const config: Config = {
           "docs/es_cs",
           "docs/de_cs",
           "docs/bc_cs",
+          "docs/idem_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -349,6 +350,12 @@ const config: Config = {
           sidebarId: 'bcCsSidebar',
           position: 'left',
           label: '境界づけられたコンテキスト C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'idemCsSidebar',
+          position: 'left',
+          label: '冪等性 (Idempotency) C#版',
         },
 
         {

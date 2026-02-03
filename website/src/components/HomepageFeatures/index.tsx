@@ -341,6 +341,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/bc_cs/bc_cs_index',
   },
+  {
+    title: '冪等性 (Idempotency) C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        「同じ要求が何回きても壊れない」設計を学びます。<br/>
+        自然冪等、冪等キー、DB一意制約、状態遷移、<br/>
+        非同期における重複排除まで。<br/>
+      </>
+    ),
+    link: '/docs/idem_cs/idem_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
