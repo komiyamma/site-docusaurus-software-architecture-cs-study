@@ -229,18 +229,6 @@ app.MapPost("/orders", async (
             statusCode: existing.StatusCode);
     }
 
-```mermaid
-flowchart TD
-    Start[リクエスト受信] --> CheckExist{キーがDBにある?}
-    CheckExist -- Yes --> HashMatch{Hash一致?}
-    HashMatch -- No --> Conflict[409 Conflict 警告]
-    HashMatch -- Yes --> ReturnStored[保存した成功結果を返す]
-    CheckExist -- No --> Process[本処理を実行]
-    Process --> Save[結果とHashを保存]
-    Save --> Return[結果を返す]
-```
-
-    // 4) 初回：先に“キーを確保”しておく（後で保存できるように）
     var idem = new IdempotencyRequest
     {
         IdempotencyKey = idempotencyKey,
@@ -293,6 +281,17 @@ static string Sha256Hex(string text)
 ```
 
 > HTTPメソッドの冪等性（GET/PUT/DELETE等）と、POSTを冪等に“寄せる”設計の背景はHTTP仕様でも整理されています ([RFCエディタ][5])
+
+```mermaid
+flowchart TD
+    Start[リクエスト受信] --> CheckExist{キーがDBにある?}
+    CheckExist -- Yes --> HashMatch{Hash一致?}
+    HashMatch -- No --> Conflict[409 Conflict 警告]
+    HashMatch -- Yes --> ReturnStored[保存した成功結果を返す]
+    CheckExist -- No --> Process[本処理を実行]
+    Process --> Save[結果とHashを保存]
+    Save --> Return[結果を返す]
+```
 
 ---
 
