@@ -110,6 +110,7 @@ const config: Config = {
           "docs/saga_cs",
           "docs/refactoring_cs",
           "docs/mod_mono_cs",
+          "docs/tdd_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -377,6 +378,12 @@ const config: Config = {
           sidebarId: 'modMonoCsSidebar',
           position: 'left',
           label: 'モジュラーモノリス C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'tddCsSidebar',
+          position: 'left',
+          label: 'TDD C#版',
         },
 
         {

@@ -389,6 +389,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/mod_mono_cs/mod_mono_cs_index',
   },
+  {
+    title: 'TDD C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        テスト駆動開発（TDD）の基礎からAI活用までを学びます。<br/>
+        Red/Green/Refactorの習慣、依存の分離、<br/>
+        そしてBlazorでのUIテストまで、50章で徹底習得。<br/>
+      </>
+    ),
+    link: '/docs/tdd_cs/tdd_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
