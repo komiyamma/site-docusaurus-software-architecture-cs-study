@@ -42,7 +42,7 @@ function generateProjectSidebar(dirName: string) {
 }
 
 // Helper for DDD which uses manual grouping
-function generateStudyIds(folder: string, prefix: string, start: number, end: number): string[] {
+export function generateStudyIds(folder: string, prefix: string, start: number, end: number): string[] {
   const ids: string[] = [];
   for (let i = start; i <= end; i++) {
     const idStr = i.toString().padStart(3, '0');
@@ -55,7 +55,7 @@ function generateStudyIds(folder: string, prefix: string, start: number, end: nu
   return ids;
 }
 
-function generateSidebarItems(folder: string, prefix: string, modules: { title?: string; start: number; end: number }[]) {
+export function generateSidebarItems(folder: string, prefix: string, modules: { title?: string; start: number; end: number }[]) {
   return modules.flatMap(mod => {
     const items = generateStudyIds(folder, prefix, mod.start, mod.end);
 
@@ -64,7 +64,7 @@ function generateSidebarItems(folder: string, prefix: string, modules: { title?:
       return [{
         type: 'category' as const,
         label: mod.title,
-        items: items,
+        items: items.map(itemId => ({ type: 'doc' as const, id: itemId } as any)),
       }];
     }
 
@@ -72,7 +72,7 @@ function generateSidebarItems(folder: string, prefix: string, modules: { title?:
     return items.map(id => ({
       type: 'doc' as const,
       id: id,
-    }));
+    } as any));
   });
 }
 
