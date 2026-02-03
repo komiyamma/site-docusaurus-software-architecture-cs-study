@@ -104,7 +104,7 @@ Context Mapでいう「上流／下流」みたいな関係で、
 
 ## 6) ACLがないと起きがちな“3つの事故”💥💥💥
 
-![ACLがないと起きる事故](./picture/bc_cs_study_031_accident_report.png)
+![ACLがないと起きる事故](./picture/bc_cs_study_031_acl_incident.png)
 
 ## 事故①：ドメインが“外部仕様カタログ”になる📚😇
 

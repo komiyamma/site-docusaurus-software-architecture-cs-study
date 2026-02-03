@@ -112,7 +112,7 @@ Conformistは **使う場所を間違えると事故る**💥
 
 ※ “CF” みたいに Conformist をラベルとして表す書き方もあるよ📌 ([Context Mapper][3])
 
-![Context Mapの記号まとめ](./picture/bc_cs_study_030_map_legend.png)
+![Context Mapの記号まとめ](./picture/bc_cs_study_030_context_map_legend.png)
 
 ```mermaid
 graph LR

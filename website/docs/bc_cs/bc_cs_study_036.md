@@ -182,7 +182,7 @@ dotnet add .\src\OrderManagement\OrderManagement.Application\OrderManagement.App
 
 ## 9. 実装：アーキテクチャテストで「参照違反を禁止」🧪🚫
 
-![アーキテクチャ違反の検知](./picture/bc_cs_study_036_arch_breach.png)
+![アーキテクチャ違反の検知](./picture/bc_cs_study_036_arch_violation.png)
 
 ## 9.1 テストプロジェクトを1つ作る🧰
 

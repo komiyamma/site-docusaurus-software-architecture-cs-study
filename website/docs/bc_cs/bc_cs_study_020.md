@@ -51,7 +51,7 @@ graph TD
   style B fill:#f96,stroke:#333
 ```
 
-![サブドメイン価値マップ](./picture/bc_cs_study_020_value_map.png)
+![サブドメイン価値マップ](./picture/bc_cs_study_020_subdomain_value_map.png)
 
 ---
 
