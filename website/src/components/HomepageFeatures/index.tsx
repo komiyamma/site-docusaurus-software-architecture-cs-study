@@ -365,6 +365,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/saga_cs/saga_cs_index',
   },
+  {
+    title: 'Refactoring C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        「動作を変えずに内部を良くする」技術を学びます。<br/>
+        安全な手順、コードスメルの見極め、<br/>
+        IDEとAIを活用した実践的な改善手法。<br/>
+      </>
+    ),
+    link: '/docs/refactoring_cs/refactoring_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

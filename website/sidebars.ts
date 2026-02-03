@@ -154,6 +154,7 @@ const sidebars: SidebarsConfig = {
   bcCsSidebar: generateProjectSidebar('bc_cs'),
   idemCsSidebar: generateProjectSidebar('idem_cs'),
   sagaCsSidebar: generateProjectSidebar('saga_cs'),
+  refactoringCsSidebar: generateProjectSidebar('refactoring_cs'),
 };
 
 export default sidebars;

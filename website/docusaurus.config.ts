@@ -108,6 +108,7 @@ const config: Config = {
           "docs/bc_cs",
           "docs/idem_cs",
           "docs/saga_cs",
+          "docs/refactoring_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -363,6 +364,12 @@ const config: Config = {
           sidebarId: 'sagaCsSidebar',
           position: 'left',
           label: 'Saga C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'refactoringCsSidebar',
+          position: 'left',
+          label: 'Refactoring C#版',
         },
 
         {
