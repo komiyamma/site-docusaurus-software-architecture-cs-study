@@ -90,7 +90,6 @@ const dddModules = [
 
 
 
-
 /**
  * Creating a sidebar enables you to:
  - create an ordered group of docs
@@ -153,6 +152,7 @@ const sidebars: SidebarsConfig = {
   esCsSidebar: generateProjectSidebar('es_cs'),
   deCsSidebar: generateProjectSidebar('de_cs'),
 
+  bcCsSidebar: generateProjectSidebar('bc_cs'),
 };
 
 export default sidebars;

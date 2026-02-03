@@ -105,6 +105,7 @@ const config: Config = {
           "docs/cap_cs",
           "docs/es_cs",
           "docs/de_cs",
+          "docs/bc_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -342,6 +343,12 @@ const config: Config = {
           sidebarId: 'deCsSidebar',
           position: 'left',
           label: 'ドメインイベント C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'bcCsSidebar',
+          position: 'left',
+          label: '境界づけられたコンテキスト C#版',
         },
 
         {

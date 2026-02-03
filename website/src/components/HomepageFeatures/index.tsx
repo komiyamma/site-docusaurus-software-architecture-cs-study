@@ -329,6 +329,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/de_cs/de_cs_index',
   },
+  {
+    title: '境界づけられたコンテキスト C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        「言葉とモデルの意味が一貫する範囲」を学びます。<br/>
+        境界の見つけ方、Context Mapによる関係整理、<br/>
+        そしてC#による境界の保護まで。
+      </>
+    ),
+    link: '/docs/bc_cs/bc_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
