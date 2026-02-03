@@ -121,6 +121,22 @@ dotnet_diagnostic.CS8509.severity = error
 
 ![Typestate Pattern](./picture/mod_mono_cs_study_028_typestate.png)
 
+```mermaid
+graph LR
+    subgraph Types ["型による定義 (Compile Time)"]
+        C["Order&lt;Created&gt;"]
+        P["Order&lt;Paid&gt;"]
+        S["Order&lt;Shipped&gt;"]
+    end
+    
+    C -- "Pay()" --> P
+    P -- "Ship()" --> S
+    
+    C -. "Ship() ❌" .-> Fail["Build Error!"]
+    Fail --- Note["そもそもビルドが通らない!<br/>(最強の守り)"]
+    style Note fill:#fff9c4,stroke:#fbc02d,stroke-dasharray: 5 5
+```
+
 ここがこの章のメイン💖
 狙いはこれ👇
 

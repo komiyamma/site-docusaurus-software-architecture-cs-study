@@ -39,6 +39,24 @@
 
 ![Strangler Fig Pattern](./picture/mod_mono_cs_study_030_strangler_fig.png)
 
+```mermaid
+graph TD
+    Client["User / Client"] -- "Request" --> Router{"Router / Proxy<br/>(分配器)"}
+    
+    subgraph Legacy ["旧モノリス 🏰"]
+        Old["Legacy Feature"]
+    end
+    
+    subgraph New ["新モジュール化 🧱"]
+        Module["Modular Feature"]
+    end
+    
+    Router -- "既存ルート" --> Old
+    Router -- "新ルート (段階的)" --> Module
+    
+    Old -. "いずれ消す" .-> Module
+```
+
 ### 1) Strangler Fig（外側から置き換え）🌿
 
 * 入口（UI/API/ルーティング）に“分岐”を置いて
@@ -112,6 +130,18 @@
 
 * 置き換え終わったら旧実装を削除（残すと復活する😇）
 * 「次に切る候補」を同じ手順で繰り返す🔁
+
+```mermaid
+graph LR
+    direction TB
+    S0["Step 0: 安全装置 🛡️<br/>(テスト/監視)"] --> S1["Step 1: 境界を描く 🖍️<br/>(依存可視化)"]
+    S1 --> S2["Step 2: 窓口を決める 🪟<br/>(Public API)"]
+    S2 --> S3["Step 3: 翻訳壁を作る 🧼<br/>(ACL)"]
+    S3 --> S4["Step 4: 差し替え 🧩<br/>(Branch by Abs)"]
+    S4 --> S5["Step 5: データ境界 🗃️<br/>(所有者固定)"]
+    S5 --> S6["Step 6: 自動検知 🔍<br/>(ArchTest)"]
+    S6 --> S7["Step 7: 完了 🏁<br/>(旧コード削除)"]
+```
 
 ---
 

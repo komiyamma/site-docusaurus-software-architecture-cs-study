@@ -56,6 +56,13 @@ order.State = OrderState.Shipped;
 
 ![Guard Conditions](./picture/mod_mono_cs_study_027_guard_conditions.png)
 
+```mermaid
+graph TD
+    Trigger["トリガー (Ship)"] --> Guard{"ガード条件👮‍♂️<br/>(住所確定? 在庫あり?)"}
+    Guard -- "No ❌" --> Fail["エラーを返す<br/>(状態は変わらない)"]
+    Guard -- "Yes ✅" --> Success["遷移実行<br/>(State: Paid -> Shipped)"]
+```
+
 コツは超シンプル👇
 
 ### ✅ ルール

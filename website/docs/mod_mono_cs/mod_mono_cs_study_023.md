@@ -26,6 +26,25 @@ Transactional Outbox は「DB更新とメッセージ送信（予定）」の**�
 
 ![Outbox Pattern](./picture/mod_mono_cs_study_023_outbox_pattern.png)
 
+```mermaid
+graph LR
+    subgraph Data ["業務データ"]
+        Order["Orders Table"]
+    end
+    
+    subgraph Outbox ["送信トレイ"]
+        Message["OutboxMessages Table"]
+    end
+    
+    User["Application"] -- "1. 注文更新" --> Order
+    User -- "2. 予約INSERT" --> Message
+    
+    Order --- Join["同一トランザクション"]
+    Message --- Join
+    
+    Join -- "3. まとめて確定 (Commit)" --> DB[(Database)]
+```
+
 1. DBの注文を `Paid` に更新 ✅
 2. **同じDBのOutboxテーブルに「送るべきイベント」を1行INSERT** ✅
 3. これらを**同一トランザクション**でコミット🎯
@@ -51,6 +70,18 @@ Transactional Outbox は「DB更新とメッセージ送信（予定）」の**�
 * `ProcessedOnUtc`：配信済みなら日時、未送信ならNULL✅❌
 
 > 「未送信は ProcessedOnUtc = NULL」って覚えると分かりやすいよ😊✨
+
+```mermaid
+classDiagram
+    class OutboxMessage {
+        +Guid Id
+        +DateTime OccurredOnUtc
+        +string Type
+        +string Payload (JSON)
+        +DateTime? ProcessedOnUtc
+    }
+    note for OutboxMessage "ProcessedOnUtc == null<br/>のものを拾って送る🚚"
+```
 
 ---
 

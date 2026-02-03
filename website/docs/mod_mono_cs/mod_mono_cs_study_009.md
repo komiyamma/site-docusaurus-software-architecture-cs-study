@@ -19,7 +19,29 @@
 ![DIP Visualized](./picture/mod_mono_cs_study_009_dip.png)🧩
 
 「大事なルール（中心のロジック）」が「細かい都合（DBや外部API）」に引っ張られないようにする考え方だよ😊✨
-つまり、**“中心は詳細を知らない”** を守るのがDIP〜！💪🧡
+つまり、**“「中心ロジックは詳細を知らない」を守るのがDIP〜！💪🧡
+
+```mermaid
+graph TD
+    subgraph Traditional ["従来の依存 (ダメ例😇)"]
+        direction TB
+        App1["Application (重要ロジック)"]
+        Db1["SQL Server (細かい都合)"]
+        App1 -- "直接依存" --> Db1
+    end
+    
+    subgraph DIP ["依存関係逆転 (良い例😎)"]
+        direction TB
+        App2["Application (重要ロジック)"]
+        IF["Interface (抽象)"]
+        Db2["SQL Server (実装)"]
+        
+        App2 -- "IFに依存" --> IF
+        Db2 -- "IFを実装" --> IF
+    end
+```
+
+### DI（依存性注入）って？🔌
 
 ### DI（依存性注入）って？🔌
 
@@ -36,6 +58,23 @@ DIPを実現しやすくする **配線テク** だよ〜！
 * 実装を差し替えても、中心のロジックは無傷😎✨
 * テストではニセモノ実装に差し替えできて速い🧪⚡
 * 依存関係ルール（第8章）も守りやすい🚦💖
+
+```mermaid
+graph LR
+    subgraph Module ["モジュール内"]
+        App["Application層"]
+        IF["Interface (穴)"]
+    end
+    
+    subgraph External ["境界の外"]
+        Stripe["Stripe実装 (プラグ)"]
+        Mock["テスト用Mock"]
+    end
+    
+    App -- "穴だけ開けておく" --> IF
+    Stripe -- "ガチャン!と嵌める" --> IF
+    Mock -- "テスト時はこっち" --> IF
+```
 
 ---
 
@@ -174,7 +213,27 @@ app.MapPost("/orders", async (PlaceOrderUseCase useCase, CancellationToken ct) =
     return Results.Ok(new { message = "order placed!" });
 });
 
+```csharp
 app.Run();
+```
+
+```mermaid
+graph TD
+    subgraph App_Core ["Application (中身)"]
+        UseCase["PlaceOrderUseCase"]
+    end
+    
+    subgraph Infra ["Infrastructure (具体)"]
+        Gateway["FakePaymentGateway"]
+    end
+    
+    subgraph DI_Container ["DIコンテナ (Program.cs)"]
+        Register["AddScoped&lt;IPaymentGateway, FakePaymentGateway&gt;()"]
+    end
+    
+    Register -- "配線🔌" --> UseCase
+    Gateway -- "注入される" --> UseCase
+```
 ```
 
 ### AddScoped / AddSingleton / AddTransientって？🧠🧁

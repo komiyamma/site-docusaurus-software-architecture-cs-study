@@ -104,6 +104,33 @@
 *## 1) 「物理DBは1つ、論理スキーマは別」の図🖼️
 
 ![Logical Separation](./picture/mod_mono_cs_study_013_logical_separation.png)は誤解😆
+
+```mermaid
+graph TD
+    subgraph App ["APP (Modular Monolith)"]
+        Cat["Catalog Module"]
+        Ord["Ordering Module"]
+    end
+    
+    subgraph DB_Server ["DB Server (1つ)"]
+        subgraph DB ["MiniEC DB"]
+            subgraph Schema_Cat ["Catalog Schema / Tables"]
+                T1[Products]
+                T2[Categories]
+            end
+            subgraph Schema_Ord ["Ordering Schema / Tables"]
+                T3[Orders]
+                T4[OrderLines]
+            end
+        end
+    end
+    
+    Cat -- "Only Access" --> Schema_Cat
+    Ord -- "Only Access" --> Schema_Ord
+    
+    Cat -. "❌ No Direct Access" .-> Schema_Ord
+    Ord -. "❌ No Direct Access" .-> Schema_Cat
+```
 * スキーマ分割／テーブル所有の考え方
 * “誰がそのデータの責任者？”を決める
 

@@ -70,6 +70,22 @@ app.MapPost("/orders/{orderId:guid}/pay", async (Guid orderId, AppDb db) =>
 
 ![Idempotency Key](./picture/mod_mono_cs_study_025_idempotency.png)
 
+```mermaid
+graph TD
+    User["User / Client"] -- "1. Request + Key=XYZ" --> API["Idempotency Filter"]
+    
+    subgraph Server ["Server Side"]
+        API -- "2. キーがあるか?" --> DB_Check{Already Exists?}
+        DB_Check -- "YES (Completed)" --> Return["前回の結果を返す"]
+        DB_Check -- "YES (Processing)" --> Conflict["409 Conflict (処理中)"]
+        DB_Check -- "NO" --> Execute["3. 本処理実行"]
+        Execute -- "4. 結果を保存" --> DB_Store[("Idempotency Record")]
+    end
+    
+    Return --> User
+    Execute --> User
+```
+
 ### Idempotency-Keyって？🔑
 
 クライアントが **一意なキー**（だいたいUUID）を付けて送る方式だよ✨
@@ -335,6 +351,22 @@ app.MapPost("/orders/{orderId:guid}/pay", async (
 
 > つまり
 > **キーで“入口”を守って、状態遷移で“中身”も守る**🧱✨
+
+```mermaid
+graph LR
+    subgraph Layer1 ["Layer 1: API Gate🔑"]
+        K["Idempotency-Key Check"]
+    end
+    
+    subgraph Layer2 ["Layer 2: Domain State🚥"]
+        S["Order Status: Paid?"]
+    end
+    
+    In["Request"] --> K
+    K -- "Pass" --> S
+    S -- "Already Paid" --> OK["No Side Effect (Success)"]
+    S -- "New" --> Work["Execute & State Change"]
+```
 
 ---
 

@@ -20,6 +20,23 @@
 
 この分け方は、いわゆるクリーンアーキテクチャ系の考えと相性がよくて、**内側は外側を知らない**が基本だよ😊 ([Microsoft Learn][1])
 
+```mermaid
+graph TD
+    subgraph Onion ["モジュール内のレイヤー (オニオン)"]
+        direction BT
+        Infra["Infrastructure (具体実装)"]
+        UI["UI (入口)"]
+        App["Application (台本)"]
+        Dom["Domain (核心部)"]
+        
+        UI --> App
+        Infra --> App
+        Infra --> Dom
+        App --> Dom
+    end
+    Note["💡 矢印は『依存の方向』。<br/>内側（Domain）は外側のことを何も知らないのが健全!"]
+```
+
 ---
 
 ## 3層それぞれ「何を置く？」早見表📦✨
@@ -75,6 +92,26 @@
 
 * Applicationが定義した **interface** を実装する（例：`IOrderRepository` の実装）
 * 実行時にDIで差し込む（この「差し込み」思想が強い✨） ([Microsoft Learn][1])
+
+```mermaid
+graph LR
+    subgraph Dom ["Domain❤️ (ルール)"]
+        D1["Entity / ValueObject"]
+        D2["Domain Rules"]
+    end
+    subgraph App ["Application🎬 (進行)"]
+        A1["UseCase / Handler"]
+        A2["Port (Interface)"]
+    end
+    subgraph Infra ["Infrastructure🔌 (現実)"]
+        I1["Adapter (具象実装)"]
+        I2["DB / External API"]
+    end
+    
+    App --> Dom
+    I1 -- "Interfaceを満たす" --> A2
+    I1 --> I2
+```
 
 ---
 
@@ -247,6 +284,19 @@ public sealed class InMemoryOrderRepository : IOrderRepository
 
 Infrastructureは「現実担当」なので、最初はこういう仮実装でもOK😊
 （DBに差し替えるのは第12〜14章で気持ちよくやろう🗃️✨）
+
+```mermaid
+sequenceDiagram
+    participant App as Application (UseCase)
+    participant Dom as Domain (Rule)
+    participant Infra as Infrastructure (Implementation)
+
+    App->>Dom: 1. ルールに従ってオブジェクト生成
+    Dom-->>App: 生成された Order
+    App->>Infra: 2. Interface経由で保存を依頼 (AddAsync)
+    Note over Infra: EF Core 等の具象クラスが<br/>実際にDB保存を行う
+    Infra-->>App: 保存完了
+```
 
 ---
 

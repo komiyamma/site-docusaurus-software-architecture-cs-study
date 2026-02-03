@@ -50,6 +50,20 @@
 
 ![Testing Strategy](./picture/mod_mono_cs_study_029_test_strategy.png)
 
+```mermaid
+graph TD
+    subgraph Pyramid ["テストピラミッド🍰"]
+        direction BT
+        E2E["E2E Tests (少し) 🐘"]
+        Int["Integration (ほどほど) 🔌"]
+        Unit["Unit Tests (たくさん) ⚡"]
+    end
+    
+    subgraph Arch ["アーキテクチャテスト 🛡️"]
+        Robot["NetArchTest<br/>(境界破りを許さない!)"]
+    end
+```
+
 ### テストピラミッド（超ざっくり）🍰
 
 * **Unit（多め）**：速い・原因が分かる・毎回回せる⚡
@@ -202,6 +216,23 @@ public class OrderingRepositoryTests : IAsyncLifetime
 ## 6) 本丸🔥：アーキテクチャテストで“境界破り”を自動検知する🔍🛡️
 
 ![Architecture Test Robot](./picture/mod_mono_cs_study_029_architecture_test.png)
+
+```mermaid
+graph LR
+    subgraph Rules ["建築ルール 📜"]
+        R1["DomainはInfraに依存禁止"]
+        R2["OrderingはIdentity内部に依存禁止"]
+    end
+    
+    subgraph Check ["CIチェック 🤖"]
+        RuleCheck{"NetArchTest"}
+    end
+    
+    PR["New PR"] --> RuleCheck
+    Rules --> RuleCheck
+    RuleCheck -- "違反あり" --> Fail["❌ Merge Blocked"]
+    RuleCheck -- "クリーン" --> Pass["✅ OK!"]
+```
 
 ここが第29章のメインディッシュ🍽️✨
 人間のレビューだけだと、忙しいときに漏れるの…あるある🥲

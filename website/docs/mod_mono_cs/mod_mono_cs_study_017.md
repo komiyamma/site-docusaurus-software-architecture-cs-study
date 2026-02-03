@@ -23,6 +23,21 @@
 
 ![Error Classification](./picture/mod_mono_cs_study_017_error_types.png)
 
+```mermaid
+mindmap
+    root((エラーの分類))
+        技術的エラー
+            インフラ障害[外部API/DBダウン]
+            予期せぬエラー[バグ/Null参照]
+        業務的エラー
+            入力エラー[バリデーション]
+            ルール違反[ドメインルール]
+            NotFound[リソース不足]
+            Conflict[排他制御/競合]
+        セキュリティ
+            Auth系[認証/権限なし]
+```
+
 失敗はぜんぶ「エラー」だけど、**性格が違う**んだよね🧠✨
 だからまずは「分類」を決めちゃう！
 
@@ -64,6 +79,17 @@
 * Validation：見せてOK（どこがダメか）
 * Domain：見せてOK（何がルール違反か）
 * Infrastructure/Unexpected：**詳細は見せない**（情報漏えい防止）🔒
+
+```mermaid
+graph TD
+    In["入力 / リクエスト"] --> V{"1. Validation"}
+    V -- "NG" --> V_Err["400 Bad Request"]
+    V -- "OK" --> D{"2. Domain Rule"}
+    D -- "NG" --> D_Err["409 Conflict / 422"]
+    D -- "OK" --> I{"3. Infrastructure"}
+    I -- "NG" --> I_Err["503 Service Unavailable"]
+    I -- "OK" --> Success["200 OK / 201 Created"]
+```
 
 ---
 
@@ -161,6 +187,17 @@ public static class Errors
 * Unexpected → **500**（詳細は隠す）🔒
 
 そして返す本文は **ProblemDetails** に寄せるのが今どきの流れだよ📦 ([Microsoft Learn][2])
+
+```mermaid
+graph LR
+    subgraph ProblemDetails ["Problem Details (JSON)"]
+        Type["type: 種類を指すURI"]
+        Title["title: 短い概要"]
+        Status["status: HTTPコード"]
+        Detail["detail: 人間向け説明"]
+        Code["extensions/code: 機械向けコード"]
+    end
+```
 
 ---
 

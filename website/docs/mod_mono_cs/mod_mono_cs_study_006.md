@@ -67,6 +67,30 @@
 * 「ここ触ったらここまで影響」って読める📌
 * 追加機能も“置き場所”で迷わない🧭✨
 
+```mermaid
+graph TD
+  subgraph Host ["Host (起動・入口)"]
+    Api["Host.Api"]
+  end
+  
+  subgraph Modules ["Modules (業務の部屋)"]
+    Cat["Catalog (商品)"]
+    Ord["Ordering (注文)"]
+    Ide["Identity (会員)"]
+  end
+  
+  subgraph Shared ["Shared (共通)"]
+    Com["Common"]
+  end
+  
+  Api --> Cat
+  Api --> Ord
+  Api --> Ide
+  Cat --> Com
+  Ord --> Com
+  Ide --> Com
+```
+
 ---
 
 ## 3) Visual Studioで“骨組み”を作ろう🛠️✨（手順どおりでOK）
@@ -132,6 +156,27 @@ Solution Folderの `Modules` の下に置く（さらに **Catalog/Ordering/Iden
 
 > 「Modules同士参照しない」は、後々めちゃ効くよ…！✨
 > “横に広がる依存”が始まると、雪だるま式に壊れる☃️💥
+
+```mermaid
+graph TD
+  Host["Host (Api)"]
+  ModA["Module A"]
+  ModB["Module B"]
+  Shared["Shared"]
+  
+  Host -- "✅ 参照OK" --> ModA
+  Host -- "✅ 参照OK" --> ModB
+  ModA -- "✅ 参照OK" --> Shared
+  ModB -- "✅ 参照OK" --> Shared
+  
+  ModA -. "❌ 参照禁止! (密結合の元)" .-> ModB
+  Shared -. "❌ 参照禁止! (依存の逆流)" .-> ModA
+  
+  style ModA fill:#f1f8e9,stroke:#388e3c
+  style ModB fill:#f1f8e9,stroke:#388e3c
+  style Host fill:#e1f5fe,stroke:#0288d1
+  style Shared fill:#fafafa,stroke:#9e9e9e
+```
 
 ---
 

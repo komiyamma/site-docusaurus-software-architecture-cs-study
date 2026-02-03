@@ -24,7 +24,28 @@
 ### 😎なにが問題？
 
 Sharedは **みんなが参照する中心**になりやすいから、肥大化すると「結合の塊」になるの。
-DDDでも“Shared Kernel（共有カーネル）”は **小さく保つべき**扱いだよ⚠️（大きい共有は危険）([DevIQ][2])
+DDDでは、大きいモデルを **Bounded Context に分割して、相互関係を“明示”する**のが超重要って話になってるよ📌 ([DevIQ][2])
+
+```mermaid
+graph TD
+    subgraph Shared ["Shared (共有地)"]
+        Tools["薄いツール類<br/>(Result, Guard...)"]
+    end
+    
+    subgraph Mod_A ["モジュール A"]
+        Rules_A["独自のルール"]
+    end
+    
+    subgraph Mod_B ["モジュール B"]
+        Rules_B["独自のルール"]
+    end
+    
+    Mod_A -- "利用" --> Shared
+    Mod_B -- "利用" --> Shared
+    
+    Rules_A -. "❌ 共有しない" .-> Shared
+    Rules_B -. "❌ 共有しない" .-> Shared
+```
 
 ---
 
@@ -45,6 +66,17 @@ DDDでも“Shared Kernel（共有カーネル）”は **小さく保つべき*
 
   * `IClock`（時間の取得）みたいなやつ⏰
 * **Sharedに置くなら「小さく・壊れにくく・テストしやすく」**が絶対条件🧪✨
+
+```mermaid
+flowchart TD
+    Start["処理開始"] --> G1{"Guard<br/>(引数チェック)"}
+    G1 -- "不正" --> Fail["例外 / 失敗Result"]
+    G1 -- "適正" --> Logic["本処理"]
+    Logic --> End["処理終了"]
+    
+    style G1 fill:#fff3e0,stroke:#fb8c00
+    style Logic fill:#e1f5fe,stroke:#0288d1
+```
 
 ### 🙅‍♀️入れちゃダメ（ここが地雷原💣）
 

@@ -23,6 +23,24 @@ Repository は、ざっくり言うと👇
 ✅ Domain は **DBの都合（テーブル、JOIN、Include、トランザクション詳細）** を知らない
 ✅ Repository は **“集約（Aggregate）” を出し入れ**する（※後の章で集約やるよ🔒🧱）
 
+```mermaid
+graph LR
+    subgraph Domain ["Domain (部屋の中)"]
+        Obj["Order<br/>(業務ルールを持つオブジェクト)"]
+    end
+    
+    subgraph Repo ["Repository (本棚)"]
+        Interface["IOrderRepository"]
+    end
+    
+    subgraph DB ["Database (倉庫)"]
+        Table[("Orders Table<br/>(ただのデータ)")]
+    end
+    
+    Obj -- "1. 預ける / 取る" --> Interface
+    Interface -- "2. マッピングして保存 / 復元" --> Table
+```
+
 ---
 
 ## でも注意！EF Coreでは「Repositoryは必須」じゃない⚠️😳
@@ -242,6 +260,24 @@ public sealed class EfOrderRepository : IOrderRepository
             Status = (int)order.Status
         };
 }
+
+```mermaid
+graph TD
+    subgraph Domain ["Domain (純粋)"]
+        DO["Order (Domain Object)"]
+    end
+    
+    subgraph Infra ["Infrastructure (実装)"]
+        direction LR
+        Mapper["Mapper (翻訳係)"]
+        Row["OrderRow (DB Entity)"]
+    end
+    
+    DO -- "マッピング" --> Mapper
+    Mapper -- "保存" --> Row
+    Row -- "復元" --> Mapper
+    Mapper -- "マッピング" --> DO
+```
 ```
 
 ### ここでの学びポイント📌
@@ -286,6 +322,20 @@ public sealed class PlaceOrderHandler
         return order.Id;
     }
 }
+
+```mermaid
+sequenceDiagram
+    participant Handler as Application Handler
+    participant Repo as IOrderRepository (Interface)
+    participant Dom as Domain (Order)
+    participant DB as Infrastructure (EF Core)
+
+    Handler->>Dom: 1. オブジェクト生成 / ロジック実行
+    Handler->>Repo: 2. 保存を依頼 (AddAsync)
+    Repo->>DB: 3. DBの形に変換して追加
+    Handler->>Repo: 4. 確定を依頼 (SaveChangesAsync)
+    Repo->>DB: 5. 実際に Commit!
+```
 ```
 
 ### Applicationがやること😊

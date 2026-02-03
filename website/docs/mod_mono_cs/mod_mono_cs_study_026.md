@@ -89,6 +89,20 @@ public void Pay()
 
 ![State Machine Table](./picture/mod_mono_cs_study_026_state_machine.png)
 
+```mermaid
+stateDiagram-v2
+    [*] --> Created
+    Created --> Paid: Pay
+    Created --> Cancelled: Cancel
+    Paid --> Shipped: Ship
+    Paid --> Cancelled: Cancel
+    Shipped --> [*]
+    Cancelled --> [*]
+    
+    note right of Created: 未決済
+    note right of Paid: 決済済み
+```
+
 ここが本編だよ〜！
 「行＝今の状態」「列＝やりたい操作」にして、セルに結果を書く感じ😊
 

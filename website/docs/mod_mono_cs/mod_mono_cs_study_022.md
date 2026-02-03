@@ -52,6 +52,28 @@ public async Task PlaceOrderAsync(Order order)
 
 ![Dual Write Problem](./picture/mod_mono_cs_study_022_dual_write.png)
 
+```mermaid
+graph TD
+    subgraph App ["アプリ (送信タイミング)"]
+        direction TB
+        DB_Save["1. DB保存"]
+        Msg_Send["2. メッセージ送信"]
+    end
+    
+    subgraph DB ["Database"]
+        Data[("Order Data")]
+    end
+    
+    subgraph Broker ["Message Broker"]
+        Queue["OrderPlaced Event"]
+    end
+    
+    DB_Save -- "Success!" --> Data
+    Msg_Send -- "❌ Failure!" --> Queue
+    
+    Note["💥 DBは更新されたが、通知が消えた!<br/>(誰も発送してくれない地獄)"]
+```
+
 同じ処理なのに、結果が割れるのが怖いポイント！
 
 ### ケースA：DB成功✅ / 送信失敗❌（めっちゃ多い）
@@ -78,6 +100,24 @@ public async Task PlaceOrderAsync(Order order)
 * 理想✨（でもA/Bが混ざる世界で運用するのが現実）
 
 ![Dual Write Matrix](./picture/mod_mono_cs_study_022_outcome_matrix.png)
+
+```mermaid
+graph LR
+    subgraph Outbox_Idea ["Outboxの仕組み"]
+        direction TB
+        subgraph Tx ["同一トランザクション (Atomicity)"]
+            Order["注文データ"]
+            Outbox["送信トレイ (DB内)"]
+        end
+        
+        Reader["Outbox Reader"]
+        Broker["External Broker"]
+    end
+    
+    Tx -- "1. まとめて保存" --> DB[("Database")]
+    DB -- "2. 読み出し" --> Reader
+    Reader -- "3. 送信 (成功までリトライ)" --> Broker
+```
 
 ---
 

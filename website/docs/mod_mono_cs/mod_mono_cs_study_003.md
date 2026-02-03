@@ -75,6 +75,23 @@ Orderingが「ユーザー管理」を始めたら破滅のカウントダウン
 Orderingは「状態が変わる中心」になりやすいよ🚥
 ここが肥大化しやすいから、最初に線引きしておくと勝ち✨
 
+```mermaid
+mindmap
+  root((ミニECの分割))
+    Catalog["Catalog (カタログ)"]
+      商品一覧・検索
+      価格・販促
+      真実のソース王
+    Identity["Identity (会員)"]
+      ログイン・ID管理
+      プロフィール
+      配送先住所
+    Ordering["Ordering (注文)"]
+      注文フロー
+      支払い待ち/完了
+      発送ステータス
+```
+
 ---
 
 ## 代表ユースケース（この題材で何をする？）🧩✨
@@ -108,6 +125,26 @@ Orderingは「状態が変わる中心」になりやすいよ🚥
 ここで超大事ルール👇
 **「同じデータを、複数モジュールが “主” として持たない」** 🙅‍♀️
 （コピーやスナップショットはOK！“主” が誰かを決めるのが大事✨）
+
+```mermaid
+graph TD
+  subgraph Catalog_Ctx ["Catalog (所有者)"]
+    P1["Product (商品マスタ)"]
+  end
+  subgraph Identity_Ctx ["Identity (所有者)"]
+    U1["User (会員マスタ)"]
+  end
+  subgraph Ordering_Ctx ["Ordering (利用者)"]
+    O["Order (注文)"]
+    P2["Product Snapshot"]
+    U2["Customer ID"]
+  end
+  
+  P1 -- "情報を写す" --> P2
+  U1 -- "IDだけ持つ" --> U2
+  P2 --- O
+  U2 --- O
+```
 
 ---
 
@@ -144,6 +181,23 @@ Orderingは「状態が変わる中心」になりやすいよ🚥
 **さらにポイント✨**
 注文には「その時点の価格や商品名」を**スナップショット**として持たせると強い💪
 （Catalogの価格が変わっても、過去の注文は守れる🛡️）
+
+```mermaid
+graph LR
+    subgraph Master ["Catalog (原本)"]
+        Price["商品 A: 1000円"]
+    end
+    
+    subgraph History ["Ordering (履歴)"]
+        Snap["購入時 A: 1000円<br/>(固定)"]
+    end
+    
+    Master -- "注文確定時にコピー" --> History
+    Price -- "その後 1200円に改定" --> Price
+    
+    style Snap fill:#e3f2fd,stroke:#1976d2
+    style Price fill:#fff3e0,stroke:#fb8c00
+```
 
 ---
 

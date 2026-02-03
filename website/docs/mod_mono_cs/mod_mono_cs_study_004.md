@@ -25,6 +25,27 @@ SoC（Separation of Concerns）は、ひとことで言うと…
 
 …これ、**全部いっしょのメソッドに入れると**、変更が来たときにドミノ倒し💥になります😵‍💫
 
+```mermaid
+graph TD
+  subgraph Messy ["ごちゃ混ぜ (地獄😇)"]
+    direction TB
+    All["1つの巨大なメソッド<br/>(UI + ルール + DB + 外部API)"]
+    Change["どこか1つ変更"] --> All
+    All --> Risk["全体が壊れるリスク (ドミノ倒し)"]
+  end
+  
+  subgraph Healthy ["SoC (スッキリ😎)"]
+    direction TB
+    UI["画面担当 (UI)"]
+    Logic["ルール担当 (Domain)"]
+    IO["外部担当 (Infra)"]
+    
+    UI <--> Logic
+    Logic <--> IO
+    Note["独立しているから、他を壊さず直せる!"]
+  end
+```
+
 ---
 
 ## 2) モジュラーモノリスでSoCが超大事な理由🏠🧩
@@ -112,6 +133,27 @@ public async Task<IActionResult> Checkout(CheckoutRequest req)
 * **Infrastructure（実装）**：DB/外部API/メールなどの“具体”🧰
 
 > 大事：**Domain は I/O を知らない**（DBやHTTPや外部APIに触れない）🙅‍♀️✨
+
+```mermaid
+graph TD
+  subgraph Ordering_Module ["Ordering モジュール"]
+    direction TB
+    UI["UI (コントローラ)<br/>HTTPの窓口"]
+    App["Application (ユースケース)<br/>進行役・手順"]
+    Domain["Domain (核心部)<br/>ビジネスルール"]
+    Infra["Infrastructure (具体)<br/>DB・外部API"]
+    
+    UI --> App
+    App --> Domain
+    Infra -- "IFを実装" --> Domain
+    App --> Infra
+  end
+  
+  style Domain fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+  style App fill:#e1f5fe,stroke:#0288d1
+  style UI fill:#f1f8e9,stroke:#388e3c
+  style Infra fill:#f3e5f5,stroke:#7b1fa2
+```
 
 ---
 
@@ -249,6 +291,22 @@ public sealed class PlaceOrder
         return order.Id;
     }
 }
+
+```mermaid
+sequenceDiagram
+    participant UI as UI (Controller)
+    participant App as Application (UseCase)
+    participant Dom as Domain (Order)
+    participant Infra as Infrastructure (DB/API)
+
+    UI->>App: 注文実行依頼 (ExecuteAsync)
+    App->>Infra: 1. 必要なデータ取得 (GetProducts)
+    Infra-->>App: 商品データ等
+    App->>Dom: 2. ルール適用・生成 (Order.Create)
+    Dom-->>App: 注文オブジェクト
+    App->>Infra: 3. 具体的な処理 (Charge / Save / Send)
+    App-->>UI: 注文IDを返却
+```
 ```
 
 ---

@@ -57,6 +57,27 @@ public class OrderLine
 
 ### ✅ 良い設計の方針（この章の核）🧱🔒
 
+```mermaid
+graph TD
+    subgraph Aggregate ["Aggregate (集約)"]
+        Root["Order (集約ルート)"]
+        L1["OrderLine"]
+        L2["OrderLine"]
+        Root --- L1
+        Root --- L2
+    end
+    
+    Buyer["外部 (Application)"] -- "1. メソッドを呼ぶ" --> Root
+    Root -- "内部で管理" --> L1
+    
+    Buyer -. "❌ 直接いじるの禁止!" .-> L1
+    
+    style Root fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style Aggregate fill:#f1f8e9,stroke:#388e3c,stroke-dasharray: 5 5
+```
+
+* 外部が触っていいのは **集約ルートだけ** 🏰✨
+
 * 外部が触っていいのは **集約ルートだけ** 🏰✨
 * 子Entityやコレクションは **外から直接いじれない** 🙅‍♀️
 * ルール（不変条件）は **集約ルートのメソッドで強制** ✅
@@ -220,6 +241,19 @@ public sealed class Order
 ## 集約をどう切る？🧠✂️✨（迷ったときのチェックリスト📋）
 
 ![Transaction Scope](./picture/mod_mono_cs_study_015_consistency_boundary.png)
+
+```mermaid
+graph LR
+    subgraph Boundary ["一貫性の境界"]
+        Obj1["Order"]
+        Obj2["OrderLine 1"]
+        Obj3["OrderLine 2"]
+    end
+    
+    Tx["1つのトランザクション"] -- "まとめて更新 & 保存" --> Boundary
+    
+    Note["💡 この中に入れたものは<br/>『DB保存の瞬間』に必ず整合性が保たれる!"]
+```
 
 集約の境界は「大きくしすぎる」と重くなるし、「小さすぎる」と整合が守れない…😵
 そこで、まずはこれで決めるのがおすすめ😊

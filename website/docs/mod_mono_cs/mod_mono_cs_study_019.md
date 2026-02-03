@@ -45,11 +45,36 @@ public class Order
 * **変更が怖い**：メール文面変更でOrderに手を入れる羽目…😱
 * **トランザクションも混ざる**：DB更新と外部I/Oが絡んで失敗時がカオス🌪️
 
+```mermaid
+graph TD
+    subgraph Heavy_Logic ["依存がパンパンのOrder.Pay() 😇"]
+        Logic["状態変更"]
+        Logic -- "直接呼ぶ" --> S1["メール送信 API"]
+        Logic -- "直接呼ぶ" --> S2["在庫引き当て API"]
+        Logic -- "直接呼ぶ" --> S3["ポイント付与 DB"]
+    end
+    Note["❌ テストもしにくいし、<br/>どれか1つ落ちると全体が止まる!"]
+```
+
 ---
 
 ## 良い例😎✨（“起きた事実”だけを出す）
 
 ![Past Tense Event](./picture/mod_mono_cs_study_019_past_tense_event.png)
+
+```mermaid
+graph LR
+    subgraph Aggregate ["集約 (不変条件の番人)"]
+        Root["Order"]
+        Root -- "事実を出す" --> Event["OrderPaid🔔<br/>(起きたこと)"]
+    end
+    
+    subgraph SideEffects ["副作用 (後でやる人たち)"]
+        Event -- "反応" --> E1["メール"]
+        Event -- "反応" --> E2["出荷"]
+        Event -- "反応" --> E3["ポイント"]
+    end
+```
 
 ### ドメインイベントとは？🔔
 
@@ -221,6 +246,20 @@ public sealed class PayOrderService
 
 > ここでやってるのは「ミニ版ディスパッチャ」だよ🔁
 > 本格版は次章以降で「複数ハンドラ」「非同期」「Outbox」「失敗耐性」へ育てる🌱✨
+
+```mermaid
+sequenceDiagram
+    participant App as Application Service
+    participant Dom as Domain (Aggregate)
+    participant Handler as Event Handlers
+
+    App->>Dom: 1. ビジネスアクション実行 (Pay)
+    Note over Dom: 状態変更 & <br/>イベントリストに Raise!
+    Dom-->>App: (完了)
+    App->>Dom: 2. イベントリストを取得
+    App->>Handler: 3. 各ハンドラに通知 (Dispatch)
+    Handler-->>App: (完了)
+```
 
 ---
 

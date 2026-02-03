@@ -21,6 +21,18 @@
 こういう「境界がはっきりしたモジュール」を、**1つのアプリとしてデプロイしつつ**中身を分割して運用するのがモジュラーモノリスのコアだよ🧩🏠
 （＝単一デプロイでも、内部はモジュールが独立して境界を持つ感じ） ([Milan Jovanović][1])
 
+```mermaid
+graph LR
+    subgraph Module ["モジュール (部屋)"]
+        direction TB
+        Internal["内部実装 (家具など)<br/>外からは見えない"]
+        API["公開API (ドア)<br/>ここだけ開いている"]
+    end
+    
+    Other["外部 / 他モジュール"] -- "ドア経由のみアクセス" --> API
+    API --> Internal
+```
+
 ---
 
 ## 2) 「フォルダ分け＝モジュール」だと何がダメ？📦😵
@@ -63,6 +75,23 @@
 * 「割引計算」「在庫引当」みたいな大事ルールが、あちこちにコピペされる
 * そのうち片方だけ修正されて事故る🚑💦
 
+```mermaid
+flowchart TD
+    subgraph Owner ["モジュール A (所有者)"]
+        Data["テーブル/エンティティ<br/>(所有権あり)"]
+        Impl["internal な内部実装"]
+    end
+    
+    subgraph Guest ["モジュール B (他所様)"]
+    end
+    
+    Guest -. "❌ 勝手に更新 (データの侵害)" .-> Data
+    Guest -. "❌ 直接 new して使う (内部侵入)" .-> Impl
+    
+    style Guest fill:#fff1f1,stroke:#d32f2f
+    style Owner fill:#f1f8e9,stroke:#388e3c
+```
+
 ---
 
 ## 4) 境界（ルール）を“守らせる”コツ3点🚦✨
@@ -81,6 +110,25 @@ C# の `internal` は「**同じアセンブリ（同じプロジェクト）内
 
 * 「ルールはドキュメント」だけだと破られる（人は急ぐので…😇）
 * **破れない形**にしておくと、未来の自分が救われる🫶✨
+
+```mermaid
+graph TD
+  subgraph Project_C ["Catalog プロジェクト"]
+    direction TB
+    PublicClass["CatalogApi (public)"]
+    InternalClass["DbContext (internal)"]
+  end
+  
+  subgraph Project_O ["Ordering プロジェクト"]
+    Code["UseCase"]
+  end
+  
+  Code -- "✅ 参照OK" --> PublicClass
+  Code -. "❌ コンパイルエラー!<br/>(見えない)" .-> InternalClass
+  
+  style PublicClass fill:#e3f2fd,stroke:#1976d2
+  style InternalClass fill:#ffebee,stroke:#c62828
+```
 
 ---
 

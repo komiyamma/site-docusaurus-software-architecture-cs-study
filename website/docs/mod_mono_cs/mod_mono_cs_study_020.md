@@ -71,6 +71,22 @@
 
 ![Raise Point](./picture/mod_mono_cs_study_020_raise_point.png)
 
+```mermaid
+graph TD
+    subgraph Aggregate_Zone ["🥚 集約内部 (Raise)"]
+        Method["Business Method"] -- "1. 状態変更" --> State["State Change"]
+        Method -- "2. 事実発生" --> Basket["DomainEvents (ためる窓口)"]
+    end
+    
+    subgraph App_Zone ["🧱 アプリ層 (Publish)"]
+        Save["1. DB保存 (Commit)"] -- "成功したら" --> Dispatch["2. 各ハンドラへ配布"]
+    end
+    
+    Basket -- "取り出す" --> Dispatch
+    
+    style Basket fill:#fff9c4,stroke:#fbc02d,stroke-dasharray: 5 5
+```
+
 ## ざっくり構図（これが気持ちいいやつ）🧠🧩
 
 1. **集約**：状態を変える + イベントを `DomainEvents` に積む🧺
@@ -79,6 +95,23 @@
 
 > 「Raise（事実の発生）」と「Publish（配布）」を分ける
 > これで一貫性が守りやすくなるよ🔒✨
+
+```mermaid
+sequenceDiagram
+    participant App as App Service
+    participant Repo as Repository
+    participant Dom as Aggregate
+    participant Disp as Dispatcher
+    participant Hand as Handler
+
+    App->>Dom: 1. Pay()
+    Dom->>Dom: Raise(Paid)
+    App->>Repo: 2. SaveAsync()
+    Repo-->>App: (Commit成功)
+    App->>Dom: 3. get DomainEvents
+    App->>Disp: 4. DispatchAsync(events)
+    Disp->>Hand: 5. 実行 (副作用)
+```
 
 ---
 

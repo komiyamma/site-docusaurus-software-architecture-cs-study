@@ -23,6 +23,25 @@
 * 境界を越えるときはルールがある ✅
   …って感じだね😊 ([milanjovanovic.tech][1])
 
+```mermaid
+graph TD
+  subgraph App["1つのアプリケーション（デプロイ単位）"]
+    subgraph ModuleA["モジュール A"]
+      direction TB
+      InternalA["内部ロジック<br/>(隠蔽されている)"]
+    end
+    subgraph ModuleB["モジュール B"]
+      direction TB
+      InternalB["内部ロジック"]
+    end
+    
+    API_A["公開API<br/>(窓口)"]
+    
+    ModuleB -- "窓口経由でのみアクセス" --> API_A
+    API_A --> ModuleA
+  end
+```
+
 ---
 
 ## 2) 3兄弟を整理しよ：モノリス / モジュラーモノリス / マイクロサービス🧠✨
@@ -40,11 +59,34 @@
 
 ### ざっくり比較表📋✨
 
-| 方式            | デプロイ単位 | モジュール間の会話              | 強み              | つらみ😵           |
-| ------------- | ------ | ---------------------- | --------------- | --------------- |
-| モノリス          | 1つ     | 何でも直接呼びがち              | 作るのが速い / 運用が軽い  | 境界が溶けると地獄💥     |
-| **モジュラーモノリス** | **1つ** | **公開API・イベントなど“窓口”だけ** | 運用は軽いまま、変更が安全に✨ | 境界ルールを守らないと崩壊😇 |
 | マイクロサービス      | 複数     | ネットワーク越し               | チーム分割・独立スケールに強い | 分散システムのコスト増💸   |
+
+```mermaid
+graph TD
+  subgraph Monolith ["モノリス"]
+    M_App["アプリ (1つ)"]
+    M_Everything["機能A, B, C...<br/>(境界が曖昧・直接呼び出し)"]
+  end
+
+  subgraph ModMono ["モジュラーモノリス"]
+    MM_App["アプリ (1つ)"]
+    subgraph MM_A ["モジュール A"]
+    end
+    subgraph MM_B ["モジュール B"]
+    end
+    MM_A <-- "公開窓口経由" --> MM_B
+  end
+
+  subgraph Microservices ["マイクロサービス"]
+    subgraph MS_A ["サービス A"]
+      A_App["アプリA"]
+    end
+    subgraph MS_B ["サービス B"]
+      B_App["アプリB"]
+    end
+    MS_A <-. "ネットワーク越し (HTTP/gRPC等)" .-> MS_B
+  end
+```
 
 「え、最初からマイクロサービスでよくない？」って思うかもだけど、**最初はモノリス（ちゃんとしたモノリス）から**が良いケースが多い、って意見も有名だよ📌 ([martinfowler.com][4])
 
@@ -98,6 +140,26 @@ public class OrderService
 
 これだけで、影響範囲が読みやすくなるよ👀✨
 （※次章以降で、**この“禁止”をコードで強制する方法**までやるよ🧩）
+
+```mermaid
+flowchart LR
+    subgraph Bad ["ダメ例😇 (境界崩壊サービス)"]
+        direction TB
+        Order["OrderService"]
+        Order -. "直接いじる" .-> DB[("他所のDB・内部")]
+        Order -. "直接呼ぶ" .-> Inv["Inventory内部"]
+    end
+    
+    subgraph Good ["良い例😎 (モジュラーモノリス)"]
+        direction TB
+        Order2["Ordering モジュール"]
+        API_Inv["Catalog API<br/>(窓口)"]
+        Inv2["Catalog 内部"]
+        
+        Order2 -- "窓口だけ通る" --> API_Inv
+        API_Inv --> Inv2
+    end
+```
 
 ---
 

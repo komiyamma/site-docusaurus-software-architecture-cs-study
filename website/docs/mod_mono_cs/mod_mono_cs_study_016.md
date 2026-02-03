@@ -29,6 +29,21 @@ CQSを守ると、こういう “こっそり副作用” が減って、
 ✅ テストが超ラク
 になるよ😊✨ ([martinfowler.com][1])
 
+```mermaid
+graph TD
+    subgraph Mixed ["混ぜるな危険 (Bad😇)"]
+        M["GetAndMarkAsViewed"]
+        M -- "副作用" --> DB1[("State Updated")]
+        M -- "戻り値" --> UI1["Object Data"]
+    end
+    
+    subgraph CQS ["CQS (Good😎)"]
+        direction LR
+        C["Command (更新)"] -- "副作用のみ" --> DB2[("State Updated")]
+        Q["Query (参照)"] -- "戻り値のみ" --> UI2["Object Data"]
+    end
+```
+
 ---
 
 ## 2) CQSって何？（Command と Query）🧠🧩
@@ -44,6 +59,25 @@ CQSを守ると、こういう “こっそり副作用” が減って、
 
 * **値を返す**（一覧、詳細、検索、集計）
 * 参照は “世界を変えない” のが基本（副作用なし）✨ ([martinfowler.com][1])
+
+```mermaid
+graph LR
+    subgraph UI ["ユーザーインタフェース"]
+        UI_Post["画面ポチッ (更新依頼)"]
+        UI_Get["画面表示 (データ取得)"]
+    end
+    
+    subgraph App ["Application (CQS)"]
+        direction TB
+        Cmd["Command: ハンドラでDB更新"]
+        Qry["Query: DBから直接読む"]
+    end
+    
+    UI_Post -- "1. 実行" --> Cmd
+    Cmd -- "成功/失敗/ID" --> UI_Post
+    UI_Get -- "2. 問い合わせ" --> Qry
+    Qry -- "DTO (値ジェクト)" --> UI_Get
+```
 
 ---
 

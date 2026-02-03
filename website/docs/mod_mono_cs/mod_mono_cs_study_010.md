@@ -22,6 +22,26 @@
 この“受付”があると、モジュールの中を自由に改装しても（リファクタしても）他モジュールが壊れにくいよ😊
 「モジュールは自分のデータ・ロジック・APIを持つ」「外に見せる面は狭く」が基本方針だよ。([Dometrain][1])
 
+```mermaid
+graph LR
+    subgraph Catalog ["Catalog モジュール"]
+        API["Public API (窓口)"]
+        Domain["Domain (内部知識)"]
+        DB[("Database (専用DB)")]
+    end
+    
+    subgraph Ordering ["Ordering モジュール"]
+        Buyer["注文処理ロジック"]
+    end
+    
+    Buyer -- "1. 窓口経由で聞く (DTO)" --> API
+    API --> Domain
+    Domain --> DB
+    
+    Buyer -. "❌ 直接覗き見禁止" .-> Domain
+    Buyer -. "❌ 直接触るの禁止" .-> DB
+```
+
 ---
 
 ## 2) まずダメ例😇💥（依存が雪だるま☃️）
@@ -103,6 +123,44 @@ Catalog の中は「どう実装してるか」知らなくてOK🙆‍♀️
   * Ordering
 
     * Ordering.Application（ここが Catalog.PublicApi を呼ぶ）
+
+```mermaid
+graph TD
+  subgraph Modules
+    subgraph Catalog
+      C_Api["Catalog.PublicApi<br/>(Interface & DTO)"]
+      C_Impl["Catalog.Application<br/>(内部実装)"]
+    end
+    subgraph Ordering
+      O_App["Ordering.Application"]
+    end
+  end
+  
+  O_App -- "参照" --> C_Api
+  C_Impl -- "実装" --> C_Api
+  O_App -. "参照不可!" .-> C_Impl
+  
+  style C_Api fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+```
+
+```mermaid
+graph TD
+  subgraph Modules
+    subgraph Catalog
+      C_Api["Catalog.PublicApi<br/>(Interface & DTO)"]
+      C_Impl["Catalog.Application<br/>(内部実装)"]
+    end
+    subgraph Ordering
+      O_App["Ordering.Application"]
+    end
+  end
+  
+  O_App -- "参照" --> C_Api
+  C_Impl -- "実装" --> C_Api
+  O_App -. "参照不可!" .-> C_Impl
+  
+  style C_Api fill:#e3f2fd,stroke:#1976d2,stroke-width:2px
+```
 
 ---
 

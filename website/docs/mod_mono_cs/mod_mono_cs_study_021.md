@@ -37,6 +37,25 @@
 
 ![Multiple Handlers](./picture/mod_mono_cs_study_021_handlers.png)
 
+```mermaid
+graph LR
+    subgraph Domain ["Domain"]
+        Event["OrderPaid DomainEvent🔔"]
+    end
+    
+    subgraph Handlers ["Event Handlers (後付け可能)"]
+        H1["Receipt Email"]
+        H2["Audit Log"]
+        H3["Loyalty Point"]
+    end
+    
+    Event -- "通知" --> H1
+    Event -- "通知" --> H2
+    Event -- "通知" --> H3
+    
+    Note["💡 Domainを変えずに、<br/>ハンドラを足すだけで機能が増える!"]
+```
+
 ### ルール1️⃣：**ドメインは“副作用ゼロ”が目標**🧼✨
 
 * ドメイン（Domain）は「正しい状態遷移」「不変条件」だけ守る💎
@@ -298,6 +317,19 @@ public sealed class DomainEventDispatcher : IDomainEventDispatcher
 EF Coreなら SaveChangesInterceptor を使うと、DbContextを汚さずに差し込めるよ〜🧰 ([Microsoft Learn][4])
 
 （この“ズレ問題”が次の Outbox 章の主役になる📤💥）
+
+```mermaid
+graph TD
+    subgraph Dispatch_Loop ["Dispatcher (配送ループ)"]
+        direction TB
+        E["DomainEvent"] --> H1["Handler A"]
+        E --> H2["Handler B"]
+        E --> H3["Handler C"]
+    end
+    
+    H1 -- "Success" --> OK
+    H2 -- "Fail!🔥" --> Error["ここで止まると<br/>H3が実行されない?"]
+```
 
 ---
 

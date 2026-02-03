@@ -31,6 +31,19 @@
 
 DDDでは、大きいモデルを **Bounded Context に分割して、相互関係を“明示”する**のが超重要って話になってるよ📌 ([martinfowler.com][4])
 
+```mermaid
+graph LR
+    subgraph ContextA ["文脈 A (例: カタログ)"]
+        TermA["単語 X<br/>(意味: 表示順)"]
+    end
+    
+    subgraph ContextB ["文脈 B (例: 注文)"]
+        TermB["単語 X<br/>(意味: 購入注文)"]
+    end
+    
+    ContextA -- "境界を越えるなら<br/>翻訳が必要" --> ContextB
+```
+
 ---
 
 ## 2. 事故る原因：「同じ単語」でも意味が違う😇💥
@@ -53,6 +66,27 @@ DDDでは、大きいモデルを **Bounded Context に分割して、相互関�
 * 変更したら別機能が壊れる（しかも理由が読めない）😇
 
 これが「境界を切る」前に起きる典型事故だよ〜💥
+
+```mermaid
+graph TD
+    Order["Order (という単語)"]
+    
+    subgraph Catalog ["Catalog文脈"]
+        C["表示順 (Display Order)"]
+    end
+    subgraph Ordering ["Ordering文脈"]
+        O["購入注文 (Purchase Order)"]
+    end
+    subgraph Shipping ["Shipping文脈"]
+        S["配送指示 (Shipping Order)"]
+    end
+    
+    Order --> C
+    Order --> O
+    Order --> S
+    
+    Note["❌ 全員が『Order』だけで会話すると<br/>どれのことか分からず大混乱!"] -.-> Order
+```
 
 ---
 
@@ -201,6 +235,29 @@ public sealed class PurchaseOrder
 * **Catalog**（商品を売るための世界）📦
 * **Ordering**（注文を成立させる世界）🛒
 * **Identity**（誰が誰か、ログインや会員の世界）🪪
+
+```mermaid
+graph TD
+  subgraph BoundedContexts ["ミニECの境界 (Bounded Context)"]
+    subgraph Catalog_C ["Catalog (商品島)"]
+        direction TB
+        C1["Product (商品)"]
+        C2["DisplayOrder (表示順)"]
+    end
+    
+    subgraph Ordering_C ["Ordering (注文島)"]
+        direction TB
+        O1["PurchaseOrder (注文)"]
+        O2["Status (進捗)"]
+    end
+    
+    subgraph Identity_C ["Identity (名前島)"]
+        direction TB
+        I1["User (ログイン)"]
+        I2["Address (住所録)"]
+    end
+  end
+```
 
 ---
 

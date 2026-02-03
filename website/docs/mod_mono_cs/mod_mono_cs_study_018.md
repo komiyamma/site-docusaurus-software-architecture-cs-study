@@ -14,6 +14,24 @@
 
 ![Exception vs Result](./picture/mod_mono_cs_study_018_exception_vs_result.png)
 
+```mermaid
+graph TD
+    subgraph Exception_Zone ["想定外 / 異常 (Exception)"]
+        E1["DBダウン"]
+        E2["バグ / Null"]
+        E3["型エラー"]
+    end
+    
+    subgraph Result_Zone ["想定内 / 仕様 (Result)"]
+        R1["入力ミス"]
+        R2["在庫なし"]
+        R3["支払い済み"]
+    end
+    
+    style Exception_Zone fill:#ffebee,stroke:#c62828
+    style Result_Zone fill:#e8f5e9,stroke:#2e7d32
+```
+
 ### ✅ Resultを使う（＝「想定内の失敗」）🙂
 
 * 入力ミス（Validation）
@@ -60,6 +78,28 @@
 
 * Result を HTTP に変換（400/404/409/500 など）
 * 例外が漏れた最後の保険として、**集中例外ハンドリング**を置く（IExceptionHandler など）🧯 ([Microsoft Learn][3])
+
+```mermaid
+graph LR
+    subgraph In ["内部 (Domain/App)"]
+        Logic["業務ロジック"]
+        Logic -- "想定外なら" --> Throw["Exception投擲"]
+    end
+    
+    subgraph Boundary ["境界 (PublicAPI)"]
+        Stop["Try-Catchで止める🛑"]
+        Stop -- "エラー情報に包む" --> Result["Result.Fail"]
+    end
+    
+    subgraph Host ["API層"]
+        HTTP["HTTPステータス変換"]
+    end
+    
+    Logic -- "想定内なら" --> Result
+    Result --> HTTP
+    Throw -- "漏れたら" --> Global["Global Handler🧯"]
+    Global --> HTTP500["500 Internal Error"]
+```
 
 ---
 

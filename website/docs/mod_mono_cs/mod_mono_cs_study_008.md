@@ -28,6 +28,24 @@
 * Host ➡️ Infrastructure ➡️ Application ➡️ Domain
   （矢印は “参照していい方向” だよ🚦）
 
+```mermaid
+graph TD
+    subgraph DependencyFlow ["依存の方向 (DIP)"]
+        direction BT
+        Host["Host (起動・配線)"]
+        Infra["Infrastructure (具体実装)"]
+        App["Application (ユースケース)"]
+        Dom["Domain (ビジネスルール)"]
+        
+        Host --> Infra
+        Host --> App
+        Infra --> App
+        Infra --> Dom
+        App --> Dom
+    end
+    Note["💡 矢印は常に内側（Domain）へ向かう!<br/>Domainは誰のことも知らない『孤高の王様』がいい。"]
+```
+
 ※今の最新では **.NET 10（LTS）** が 2025/11/11 リリースで、サポートは 2028/11/14 までだよ📅✨ ([Microsoft][1])
 ※C# は **C# 14** が最新で、.NET 10 でサポートされてるよ🧡 ([Microsoft Learn][2])
 
@@ -95,6 +113,24 @@
 * Ordering.Application ➡️ Ordering.Domain を参照
 * Ordering.Infrastructure ➡️ Ordering.Application を参照（結果として Domain も見える）
 * Domain は **何も参照しない**（ここ大事💎）
+
+```mermaid
+graph LR
+    H["Host<br/>(APIプロジェクト)"]
+    I["Ordering.Infra<br/>(実装プロジェクト)"]
+    A["Ordering.App<br/>(台本プロジェクト)"]
+    D["Ordering.Domain<br/>(ルールプロジェクト)"]
+    
+    H -- "参照" --> I
+    H -- "参照" --> A
+    I -- "参照" --> A
+    A -- "参照" --> D
+    
+    style D fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+    style A fill:#e1f5fe,stroke:#0288d1
+    style I fill:#f3e5f5,stroke:#7b1fa2
+    style H fill:#f1f8e9,stroke:#388e3c
+```
 
 ---
 
@@ -207,6 +243,19 @@ Console.WriteLine("Paid ✅");
 
 * Domain プロジェクトは Infrastructure を参照してないので **コンパイルできない**👏✨
   → これが「Project参照で守る」の最強ポイントだよ🚦💪
+
+```mermaid
+graph TD
+    subgraph D_Proj ["Ordering.Domain"]
+        Code_D["ドメインロジック"]
+    end
+    subgraph I_Proj ["Ordering.Infra"]
+        Code_I["DBアクセス具体例"]
+    end
+    
+    Code_D -. "❌ 参照しようとする (逆流)" .-> Code_I
+    Error["コンパイラ: 'Ordering.Infra' への参照がありません!<br/>(物理的に呼ぶことができない 🛡️)"]
+```
 
 ---
 

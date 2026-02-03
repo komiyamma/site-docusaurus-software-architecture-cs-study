@@ -28,6 +28,23 @@
 
 ![Outbox Dispatcher Flow](./picture/mod_mono_cs_study_024_dispatcher_flow.png)
 
+```mermaid
+sequenceDiagram
+    participant Worker as Background Worker
+    participant DB as Outbox Table
+    participant Broker as External Broker
+
+    loop 定期実行 (Polling)
+        Worker->>DB: 1. 未送信を取得 (& ロック)
+        DB-->>Worker: メッセージリスト
+        loop 各メッセージ
+            Worker->>Broker: 2. 送信
+            Broker-->>Worker: OK
+            Worker->>DB: 3. 『送信済み』に更新
+        end
+    end
+```
+
 Outboxの配信処理は、ざっくりこう👇
 
 1. Outboxから「未送信」を取る📤
@@ -84,6 +101,19 @@ Outboxの配信処理は、ざっくりこう👇
 * ⚠️ “どこまで分けるか”の設計が必要
 
 .NET の Worker Service を Windows サービスとして動かす流れも、公式で案内されています([Microsoft Learn][4])
+
+```mermaid
+graph TD
+    subgraph S1 ["① ポーリング (常駐)"]
+        A[Web App] -- "内部スレッド" --> D1[Outbox Reader]
+    end
+    subgraph S2 ["② バッチ (定時)"]
+        B[Scheduler] -- "起動" --> D2[Batch Console]
+    end
+    subgraph S3 ["③ 別プロセス (専門家)"]
+        C[Worker Service] -- "独立稼働" --> D3[Dispatcher]
+    end
+```
 
 ---
 

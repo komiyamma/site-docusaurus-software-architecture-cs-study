@@ -22,6 +22,16 @@ EF Coreは基本ちゃんと作ってくれるけど、**意図が伝わらな�
 
 ![Migration Flow](./picture/mod_mono_cs_study_014_migration_flow.png)
 
+```mermaid
+graph LR
+    A["Dev: モデル変更"] --> B["Migration生成"]
+    B --> C["SQL生成 & レビュー👀"]
+    C --> D["検証環境へ適用"]
+    D --> E["本番環境へ適用"]
+    
+    style C fill:#fff9c4,stroke:#fbc02d,stroke-width:2px
+```
+
 ### ① Migrationは「モジュールの持ち物」📦🧩
 
 * Orderingのテーブル変更なら、**OrderingモジュールのMigration**として作る
@@ -38,6 +48,21 @@ EF Coreは基本ちゃんと作ってくれるけど、**意図が伝わらな�
 列削除・型変更・NOT NULL化…みたいな変更は、いきなりやると死にがち😇
 安全にやる王道は **Expand → Migrate → Contract**（増やす→移す→消す）だよ✨ ([PlanetScale][3])
 
+```mermaid
+graph TD
+    subgraph Step1 ["1. Expand (拡張)"]
+        S1["新カラム追加<br/>(既存は残す)"]
+    end
+    subgraph Step2 ["2. Migrate (移行)"]
+        S2["新旧両方に書き込む<br/>データを移す"]
+    end
+    subgraph Step3 ["3. Contract (収縮)"]
+        S3["旧カラムを削除"]
+    end
+    
+    Step1 --> Step2 --> Step3
+```
+
 ---
 
 ## 最小の運用フロー（これをテンプレ化しよ！）📋✨
@@ -51,6 +76,21 @@ EF Coreは基本ちゃんと作ってくれるけど、**意図が伝わらな�
 * `Modules/Identity/Identity.Infrastructure/Persistence/Migrations`
 
 > 「Migrationをどこに出すか」は `--output-dir` で指定できるよ✅ ([Microsoft Learn][1])
+
+```mermaid
+graph TD
+  subgraph Project ["MiniECommerce.sln"]
+    subgraph Mod_Catalog ["Catalog Module"]
+        M1["Migrations 📁"]
+    end
+    subgraph Mod_Ordering ["Ordering Module"]
+        M2["Migrations 📁"]
+    end
+    subgraph Mod_Identity ["Identity Module"]
+        M3["Migrations 📁"]
+    end
+  end
+```
 
 ---
 
