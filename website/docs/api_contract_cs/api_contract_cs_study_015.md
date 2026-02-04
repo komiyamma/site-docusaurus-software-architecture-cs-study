@@ -10,7 +10,7 @@
 ---
 
 ## 15.2 まず結論：null は「仕様」だから、軽く扱うと事故る😵☂️
-![NRT Umbrella](picture/api_contract_cs_study_015_umbrella.png)
+![NRT Umbrella](./picture/api_contract_cs_study_015_nrt_umbrella.png)
 
 ```mermaid
 graph TD
@@ -90,7 +90,7 @@ public string FindNickname(int userId);
 ---
 
 ## 15.6 “契約としての null” を決める3パターン🍡✨
-![NRT Strategy Patterns](picture/api_contract_cs_study_015_nrt_patterns.png)
+![NRT Strategy Patterns](./picture/api_contract_cs_study_015_nrt_strategy_patterns.png)
 
 ```mermaid
 flowchart LR

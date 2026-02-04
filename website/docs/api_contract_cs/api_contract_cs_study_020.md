@@ -46,7 +46,7 @@
 ---
 
 ## 3) “Keep a Changelog” の型を採用するとラクになる 🧱😊
-![Changelog Boxes](picture/api_contract_cs_study_020_changelog_boxes.png)
+![Changelog Boxes](./picture/api_contract_cs_study_020_changelog_boxes.png)
 
 ```mermaid
 mindmap

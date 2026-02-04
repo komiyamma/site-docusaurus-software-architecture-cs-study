@@ -9,7 +9,7 @@
 ---
 
 ## 5-1. 破壊的変更ってなに？💣
-![Breaking Change Trap](picture/api_contract_cs_study_005_breaking_trap.png)
+![Breaking Change Trap](./picture/api_contract_cs_study_005_breaking_trap.png)
 
 ```mermaid
 graph LR

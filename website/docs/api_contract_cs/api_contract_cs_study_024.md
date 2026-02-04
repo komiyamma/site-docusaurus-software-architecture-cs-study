@@ -23,7 +23,7 @@ OpenAPI は、HTTP API の「できること」を **言語に依存せず** 書
 
 ## 24.2 仕様書の中身、ざっくり構造を覚えよう🧠🗂️
 
-![OpenAPI Specification Structure](picture/api_contract_cs_study_024_openapi_structure.png)
+![OpenAPI Specification Structure](./picture/api_contract_cs_study_024_openapi_structure.png)
 
 ```mermaid
 mindmap

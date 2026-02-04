@@ -50,7 +50,7 @@ PRを開いたら、まずここだけ見て “方向” を決めるよ🧭✨
 ---
 
 ## 21.3 契約レビューの「型」：7ステップ🧠🧁
-![Contract Review Steps](picture/api_contract_cs_study_021_review_steps.png)
+![Contract Review Steps](./picture/api_contract_cs_study_021_contract_review_steps.png)
 
 ```mermaid
 graph TD
@@ -78,6 +78,8 @@ PRをレビューするとき、毎回この順番でいくとブレないよ✨
 * 「nullを返さなくした」→「利用者のifが不要になる…けど互換は？」
 
 ### Step 3：互換性の種類で分類する🧩
+
+![Compatibility Levels](./picture/api_contract_cs_study_021_producer_consumer_versions.png)
 
 * **ソース互換**：利用側が再コンパイルしたら通る？
 * **バイナリ互換**：再ビルドなしで動く？（MissingMethodException などが典型）([Microsoft Learn][1])
@@ -113,7 +115,7 @@ NG：
 
 ## 21.4 コピペで使える：契約レビュー・チェックリスト📋✅✨
 
-![PR Contract Review Checklists](picture/api_contract_cs_study_021_pr_contract_review.png)
+![PR Contract Review Checklists](./picture/api_contract_cs_study_021_pr_contract_review.png)
 
 ```mermaid
 mindmap

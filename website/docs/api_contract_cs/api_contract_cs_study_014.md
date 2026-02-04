@@ -40,7 +40,7 @@
 ---
 
 ## 14.4 どう選ぶ？判断基準の“最短ルール”⚖️✨
-![Exception vs Result Balance](picture/api_contract_cs_study_014_exception_vs_result.png)
+![Exception vs Result Balance](./picture/api_contract_cs_study_014_exception_vs_result.png)
 
 ```mermaid
 graph LR
@@ -86,7 +86,7 @@ Result型を public API に出すと、それ自体が契約になります。�
 ---
 
 ## 14.6 実装してみよう：最小で強い Result 型🛠️🎁
-![Result Type Structure](picture/api_contract_cs_study_014_result_structure.png)
+![Result Type Structure](./picture/api_contract_cs_study_014_result_structure.png)
 
 ```mermaid
 graph TD

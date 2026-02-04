@@ -131,7 +131,7 @@ C#だと `record` や `class`、WebだとJSONとして登場しがち。
 ---
 
 ## 3. “一瞬で見分ける”ための判断チャート🔍✨
-![Contract Types Flowchart](picture/api_contract_cs_study_002_contract_types.png)
+![Contract Types Flowchart](./picture/api_contract_cs_study_002_contract_types.png)
 
 ```mermaid
 flowchart TD

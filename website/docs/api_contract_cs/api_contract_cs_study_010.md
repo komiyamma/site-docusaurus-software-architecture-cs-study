@@ -10,7 +10,7 @@
 ---
 
 ## 10.1 「契約を見える化」って、何をするの？🤔💡
-![API Visualization](picture/api_contract_cs_study_010_api_visualization.png)
+![API Visualization](./picture/api_contract_cs_study_010_api_visualization.png)
 
 ```mermaid
 graph TD
@@ -91,7 +91,7 @@ C#だと基本はこれ👇
 ---
 
 ## 3. PublicApiAnalyzers を使ってみよう🛡️✨
-![Analyzer Workflow](picture/api_contract_cs_study_010_analyzer_workflow.png)
+![Analyzer Workflow](./picture/api_contract_cs_study_010_analyzer_workflow.png)
 
 ```mermaid
 sequenceDiagram

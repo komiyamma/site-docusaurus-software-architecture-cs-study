@@ -9,7 +9,7 @@
 ---
 
 ## 1) 互換性って、結局なに？🤔💭
-![Compatibility Types](picture/api_contract_cs_study_004_compatibility_types.png)
+![Compatibility Types](./picture/api_contract_cs_study_004_compatibility_types.png)
 
 ```mermaid
 graph TD

@@ -60,7 +60,7 @@ NuGet では、利用側（Consumer）が「どのバージョンまで許すか
 ---
 
 ## 19.4 「依存関係更新で壊れる」ってどういうこと？😱
-![Transitive Impact](picture/api_contract_cs_study_019_transitive_impact.png)
+![Transitive Impact](./picture/api_contract_cs_study_019_transitive_impact.png)
 
 ```mermaid
 graph TD

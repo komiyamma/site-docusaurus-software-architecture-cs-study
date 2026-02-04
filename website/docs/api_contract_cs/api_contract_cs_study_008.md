@@ -9,7 +9,7 @@
 ---
 
 ## 8-1. そもそも互換ポリシーってなに？🤔📜
-![Compatibility Policy](picture/api_contract_cs_study_008_compatibility_policy.png)
+![Compatibility Policy](./picture/api_contract_cs_study_008_compatibility_policy.png)
 
 ```mermaid
 graph TD

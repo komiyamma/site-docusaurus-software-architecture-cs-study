@@ -35,7 +35,7 @@ DTO変更は、だいたいこの2方向で事故るよ😇
 
 ## 3) DTO進化の大原則🍡✨（最重要）
 
-![DTO Evolution: Safe vs Dangerous](picture/api_contract_cs_study_026_dto_evolution.png)
+![DTO Evolution: Safe vs Dangerous](./picture/api_contract_cs_study_026_dto_evolution.png)
 
 ```mermaid
 graph TD
@@ -116,7 +116,7 @@ graph TD
 ---
 
 ## 7) missing / null / 既定値 を“契約”として固定する☂️🧊🍬
-![Null vs Missing Comparison](picture/api_contract_cs_study_026_null_vs_missing.png)
+![Null vs Missing Comparison](./picture/api_contract_cs_study_026_null_vs_missing.png)
 
 ```mermaid
 graph LR

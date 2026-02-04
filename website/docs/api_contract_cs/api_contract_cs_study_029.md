@@ -31,9 +31,9 @@
 ---
 
 ## 29.3 まず覚える！契約テストの3タイプ🧩✨
-![Pact/Consumer-Driven Flow](picture/api_contract_cs_study_029_pact_flow.png)
+![Pact/Consumer-Driven Flow](./picture/api_contract_cs_study_029_pact_flow.png)
 
-![Three Types of Contract Testing](picture/api_contract_cs_study_029_contract_test_types.png)
+![Three Types of Contract Testing](./picture/api_contract_cs_study_029_contract_test_types.png)
 
 ```mermaid
 mindmap

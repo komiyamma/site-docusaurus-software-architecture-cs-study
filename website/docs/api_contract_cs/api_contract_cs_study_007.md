@@ -9,7 +9,7 @@
 ---
 
 ## 1. SemVerってなに？🤔💡
-![SemVer Numbers](picture/api_contract_cs_study_007_semver.png)
+![SemVer Numbers](./picture/api_contract_cs_study_007_semver.png)
 
 ```mermaid
 graph LR
@@ -67,7 +67,7 @@ SemVer 2.0.0 ではこう決まってるよ👇 ([Semantic Versioning][1])
 ---
 
 ## 4. まずはこれだけ覚えれば勝てる判断フロー🧭✨
-![SemVer Decision Flow](picture/api_contract_cs_study_007_decision_flow.png)
+![SemVer Decision Flow](./picture/api_contract_cs_study_007_semver_decision_flow.png)
 
 ```mermaid
 flowchart TD

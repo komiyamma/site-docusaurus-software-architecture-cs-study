@@ -36,7 +36,7 @@
 
 ## 0️⃣ SemVerの“決め方”を1分で確認🔢
 
-![Versioning Strategy Roadmap](picture/api_contract_cs_study_030_versioning_roadmap.png)
+![Versioning Strategy Roadmap](./picture/api_contract_cs_study_030_versioning_roadmap.png)
 
 ```mermaid
 graph TD

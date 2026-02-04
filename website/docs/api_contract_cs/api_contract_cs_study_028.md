@@ -20,7 +20,7 @@
 
 ## 2. イベント互換の3種類（これが超コア）👩‍🏫🔑
 
-![Event Compatibility Types](picture/api_contract_cs_study_028_event_compatibility.png)
+![Event Compatibility Types](./picture/api_contract_cs_study_028_event_compatibility.png)
 
 ```mermaid
 graph LR

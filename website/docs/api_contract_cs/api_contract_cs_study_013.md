@@ -25,7 +25,7 @@
 ---
 
 ## まず覚える 失敗の3分類 🧠🗂️
-![Failure Case Categories](picture/api_contract_cs_study_013_failure_categories.png)
+![Failure Case Categories](./picture/api_contract_cs_study_013_failure_categories.png)
 
 例外設計が一気にラクになるコツは「失敗を分類する」ことだよ😊✨
 
@@ -76,7 +76,7 @@
 ---
 
 ## 例外型の選び方 これだけで勝てる 🧰✨
-![Exception Selection Guide](picture/api_contract_cs_study_013_exception_selection.png)
+![Exception Selection Guide](./picture/api_contract_cs_study_013_exception_selection.png)
 
 ```mermaid
 flowchart TD

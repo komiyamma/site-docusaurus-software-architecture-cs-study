@@ -24,7 +24,7 @@
 ---
 
 ## 16.1 破壊的変更カタログ（コンパイルで壊れる系）📚💣
-![Compile Wall](picture/api_contract_cs_study_016_compile_wall.png)
+![Compile Wall](./picture/api_contract_cs_study_016_compile_wall.png)
 
 ```mermaid
 graph TD

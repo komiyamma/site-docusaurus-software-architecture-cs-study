@@ -12,7 +12,7 @@
 ---
 
 ## Producer / Consumer ってなに？🧩
-![Producer/Consumer Setup](picture/api_contract_cs_study_009_setup_lab.png)
+![Producer/Consumer Setup](./picture/api_contract_cs_study_009_setup_lab.png)
 
 超ざっくり言うと、こうです👇✨
 

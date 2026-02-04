@@ -23,7 +23,7 @@
 ---
 
 ## 17.2 事故りやすい“サイレント破壊”パターン集📦🕳️
-![Silent Killing Patterns](picture/api_contract_cs_study_017_silent_killing_patterns.png)
+![Silent Killing Patterns](./picture/api_contract_cs_study_017_silent_killing_patterns.png)
 
 ```mermaid
 graph LR
@@ -36,7 +36,7 @@ graph LR
         P3[丸め/精度変更]
     end
 ```
-![Behavioral Trap](picture/api_contract_cs_study_017_behavioral_trap.png)
+![Behavioral Trap](./picture/api_contract_cs_study_017_behavioral_trap.png)
 
 ## パターンA：**オプション引数（既定値）の変更**🎁➡️🎁
 

@@ -24,7 +24,7 @@
 
 ## 2) まず“器”を統一：Problem Details 🍱📌
 
-![Problem Details Structure](picture/api_contract_cs_study_023_problem_details.png)
+![Problem Details Structure](./picture/api_contract_cs_study_023_problem_details.png)
 
 ```mermaid
 graph TD

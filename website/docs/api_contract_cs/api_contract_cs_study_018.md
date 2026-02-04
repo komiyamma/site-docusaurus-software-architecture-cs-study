@@ -76,7 +76,7 @@
 ---
 
 ## 5) 段階的廃止の“王道3ステップ”👑📅
-![Deprecation Path](picture/api_contract_cs_study_018_deprecation_path.png)
+![Deprecation Path](./picture/api_contract_cs_study_018_deprecation_path.png)
 
 ```mermaid
 flowchart LR

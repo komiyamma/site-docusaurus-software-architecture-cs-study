@@ -66,7 +66,7 @@
 ---
 
 ## 11.4 公開APIを小さく保つための基本ルール7つ🛡️✨
-![Minimal Entry Point](picture/api_contract_cs_study_011_entry_point.png)
+![Minimal Entry Point](./picture/api_contract_cs_study_011_entry_point.png)
 
 ```mermaid
 graph TD

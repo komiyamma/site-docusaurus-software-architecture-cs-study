@@ -28,7 +28,7 @@ C#のXMLドキュメントコメントは、コンパイル時にXMLとして出
 ---
 
 ## 12.2 「契約ドキュメント」3点セット🧩✨（これだけは必須！）
-![IntelliSense Contract Doc](picture/api_contract_cs_study_012_intellisense_contract.png)
+![IntelliSense Contract Doc](./picture/api_contract_cs_study_012_intellisense_contract.png)
 
 ```mermaid
 graph LR

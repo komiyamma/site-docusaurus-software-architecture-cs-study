@@ -9,7 +9,7 @@
 ---
 
 ## 1. 「契約」＝“外に約束してる形”だよ🤝🌸
-![Contract Metaphor](picture/api_contract_cs_study_001_contract_metaphor.png)
+![Contract Metaphor](./picture/api_contract_cs_study_001_contract_metaphor.png)
 
 ```mermaid
 graph LR

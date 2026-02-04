@@ -10,7 +10,7 @@
 ---
 
 ## 1) 「契約設計」って、結局なに？😊📌
-![Minimal Public Surface](picture/api_contract_cs_study_006_minimal_surface.png)
+![Minimal Public Surface](./picture/api_contract_cs_study_006_minimal_surface.png)
 
 ```mermaid
 graph TD
@@ -64,7 +64,7 @@ C#の世界だと、ざっくりこう👇
 ---
 
 ## 4) 契約設計の“地図”🗺️✨
-![Contract Zones](picture/api_contract_cs_study_006_contract_zones.png)
+![Contract Zones](./picture/api_contract_cs_study_006_contract_zones.png)
 
 ```mermaid
 graph LR

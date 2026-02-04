@@ -11,7 +11,7 @@
 ---
 
 ## 1. そもそも「利用者」って誰？🤔
-![User Personas](picture/api_contract_cs_study_003_user_personas.png)
+![User Personas](./picture/api_contract_cs_study_003_user_personas.png)
 
 ```mermaid
 graph LR

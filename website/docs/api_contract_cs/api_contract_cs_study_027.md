@@ -61,7 +61,7 @@
 
 ## 27.4 イベントの基本構造📮✨（封筒＝メタデータ／中身＝データ）
 
-![Event Structure: Envelope and Data](picture/api_contract_cs_study_027_event_structure.png)
+![Event Structure: Envelope and Data](./picture/api_contract_cs_study_027_event_structure.png)
 
 ```mermaid
 graph TD

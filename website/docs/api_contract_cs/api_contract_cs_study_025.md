@@ -11,7 +11,7 @@
 
 ## 1. なぜ「運用」が主役なの？🧠💡
 
-![API Contract Lifecycle](picture/api_contract_cs_study_025_api_lifecycle.png)
+![API Contract Lifecycle](./picture/api_contract_cs_study_025_api_lifecycle.png)
 
 ```mermaid
 graph LR

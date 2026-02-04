@@ -25,7 +25,7 @@
 
 ## 22.3 成功ステータスの基本（ここは暗記でOK）🔖😺
 
-![Success Status Codes](picture/api_contract_cs_study_022_success_status.png)
+![Success Status Codes](./picture/api_contract_cs_study_022_success_status.png)
 
 ```mermaid
 graph LR
