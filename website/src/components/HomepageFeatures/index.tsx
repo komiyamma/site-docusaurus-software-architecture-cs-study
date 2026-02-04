@@ -401,6 +401,17 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/tdd_cs/tdd_cs_index',
   },
+  {
+    title: 'API Contract CS Study',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        API設計における型安全性と疎結合の学習。<br/>
+        C#によるAPIコントラクトの実装例。<br/>
+      </>
+    ),
+    link: '/docs/api_contract_cs/api_contract_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {

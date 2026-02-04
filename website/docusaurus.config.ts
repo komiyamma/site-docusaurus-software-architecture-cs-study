@@ -111,6 +111,7 @@ const config: Config = {
           "docs/refactoring_cs",
           "docs/mod_mono_cs",
           "docs/tdd_cs",
+          "docs/api_contract_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -384,6 +385,12 @@ const config: Config = {
           sidebarId: 'tddCsSidebar',
           position: 'left',
           label: 'TDD C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'apiContractCsSidebar',
+          position: 'left',
+          label: 'API Contract CS',
         },
 
         {
