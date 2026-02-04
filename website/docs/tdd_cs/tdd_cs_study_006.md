@@ -47,6 +47,13 @@ AIってね、ざっくり言うと
 * ✅ **小さなリファクタ手順の提案**（手順を刻む）
 * ✅ **重複の指摘**（でも採用は人が決める！）
 
+```mermaid
+graph LR
+    User["👤 あなた<br/>(主導権・仕様決定)"] -- "指示" --> AI["🤖 AI<br/>(案出し・抜け指摘)"]
+    AI -- "提案" --> User
+    User -- "テストで検証" --> Result["✅ 採用/却下"]
+```
+
 ※Copilot系がIDEに統合されて、補完＋チャットが連携して使える流れは強まってるよ〜（2025/11頃の案内）🧩✨ ([Visual Studio][1])
 あと、Copilotはエディタ周辺の文脈（近い行、開いてるファイル等）を見て提案を作る仕組みだよ📝 ([GitHub][2])
 
@@ -69,7 +76,16 @@ AIってね、ざっくり言うと
 ### ルール③：「通ったからOK」じゃなく「意図に一致したらOK」✅💖
 
 * テストが通っても、**意図と違う実装**は普通に起こる
-* 最終チェックは **“意図” と “読みやすさ”** 🌷
+* 最終チェックは **“意図”* 🧷 “本体を参照するテスト”にする（tests → src）
+
+```mermaid
+graph TD
+    Root["MyApp (Solution Root)"]
+    Root --> SLN["MyApp.sln"]
+    Root --> SRC["src/ (Application)"]
+    Root --> TESTS["tests/ (Testing)"]
+    TESTS -- "Project Reference" --> SRC
+```
 
 ---
 
@@ -255,6 +271,17 @@ public sealed class PriceCalculator
 
 * .NET 10 は LTSで、2025/11/11にリリース、2026/01/13に 10.0.2 が出てるよ🧩 ([Microsoft][3])
 * Visual Studio 2022 は 2026/01/13 に Current 17.14.24 が案内されてる（リリース履歴）🪟✨ ([Microsoft Learn][4])
+* 4. **何を直して、どのテストを再実行する？**（最小の修正で！）
+
+```mermaid
+flowchart TD
+    Red["🔴 赤が出た！"] --> Name["1. どのテスト？<br/>(意図を確認)"]
+    Name --> Msg["2. メッセージを読む<br/>(Expected vs Actual)"]
+    Msg --> Trace["3. スタックトレース<br/>(自分のコードの行へ)"]
+    Trace --> Fix["4. 最小の修正をして<br/>再実行 🔄"]
+```
+
+Visual Studio の Test Explorer は、失敗したテストを選ぶと **メッセージとスタックトレース**を表示してくれるよ👀✨ ([Microsoft Learn][5])
 * xUnit v3 は 3.0.0 が 2025/07/13 にリリースされていて、v2→v3移行ガイドや “v3の新機能まとめ”も整ってるよ🧪📘 ([xUnit.net][5])
 
 ---

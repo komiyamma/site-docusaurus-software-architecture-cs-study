@@ -27,6 +27,20 @@
 この “混ざり” が増えると、変更のたびに壊れやすくなります🥲
 （「Large Class は Extract Class などで分割する」のが典型的な対処として整理されています📚） ([refactoring.guru][1])
 
+```mermaid
+graph TD
+    subgraph "God Class (Tangled)"
+    G["[Large Class]\nValidate();\nCalculate();\nSave();\nSendMail();"]
+    end
+    subgraph "Specialized Classes (Clean)"
+    V["Validator"]
+    C["Calculator"]
+    S["Repository"]
+    M["Notifier"]
+    end
+    G -- "Extract Class" --> V & C & S & M
+```
+
 ---
 
 ## 2. 巨大クラスの「よくあるサイン」チェックリスト👃🔎

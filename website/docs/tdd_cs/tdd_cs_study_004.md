@@ -71,6 +71,19 @@ TDDが得意なのは、ざっくり言うとこういうやつ👇
 
 **YESが4つ以上**なら、まずTDD候補に入れてOKです🟢✨
 
+```mermaid
+graph TD
+    Q["TDD Check (7 Questions)"]
+    Q -- "YES >= 4" --> G["🟢 TDD Recommended"]
+    Q -- "YES <= 3" --> Y["🟡 Use with Caution"]
+    
+    subgraph "Key Indicators"
+    I["Input/Output Clarity"]
+    D["Determinism"]
+    S["Speed (< 1s)"]
+    end
+```
+
 ---
 
 ## 4) 具体例で体感しよう😊🧪

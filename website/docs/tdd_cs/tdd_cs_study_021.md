@@ -14,6 +14,15 @@
 * **仮実装 / 三角測量 / 明白な実装**を、状況で使い分けられる🚦📐🌼
 * 明白に実装しても、**TDDのリズム（Red→Green→Refactor）**は崩さない🧪🔁✨
 
+```mermaid
+graph TD
+    subgraph "🤔 どの手筋で行く？"
+    A["実装に迷いがある？"] -- "Yes" --> B["🩹 仮実装 (Fake It)"]
+    A -- "No (明白)" --> C["🌼 明白な実装 (Obvious)"]
+    B -- "2ケース目で一般化" --> D["📐 三角測量 (Triangulation)"]
+    end
+```
+
 ---
 
 ## 1) 3つの手筋、ざっくり復習だよ🚦✨
@@ -173,6 +182,18 @@ public static class PriceCalculator
 
 * 「端数処理って切り捨て？四捨五入？品目ごと？合計？」みたいなやつ😵
   → こういうときは **三角測量**で仕様をテストで固めるのが安全📐🧪✨
+* **最小のリファクタ**で、テストも実装もラクにできる（大改造しない🧸）
+
+```mermaid
+graph TD
+    S["👃 テストのにおい (症状)"] -- "警報🚨" --> C["🧠 設計の問題 (原因)"]
+    C -- "治療 (処方箋)" --> R["🧼 最小のリファクタ"]
+    
+    subgraph "Example"
+    S1["Arrangeが長すぎる"] --> C1["責務が混ざりすぎ"]
+    S2["たまに落ちる"] --> C2["共有状態や依存"]
+    end
+```
 
 ---
 
@@ -197,6 +218,20 @@ public static class PriceCalculator
 * “今この瞬間” 依存や設計の迷いがない？😊
 * 仮実装にすると逆に遠回りになりそう？🩹➡️😵
 * テストが読みやすくて、仕様として成立してる？🧪📘
+* 特に「引数が変」「状態が変」は、APIを使う側にとって超大事！
+
+```mermaid
+graph LR
+    subgraph "例外の検証対象"
+    T["型 (Type)"]
+    P["引数名 (ParamName)"]
+    M["メッセージ (Message)"]
+    end
+    
+    Test["Test"] -- "Assert.Throws" --> T
+    Test -- "Assert.Throws" --> P
+    Test -- "Record.Exception" --> M
+```
 
 ---
 

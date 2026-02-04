@@ -104,6 +104,17 @@ Visual Studio で👇
 
 テスト側プロジェクト右クリック → **参照の追加** → 本体プロジェクトにチェック✅
 
+```mermaid
+graph TD
+    subgraph "Solution"
+    Main["Core Project (Executable)"]
+    Test["Test Project (xUnit)"]
+    end
+    Test -- "Reference" --> Main
+    Test -- "Asserts" --> Main
+```
+
+---
 ### 5-3. 例：超ミニテストを書いて動かす🐣
 
 本体に、まずは小さな関数を作ります👇

@@ -19,6 +19,18 @@
 * **AI提案の“クセ”を消せる**：一発で同じスタイルに揃えられる🤖➡️🧼
 * **レビューが楽**：指摘が「中身」に集中できる🗣️💬
 
+```mermaid
+graph TD
+    subgraph "Tangled (Messy)"
+    T["Whitespace & Style Noise"]
+    end
+    subgraph "Refactored (Clean)"
+    R["Consistent Code Style"]
+    end
+    T -- "Format / Code Cleanup" --> R
+    R -- "Result" --> Diff["Clean & Meaningful Diffs"]
+```
+
 ---
 
 ## 2. まずはIDEの整形を使いこなす🧰✨

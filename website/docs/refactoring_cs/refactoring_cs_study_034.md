@@ -21,6 +21,23 @@
 そこで登場するのが **例外の境界** 🚪✨
 「ここから外へ出すときは、例外を**整形**して渡そうね」っていう**境目のルール**だよ💡
 
+```mermaid
+graph LR
+    subgraph "Internal (Low Level)"
+    E["SqlException\nHttpRequestException"]
+    end
+    subgraph "Boundary (Convert)"
+    B["AppException\n(Inner: ex)"]
+    end
+    subgraph "External (UI/API)"
+    U["Error Message\n/ 400 Bad Request"]
+    end
+    E -- "Catch & Wrap" --> B
+    B -- "Handle" --> U
+```
+
+---
+
 * 内側：実装の都合が強い（DB/HTTP/ファイル/ライブラリ例外など）🔧
 * 外側：利用者が理解できる形（画面メッセージ、HTTPレスポンス、エラーコードなど）📣
 

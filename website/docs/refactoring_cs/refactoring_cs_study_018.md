@@ -25,6 +25,19 @@
   ✅ **判定メソッド（`Is〜`）** にする
 * その結果、`if` の行が「文章」みたいに読めるようになる📚✨
 
+```mermaid
+graph TD
+    subgraph "Cryptic Logic"
+    C["if (user.Age > 18 && user.HasParentalConsent || user.IsSpecialMember)"]
+    end
+    subgraph "Self-Explaining Condition"
+    V["var canAccess = IsEligibleForAccess(user);"]
+    I["if (canAccess)"]
+    end
+    C -- "Explain Condition" --> V --> I
+```
+
+---
 この系統は “Decompose Conditional（条件の分解）” としても知られていて、条件を `summer()` みたいな判定関数に置き換える形が紹介されています📌 ([リファクタリング][2])
 
 ---

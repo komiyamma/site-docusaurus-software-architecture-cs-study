@@ -18,6 +18,20 @@ CQS（Command Query Separation）は超ざっくり言うと👇
 * **Query（クエリ）**：状態を変えずに返す（検索・取得など）🔎📦
 
 「質問しただけで答えが変わるのはナシね！」って発想だよ🙂
+
+```mermaid
+graph TD
+    subgraph "Command (Write)"
+    C["Update/Save/Delete"] --> S["State Change"]
+    C -- "Returns" --> V["void / Result"]
+    end
+    subgraph "Query (Read)"
+    Q["Get/Find/Search"] --> R["Return Value"]
+    Q -- "Side Effect?" --> NO["❌ None"]
+    end
+```
+
+---
 （Martin Fowlerの定義もほぼこれで、Queryは副作用なし、Commandは値を返さない、という整理です） ([martinfowler.com][1])
 
 ---

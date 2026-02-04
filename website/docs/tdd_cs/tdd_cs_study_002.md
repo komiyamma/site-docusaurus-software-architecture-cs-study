@@ -191,6 +191,22 @@ public class Greeting
 ✅ まだ緑ならOK！🟩✨
 これで **2周回した** ことになるよ🚦🚦💖
 
+```mermaid
+sequenceDiagram
+    participant Test as テスト (GreetingTests)
+    participant Code as 実装 (Greeting)
+    
+    Note over Test,Code: 1周目: 基本機能
+    Test->>+Test: Red: Make("Yui") が落ちる
+    Code->>+Code: Green: return "Hello, Yui!" (最短)
+    Code->>-Code: Refactor: return $"Hello, {name}!" (汎用化)
+    
+    Note over Test,Code: 2周目: スペース対応
+    Test->>+Test: Red: Make("  Yui  ") が落ちる
+    Code->>+Code: Green: Trim() を足して通す
+    Code->>-Code: Refactor: 変数 normalized に抽出
+```
+
 ---
 
 ## AIの使いどころ（この章の型）🤖🧠✨

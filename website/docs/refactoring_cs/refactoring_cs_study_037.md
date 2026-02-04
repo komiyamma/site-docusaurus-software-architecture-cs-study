@@ -67,6 +67,21 @@
 
 要するに「外のものを、こっちの都合の良い形で使えるようにする」やつだよ✨ ([refactoring.guru][2])
 
+```mermaid
+graph LR
+    subgraph "App Core"
+    C["Logic"]
+    I["<< Interface >>\nGateway"]
+    end
+    subgraph "Infrastructure"
+    A["Adapter\n(Wrapper)"]
+    E["External API\n/ DB"]
+    end
+    C -- "Call" --> I
+    I <|-- A
+    A -- "Translate" --> E
+```
+
 ---
 
 ## 4. ダメになりやすい例🥲（中心が外部にベタ結合）

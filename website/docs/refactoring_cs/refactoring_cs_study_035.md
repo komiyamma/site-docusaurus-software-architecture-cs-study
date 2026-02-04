@@ -63,6 +63,20 @@ Microsoft も「よくある条件は例外にしない（例外を避ける設�
 * “何が起きうるか” がコードに表れて、読みやすい📖✨
 * テストがめちゃ書きやすくなる🧪🎀
 
+```mermaid
+graph TD
+    subgraph "Exception (Unexpected)"
+    E["throw Exception"]
+    C["catch & Log"]
+    E -- "Halt" --> C
+    end
+    subgraph "Result (Expected)"
+    R["return Result.Fail"]
+    M["Match / if (Success)"]
+    R -- "Data" --> M
+    end
+```
+
 ---
 
 ## 4. 失敗の分類ラベル（おすすめ4分類）🏷️📋

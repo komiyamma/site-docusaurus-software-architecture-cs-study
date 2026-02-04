@@ -42,6 +42,19 @@ I/Oとロジックが混ざると、こうなるよ👇
 ![refactoring_cs_study_038_boundary](./picture/refactoring_cs_study_038_boundary.png)
 
 * 外側（I/O）：**薄くする**（入力を整えて渡す、結果を整えて出す）🧻
+
+```mermaid
+graph LR
+    I["Input\n(Console/HTTP)"]
+    subgraph "Core (Pure)"
+    L["Logic\n(Request -> Result)"]
+    end
+    O["Output\n(Display/Save)"]
+    I -- "Parse" --> L
+    L -- "Format" --> O
+```
+
+---
 * 内側（コア）：**濃くする**（仕様・ルール・計算の本体）🍫
 
 ---

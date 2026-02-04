@@ -57,6 +57,19 @@ UIはまだ作らず、**中身（ロジック）だけ**をTDDで育てるよ�
 * カテゴリ指定があれば絞り込み
 * 返す順番：登録日が新しい順（CreatedAt 降順）🕒⬇️
 
+```mermaid
+sequenceDiagram
+    participant U as UseCase
+    participant R as Repository
+    participant D as Domain(Goods)
+    
+    U->>R: Exists?(name, category)
+    R-->>U: No
+    U->>D: CreateNew(...)
+    D-->>U: Instance
+    U->>R: Add(Goods)
+```
+
 ---
 
 ## 4) 最小の設計（ちゃんと “依存” を外に出す）🔌✨

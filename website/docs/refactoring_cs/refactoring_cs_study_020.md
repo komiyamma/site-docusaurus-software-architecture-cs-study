@@ -20,6 +20,17 @@
 
 逆に「置き場所・名前空間・using」が整うと、次の章（コードスメル）以降の改善が**めちゃ進みます**🚀✨
 
+```mermaid
+graph TD
+    subgraph "Tangled Folders"
+    T["Models/\nServices/\nValidators/"]
+    end
+    subgraph "Feature-Based (Organized)"
+    F["Features/Orders/\nFeatures/Users/"]
+    end
+    T -- "Group by Feature" --> F
+```
+
 ---
 
 ## 2) using を整える（少なく・揃えて・自動化）🧹✨

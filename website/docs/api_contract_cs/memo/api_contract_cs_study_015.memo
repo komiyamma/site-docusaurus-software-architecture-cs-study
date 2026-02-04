@@ -1,0 +1,1 @@
+第15章では、nullabilityをAPI契約として解説。NRT（Nullable Reference Types）の活用や実行時チェック、属性による条件付き契約の表現方法を学ぶ。

@@ -15,6 +15,21 @@
 * ✅ 決定表から **テストケース（Theory）** を作れる🧪
 * ✅ 実装は **“表駆動”** に寄せて、if を育てない🌱
 
+```mermaid
+graph LR
+    subgraph "❌ Nested IF (迷路)"
+    IF["if... else... if..."]
+    end
+    
+    subgraph "✅ Decision Table (地図)"
+    T["条件 | 結果"]
+    R1["Rule 1"]
+    R2["Rule 2"]
+    end
+    
+    IF -- "整理" --> T
+```
+
 ---
 
 ## 1) なぜ if は地獄になるの？😵‍💫🌋
@@ -110,7 +125,23 @@
 
 * **各ルールにつき最低1ケース** を作る
 * 境界（499/500/999/1000）を入れる
-* 10%の丸めや上限（500）も入れる
+* **分けすぎ事故**（細切れ地獄）を回避できる🍰🙅‍♀️
+
+```mermaid
+graph TD
+    subgraph "Before: 神クラス👑 (全部係)"
+    A["Checkout (会計+割引+税+保存)"]
+    end
+    
+    subgraph "After: チームプレイ🤝 (担当分割)"
+    B["Checkout (指揮)"]
+    C["Discount (割引)"]
+    D["Tax (税)"]
+    E["Repository (保存)"]
+    end
+    
+    A -- "分割" --> B
+```
 
 ---
 
@@ -262,6 +293,22 @@ public sealed class DiscountPolicy
 * ルール追加＝ `Rule` を1個足すだけ🎯
 * “どれが優先？” も **順番**で分かる📌
 * テストは **表の行を増やす**感覚で増やせる🧪
+* テストだから「時間」は **依存（外部要因）** として扱って、差し替え可能にするよ〜🔁✨
+
+```mermaid
+graph LR
+    subgraph "本番"
+    App1["App"] --> SC["SystemClock (実時間)"]
+    end
+    
+    subgraph "テスト"
+    App2["App"] --> FC["FakeClock (固定時間)"]
+    end
+    
+    BC["IClock (薄い壁)"]
+    SC -- "implements" --> BC
+    FC -- "implements" --> BC
+```
 
 ---
 

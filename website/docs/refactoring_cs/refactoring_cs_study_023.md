@@ -21,6 +21,18 @@ DRY（Don’t Repeat Yourself）は、ざっくり言うと👇
 * 「送料は500円（ただし1万円以上で無料）」みたいな**ビジネスルール**が複数箇所に散らばってる → これは危険😱
 * たまたま似た形の`if`が2か所にあるだけ（理由が別） → これは放置でもOKなこと多い🙂
 
+```mermaid
+graph LR
+    subgraph "Duplicated Knowledge"
+    K1["Logic A (Price * 1.1)"]
+    K2["Logic B (Price * 1.1)"]
+    end
+    subgraph "Single Source of Truth"
+    S["ToTaxIncluded()"]
+    end
+    K1 & K2 -- "Unify" --> S
+```
+
 ---
 
 ## 重複の3タイプを見分けよう👃✨（コードスメルの正体）

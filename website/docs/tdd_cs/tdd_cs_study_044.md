@@ -61,6 +61,17 @@ TDD的には **“失敗も仕様として固定する”** のがポイント�
 👉 これは「仕様の失敗」じゃなくて「実装の失敗」
 👉 基本は直す！テスト追加して再発防止！🧪🧯
 
+```mermaid
+graph TD
+    subgraph "Error Classification"
+    D["Domain Error"] -- "User Feedback" --> U["UI / Label"]
+    E["External Error"] -- "Classification" --> C["Classifier"]
+    C -- "Transient" --> R["Retry"]
+    C -- "Permanent" --> L["Log / Error Page"]
+    B["Bug"] -- "Investigation" --> Fix["Fix & Test"]
+    end
+```
+
 ---
 
 ## 3. “分けない”と何が起きる？😇（あるある地獄）

@@ -27,6 +27,19 @@
 * 意味が薄い一時変数を消して、**ノイズを減らす**✨
 * “名付ける価値がない”なら消した方が読みやすいこともある🧼
 
+```mermaid
+graph LR
+    subgraph "Tangled Expression"
+    E["var x = a * b * (1 - c) + d;"]
+    end
+    subgraph "Self-Explaining Code"
+    A1["var basePrice = a * b;"]
+    A2["var discount = basePrice * c;"]
+    A3["var total = basePrice - discount + d;"]
+    end
+    E -- "Extract Variable" --> A1 --> A2 --> A3
+```
+
 ---
 
 ## 1) Extract Variable（Introduce local variable）🏷️✨

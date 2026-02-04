@@ -49,6 +49,18 @@ TDDはね…
 
 > この3つを“ちいさく”何回も回すのがTDDだよ〜🔁😊
 
+```mermaid
+graph TD
+    subgraph TDD_Cycle ["TDDサイクル 🚦"]
+        Red["🔴 Red<br/>失敗するテストを書く"] --> Green["🟢 Green<br/>最短でテストを通す"]
+        Green --> Refactor["🧹 Refactor<br/>コードを整える"]
+        Refactor --> Red
+    end
+    style Red fill:#ffebee,stroke:#c62828
+    style Green fill:#e8f5e9,stroke:#2e7d32
+    style Refactor fill:#e3f2fd,stroke:#1565c0
+```
+
 ---
 
 ## 4) 「テスト＝仕様書」ってどういうこと？📘🧪

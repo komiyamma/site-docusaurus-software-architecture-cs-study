@@ -116,6 +116,19 @@ private static bool IsChild(int age) => age is >= 6 and <= 12;
 
 これがリファクタリングの基本の空気感です🧹✨
 
+```mermaid
+graph LR
+    subgraph "Before"
+    B["Legacy Code (Tangled)"]
+    end
+    subgraph "After"
+    A1["Method A (Naming)"]
+    A2["Method B (Naming)"]
+    end
+    B -- "Extract & Name" --> A1
+    B -- "Extract & Name" --> A2
+```
+
 ---
 
 ## リファクタリングの“いい匂い”チェック👃✨（判断のコツ）

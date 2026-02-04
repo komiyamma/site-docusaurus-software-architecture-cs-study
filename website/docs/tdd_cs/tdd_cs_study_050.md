@@ -55,6 +55,21 @@ OshiGoods.sln
      └─ OshiGoods.WebTests   // bUnit（最小）
 ```
 
+```mermaid
+graph TD
+    subgraph "Presentation Layer"
+    Web["OshiGoods.Web (Blazor)"]
+    end
+    subgraph "Application Layer"
+    App["OshiGoods.App (Service)"]
+    end
+    subgraph "Domain Layer"
+    Dom["OshiGoods.Domain (Logic)"]
+    end
+    Web -- "Depends on" --> App
+    App -- "Depends on" --> Dom
+```
+
 ---
 
 ## 4) 仕様を「テストに落とす」やり方（卒業制作のコツ）🎯🧪

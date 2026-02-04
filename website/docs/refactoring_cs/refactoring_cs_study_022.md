@@ -22,6 +22,18 @@
 
 結果、**直すのが怖い → 放置 → もっと大変**のループに入りやすいよ〜😇
 
+```mermaid
+graph TD
+    subgraph "Tangled Process (Long)"
+    T["[Main Method]\nA\nB\nC\nD\nE\nF"]
+    end
+    subgraph "Paragraphs (Clean)"
+    P["[Method]\nParagraph_1();\nParagraph_2();\nParagraph_3();"]
+    end
+    T -- "Extract Method" --> P
+```
+
+---
 ちなみに今の主流のC#周りは、.NET 10 + C# 14 を Visual Studio 2026 で扱う流れがはっきりしてるので、IDEのリファクタ機能＆AI支援を前提に“安全に切る”のが現実的だよ🧰✨ ([Microsoft Learn][1])
 
 ---

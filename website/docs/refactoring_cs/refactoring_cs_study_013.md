@@ -27,6 +27,20 @@ Renameは「動作を変えずに、名前だけ変える」リファクタで�
 * バグが減る🪲➡️✅（「勘違い」が減る！）
 * AIも賢くなる🤖✨（良い名前があると提案の精度が上がる）
 
+```mermaid
+graph LR
+    subgraph "Vague Name (Bad)"
+    B["var a = 100;"]
+    M["decimal Calc()"]
+    end
+    subgraph "Precise Name (Good)"
+    A["var priceWithTax = 100;"]
+    G["decimal CalculatePriceWithTax()"]
+    end
+    B -- "Rename" --> A
+    M -- "Rename" --> G
+```
+
 ---
 
 ## 2) 命名の“基本の型”🍳✨（C#の王道ルール）

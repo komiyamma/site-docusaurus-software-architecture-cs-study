@@ -66,6 +66,22 @@
 | OnSale   | SellOut   | SoldOut   |
 | OnSale   | Cancel    | Cancelled |
 
+```mermaid
+stateDiagram-v2
+    [*] --> Draft
+    Draft --> Reserved: Reserve
+    Draft --> Cancelled: Cancel
+    Reserved --> InStock: StockIn
+    Reserved --> Cancelled: Cancel
+    InStock --> OnSale: StartSale
+    InStock --> Cancelled: Cancel
+    OnSale --> SoldOut: SellOut
+    OnSale --> Cancelled: Cancel
+    Cancelled --> [*]
+    SoldOut --> [*]
+```
+
+---
 この表があるだけで、頭の中がスッキリする〜！🧠✨
 そして **テストはこの表をそのまま写す** のが強い💪🧪
 

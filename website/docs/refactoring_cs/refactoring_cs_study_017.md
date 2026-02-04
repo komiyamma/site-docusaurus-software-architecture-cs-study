@@ -21,6 +21,16 @@
 を **早めに確定** して、残りの処理をスッキリさせる書き方だよ🌸✨
 つまり **ネストを深くしないための作法** 💡
 
+```mermaid
+graph TD
+    subgraph "Arrow Anti-pattern (Nested)"
+    A["if (A)\n  if (B)\n    if (C)\n      [Main Logic]"]
+    end
+    subgraph "Flattened (Guard Clause)"
+    G["if (!A) return;\nif (!B) return;\nif (!C) return;\n[Main Logic]"]
+    end
+```
+
 ---
 
 ## 2. なぜ読みやすくなるの？👀✨

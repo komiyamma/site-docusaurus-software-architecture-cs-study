@@ -19,6 +19,19 @@ Long Parameter List / Data Clumps は「オブジェクト化しなよ〜」っ�
 たとえば `start` と `end`、`prefecture` と `city` と `zip` みたいに、**いつもセットで渡されてる**やつ。
 こういう“塊”は **Range / Address みたいなオブジェクトになりたがってる**ことが多いよ📦✨ ([martinfowler.com][1])
 
+```mermaid
+graph LR
+    subgraph "Long Args"
+    A["method(w, h, d, z, p, c)"]
+    end
+    subgraph "Parameter Object"
+    O["method(RequestObject)"]
+    R["request { w, h, d, z, p, c }"]
+    end
+    A -- "Introduce Parameter Object" --> O
+    O -- "Contains" --> R
+```
+
 ---
 
 ## 何が困るの？😵‍💫（つらみポイント）

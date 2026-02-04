@@ -36,6 +36,23 @@ Blazorの画面って、だいたい裏でこういうことしてるよね👇
 
 だから、UIテストでは **「画面は本物、裏のサービスは偽物」** にするのが最強だよ💪✨
 
+```mermaid
+graph TD
+    subgraph "Component"
+    C["GoodsSearch"]
+    end
+    subgraph "Dependency Injection"
+    I["IGoodsQueryService"]
+    end
+    subgraph "Implementations"
+    Real["Real API (Production)"]
+    Fake["Fake Stub (Testing)"]
+    end
+    C -- "calls" --> I
+    I -- "resolves to" --> Real
+    I -- "overrides with (Testing)" --> Fake
+```
+
 ---
 
 ## 3) 例題：推し活グッズ検索画面🎀🔎（サービス差し替え前提）

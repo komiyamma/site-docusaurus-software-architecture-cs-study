@@ -34,6 +34,22 @@
 
 この3つを分けて考えるだけで、混乱が激減するよ〜😌🌿
 
+```mermaid
+graph TD
+    subgraph "1. Repository (Folders)"
+    F["Physical Files & Folders"]
+    end
+    subgraph "2. Solution (.sln / .slnx)"
+    S["Project List & Config"]
+    end
+    subgraph "3. Project (.csproj)"
+    P["Build Units (DLL/EXE)"]
+    end
+    
+    F --> S
+    S --> P
+```
+
 ---
 
 ## 4-1. ソリューションって何？🗂️✨
@@ -103,6 +119,13 @@ C# 14 も .NET 10 の “新機能” として整理されているよ🌟 ([Mi
 * .NETに最初から含まれてるもの（追加インストール不要なことが多い）
 
 Visual Studio の Solution Explorer では、参照はだいたい **Dependencies ノード**にまとまって見えるよ👀✨ ([Microsoft Learn][6])
+
+```mermaid
+graph LR
+    P1["Project A"] -- "ProjectReference" --> P2["Project B"]
+    P1 -- "PackageReference" --> N["NuGet Library"]
+    P1 -- "FrameworkReference" --> F[".NET SDK"]
+```
 
 ---
 

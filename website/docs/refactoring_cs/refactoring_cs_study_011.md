@@ -190,6 +190,16 @@ using (logger.BeginScope(new List<KeyValuePair<string, object>>
 
 Scope は「同じデータをまとめて付ける」ための仕組みで、`BeginScope()` が返す `IDisposable` を `using` で囲みます🧤✨ ([Microsoft Learn][1])
 
+```mermaid
+graph TD
+    subgraph "Logging Scope (e.g. TraceId: u-123)"
+    L1["Log: Start"]
+    L2["Log: Process A"]
+    L3["Log: End"]
+    end
+    L1 & L2 & L3 -- "Attached Context" --> Storage["Log Storage (Elastic/Seq/etc)"]
+```
+
 ---
 
 ## 9. 例外は “exを渡して” 記録する💥🧯

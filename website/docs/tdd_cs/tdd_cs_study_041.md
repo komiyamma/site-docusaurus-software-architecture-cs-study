@@ -41,6 +41,18 @@ public class Goods
 ✅ だから発想を変えるよ：
 **「チェックを増やす」より「変な値を入れられない型を作る」** 🧷✨
 
+```mermaid
+graph LR
+    subgraph "❌ Primitive (int)"
+    A["-100"] --> Op["Calculation"]
+    B["9999999"] --> Op
+    end
+    subgraph "✅ Value Object (Price)"
+    P["Price.Create(value)"] -- "Validation" --> OK["Safe Object"]
+    NG["Invalid Value"] -- "Error" --> Th["Throw Exception"]
+    end
+```
+
 ---
 
 ## 2. 今日の作戦：Value Object（値オブジェクト）ってやつ🧸✨

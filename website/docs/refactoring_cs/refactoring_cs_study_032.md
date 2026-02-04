@@ -20,6 +20,17 @@ if/else が増えると…
 そこで **switch + パターンマッチ** の出番！🎉
 「この入力はどの“形（パターン）”？」って考え方で、分岐が読みやすくなります🧁✨ ([Microsoft Learn][1])
 
+```mermaid
+graph TD
+    subgraph "If-Else Chain (Complex)"
+    I["if (a) ..\nelse if (b) ..\nelse if (c) .."]
+    end
+    subgraph "Switch Expression (Clear)"
+    S["input switch\n{\n  a => ..\n  b => ..\n  _ => ..\n}"]
+    end
+    I -- "Pattern Match" --> S
+```
+
 ---
 
 ## switch は2種類あるよ🧁🎀

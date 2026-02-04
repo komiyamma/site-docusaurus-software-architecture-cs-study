@@ -52,6 +52,16 @@
 
 AAAを守ると、テストが「読み物」になってわかりやすいです📖💕
 
+```mermaid
+graph TD
+    subgraph "AAA Pattern"
+    A1["Arrange (Prepare Inputs)"]
+    A2["Act (Execute Method)"]
+    A3["Assert (Verify Results)"]
+    end
+    A1 --> A2 --> A3
+```
+
 ---
 
 ## 7-4 まず“テストしやすい形”を知っておく🍰✨

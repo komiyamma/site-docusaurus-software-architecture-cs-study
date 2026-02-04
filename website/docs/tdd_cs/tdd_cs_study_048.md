@@ -28,6 +28,13 @@ MicrosoftのBlazorテスト記事でも、流れはこれ👇
 
 そして `MarkupMatches` はただの文字列比較じゃなくて、**HTMLの意味（空白とか）を考慮**してくれるから、テストが壊れにくいのが嬉しいポイント💖 ([Microsoft Learn][1])
 
+```mermaid
+graph LR
+    R["RenderComponent"] --> Action["User Action (Click/Input)"]
+    Action --> Wait["Wait (Async)"]
+    Wait --> Verify["Assert (MarkupMatches)"]
+```
+
 ---
 
 ## 3) セットアップ（テストプロジェクト側）🔧🧪

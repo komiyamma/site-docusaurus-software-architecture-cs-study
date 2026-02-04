@@ -245,8 +245,8 @@ AIは「答え」じゃなくて、**案を出す相棒**にすると超強い�
 注文の状態を Draft / Confirmed / Paid / Cancelled とします。
 この状態遷移の一覧を「表」で作って。
 禁止される操作も含めて。
+```
 AIの出力を見たら、最後にこれだけやってね👇
-
 ```mermaid
 stateDiagram-v2
     [*] --> Draft: 作成

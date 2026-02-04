@@ -33,6 +33,19 @@ DI（Dependency Injection）は、
 
 .NET の公式ドキュメントでも DI は「依存とクラスを疎結合にするための基本パターン」として説明されてるよ📚✨ ([Microsoft Learn][1])
 
+```mermaid
+graph TD
+    subgraph "Composition Root (Entry)"
+    R["new Service(new Tool())"]
+    end
+    subgraph "Logic"
+    S["Service"]
+    T["<< Interface >>\nTool"]
+    S -- "use" --> T
+    end
+    R -- "Inject" --> S
+```
+
 ---
 
 ## 3. “手動注入”ってなに？🧶🙂（DIコンテナはまだ使わない）

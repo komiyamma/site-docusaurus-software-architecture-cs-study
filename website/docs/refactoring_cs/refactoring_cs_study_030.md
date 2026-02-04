@@ -26,6 +26,18 @@
 **“不変条件が壊れたオブジェクト” がシステム内に入り込むと、後でどこで爆発するか分からない**ってこと💣😱
 だから入口で止める！🚪🛑
 
+```mermaid
+graph TD
+    In["Input Data"]
+    subgraph "Object Boundary"
+    G["[Guard Clause]\n(Constructor/Setter)"]
+    O["Safe Object State"]
+    end
+    In -- "Create/Update" --> G
+    G -- "Exception" --> X["Fail Early"]
+    G -- "Valid" --> O
+```
+
 ---
 
 ## 2. 入口はどこ？（守る場所ベスト3）🏰✨

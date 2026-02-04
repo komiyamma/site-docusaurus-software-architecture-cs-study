@@ -18,6 +18,13 @@
     をサクッと使えるようになる🧪✨
 * そして一番大事：**モックの使いすぎを避ける基準**が持てる🎭🚫🍰
 
+```mermaid
+graph LR
+    A["Arrange"] -- "Setup" --> M["Mock Object"]
+    B["Act"] -- "Invoke" --> M
+    C["Assert"] -- "Verify" --> M
+```
+
 ---
 
 ## 0) どれを使う？（2026年1月の“今”ベース）🔍✨

@@ -25,6 +25,21 @@
 * **ふだん回す“速いレーン”**：合計 **数秒〜十数秒** で終わる（1分超えたら黄色信号🚥）
 * **1テスト**：基本は **数ms〜数十ms**（100ms超えるのが常連なら原因があること多い😵‍💫）
 
+```mermaid
+graph LR
+    subgraph "Fast Lane (Unit Tests)"
+    F["Logic / Math / State"]
+    end
+    subgraph "Slow Lane (Integration)"
+    S["DB / HTTP / File"]
+    end
+    
+    Dev["Developer"] -- "Always" --> F
+    Dev -- "CI / Nightly" --> S
+```
+
+---
+
 ポイントは「完璧な数字」より **“遅くなったら気づける運用”** を作ることだよ😊✨
 
 ---

@@ -18,6 +18,17 @@
 * 直す人が「コメント直した気」になってバグる😵‍💫
 * “説明が必要な複雑さ”を温存しちゃう🧨
 
+```mermaid
+graph LR
+    subgraph "Tangled (Needs Comments)"
+    C["// Calc Tax\nlogic...;"]
+    end
+    subgraph "Clear (Self-Explaining)"
+    M["CalculateTax();"]
+    end
+    C -- "Apply Name" --> M
+```
+
 ---
 
 ## 「コメントに頼りすぎ」スメルあるある👃💭

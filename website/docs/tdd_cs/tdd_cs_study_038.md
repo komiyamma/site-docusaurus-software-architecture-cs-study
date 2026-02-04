@@ -56,6 +56,13 @@
 ✅ **自分のドメイン（推し活）に合わせやすい**
 ✅ **初心者でも管理しやすい**
 
+```mermaid
+graph LR
+    B["Builder (Default)"] -- "WithX" --> B
+    B -- "WithY" --> B
+    B -- "Build" --> O["Object"]
+```
+
 ---
 
 ### B) ファクトリ（Factory）🏭✨

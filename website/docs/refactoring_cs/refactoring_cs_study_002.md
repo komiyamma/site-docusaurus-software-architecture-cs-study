@@ -134,6 +134,17 @@ Gitの差分を見ると、
 8. **コミット**（メッセージは一言で）📝
 9. 次の1手へ🔁
 
+```mermaid
+graph TD
+    Start["1. Work Branch"] --> Step["2. Split into Small Steps"]
+    Step --> Change["3. Change Code"]
+    Change --> Build["4. Build & Verify"]
+    Build -- "NG" --> Fix["Fix it"] --> Build
+    Build -- "OK" --> Diff["5. Review Diff"]
+    Diff --> Commit["6. Commit (Small)"]
+    Commit --> Step
+```
+
 ---
 
 ## Visual Studioでの実践ポイント💻✨

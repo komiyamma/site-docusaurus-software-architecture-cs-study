@@ -25,6 +25,21 @@
 * 外部API叩く🌐
 * 画面に通知する🔔
 
+```mermaid
+graph TD
+    App["Application"]
+    App -- "📧 Send" --> Email["Email Sender"]
+    App -- "🪵 Log" --> Log["Audit Log"]
+    App -- "💾 Save" --> Repo["Repository"]
+    
+    subgraph "Verify Points"
+    Email
+    Log
+    Repo
+    end
+```
+
+---
 こういうのって、**戻り値だけ**見ても「本当に実行された？」が分からないことが多いのね🙈
 だから「呼び出した？」を**仕様として**テストするのがこの章！
 

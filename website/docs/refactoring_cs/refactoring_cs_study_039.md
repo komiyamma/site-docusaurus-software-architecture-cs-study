@@ -15,6 +15,18 @@
 
 ### 1) 「待つ場所」が散らかる 🧵
 
+```mermaid
+graph TD
+    T["Task"]
+    W["await"]
+    S["Success"]
+    C["Cancel / Failure"]
+    T -- "Wait" --> W
+    W -- "Result" --> S
+    W -- "Exception" --> C
+```
+
+---
 `await` が増えるほど、処理の流れが **飛び飛び** に見えて読みづらい…💦
 
 ### 2) キャンセル・タイムアウトが後付けで壊れる 🛑⏳
@@ -284,6 +296,21 @@ private static decimal ParsePrice(string json)
 
 * `GetPriceAsync` が「やりたいことの順番」だけになって、**物語みたいに読める**📖
 * パースや入力チェックは同期メソッドにして、**テストが超ラク**🧪💕
+
+---
+
+## 5. キャンセル・タイムアウトの流れ🛑⏳⚖️
+
+```mermaid
+graph TD
+    T["Task"]
+    W["await"]
+    S["Success"]
+    C["Cancel / Failure"]
+    T -- "Wait" --> W
+    W -- "Result" --> S
+    W -- "Exception" --> C
+```
 
 ---
 

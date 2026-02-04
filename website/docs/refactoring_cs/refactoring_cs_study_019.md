@@ -21,6 +21,17 @@ Nullable Reference Types は、コンパイル時に「この参照、null か�
 * 例えば「string」と「string?」は、実行時にはどっちも同じ「System.String」扱い（違いは注釈＆解析）だよ🧷 ([Microsoft Learn][1])
 * なので、**警告を無視すれば実行時に null 例外は普通に起きる**。必要なら実行時チェックもちゃんと入れる💥 ([Microsoft Learn][1])
 
+```mermaid
+graph LR
+    subgraph "Reference Types"
+    N["string (Not-Null)"]
+    Q["string? (Nullable)"]
+    end
+    N -- "Guarantee" --> S["Safe Access"]
+    Q -- "Warning" --> W["Analysis Tool"]
+    W -- "Check / Guard" --> S
+```
+
 ---
 
 ## 2. 「string」と「string?」の気持ちの違い🙂🪄

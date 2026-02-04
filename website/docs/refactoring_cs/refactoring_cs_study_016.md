@@ -28,7 +28,18 @@ var timeoutMs = 30000;
 * 同じ値が散らばると **変更漏れ** が起きる😱
 * 仕様変更のときに **影響範囲が読めない** 🧨
 
-そこで **Introduce Constant（定数化）** の出番です💪✨
+まず“安全に触れる地面”を作る回だよ🌱
+
+```mermaid
+graph LR
+    subgraph "Magic Number (Unknown)"
+    M["if (len < 8)"]
+    end
+    subgraph "Named Constant (Clear)"
+    C["const int MinLength = 8;\nif (len < MinLength)"]
+    end
+    M -- "Introduce Constant" --> C
+```
 
 ---
 

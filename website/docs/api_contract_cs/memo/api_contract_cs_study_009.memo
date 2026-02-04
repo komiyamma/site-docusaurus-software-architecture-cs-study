@@ -1,0 +1,1 @@
+第9章では、提供側（Producer）と利用側（Consumer）を作成し、public APIが契約であることを体験。構築手順やinternal実装との分離、AI活用を学ぶ。

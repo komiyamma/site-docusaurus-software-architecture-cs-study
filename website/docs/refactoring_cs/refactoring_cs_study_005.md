@@ -30,6 +30,12 @@
 
 👉 **仮説は何個でもOK**。でも採用するのは **デバッガで事実を見てから**✅
 
+```mermaid
+graph LR
+    H["Hypothesis (Maybe here?)"] -- "Check with Debugger" --> F["Fact (It IS here)"]
+    F -- "Verify" --> C["Correct Change"]
+```
+
 ---
 
 ## 0. デバッグを開始する（まずここ）▶️🐣
@@ -104,6 +110,16 @@ Tracepointは「ブレークせずにログを出す」機能だよ。 ([Microso
 * **Step Out（今のメソッドを抜ける）**：Shift + F11
 
 このショートカットは公式の一覧に載ってるよ。 ([Microsoft Learn][6])
+
+```mermaid
+graph TD
+    S["Breakpoint (Stop)"] --> Over["Step Over (F10)"]
+    S --> Into["Step Into (F11)"]
+    S --> Out["Step Out (Shift+F11)"]
+    Over -- "Next Line" --> Next["Next Instruction"]
+    Into -- "Inside Method" --> Inside["Sub Method"]
+    Out -- "Return to Caller" --> Caller["Caller Method"]
+```
 
 ---
 

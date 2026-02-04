@@ -50,6 +50,14 @@ C#だと、コンパイラやアナライザーが「バグになりそう」「
 * 波線の場所が「今ここがポイント！」の目印✨
 * 左側の余白に電球💡や工具🪛が出てたら、そこから直せる
 
+```mermaid
+graph TD
+    Code["Code with Siggles (〰️)"] --> Analysis["Static Analysis (Roslyn)"]
+    Analysis --> LightBulb["Light Bulb (💡/🪛)"]
+    LightBulb -- "Quick Action" --> Fix["Automatic Fix"]
+    LightBulb -- "Manual" --> Review["Human Review & Edit"]
+```
+
 ---
 
 ## 4) Quick Actions（電球💡）が最強な理由⚡✨

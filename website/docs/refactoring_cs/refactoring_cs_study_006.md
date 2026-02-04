@@ -85,7 +85,17 @@
 6. **push**⬆️
 7. **PR作成→レビュー**📮
 
-Visual Studio 2026 だと、push後にそのままPR作成に進める導線が用意されています✨（Git Changesにバナーが出てPR作成へ進める） ([Microsoft for Developers][1])
+Visual Studio 2026 だと、8. push後にそのままPR作成に進める導線が用意されています✨（Git Changesにバナーが出てPR作成へ進める） ([Microsoft for Developers][1])
+
+```mermaid
+graph LR
+    B["Branch"] --> Change["Change (Small)"]
+    Change --> Verify["Verify (Test)"]
+    Verify --> Diff["Read Diff"]
+    Diff --> Commit["Commit (1-Refactor)"]
+    Commit --> Push["Push & PR"]
+    Push --> Change
+```
 
 ---
 

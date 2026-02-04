@@ -14,6 +14,17 @@
 外から直接書き換えできると、あとからルールを足したい時に詰みやすいです😵‍💫
 （.NET の設計ガイドラインでも「公開フィールドは避けてプロパティで公開してね」と明確に言っています📘） ([Microsoft Learn][1])
 
+```mermaid
+graph LR
+    subgraph "Exposed Field (Dangerous)"
+    F["obj.Age = -10;"]
+    end
+    subgraph "Encapsulated Property (Safe)"
+    P["obj.Age = -10;\n(Blocked by Setter)"]
+    end
+    F -- "Encapsulate Field" --> P
+```
+
 ---
 
 ## Encapsulate Fieldってなに？🔐

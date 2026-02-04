@@ -28,6 +28,15 @@
   * そして… **組み合わせ（AND）**が壊れない
 * ✅ テストが読み物みたいに分かりやすい📘✨（＝将来の自分が助かる）
 
+```mermaid
+graph LR
+    Data["Items Collection"] --> F1["Keyword Filter"]
+    F1 --> F2["Category Filter"]
+    F2 --> F3["Price Range Filter"]
+    F3 --> S["Sort Pipeline"]
+    S --> Result["Final Result"]
+```
+
 ---
 
 ## 今日の作戦（TDDの進め方）🚦🧠

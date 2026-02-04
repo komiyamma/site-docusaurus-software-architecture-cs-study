@@ -29,6 +29,18 @@ xUnitは「テストコレクション」という単位で、**同時に走っ�
 * 並列スレッド数を指定：`MaxParallelThreads = n`
 * 特定コレクションだけ並列禁止：`[CollectionDefinition(DisableParallelization = true)]`
 
+```mermaid
+graph TD
+    subgraph "Parallel (Default)"
+    C1["Class A"]
+    C2["Class B"]
+    end
+    
+    subgraph "Serialized (Collection)"
+    C3["Class C"] -- "Wait" --> C4["Class D"]
+    end
+```
+
 ---
 
 ## 2) 典型的な症状あるある😵‍💫🧪

@@ -31,6 +31,21 @@ Strategyは一言でいうと👇
 
 こういう時に、分岐を「クラス」にして分離します✂️✨
 
+```mermaid
+graph TD
+    subgraph "Large Switch"
+    S["switch (Type)"]
+    end
+    subgraph "Strategy Pattern"
+    I["<< Interface >>"]
+    A["Strategy A"]
+    B["Strategy B"]
+    I <|-- A
+    I <|-- B
+    end
+    S -- "Refactor" --> I
+```
+
 ---
 
 ## 3. まずは“やりすぎない判断”⚖️🙂

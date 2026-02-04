@@ -18,6 +18,21 @@
 **まとまった処理の一部を、新しいメソッドに切り出す**リファクタです✂️📦
 元の場所には「新しいメソッドを呼ぶ1行」が残るので、読みやすさが一気に上がります📖✨
 
+```mermaid
+graph TD
+    subgraph "Before (Big Method)"
+    B["[Step 1: Validate]\n[Step 2: Calculate]\n[Step 3: Save]"]
+    end
+    subgraph "After (Decomposed)"
+    Main["[Main Method]\nValidate();\nCalculate();\nSave();"]
+    S1["Validate() { ... }"]
+    S2["Calculate() { ... }"]
+    S3["Save() { ... }"]
+    Main --> S1 & S2 & S3
+    end
+```
+
+---
 文章でいうと…
 
 * だらだら長い文章 → **段落に分けて見出しを付ける** 느낌です📚💕

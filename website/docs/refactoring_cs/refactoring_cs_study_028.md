@@ -15,6 +15,18 @@
 * **直しやすい**🛠️（変更点が1か所に集まる）
 * **テストしやすい**🧪（依存や副作用が減る）
 
+```mermaid
+graph TD
+    subgraph "Mixed Responsibilities"
+    M["[Class]\nCalcTotal();\nBuildReceipt();"]
+    end
+    subgraph "Extracted Classes"
+    C["OrderPricing\nCalcTotal()"]
+    S["OrderService\nBuildReceipt()"]
+    end
+    M -- "Extract Class" --> C & S
+```
+
 ---
 
 ## 2. この章のゴール🎯🌸

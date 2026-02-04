@@ -30,6 +30,17 @@
 * 例：メール送信が **1回だけ呼ばれた？**、宛先は合ってる？📧✅
 * テストは **“やりとり（振る舞い）”** を見る🎬
 
+```mermaid
+graph TD
+    subgraph "Stub (Indirect Input)"
+    S["Stub"] -- "Returns Value" --> App["Application"]
+    end
+    subgraph "Mock (Indirect Output)"
+    App -- "Calls & Sends" --> M["Mock"]
+    M -- "Verifies Call" --> V["Verify"]
+    end
+```
+
 ---
 
 ## いったん全体像：「テストダブル」って何？🎎✨

@@ -56,6 +56,22 @@ TDDで「失敗時の仕様」を先に固定して、安心して実装でき�
   例：NullReferenceException…😵
   → リトライでは直らない、まず直すべき🛠️
 
+```mermaid
+graph TD
+    E["Exception"] --> T["Transient (一時的)"]
+    E --> P["Permanent (恒久的)"]
+    
+    T -- "Retry?" --> R["✅ Yes"]
+    P -- "Retry?" --> N["❌ No"]
+    
+    subgraph "Examples"
+    T1["Timeout / 503"]
+    P1["Auth Error / 404"]
+    end
+    T --> T1
+    P --> P1
+```
+
 ---
 
 ## 3) どこで try/catch するのが正解？📍✨

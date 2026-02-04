@@ -339,7 +339,6 @@ sequenceDiagram
     Handler->>Repo: 4. 確定を依頼 (SaveChangesAsync)
     Repo->>DB: 5. 実際に Commit!
 ```
-```
 
 ### Applicationがやること😊
 

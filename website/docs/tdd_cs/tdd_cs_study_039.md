@@ -32,6 +32,18 @@ Console入出力、ファイル、DB、HTTP…こういうのって全部「外�
 
 この考え方、よく **“Functional Core / Imperative Shell”**（中心は純粋・外側は手続き）って言われます☺️
 
+```mermaid
+graph LR
+    subgraph "Imperative Shell (Outer)"
+    IO["Console / File / DB"]
+    end
+    subgraph "Functional Core (Inner)"
+    Logic["Pure Business Logic"]
+    end
+    IO -- "Input Data" --> Logic
+    Logic -- "Result Data" --> IO
+```
+
 ---
 
 ## 今日の題材：ミニCLI「推し活グッズ管理（超ミニ）」🎀📦

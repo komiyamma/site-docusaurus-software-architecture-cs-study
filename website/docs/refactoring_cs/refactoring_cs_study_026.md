@@ -1,11 +1,3 @@
-# 第26章：密結合のサイン（参照が多すぎる）🧲🪶
-
----
-
-## この章のゴール🎯✨
-
-* 「密結合っぽいコード」を**見つけられる**ようになる👀🔎
-* 依存（参照）を**1つずつ減らす**やり方が分かる🧵✨
 * 「テストしづらい…😭」の理由を**言葉にできる**ようになる🗣️💡
 
 ---
@@ -13,10 +5,6 @@
 ## 密結合ってどんな状態？🧲😵
 
 ![](./picture/refactoring_cs_study_026_coupling.png)
-
-![](./picture/refactoring_cs_study_026_coupling.png)
-
-![refactoring_cs_study_026_coupling](./picture/refactoring_cs_study_026_coupling.png)
 
 密結合（Tight Coupling）は、ざっくり言うと…
 
@@ -27,6 +15,23 @@
 * DBの種類を変えたい → いろんなクラスが直にDBアクセスしてて無理😇
 * メール送信を止めたい → あちこちに `new SmtpClient()` が散らばってる📩💦
 * テストしたい → `DateTime.Now` とファイルI/OとHTTPが混ざってて詰み😭
+
+```mermaid
+graph TD
+    subgraph "Tight Coupling (Hard to Test)"
+    S["Service"]
+    DB["SQL Server"]
+    M["SMTP Client"]
+    S -- "new" --> DB
+    S -- "new" --> M
+    end
+    subgraph "Loose Coupling (DI)"
+    S2["Service"]
+    I1["IRepository"]
+    I2["IMailer"]
+    S2 -- "inject" --> I1 & I2
+    end
+```
 
 ---
 

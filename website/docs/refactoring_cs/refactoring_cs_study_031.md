@@ -6,6 +6,20 @@
 * **無効状態（壊れた値）を作らない** ための置き場所を、コードの中にちゃんと作れるようになる🛡️
 * C# の `record` / `record struct` を使って、**等価性（同じかどうか）** と **不変（変わらない）** をラクに実装できるようになる💎✨ ([Microsoft Learn][1])
 
+```mermaid
+graph LR
+    subgraph "Primitive (Risky)"
+    A["int amount = -100;"]
+    end
+    subgraph "Value Object (Safe)"
+    V["Money(100, 'JPY')"]
+    G["[Guard]"]
+    V -- "Create" --> G
+    G -- "Fail" --> X["Exception"]
+    end
+    A -- "Wrap" --> V
+```
+
 ---
 
 ## Value Objectってなに？🤔💡

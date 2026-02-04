@@ -31,6 +31,14 @@ TDDだと「Refactor」って毎回出てくるけど、実際はここでつま
 
 この3点セットでいこうね😊✨
 
+```mermaid
+graph LR
+    T1["Green Test"] -- "Refactor 1mm" --> C["Change Code"]
+    C -- "Run Test" --> T2["Green Test?"]
+    T2 -- "Yes" --> Commit["Commit"]
+    T2 -- "No" --> Revert["Revert"]
+```
+
 ---
 
 ## 3) “安全運転”チェックリスト🧷✅（これだけ守ればだいぶ勝てる！）

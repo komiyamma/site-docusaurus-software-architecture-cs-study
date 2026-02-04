@@ -15,6 +15,19 @@
 * ✅ テストでは **スタブ（Fake）を渡して安定・高速**に回せる
 * ✅ まだ **DIコンテナ無し**でOK！手で渡せるようになる
 
+```mermaid
+graph LR
+    subgraph "❌ Before: new inside"
+    App1["App"] -- "new" --> S1["SystemClock"]
+    end
+    subgraph "✅ After: DI"
+    App2["App"]
+    S2["SystemClock"]
+    App2 -- "get via ctor" --> I["IClock"]
+    S2 -- "implements" --> I
+    end
+```
+
 ---
 
 ## 1) “DI”って言葉にビビらないでOK😌✨

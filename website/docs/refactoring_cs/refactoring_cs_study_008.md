@@ -29,6 +29,18 @@ Characterization Test（キャラクタリゼーションテスト）は、ざ�
 Michael Feathers は「Characterization testing の目的は、こうなって欲しい挙動ではなく“実際の挙動”を記録すること」と説明しています。([michaelfeathers.silvrback.com][1])
 また、Characterization test は Golden Master / Snapshot / Approval testing などと呼ばれることもあります。([ウィキペディア][2])
 
+```mermaid
+graph LR
+    subgraph "Legacy Code"
+    LC["Actual Behavior (Unknown Specs)"]
+    end
+    subgraph "Test"
+    T["Characterization Test"]
+    end
+    LC -- "Capture & Snapshot" --> T
+    T -- "Lock" --> LC
+```
+
 ---
 
 ## 2. どうして“最初に写す”の？🛡️✨

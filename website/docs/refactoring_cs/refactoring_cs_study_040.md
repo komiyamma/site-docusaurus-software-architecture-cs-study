@@ -25,6 +25,20 @@
 * 計算（ロジック）と I/O（保存・ログ）が混ざってる🌀
 * テストが無いので怖い😱
 
+```mermaid
+graph TD
+    subgraph "Legacy (Tangled)"
+    L["God Method\n(Logic + I/O + UI)"]
+    end
+    subgraph "Refactored (Clean)"
+    C["Calculator (Pure)"]
+    A["App Service"]
+    R["Repository"]
+    A -- "Use" --> C & R
+    end
+    L -- "Refactor" --> A
+```
+
 ---
 
 ## Before：レガシー版（わざと読みにくい）🫠💥

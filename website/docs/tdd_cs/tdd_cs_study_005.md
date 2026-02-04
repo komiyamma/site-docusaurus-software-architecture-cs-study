@@ -157,6 +157,16 @@ public class ShippingFeeCalculatorTests
 “英語が苦手”でも大丈夫だよ😊
 **日本語→英語**は慣れゲーだから、毎回ちょっとずつでOK🎮✨
 
+```mermaid
+flowchart TD
+    Step1["1. 日本語で仕様を書く<br/>(送料は0円になる)"] --> Step2["2. DisplayName に設定<br/>(DisplayName = '...')"]
+    Step2 --> Step3["3. 英語メソッド名に変換<br/>(Calculate_..._Returns0Yen)"]
+    
+    style Step1 fill:#fce4ec,stroke:#d81b60
+    style Step2 fill:#f3e5f5,stroke:#8e24aa
+    style Step3 fill:#e8eaf6,stroke:#3949ab
+```
+
 ---
 
 ## AIの使いどころ（この章はここが最強）🤖💖

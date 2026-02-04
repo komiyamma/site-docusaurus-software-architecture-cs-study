@@ -29,6 +29,17 @@
 
 Visual Studio では、例外が起きた瞬間に **Exception Helper** が出て、`InnerException` も追えます👀✨ ([Microsoft Learn][1])
 
+```mermaid
+graph BT
+    L1["Leaf Method (Error!)"] -- "throw ex" --> L2["Mid Level"]
+    L2 -- "catch & throw new (Wrapper)" --> L3["Top Level (Catch & Log)"]
+    subgraph "Inner Structure"
+    Wrapper["Wrapper Exception"]
+    Inner["Inner Exception (Original Cause)"]
+    Wrapper -- "Points to" --> Inner
+    end
+```
+
 ---
 
 ## 2) “投げる（throw）”の基本ルール🧨

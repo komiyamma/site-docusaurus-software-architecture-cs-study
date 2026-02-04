@@ -73,6 +73,18 @@ TDDが止まる原因って、だいたいこれ👇
 * 異常系（落とし方を決める）
 * 境界（ギリギリを固める）
 
+```mermaid
+graph LR
+    subgraph Strategies ["小さく刻む3つの型 🧩"]
+        A["型A: 例で刻む<br/>(成功例1 → 成功例2)"]
+        B["型B: ルールで刻む<br/>(正規化 → バリデーション)"]
+        C["型C: 正常→異常→境界<br/>(Happy Path優先)"]
+    end
+    style A fill:#fff9c4,stroke:#fbc02d
+    style B fill:#f1f8e9,stroke:#689f38
+    style C fill:#e1f5fe,stroke:#0288d1
+```
+
 ---
 
 ## 5. 実例で「3つの小テスト」に分解してみよ🎀🧪
