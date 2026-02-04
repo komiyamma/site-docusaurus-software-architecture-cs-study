@@ -394,6 +394,13 @@ const config: Config = {
         },
 
         {
+          type: 'docSidebar',
+          sidebarId: 'outboxCsSidebar',
+          position: 'left',
+          label: 'Outbox C#版',
+        },
+
+        {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-cs-study',
           label: 'GitHub',
           position: 'right',

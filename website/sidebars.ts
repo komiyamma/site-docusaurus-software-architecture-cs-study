@@ -158,6 +158,7 @@ const sidebars: SidebarsConfig = {
   modMonoCsSidebar: generateProjectSidebar('mod_mono_cs'),
   tddCsSidebar: generateProjectSidebar('tdd_cs'),
   apiContractCsSidebar: generateProjectSidebar('api_contract_cs'),
+  outboxCsSidebar: generateProjectSidebar('outbox_cs'),
 };
 
 export default sidebars;

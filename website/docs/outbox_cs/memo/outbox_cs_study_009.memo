@@ -1,0 +1,2 @@
+Outboxテーブルの基本設計として、Id、Type、Payload、OccurredAtの4項目を学ぶ。
+ズレを防ぐための、最小構成のスキーマ定義とEF Coreによる実装例を解説する。

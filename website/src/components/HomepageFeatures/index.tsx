@@ -412,6 +412,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/api_contract_cs/api_contract_cs_index',
   },
+  {
+    title: 'Outbox C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_tree.svg').default,
+    description: (
+      <>
+        トランザクションアウトボックスパターンの<br/>
+        概念とC#での実装方法を学びます。<br/>
+        確実なメッセージ配送と整合性の確保。<br/>
+      </>
+    ),
+    link: '/docs/outbox_cs/outbox_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
