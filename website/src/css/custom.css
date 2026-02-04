@@ -1,49 +1,52 @@
 /**
- * CSS for Docusaurus - komiyamma.net 統一デザイン
- * ライトモードのみ（ダークモード無効化済み）
+ * Any CSS included here will be global. The classic template
+ * bundles Infima by default. Infima is a CSS framework designed to
+ * work well for content-centric websites.
  */
 
-/* ========================================
-   Base Color Variables - komiyamma.net 風
-   ======================================== */
+/* You can override the default Infima variables here. */
 :root {
-  /* Primary Blue - komiyamma.net 風の濃い青 */
-  --ifm-color-primary: #2563a7;
-  --ifm-color-primary-dark: #2157a1;
-  --ifm-color-primary-darker: #1e4e8c;
-  --ifm-color-primary-darkest: #173e6d;
-  --ifm-color-primary-light: #3a78bc;
-  --ifm-color-primary-lighter: #4f8ccf;
-  --ifm-color-primary-lightest: #6ea0db;
-  
+  /* Desaturated Blue (Steel Blue style) */
+  --ifm-color-primary: #46769b;
+  --ifm-color-primary-dark: #3f6a8b;
+  --ifm-color-primary-darker: #3b6483;
+  --ifm-color-primary-darkest: #31526c;
+  --ifm-color-primary-light: #5282a7;
+  --ifm-color-primary-lighter: #5a88ad;
+  --ifm-color-primary-lightest: #709abd;
   --ifm-code-font-size: 95%;
   --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.1);
   
-  /* Sidebar width */
+  /* Sidebar width 400px -> 430px (Refined by user) */
   --doc-sidebar-width: 430px;
   
-  /* Container width for 4K screens */
+  /* Cap the width at 1770px for readability on 4K screens */
   --ifm-container-width: 1770px;
-  
-  /* Navbar/Sidebar colors */
-  --navbar-bg: #1e4f8c;
-  --sidebar-bg: #2563a7;
-  --sidebar-link-color: #ffffff;
-  --sidebar-link-hover-bg: rgba(255, 255, 255, 0.15);
 }
 
-/* ========================================
-   Container Width
-   ======================================== */
+/* Force container to match the custom width on large screens */
 .container {
   max-width: var(--ifm-container-width) !important;
 }
 
+/* For readability concerns, you should choose a lighter palette in dark mode. */
+[data-theme='dark'] {
+  /* Lighter, softer blue for dark mode */
+  --ifm-color-primary: #6daccd;
+  --ifm-color-primary-dark: #56a2c6;
+  --ifm-color-primary-darker: #4a9cc2;
+  --ifm-color-primary-darkest: #3685a8;
+  --ifm-color-primary-light: #84b6d4;
+  --ifm-color-primary-lighter: #8fbbd7;
+  --ifm-color-primary-lightest: #b0cce1;
+  --docusaurus-highlighted-code-line-bg: rgba(0, 0, 0, 0.3);
+}
+
 /* ========================================
-   Navbar - Dark Blue Header
+   Navbar - Custom Blue Background
    ======================================== */
 .navbar {
-  background: var(--navbar-bg);
+  background: #2563a7;
   box-shadow: 0 2px 4px rgba(0, 0, 0, 0.1);
 }
 
@@ -74,70 +77,27 @@
 }
 
 /* ========================================
-   Sidebar - Blue Background
+   Navbar Horizontal Scroll (Simple)
    ======================================== */
-.theme-doc-sidebar-container {
-  background: var(--sidebar-bg);
-}
 
-.menu {
-  background: var(--sidebar-bg);
-  padding: 0.5rem 0;
-}
-
-.menu__link {
-  color: var(--sidebar-link-color);
-  border-radius: 0;
-  padding: 0.5rem 1rem;
-}
-
-.menu__link:hover {
-  background: var(--sidebar-link-hover-bg);
-  color: white;
-}
-
-.menu__link--active {
-  background: rgba(255, 255, 255, 0.2);
-  color: white;
-  font-weight: 600;
-}
-
-.menu__link--sublist-caret::after {
-  filter: brightness(0) invert(1);
-}
-
-.menu__list-item-collapsible:hover {
-  background: var(--sidebar-link-hover-bg);
-}
-
-.menu__list-item-collapsible .menu__link {
-  color: white;
-}
-
-/* Sidebar category labels */
-.theme-doc-sidebar-item-category > .menu__list-item-collapsible > .menu__link {
-  color: white;
-  font-weight: 500;
-}
-
-/* ========================================
-   Navbar Horizontal Scroll
-   ======================================== */
+/* Navbar inner is the positioning context */
 .navbar__inner {
   position: relative;
 }
 
+/* Left navbar items (menu links) scroll horizontally */
 .navbar__items:not(.navbar__items--right) {
   flex-wrap: nowrap;
   overflow-x: auto;
   white-space: nowrap;
+  /* Add left margin to make room for the fixed home icon */
   margin-left: 48px;
   
-  /* Border for scroll indication */
+  /* Subtle vertical lines on left and right edges */
   border-left: 1px solid rgba(255, 255, 255, 0.2);
   border-right: 1px solid rgba(255, 255, 255, 0.2);
   
-  /* Scrollbar */
+  /* Visible thin scrollbar to indicate scrollability */
   scrollbar-width: thin;
   scrollbar-color: rgba(255, 255, 255, 0.4) transparent;
 }
@@ -159,104 +119,11 @@
   background-color: rgba(255, 255, 255, 0.6);
 }
 
+/* Home icon is positioned outside the scroll container */
 .navbar__brand {
   position: absolute;
   left: 6px;
   top: 50%;
   transform: translateY(-50%);
   z-index: 10;
-}
-
-/* ========================================
-   Footer - Dark Style (matching navbar)
-   ======================================== */
-.footer--dark {
-  background: var(--navbar-bg);
-}
-
-/* ========================================
-   Main Content Area
-   ======================================== */
-.main-wrapper {
-  background: #ffffff;
-}
-
-/* Article/Doc Content */
-article {
-  background: #ffffff;
-}
-
-/* Links in content */
-.markdown a {
-  color: var(--ifm-color-primary);
-}
-
-.markdown a:hover {
-  color: var(--ifm-color-primary-dark);
-}
-
-/* ========================================
-   Breadcrumbs
-   ======================================== */
-.breadcrumbs__link {
-  color: var(--ifm-color-primary);
-}
-
-/* ========================================
-   Table of Contents (Right Sidebar)
-   ======================================== */
-.table-of-contents__link {
-  color: #555;
-}
-
-.table-of-contents__link--active {
-  color: var(--ifm-color-primary);
-  font-weight: 600;
-}
-
-/* ========================================
-   Pagination
-   ======================================== */
-.pagination-nav__link {
-  border-color: var(--ifm-color-primary-light);
-}
-
-.pagination-nav__link:hover {
-  border-color: var(--ifm-color-primary);
-}
-
-/* ========================================
-   Homepage Features
-   ======================================== */
-.features h3 a,
-.features h3 {
-  color: var(--ifm-color-primary);
-}
-
-/* ========================================
-   Code Blocks
-   ======================================== */
-.prism-code {
-  background: #f6f8fa !important;
-}
-
-/* ========================================
-   Buttons
-   ======================================== */
-.button--primary {
-  background-color: var(--ifm-color-primary);
-  border-color: var(--ifm-color-primary);
-}
-
-.button--primary:hover {
-  background-color: var(--ifm-color-primary-dark);
-  border-color: var(--ifm-color-primary-dark);
-}
-
-/* ========================================
-   Admonitions / Alerts
-   ======================================== */
-.alert--info {
-  --ifm-alert-background-color: rgba(37, 99, 167, 0.1);
-  --ifm-alert-border-color: var(--ifm-color-primary);
 }
