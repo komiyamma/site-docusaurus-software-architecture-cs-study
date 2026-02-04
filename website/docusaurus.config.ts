@@ -112,6 +112,7 @@ const config: Config = {
           "docs/mod_mono_cs",
           "docs/tdd_cs",
           "docs/api_contract_cs",
+          "docs/testable_cs",
         ],
         hideSearchBarWithNoSearchContext: true,
       }),
@@ -398,6 +399,12 @@ const config: Config = {
           sidebarId: 'outboxCsSidebar',
           position: 'left',
           label: 'Outbox C#版',
+        },
+        {
+          type: 'docSidebar',
+          sidebarId: 'testableCsSidebar',
+          position: 'left',
+          label: 'テスト容易な設計 C#版',
         },
 
         {
