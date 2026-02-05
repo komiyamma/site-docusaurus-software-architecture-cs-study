@@ -163,8 +163,8 @@ const config: Config = {
       title: '',
       logo: {
         alt: 'Home',
-        src: 'img/home_dark.svg',
-        srcDark: 'img/home_dark.svg',
+        src: 'img/home_white.svg',
+        srcDark: 'img/home_white.svg',
       },
       items: [
         {
