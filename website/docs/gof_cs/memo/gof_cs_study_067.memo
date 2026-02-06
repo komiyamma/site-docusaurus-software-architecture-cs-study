@@ -1,0 +1,1 @@
+C#標準のeventとEventHandlerによるObserverパターン実装を解説。発行側と購読側の疎結合、解除漏れ対策、INotifyPropertyChanged等の活用を学ぶ。

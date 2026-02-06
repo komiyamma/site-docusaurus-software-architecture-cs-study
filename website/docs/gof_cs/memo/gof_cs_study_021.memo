@@ -1,0 +1,1 @@
+Abstract Factoryの乱用によるクラス増殖を防ぐ判断基準を学びます。不要なFactoryを削除し、StrategyやDI等の代替手段で設計を簡素化する方法を習得します。

@@ -1,0 +1,1 @@
+HttpClientのハンドラチェーン構成をChain of Responsibilityの実例として学ぶ。DelegatingHandlerによる横断処理の差し込みや、順序制御の重要性を理解する。

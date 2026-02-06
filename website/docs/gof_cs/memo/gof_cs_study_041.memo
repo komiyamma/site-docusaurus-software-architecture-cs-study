@@ -1,0 +1,1 @@
+Compositeパターンをファイルシステム（DirectoryInfo/FileInfo）の例で理解する。共通基底クラスFileSystemInfoを通じ、フォルダとファイルを統一的に扱う方法を学ぶ。

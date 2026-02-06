@@ -1,0 +1,1 @@
+InterpreterとMementoを.NET標準機能で学ぶ。Regexによる簡易ルール解釈と、Stackと不変オブジェクトを用いたUndo機能の実装でパターンを体験する。

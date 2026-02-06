@@ -1,0 +1,1 @@
+IObservable<T>とRxを用いたストリーム処理によるObserverパターンを解説。OnNext/OnError/OnCompleted規約、Disposeでの購読解除、LINQ風オペレータの活用を学ぶ。

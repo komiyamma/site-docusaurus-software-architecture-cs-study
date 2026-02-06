@@ -1,0 +1,1 @@
+ASP.NET CoreのミドルウェアパイプラインをChain of Responsibilityの実例として学ぶ。UseやRunによる順序制御や、リクエスト処理の連鎖構造を理解する。

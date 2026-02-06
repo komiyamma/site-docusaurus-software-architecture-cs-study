@@ -1,0 +1,1 @@
+MediatRを用いたMediatorパターンの実装を解説。DIとハンドラによる疎結合化、Request/Notificationの違い、IPipelineBehaviorによる横断関心の分離を学ぶ。

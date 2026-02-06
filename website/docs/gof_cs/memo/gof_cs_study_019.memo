@@ -1,0 +1,1 @@
+DbProviderFactoryを通じ、Abstract Factoryの実用例を学びます。関連オブジェクト群の生成を隠蔽し、DB製品に依存しない記述と、その限界（SQL方言）を理解します。

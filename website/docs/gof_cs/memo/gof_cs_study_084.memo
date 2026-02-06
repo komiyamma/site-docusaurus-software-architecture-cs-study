@@ -1,0 +1,1 @@
+MediatRを用いたMediatorパターンの演習。注文確定を例に、IRequestによるコマンド実行とINotificationでのイベント通知による疎結合化を学ぶ。

@@ -1,0 +1,1 @@
+操作をオブジェクト化（Command）し、実行可否や履歴管理を容易にする。WPFのICommandやCanExecuteを例に、InvokerとReceiverの分離を学ぶ。

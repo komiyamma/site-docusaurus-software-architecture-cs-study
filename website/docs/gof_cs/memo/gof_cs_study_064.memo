@@ -1,0 +1,2 @@
+C#のIteratorはIEnumerableとyield returnで遅延実行を実現し、構造を隠す。
+File.ReadLinesのように必要な分だけ読み込み、メモリ効率と応答性を高める。

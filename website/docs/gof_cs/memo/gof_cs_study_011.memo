@@ -1,0 +1,1 @@
+Microsoft.Extensions.DependencyInjectionを用いた標準的なDI手法を学習します。適切なライフサイクルの選択や、テスト時の依存差し替えを実践します。

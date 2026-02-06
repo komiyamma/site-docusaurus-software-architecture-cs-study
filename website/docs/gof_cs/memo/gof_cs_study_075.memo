@@ -1,0 +1,1 @@
+StateパターンのC#らしい実装として、switch式からprivateな入れ子クラスを用いたStateクラスへの移行手法を解説。カプセル化による状態の隠蔽やSingleton化を学ぶ。

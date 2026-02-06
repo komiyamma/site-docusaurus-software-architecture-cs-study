@@ -1,0 +1,2 @@
+Iteratorは内部構造を隠して走査方法を統一する仕組みで、C#ではIEnumerableが主役。
+foreachの裏側にある列挙子の動作を理解し、yield returnで遅延評価を実現する。

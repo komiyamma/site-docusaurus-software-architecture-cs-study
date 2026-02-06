@@ -1,0 +1,1 @@
+処理を鎖状に繋ぎ（Chain of Responsibility）、順次実行や中断を柔軟に制御する。パイプライン型処理やASP.NET Coreのミドルウェア等の実例を学ぶ。

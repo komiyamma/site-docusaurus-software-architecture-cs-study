@@ -1,0 +1,1 @@
+.NET標準のFactory Method（SHA256やHttpClientFactory等）の実例から、実装隠蔽や戻り値の抽象化、そしてIDisposableの適切な扱いを深く学びます。

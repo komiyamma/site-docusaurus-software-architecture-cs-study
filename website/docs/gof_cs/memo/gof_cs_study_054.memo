@@ -1,0 +1,1 @@
+StreamのDecoratorやAdapter、Facadeを組み合わせ、圧縮やDTO変換を含む複雑な入出力を隠蔽する手法を学ぶ。構造系パターンの連携を実践する。

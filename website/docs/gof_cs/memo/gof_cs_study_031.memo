@@ -1,0 +1,1 @@
+.NETでのSingletonは、Lazy<T>を用いた遅延初期化とスレッド安全性の確保が基本です。また、DIのAddSingletonやIOptionsの活用も検討すべきです。

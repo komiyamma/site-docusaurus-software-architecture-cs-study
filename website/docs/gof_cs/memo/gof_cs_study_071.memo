@@ -1,0 +1,1 @@
+Strategyパターンの標準例としてIComparer<T>とComparison<T>を用いた並び替え処理を解説。比較ルールの差し替えや安定ソート、LINQのOrderBy活用法を学ぶ。
