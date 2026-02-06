@@ -88,6 +88,14 @@ const dddModules = [
   { title: "第7部：【継続と成長】AI時代に生き残る設計者になる", start: 91, end: 100 },
 ];
 
+const gofModules = [
+  { title: "Part 0：学び方・準備", start: 1, end: 12 },
+  { title: "Part 1：生成パターン", start: 13, end: 32 },
+  { title: "Part 2：構造パターン", start: 33, end: 54 },
+  { title: "Part 3：振る舞いパターン", start: 55, end: 80 },
+  { title: "Part 4：応用とまとめ", start: 81, end: 85 },
+];
+
 
 
 /**
@@ -160,6 +168,14 @@ const sidebars: SidebarsConfig = {
   apiContractCsSidebar: generateProjectSidebar('api_contract_cs'),
   outboxCsSidebar: generateProjectSidebar('outbox_cs'),
   testableCsSidebar: generateProjectSidebar('testable_cs'),
+
+  gofCsSidebar: [
+    {
+      type: 'doc',
+      id: 'gof_cs/gof_cs_index',
+    },
+    ...generateSidebarItems('gof_cs', 'gof_cs', gofModules),
+  ],
 };
 
 export default sidebars;

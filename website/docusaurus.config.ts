@@ -408,6 +408,12 @@ const config: Config = {
           position: 'left',
           label: 'テスト容易な設計 C#版',
         },
+        {
+          type: 'docSidebar',
+          sidebarId: 'gofCsSidebar',
+          position: 'left',
+          label: 'GoF C#版',
+        },
 
         {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-cs-study',

@@ -436,6 +436,18 @@ const FeatureList: FeatureItem[] = [
     ),
     link: '/docs/testable_cs/testable_cs_index',
   },
+  {
+    title: 'GoF C#版',
+    Svg: require('@site/static/img/undraw_docusaurus_mountain.svg').default,
+    description: (
+      <>
+        C#で学ぶGoFデザインパターン。<br/>
+        23パターンの基本から、<br/>
+        .NET標準クラスや定番ライブラリでの実践まで。<br/>
+      </>
+    ),
+    link: '/docs/gof_cs/gof_cs_index',
+  },
 ];
 
 function Feature({title, Svg, description, link}: FeatureItem) {
