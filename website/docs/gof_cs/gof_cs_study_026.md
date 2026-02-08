@@ -36,6 +36,25 @@
 
 ---
 
+
+```mermaid
+flowchart LR
+    Original["テンプレート<br>(不変)"]
+    Clone1["複製A"]
+    Clone2["複製B"]
+    
+    Original -->|with| Clone1
+    Original -->|with| Clone2
+    
+    subgraph Edit ["数箇所だけ変更"]
+    Clone1
+    Clone2
+    end
+    
+    style Original fill:#e1f5fe
+    style Edit fill:#fff3e0
+```
+
 ### 3) C#らしく `record` + `with` でテンプレを作る🧾✨
 
 Prototypeは本来「Cloneメソッドを持つ」形が多いけど、C#は `with` が強い💪

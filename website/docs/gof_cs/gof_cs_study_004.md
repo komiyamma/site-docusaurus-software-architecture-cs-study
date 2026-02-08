@@ -45,6 +45,23 @@ GofPatternsLearning/
 
 ---
 
+
+```mermaid
+graph TD
+    subgraph Tests[テスト層]
+        T[Ch04.SolutionSetup.Tests]
+    end
+    subgraph Src[実装層]
+        Main[Ch04.SolutionSetup]
+        Shared[Domain.Shared]
+    end
+    
+    T -->|参照| Main
+    Main -->|参照| Shared
+    T -.->|参照| Shared
+    style Shared fill:#f9f,stroke:#333,stroke-width:2px
+```
+
 ### 2) Visual Studioでソリューションを作る🧰✨
 
 1. Visual Studio → **新しいプロジェクトの作成**

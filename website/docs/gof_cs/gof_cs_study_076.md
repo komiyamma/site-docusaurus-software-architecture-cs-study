@@ -2,7 +2,30 @@
 
 ## ねらい 🎯
 
-![注文ステータス管理の演習（Stateパターン）](picture/gof_cs_study_076_state_exercise.png)
+
+```mermaid
+classDiagram
+    class Order {
+        +Pay()
+        +Ship()
+        -TransitionTo(state)
+    }
+    class IOrderState {
+        <<interface>>
+        +Pay(ctx)
+        +Ship(ctx)
+    }
+    
+    Order o-- IOrderState
+    IOrderState <|.. NewState
+    IOrderState <|.. PaidState
+    IOrderState <|.. ShippedState
+    
+    NewState ..> PaidState : Creates
+    PaidState ..> ShippedState : Creates
+```
+
+![注文ステータス管理の演習（Stateパターン）](./picture/gof_cs_study_076_state_exercise.png)
 
 * 「状態によって許される操作が変わる」せいで **if/switch が増殖する地獄🔥😵** を、Stateパターンでスッキリさせる✨
 * 「動く」「テストが通る」「責務が薄い」この3点を守りながら、**最小のState実装**を体に入れる💪😊

@@ -22,7 +22,33 @@
 
 ### 1) まず「困りごと」を言葉にする📝💭
 
-![Image](picture/gof_cs_study_046_facade_simplified_gate.png)
+```mermaid
+graph TD
+    Client[呼び出し側]
+    
+    subgraph Facade [窓口]
+        F[Facade Class]
+    end
+    
+    subgraph SubSystem [複雑な中身]
+        A[Class A]
+        B[Class B]
+        C[Class C]
+        D[Class D]
+    end
+    
+    Client --> F
+    F --> A
+    F --> B
+    F --> C
+    F --> D
+    
+    style Facade fill:#e1f5fe
+    style SubSystem fill:#fff9c4
+```
+
+![Image](./picture/gof_cs_study_046_facade_concept.png)
+![Image](./picture/gof_cs_study_046_facade_simplified_gate.png)
 
 Facadeが刺さるのは、だいたいこんな症状のとき👇
 

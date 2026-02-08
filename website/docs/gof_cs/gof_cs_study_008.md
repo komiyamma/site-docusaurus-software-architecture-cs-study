@@ -46,6 +46,28 @@
 
 ---
 
+
+```mermaid
+graph TD
+    subgraph Outer["外側 (Infrastructure)"]
+        UI[Web / GUI]
+        DB[Database]
+        API[External API]
+    end
+    subgraph Inner["内側 (Domain/Core)"]
+        Logic[Business Logic]
+        Model[Domain Model]
+    end
+    
+    UI --> Logic
+    DB --> Logic
+    API --> Logic
+    Logic --> Model
+    
+    style Inner fill:#e8f5e9,stroke:#2e7d32,stroke-width:2px
+    style Outer fill:#e3f2fd,stroke:#1565c0,stroke-width:2px
+```
+
 ### 3) 例題（ミニEC）で分類してみるよ🛒🍰
 
 * **内側**：`Order`、`Money`、合計計算、状態遷移（Paid/Cancelledなど）🧾

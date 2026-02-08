@@ -20,7 +20,36 @@
 
 ## まずイメージ🍓：操作＝「命令カード」🃏
 
-![Image](picture/gof_cs_study_060_command_cards_invoker.png)
+
+```mermaid
+classDiagram
+    class Invoker {
+        -command: ICommand
+        +Click()
+    }
+    class ICommand {
+        <<interface>>
+        +Execute()
+        +CanExecute()
+    }
+    class PlaceOrderCommand {
+        +Execute()
+        +CanExecute()
+    }
+    class OrderService {
+        +PlaceOrder()
+    }
+    
+    Invoker --> ICommand
+    ICommand <|.. PlaceOrderCommand
+    PlaceOrderCommand --> OrderService : Calls
+    
+    note for Invoker "Button, MenuItem"
+    note for PlaceOrderCommand "Command Object"
+    note for OrderService "Receiver"
+```
+
+![Image](./picture/gof_cs_study_060_command_cards_invoker.png)
 
 「注文確定」って操作を、ただの `PlaceOrder()` 呼び出しにしちゃうと…
 

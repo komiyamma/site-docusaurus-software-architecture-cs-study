@@ -2,7 +2,24 @@
 
 ## ねらい 🎯
 
-![Stateパターンの状態遷移イメージ](picture/gof_cs_study_074_state_transition.png)
+
+```mermaid
+stateDiagram-v2
+    [*] --> New
+    New --> Paid : Pay()
+    New --> Cancelled : Cancel()
+    
+    Paid --> Shipped : Ship()
+    Paid --> Cancelled : Cancel() (Refund)
+    
+    Shipped --> [*]
+    Cancelled --> [*]
+    
+    note right of New : 発送NG
+    note right of Shipped : キャンセルNG
+```
+
+![Stateパターンの状態遷移イメージ](./picture/gof_cs_study_074_state_transition.png)
 
 * 「状態が増えるほど `if/switch` が太っていく問題」😵‍💫 をスパッと説明できるようにする
 * **State（状態）によって“許される操作”や“振る舞い”が変わる**ケースで、コードを読みやすく保つ感覚をつかむ✨

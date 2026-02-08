@@ -24,13 +24,37 @@ Decorator（デコレータ）は、**既存の処理（本体）を壊さずに
 
 ### 1) まず「困りごと」を1行で言う📝
 
-![Image](picture/gof_cs_study_043_decorator_wrapping_concept.png)
+![Image](./picture/gof_cs_study_043_decorator_wrapping_concept.png)
 
 Decoratorがハマる症状はこれ👇
 
 * もとの処理は同じなのに、**ログ・計測・リトライ・圧縮**みたいな“横から足す機能”が増える📈🧩
 * `if` や「オプション引数の増殖」で呼び出し側がぐちゃぐちゃになる😵‍💫
 * 組み合わせ（ログあり×圧縮あり×暗号化あり…）が増えて爆発する💥
+
+
+```mermaid
+graph LR
+    Client[呼び出し側]
+    
+    subgraph Wrapper2 [Decorator 2]
+        Func2[機能追加]
+        subgraph Wrapper1 [Decorator 1]
+            Func1[機能追加]
+            subgraph Core [本体]
+                Impl[処理実行]
+            end
+        end
+    end
+    
+    Client --> Wrapper2
+    Wrapper2 --> Wrapper1
+    Wrapper1 --> Core
+    
+    style Core fill:#ff9,stroke:#333
+    style Wrapper1 fill:#e1f5fe
+    style Wrapper2 fill:#e1f5fe
+```
 
 ---
 

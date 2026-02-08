@@ -182,6 +182,34 @@ public class NotificationServiceLegacyTests
 
 ![2軸に分離された通知システム](./picture/gof_cs_study_039_notification_bridge.png)
 
+
+```mermaid
+classDiagram
+    class OrderNotification {
+        <<Abstract>>
+        -writer : TextWriter
+        +Send()
+        #Write()*
+    }
+    class PlainTextNotif {
+        #Write()
+    }
+    class JsonNotif {
+        #Write()
+    }
+    
+    class TextWriter {
+        <<Abstract>>
+    }
+    
+    OrderNotification o-- TextWriter : Bridge
+    PlainTextNotif --|> OrderNotification
+    JsonNotif --|> OrderNotification
+    
+    note for OrderNotification "フォーマット(どう書く?)"
+    note for TextWriter "出力先(どこへ?)"
+```
+
 ここからが本番！
 
 今回の“Bridgeの形”はこうします👇

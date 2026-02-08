@@ -80,7 +80,34 @@ public sealed record PaymentResult(bool Succeeded, string? Error = null);
 
 ### 3) Facade（窓口）を作る🚪🛒
 
-![Image](picture/gof_cs_study_048_facade_checkout_flow.png)
+
+```mermaid
+classDiagram
+    class OrderCheckoutFacade {
+        +PlaceOrderAsync()
+    }
+    class IPaymentGateway {
+        +PayAsync()
+    }
+    class IOrderRepository {
+        +SaveAsync()
+    }
+    class IReceiptWriter {
+        +WriteAsync()
+    }
+    class INotifier {
+        +NotifyAsync()
+    }
+    
+    OrderCheckoutFacade --> IPaymentGateway
+    OrderCheckoutFacade --> IOrderRepository
+    OrderCheckoutFacade --> IReceiptWriter
+    OrderCheckoutFacade --> INotifier
+    
+    note for OrderCheckoutFacade "ここだけ叩けばOK!"
+```
+
+![Image](./picture/gof_cs_study_048_facade_checkout_flow.png)
 
 呼び出し側が知らなくていいことを、ぜんぶ中へ👇
 **入口はユースケース単位で1つ**が基本（ここでは「注文確定」）

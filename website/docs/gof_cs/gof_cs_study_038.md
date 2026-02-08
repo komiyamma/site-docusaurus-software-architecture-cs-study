@@ -23,6 +23,32 @@
 
 ![Streamによる実装差し替えのイメージ](./picture/gof_cs_study_038_stream_abstraction.png)
 
+
+```mermaid
+flowchart TD
+    Client[ReceiptExporter]
+    
+    subgraph Abstraction ["抽象: Stream"]
+        Stream[Stream class]
+    end
+    
+    subgraph Implementation ["実装: 具体的な置き場"]
+        File["FileStream<br>(HDD/SSD)"]
+        Mem["MemoryStream<br>(RAM)"]
+        Net["NetworkStream<br>(Socket)"]
+    end
+    
+    Client --> Stream
+    Stream <--> File
+    Stream <--> Mem
+    Stream <--> Net
+    
+    Stream <--> Net
+    
+    note["中身がどれかは<br>知らなくていい！"]
+    Client -.-> note
+```
+
 Bridgeのコアはこれ👇
 
 * **抽象（Abstraction）**：呼び出し側が触る“窓口”

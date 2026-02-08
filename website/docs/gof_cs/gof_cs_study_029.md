@@ -94,6 +94,25 @@ public class PrototypeCopyPitfallsTests
   * **箱（List）が同じ** → 片方で `Add` すると両方に見える
   * **中身（要素）が可変** → 片方で要素を書き換えると両方に影響
 
+
+```mermaid
+graph TD
+    subgraph Shallow["浅いコピー(危険)"]
+        A1[Instance A] --共有--> List["List<T>"]
+        B1[Instance B] --共有--> List
+    end
+    
+    subgraph Safe["箱だけ作り直し(安全)"]
+        A2[Instance A] --> L1[List A]
+        B2[Instance B] --> L2[List B]
+        L1 -.-> Item
+        L2 -.-> Item
+    end
+    
+    style Shallow fill:#ffcdd2
+    style Safe fill:#c8e6c9
+```
+
 ---
 
 ### 3) 対策①：不変（immutable）に寄せて「浅いコピーでも安全」にする 🛡️🌟

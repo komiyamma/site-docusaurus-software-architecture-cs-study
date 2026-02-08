@@ -21,7 +21,7 @@
 
 ### 1) まず「導入前」素朴版を作る 🐣
 
-![Image](picture/gof_cs_study_051_flyweight_badge_factory.png)
+![Image](./picture/gof_cs_study_051_flyweight_badge_factory.png)
 
 状況：ECの管理画面で、商品に「NEW」「SALE」みたいな **バッジ（ラベル＋アイコン）**をいっぱい表示したい📦🛒
 でも素朴にやると、商品1件ごとに同じラベル情報を **何度もnew** しちゃう😵💦
@@ -38,6 +38,34 @@
 
 ここがFlyweightのキモ！🪶✨
 「変わらない部品」を共通化して、個別データは軽く持つよ🙂
+
+
+```mermaid
+classDiagram
+    class LabelFlyweightFactory {
+        -cache: Dictionary
+        +Get(kind)
+    }
+    class LabelFlyweight {
+        <<Shared>>
+        +Text
+        +IconBytes
+    }
+    class BadgeInstance {
+        <<Unique>>
+        +ProductId
+        +X
+        +Y
+        +Kind
+    }
+    
+    BadgeInstance ..> LabelFlyweightFactory : Uses
+    LabelFlyweightFactory --> LabelFlyweight : Manages
+    BadgeInstance --> LabelFlyweight : Refers (via Kind)
+    
+    note for LabelFlyweight "不変(Immutable)\n1つだけ作る"
+    note for BadgeInstance "個別(Extrinsic)\n大量に作る"
+```
 
 ### 3) Flyweight（共有オブジェクト）をFactoryで管理する 🏭🧊
 

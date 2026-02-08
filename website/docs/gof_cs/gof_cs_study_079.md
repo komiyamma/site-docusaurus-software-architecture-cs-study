@@ -2,7 +2,23 @@
 
 ## ねらい 🎯✨
 
-![Visitorパターン：データ構造と操作の分離（ダブルディスパッチ）](picture/gof_cs_study_079_visitor_double_dispatch.png)
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant E as Element (LineItem)
+    participant V as Visitor (PriceCalc)
+    
+    Client->>E: Accept(visitor)
+    E->>V: Visit(this)
+    V->>V: Calculate Price
+    V-->>E: return
+    E-->>Client: return
+    
+    note over E,V: Double Dispatch\n1. Elementの型でAccept\n2. VisitorのOverloadで処理
+```
+
+![Visitorパターン：データ構造と操作の分離（ダブルディスパッチ）](./picture/gof_cs_study_079_visitor_double_dispatch.png)
 
 * 「**データ構造（ツリー/Composite）** はあまり変えたくないけど、**やりたい処理（操作）がどんどん増える**」問題をスッキリさせる 🧹🌳
 * Visitorの“本質”＝**構造と操作を分ける**、を言葉で説明できるようにする 🗣️💡

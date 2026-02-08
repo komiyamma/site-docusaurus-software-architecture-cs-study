@@ -2,7 +2,27 @@
 
 ## ねらい 🎯✨
 
-![割引ルール差し替えの演習（Strategyパターン）](picture/gof_cs_study_073_strategy_exercise.png)
+
+```mermaid
+classDiagram
+    class Calculator {
+        -Func_decimal_decimal strategy
+        +Calculate(subtotal)
+    }
+    class Strategies {
+        <<static>>
+        +None
+        +Member10Percent
+        +Coupon500
+    }
+    
+    Calculator --> Strategies : Uses (via Func)
+    
+    note for Calculator "値引き計算の骨組み"
+    note for Strategies "具体的な値引きルール"
+```
+
+![割引ルール差し替えの演習（Strategyパターン）](./picture/gof_cs_study_073_strategy_exercise.png)
 
 * 「割引ルール（方針）」がコロコロ変わる現場で、`if/switch` 地獄を回避する🌀
 * Strategy を “入れるだけ” じゃなくて、「入れない判断」「外す判断」までできるようになる🧠✅

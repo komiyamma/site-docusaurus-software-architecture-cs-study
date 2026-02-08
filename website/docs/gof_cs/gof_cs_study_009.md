@@ -211,6 +211,33 @@ public sealed record Notification(
 
 ---
 
+
+```mermaid
+classDiagram
+    class Order {
+        +OrderId Id
+        +Money Total
+        +OrderStatus Status
+        +PaymentMethod PaymentMethod
+        +MarkPaid()
+        +Cancel()
+    }
+    class Money {
+        +decimal Amount
+    }
+    class OrderId {
+        +Guid Value
+    }
+    class Notification {
+        +NotificationChannel Channel
+        +string Message
+    }
+    
+    Order --> OrderId
+    Order --> Money
+    Order --> Notification : (creates)
+```
+
 ### 8) JSON用DTOを用意して、System.Text.Jsonで変換する 🧾✨
 
 ここが超大事ポイント🙂

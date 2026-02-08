@@ -75,6 +75,15 @@
 
 ---
 
+
+```mermaid
+flowchart TD
+    Start[困りごと発生😫] --> Q{どのタイプ？}
+    Q -->|Newがつらい| A[生成パターン🏭<br>Factory/Builderなど]
+    Q -->|繋ぐのがつらい| B[構造パターン🏗️<br>Adapter/Decoratorなど]
+    Q -->|振る舞いが複雑| C[振る舞いパターン🎭<br>Strategy/Stateなど]
+```
+
 ### 4) 逆引きミニ辞書を作る📚🔁（覚えなくていい仕組み）
 
 「症状 → 候補」を短くメモしていくと最強💪✨

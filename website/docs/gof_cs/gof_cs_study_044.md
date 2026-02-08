@@ -19,7 +19,7 @@
 
 ### 1) まず “土台” を確認：`Stream` は契約（インターフェース）そのもの 📜
 
-![Image](picture/gof_cs_study_044_decorator_stream_chain.png)
+![Image](./picture/gof_cs_study_044_decorator_stream_chain.png)
 
 `Stream` は **すべてのストリームの抽象基底クラス**で、読み書きの共通メソッドを提供するよ📦✨
 つまり「ここ（`Stream`）を満たしていれば、差し替えOK」っていう強い契約！ ([Microsoft Learn][1])
@@ -28,6 +28,25 @@
 
 * “包む側” も “包まれる側” も **同じ型（`Stream`）として扱える**
 * だから **チェーン（重ね着）** ができる 🔗✨
+
+
+```mermaid
+flowchart LR
+    App[アプリ]
+    
+    subgraph Chain ["Stream Chain"]
+        Crypto["CryptoStream<br>(暗号化)"]
+        Zip["GZipStream<br>(圧縮)"]
+        Buf["BufferedStream<br>(バッファ)"]
+        File["FileStream<br>(ファイル)"]
+    end
+    
+    App -->|Write| Crypto
+    Crypto -->|Encrypt| Zip
+    Zip -->|Compress| Buf
+    Buf -->|Buffer| File
+    File -->|Bytes| HDD[Disk]
+```
 
 ---
 

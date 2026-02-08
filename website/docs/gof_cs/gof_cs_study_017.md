@@ -79,6 +79,17 @@
 
 ---
 
+
+```mermaid
+flowchart TD
+    Prompt[AIへの依頼📝] --> Gen[雛形生成🤖]
+    Gen --> Test[テスト実行🧪]
+    Test -->|Fail| Fix[修正依頼🤖]
+    Test -->|Pass| Review[人間レビュー👀]
+    Review -->|OK| Merge[採用✅]
+    Review -->|NG| Cut[削る/却下✂️]
+```
+
 ### 4) 人間の設計レビュー（チェックリスト）で削る✂️👀
 
 AIは“盛る”のが得意だから、ここで止めるよ🚧💡

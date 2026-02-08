@@ -20,7 +20,7 @@
 
 ### 1) Proxyってなに？（超ざっくり）🪞
 
-![Image](picture/gof_cs_study_052_proxy_gatekeeper.png)
+![Image](./picture/gof_cs_study_052_proxy_gatekeeper.png)
 
 Proxyは「**本人（Real Subject）に見せかけた“代理人”**」だよ〜！😺
 呼び出し側からは **本体と同じインターフェース**に見えるけど、裏でこういうことをする👇
@@ -29,6 +29,27 @@ Proxyは「**本人（Real Subject）に見せかけた“代理人”**」だ�
 * 結果を**覚えておいて**次回を高速化（キャッシュ / Caching Proxy）🧊
 * 条件が満たされないと**通さない**（保護 / Protection Proxy）🔐
 * 呼ぶ前後で**ログ・計測・リトライ**などを入れる（制御 / Smart Proxy）🧾📏🔁
+
+
+```mermaid
+classDiagram
+    class ISubject {
+        <<interface>>
+        +Request()
+    }
+    class RealSubject {
+        +Request()
+    }
+    class Proxy {
+        -realSubject
+        +Request()
+    }
+    
+    Client --> ISubject
+    ISubject <|.. RealSubject
+    ISubject <|.. Proxy
+    Proxy o-- RealSubject : 制御(Control)
+```
 
 ---
 

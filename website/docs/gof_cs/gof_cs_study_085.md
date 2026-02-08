@@ -2,7 +2,28 @@
 
 ## ねらい 🎯
 
-![InterpreterとMementoの概念イメージ](picture/gof_cs_study_085_interpreter_memento.png)
+
+```mermaid
+flowchart TD
+    Input[Text Rule] -->|Regex Parse| Interpreter[FilterCompiler]
+    Interpreter -->|Build| Func[Func delegate]
+    
+    Func -->|Applies to| Orders[Order List]
+    
+    subgraph Memento [Undo History]
+        Stack[(Stack)]
+        State1[Filter Text 1]
+        State2[Filter Text 2]
+    end
+    
+    Input -.-> Stack
+    Stack --> Input
+    
+    note[テキストを保存すれば\nUndoができる]
+    Stack --- note
+```
+
+![InterpreterとMementoの概念イメージ](./picture/gof_cs_study_085_interpreter_memento.png)
 
 * Interpreter（インタプリタ）と Memento（メメント）を、「使いどころだけ分かる」レベルでサクッと体験するよ✨
 * “自作言語を作る”みたいな沼に落ちずに、.NET標準の **Regex（正規表現）** や **式ツリー** を入口にして「それっぽさ」を掴むよ🧩

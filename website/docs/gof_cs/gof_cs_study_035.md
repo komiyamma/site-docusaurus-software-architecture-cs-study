@@ -32,6 +32,17 @@
 
 StreamReader はこのズレを吸収して、Stream を “文字として読める形” にしてくれるよ🎁✨
 
+
+```mermaid
+flowchart LR
+    Source[File/Net] -->|Bytes| Stream[Stream]
+    Stream -->|Bytes| Reader["StreamReader<br>(Adapter)"]
+    Reader -->|String| App[Client]
+    
+    note["ズレ吸収:<br>Encoding / Buffer"]
+    Reader -.-> note
+```
+
 ---
 
 ### 2) IntelliSenseで「Adapterっぽい匂い」を嗅ぐ 👃📌

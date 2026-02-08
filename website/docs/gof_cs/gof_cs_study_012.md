@@ -240,6 +240,26 @@ public sealed class OrderProcessor
 * 「決済」も「通知」も「状態遷移」も、ぜんぶ `Process` に入ってる😇
 * `switch` が**入れ子**になってて、追加変更が怖いタイプ😵
 
+
+```mermaid
+flowchart TD
+    Start[Process開始] --> SwitchStats{Statusは？}
+    SwitchStats -->|New| SwitchMethod1{支払い方法は？}
+    SwitchStats -->|Awaiting| SwitchMethod2{支払い方法は？}
+    
+    SwitchMethod1 -->|Card| Logic1[手数料計算]
+    SwitchMethod1 -->|Bank| Logic2[期限計算]
+    
+    Logic1 --> SwitchNotif1{通知は？}
+    Logic2 --> SwitchNotif2{通知は？}
+    
+    SwitchNotif1 --> Result
+    SwitchNotif2 --> Result
+    
+    style SwitchMethod1 fill:#ffcdd2
+    style SwitchNotif1 fill:#fff9c4
+```
+
 ---
 
 ### 4) テストで“仕様を固定”する（超大事）🧪🌸

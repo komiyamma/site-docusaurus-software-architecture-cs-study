@@ -2,7 +2,27 @@
 
 ## ねらい 🎯✨
 
-![Funcデリゲートによる手軽なStrategyパターン](picture/gof_cs_study_072_func_strategy.png)
+
+```mermaid
+flowchart LR
+    Client[Client Code]
+    Calc[Pricing.Calculate]
+    Strategy1[("Func: 10% Off")]
+    Strategy2[("Func: 500 Yen Off")]
+    
+    Client --Pass Strategy--> Calc
+    Calc --Invoke--> Strategy1
+    
+    subgraph Strategies [Func Delegates]
+        Strategy1
+        Strategy2
+    end
+    
+    note[クラスを作らず\n関数を渡すだけ]
+    Strategies -.-> note
+```
+
+![Funcデリゲートによる手軽なStrategyパターン](./picture/gof_cs_study_072_func_strategy.png)
 
 * Strategy（方針の差し替え）を、**クラスを増やさず**にサクッと実現できるようになるよ🙂
 * C#の**デリゲート**（`Func` / `Action`）と**ラムダ式**で、「差し替えポイント」を自然に作る感覚をつかむよ🧠💡

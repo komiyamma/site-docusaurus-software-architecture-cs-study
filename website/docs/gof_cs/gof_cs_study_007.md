@@ -41,6 +41,17 @@ GoFの考え方はそのままに、C#の言語機能（record / with / デリ�
 
 ---
 
+
+```mermaid
+flowchart TD
+    Start[Strategyの実装] --> Q{複雑さに応じて}
+    Q -->|複雑・状態あり| Interface[interface + class<br>王道👑]
+    Q -->|単純・計算のみ| Func[Func / Action<br>軽量⚡]
+    
+    style Interface fill:#e1f5fe
+    style Func fill:#fff3e0
+```
+
 ### 2) 例題：割引の「方針」を差し替えたい（Strategyの題材）💳🛒
 
 ECあるある：支払い方法や会員ランクで割引が変わるやつ！🍰

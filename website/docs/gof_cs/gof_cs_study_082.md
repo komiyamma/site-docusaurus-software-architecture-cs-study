@@ -2,7 +2,33 @@
 
 ## ねらい 🎯✨
 
-![Mediatorパターンのハブ・アンド・スポーク構造](picture/gof_cs_study_082_mediator_hub.png)
+
+```mermaid
+flowchart TD
+    subgraph Before [依存の爆発💥]
+        A[UI] <--> B[Order]
+        B <--> C[Payment]
+        B <--> D[Inventory]
+        C <--> D
+        A <--> C
+    end
+    
+    subgraph After [Mediator導入後🕊️]
+        UI[UI] --> M((Mediator))
+        Order[Order] --> M
+        Pay[Payment] --> M
+        Inv[Inventory] --> M
+        
+        M -.-> Order
+        M -.-> Pay
+        M -.-> Inv
+    end
+    
+    style Before fill:#ffebee
+    style After fill:#e8f5e9
+```
+
+![Mediatorパターンのハブ・アンド・スポーク構造](./picture/gof_cs_study_082_mediator_hub.png)
 
 * 画面やサービス同士が直接参照し合って、**依存がぐちゃぐちゃに増える問題**（依存の爆発💥）を説明できるようになる
 * **Mediatorが「部品同士の会話」を中央（仲介役）に集める**考え方だと掴む

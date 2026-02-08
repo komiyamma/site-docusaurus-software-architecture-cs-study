@@ -51,7 +51,31 @@
 
 ### 3) `ArrayPool<T>` は“バッファのFlyweight”📦🪶
 
-![Image](picture/gof_cs_study_050_flyweight_dotnet_pools.png)
+
+```mermaid
+stateDiagram-v2
+    [*] --> Pool : Init
+    Pool --> Rented : Rent(size)
+    Rented --> Used : Copy/Write/Read
+    Used --> Pool : Return(array)
+    
+    state Used {
+        [*] --> Processing
+        Processing --> [*]
+    }
+    
+    note right of Used
+        借りてる間は
+        自分専用！
+    end note
+    
+    note right of Pool
+        返却を忘れると
+        枯渇するよ👻
+    end note
+```
+
+![Image](./picture/gof_cs_study_050_flyweight_dotnet_pools.png)
 
 #### A. 何が嬉しい？（超ざっくり）🙂
 

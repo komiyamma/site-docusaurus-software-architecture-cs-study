@@ -45,6 +45,29 @@ Adapterが活躍するズレはだいたいこのへん👇
 * Target：`INotificationSender`（呼び出し側が欲しい形）
 * Adaptee：外部の `EmailClient` / `SmsClient`（もう存在してる、形が違う）
 
+
+```mermaid
+classDiagram
+    class Client {
+        -target: ITarget
+    }
+    class ITarget {
+        <<interface>>
+        +Request()
+    }
+    class Adapter {
+        -adaptee
+        +Request()
+    }
+    class Adaptee {
+        +SpecificRequest()
+    }
+    
+    Client --> ITarget
+    Adapter ..|> ITarget
+    Adapter --> Adaptee : 変換して呼ぶ
+```
+
 ---
 
 ### 3) Adapterは“翻訳だけ”に徹する📘➡️📗

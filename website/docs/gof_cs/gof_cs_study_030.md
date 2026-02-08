@@ -31,6 +31,22 @@ Singletonが出てくるのは、だいたいこのどれかです👇
 ここで大事なのは、最後の「どこからでもアクセスしたい」だけを理由にしないこと！🚫
 それは“便利”だけど、あとで泣きやすいです😭
 
+
+```mermaid
+flowchart TD
+    subgraph Bad["Static Singleton (Global)"]
+        App -->|どこからでも| Static[Instance]
+    end
+    
+    subgraph Good["DI Singleton (Inject)"]
+        App -->|Construct| Service
+        Service -->|Inject| IShared[ISharedResource]
+    end
+    
+    style Bad fill:#ffcdd2
+    style Good fill:#c8e6c9
+```
+
 ---
 
 ### 2) 「本当に“1つ”である必要ある？」をチェックする✅🔍

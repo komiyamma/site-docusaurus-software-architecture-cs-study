@@ -2,7 +2,31 @@
 
 ## ねらい 🎯💡
 
-![Reactive Extensions (Rx) のマーブルダイアグラム](picture/gof_cs_study_068_rx_marbles.png)
+
+```mermaid
+sequenceDiagram
+    participant P as Publisher (Observable)
+    participant S as Subscriber (Observer)
+    
+    S->>P: Subscribe()
+    P-->>S: IDisposable (Ticket)
+    
+    P->>S: OnNext(1)
+    P->>S: OnNext(2)
+    P->>S: OnNext(3)
+    
+    alt Error
+        P->>S: OnError(ex)
+    else Completed
+        P->>S: OnCompleted()
+    end
+    
+    opt Unsubscribe
+        S->>P: Dispose()
+    end
+```
+
+![Reactive Extensions (Rx) のマーブルダイアグラム](./picture/gof_cs_study_068_rx_marbles.png)
 
 * 「通知」を“イベント1回”じゃなくて、“流れてくるデータの川（ストリーム）”として扱えるようになる 🌊✨
 * `event` 版Observerの次の一歩として、`IObservable<T>` の約束（契約）を理解する 🤝🙂

@@ -138,6 +138,36 @@ public sealed class ShippingApiClient : IShippingApiClient
 
 ---
 
+
+```mermaid
+flowchart LR
+    subgraph External ["外部/既存"]
+        API[External API]
+        DTO[DTO]
+    end
+    
+    subgraph Adapter ["変換層"]
+        Client[API Client]
+        Adapt[Adapter]
+    end
+    
+    subgraph Domain ["アプリ中心"]
+        IProv[IProvider]
+        DomObj[Domain Object]
+        Svc[Service]
+    end
+    
+    Svc --> IProv
+    Adapt -.->|Implements| IProv
+    Adapt --> Client
+    Client --> API
+    
+    API --> DTO
+    DTO --> Adapt
+    Adapt --変換--> DomObj
+    DomObj --> Svc
+```
+
 ### 5) Adapter を作る：外部DTO → ドメイン型へ変換する 🧼🧩
 
 ![外部DTOからドメインへのクリーンな変換](./picture/gof_cs_study_036_api_to_domain.png)

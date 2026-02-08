@@ -47,6 +47,23 @@ Singletonにしていいか”3問チェック🧩
 * デフォルトで **スレッド安全**（並列でも安全に“1回だけ”初期化しやすい）👭👫🧑‍🤝‍🧑
 * 初期化関数が失敗すると、**同じ例外が再スロー**される（落とし穴で後述）💥
 
+
+```mermaid
+stateDiagram-v2
+    [*] --> Uninitialized : new Lazy()
+    Uninitialized --> InProgress : Value access
+    InProgress --> Created : Factory() run
+    Created --> [*] : Return Value
+    
+    InProgress --> Error : Exception
+    Error --> Error : Rethrow
+    
+    note right of InProgress
+        Thread Safe
+        (Locking)
+    end note
+```
+
 ---
 
 ### 3) “教科書どおり”のLazy Singleton（sealed + private ctor）📦

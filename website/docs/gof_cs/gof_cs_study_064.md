@@ -2,7 +2,24 @@
 
 ## ねらい 🎯✨
 
-![yield return による遅延実行（オンデマンド生成）](picture/gof_cs_study_064_lazy_execution.png)
+
+```mermaid
+stateDiagram-v2
+    [*] --> Suspended : Call Method
+    Suspended --> Running : MoveNext()
+    Running --> Yielded : yield return
+    Yielded --> Suspended : (Suspend state)
+    
+    Running --> Finished : yield break / End
+    Finished --> [*]
+    
+    note right of Suspended
+        ここが「遅延」の状態
+        再開を待ってる
+    end note
+```
+
+![yield return による遅延実行（オンデマンド生成）](./picture/gof_cs_study_064_lazy_execution.png)
 
 * C#の **Iterator（反復）** が、ほぼ **`IEnumerable<T>` + `foreach` + `yield return`** で出来ていることを体感するよ〜🚶‍♀️🧺
 * 「内部構造は隠して、走査方法だけ統一する」っていう **“気持ちよさ”** を、.NET標準APIの実例で覚えるよ📚💕

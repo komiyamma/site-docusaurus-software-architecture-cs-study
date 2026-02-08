@@ -2,7 +2,32 @@
 
 ## ねらい 🎯✨
 
-![Strategyパターンの基本：アルゴリズムの差し替え](picture/gof_cs_study_070_strategy_concept.png)
+
+```mermaid
+classDiagram
+    class Context {
+        -strategy: IStrategy
+        +DoWork()
+    }
+    class IStrategy {
+        <<interface>>
+        +Execute()
+    }
+    class ConcreateStrategyA {
+        +Execute()
+    }
+    class ConcreateStrategyB {
+        +Execute()
+    }
+    
+    Context o-- IStrategy : Uses
+    IStrategy <|.. ConcreateStrategyA
+    IStrategy <|.. ConcreateStrategyB
+    
+    note for Context "中身のロジックを\nこれに委譲する"
+```
+
+![Strategyパターンの基本：アルゴリズムの差し替え](./picture/gof_cs_study_070_strategy_concept.png)
 
 * **割引計算・送料計算・並び替えルール**みたいな「方針（アルゴリズム）」が増えて、`if/switch` がムキムキになる問題を止めます😵‍💫
 * “方針を入れ替える”だけで挙動を変えられるようにして、**テストもしやすく**します🧪🌸

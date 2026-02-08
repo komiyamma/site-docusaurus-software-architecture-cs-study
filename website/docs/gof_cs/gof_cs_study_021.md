@@ -21,6 +21,20 @@
 
 ## 手順 🧭🧩
 
+
+```mermaid
+flowchart TD
+    Start[Abstract Factory検討] --> Q1{セットで差し替える？}
+    Q1 -->|No| Alt1[Factory Method / Strategy]
+    Q1 -->|Yes| Q2{種類は増える？}
+    Q2 -->|No| Alt2[Options / DI]
+    Q2 -->|Yes| OK[Abstract Factory採用✅]
+    
+    style Alt1 fill:#fff9c4
+    style Alt2 fill:#fff9c4
+    style OK fill:#c8e6c9
+```
+
 ### 1) まず確認：「ファミリー（セット差し替え）」が本当にある？👨‍👩‍👧‍👦📦
 
 Abstract Factoryは「部品を**セット**で差し替えたい」時に強いです💪✨

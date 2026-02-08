@@ -41,6 +41,40 @@
 
 Bridgeはざっくりこう👇
 
+
+```mermaid
+classDiagram
+    class OrderReport {
+        <<Abstract>>
+        -writer : TextWriter
+        +Write()
+        #Render()*
+    }
+    class PlainReport {
+        #Render()
+    }
+    class JsonReport {
+        #Render()
+    }
+    
+    class TextWriter {
+        <<Abstract>>
+        +Write()
+    }
+    class StreamWriter {
+        +Write()
+    }
+    class StringWriter {
+        +Write()
+    }
+    
+    OrderReport o-- TextWriter : Bridge
+    PlainReport --|> OrderReport
+    JsonReport --|> OrderReport
+    StreamWriter --|> TextWriter
+    StringWriter --|> TextWriter
+```
+
 * **抽象（Abstraction）**：利用者が呼ぶ側の“やりたいこと”
 * **実装（Implementor）**：裏で実際に動く“差し替えたい部品”([Microsoft Learn][1])
 

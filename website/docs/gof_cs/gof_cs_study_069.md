@@ -2,7 +2,26 @@
 
 ## ねらい 😊
 
-![Observerパターンを用いた通知機能の演習](picture/gof_cs_study_069_observer_notification.png)
+
+```mermaid
+flowchart LR
+    Svc[OrderService]
+    Event((Order\nConfirmed))
+    
+    Email[EmailNotifier]
+    Slack[SlackNotifier]
+    Log[AuditLogger]
+    
+    Svc --> Event
+    Event -.-> Email
+    Event -.-> Slack
+    Event -.-> Log
+    
+    note[1つのイベントが\n複数の購読者を動かす]
+    Event --- note
+```
+
+![Observerパターンを用いた通知機能の演習](./picture/gof_cs_study_069_observer_notification.png)
 
 * 「注文が確定したよ！」という出来事（イベント）を、`event / EventHandler` で **疎結合に通知**できるようになる 🔔✨
 * 通知先（メール📧、Slack💬、監査ログ🧾…）を **追加・削除・差し替え**しても、注文確定の本体コードをあまり触らなくて済む状態を作る 🧩

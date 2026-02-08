@@ -2,7 +2,24 @@
 
 ## ねらい 🎯✨
 
-![Visitorパターンを用いた式ツリー書き換えの演習](picture/gof_cs_study_081_visitor_tree_rewrite.png)
+
+```mermaid
+flowchart TB
+    Original["Original Tree\n(x + 0)"]
+    Visitor[ExpressionVisitor]
+    Rewritten["Rewritten Tree\n(x)"]
+    
+    Original --Visit--> Visitor
+    Visitor --Rebuild--> Rewritten
+    
+    style Original fill:#e1f5fe
+    style Rewritten fill:#e8f5e9
+    
+    note["Immutableなので\n新しいツリーが返る"]
+    Rewritten -.-> note
+```
+
+![Visitorパターンを用いた式ツリー書き換えの演習](./picture/gof_cs_study_081_visitor_tree_rewrite.png)
 
 Visitor って、「**データ構造（構造）はそのまま**にして、あとから **やりたい処理（操作）** をどんどん増やせる」考え方だよ〜🙂🧳
 今回はその練習として、C#の **式ツリー（Expression Tree）** を題材にするよ！🧠⚡

@@ -73,6 +73,14 @@ static string ComputeSha256Hex(string text)
 * `using` しないと、リソースが残る可能性（特に大量処理で影響）💦
 * `ComputeHash` は **バイト列** 前提なので、文字列→バイト変換の規約（UTF-8等）を決める必要がある🧾
 
+
+```mermaid
+graph LR
+    User[呼び出し側] -->|Create| Abstract[抽象クラス: SHA256]
+    Abstract -.->|隠蔽| Concrete[具体実装: SHA256Managed / CNG]
+    User -->|使う| Abstract
+```
+
 ---
 
 ### 3) 定番例②：`TextWriter` と `StreamWriter`（＋`File.CreateText`）📝📁

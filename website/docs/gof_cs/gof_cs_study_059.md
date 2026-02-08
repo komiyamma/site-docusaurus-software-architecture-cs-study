@@ -103,7 +103,21 @@ public sealed class ShippingApiClient
 
 ### 3) 連鎖を組み立てる（IHttpClientFactory + 標準寄りResilience）🔗🧩
 
-![Image](picture/gof_cs_study_059_cor_resilience_logging_chain.png)
+
+```mermaid
+flowchart LR
+    App[ShippingClient]
+    Log[LoggingHandler]
+    Retry["ResilienceHandler\n(Retry/Timeout)"]
+    Primary["PrimaryHandler\n(Mock)"]
+    
+    App --> Log
+    Log --> Retry
+    Retry --> Primary
+    Primary --> Net((Auto-Response))
+```
+
+![Image](./picture/gof_cs_study_059_cor_resilience_logging_chain.png)
 
 * `IHttpClientFactory` は “作り方・設定・ハンドラ連鎖” をまとめて管理できるよ🙂
   （`HttpClient` を都度 `new` して捨てるのを避けるのが定番）([Microsoft Learn][3])

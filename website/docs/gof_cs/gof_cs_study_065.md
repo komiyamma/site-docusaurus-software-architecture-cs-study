@@ -2,7 +2,21 @@
 
 ## ねらい 🎯💖
 
-![Iteratorを用いたフィルタリングの演習](picture/gof_cs_study_065_iterator_exercise.png)
+
+```mermaid
+flowchart LR
+    Source[List: Orders] -->|IEnumerable| Filter["PaidOver\n(Iterator)"]
+    Filter -->|yield return| Consumer[foreach Loop]
+    
+    subgraph Pipeline [Lazy Evaluation]
+        Filter
+    end
+    
+    note["Item flows one by one\nNo huge list created"]
+    Filter -.-> note
+```
+
+![Iteratorを用いたフィルタリングの演習](./picture/gof_cs_study_065_iterator_exercise.png)
 
 * 「注文一覧をフィルタして返す」みたいな処理を、**IEnumerable<T>** と **yield return** でスッキリ書けるようになるよ〜😊
 * **foreach で回せる形（＝列挙可能）**にしておくと、呼び出し側が気持ちよくなる✨

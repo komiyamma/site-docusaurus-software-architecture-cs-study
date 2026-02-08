@@ -2,7 +2,23 @@
 
 ## ねらい 🎯
 
-![ExpressionVisitor による式ツリーの走査](picture/gof_cs_study_080_expression_visitor.png)
+
+```mermaid
+graph TD
+    Lambda[LambdaExpression] --> Body["BinaryExpression\n(>=)"]
+    Body --> Left["MemberAccess\n(Total)"]
+    Body --> Right["Constant\n(1000m)"]
+    
+    Visitor[ExpressionVisitor] -.-> Lambda
+    Visitor -.-> Body
+    Visitor -.-> Left
+    Visitor -.-> Right
+    
+    note["Visitor巡回で\n木構造を解析・再構築"]
+    Visitor --- note
+```
+
+![ExpressionVisitor による式ツリーの走査](./picture/gof_cs_study_080_expression_visitor.png)
 
 * Visitorパターンが「固定された構造（ツリー）に対して、操作を増やしたい」時に強い理由を、**.NET標準の `ExpressionVisitor`** で体感する🧩
 * 「式ツリー（Expression Tree）」が **コードをデータとして持つ仕組み** だと理解して、読む・数える・書き換えるの基本をつかむ🌳🔍

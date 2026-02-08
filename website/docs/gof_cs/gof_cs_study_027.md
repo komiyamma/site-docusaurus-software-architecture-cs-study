@@ -43,6 +43,23 @@ C#で相性がいいのは、こういう“テンプレ/下書き”👇
 * `record class`：参照型（でもEqualsは中身寄り）
 * `record struct`：値型（小さめの値オブジェクトに便利）
 
+
+```mermaid
+classDiagram
+    class OrderDraft {
+        <<record>>
+        +CustomerEmail
+        +Lines : ImmutableArray
+    }
+    class OrderLine {
+        <<record>>
+    }
+    
+    OrderDraft o-- OrderLine : Holds
+    
+    note for OrderDraft "with式で<br>側だけコピー"
+```
+
 ---
 
 ### 3) `with`は「コピーして、指定したところだけ差し替え」🔁✨

@@ -185,6 +185,17 @@ public sealed class OrderService
 
 ---
 
+
+```mermaid
+flowchart TD
+    Start[困りごと] --> Q1{標準にある？<br>BCL/.NET}
+    Q1 -->|Yes| A[標準を使う✅]
+    Q1 -->|No| Q2{デファクトにある？<br>NuGet定番}
+    Q2 -->|Yes| B[デファクトを使う📦]
+    Q2 -->|No| Q3[最小で自作する🐣]
+    Q3 --> End[将来消せるように作る🧹]
+```
+
 ## よくある落とし穴 😵‍💫💦
 
 * 「GoFを学ぶ＝クラス図が増えるほど正しい」と思ってしまう📈❌

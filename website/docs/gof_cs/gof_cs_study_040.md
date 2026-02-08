@@ -47,6 +47,29 @@ Compositeが必要になる典型はこれ👇
 
 ![葉と枝を同一視する構造図](./picture/gof_cs_study_040_composite_tree.png)
 
+
+```mermaid
+classDiagram
+    class ILineItem {
+        <<interface>>
+        +GetTotal()
+    }
+    class ProductLine {
+        +GetTotal()
+    }
+    class Bundle {
+        -items : List~ILineItem~
+        +Add()
+        +GetTotal()
+    }
+    
+    ILineItem <|.. ProductLine
+    ILineItem <|.. Bundle
+    Bundle o-- ILineItem : Contains
+    
+    note for Bundle "自分もILineItemであり\n中身もILineItem"
+```
+
 まずは **同じ操作** を1つ決めるよ！
 今回は「合計金額」を例にして `GetTotal()` にするね🧾💰
 

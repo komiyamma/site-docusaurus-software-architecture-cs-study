@@ -50,6 +50,18 @@ await orderService.PayAsync(PaymentKind.CreditCard, new Money(1200));
 
 ---
 
+
+```mermaid
+graph LR
+    Reg[登録: ServiceCollection] -->|Build| Prov[解決: ServiceProvider]
+    Prov -->|Get| Svc[注入: OrderService]
+    
+    subgraph Container
+    Reg
+    Prov
+    end
+```
+
 ### 3) 例題の最小ドメインを用意（小さくてOK）🛒🍰
 
 ※ここは“学習用モデル”だから、作り込み禁止ね😉🧼

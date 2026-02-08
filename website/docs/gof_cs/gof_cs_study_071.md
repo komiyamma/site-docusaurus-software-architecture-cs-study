@@ -2,7 +2,32 @@
 
 ## ねらい 🎯
 
-![.NET標準の比較ルール（Strategyの実例）](picture/gof_cs_study_071_standard_comparers.png)
+
+```mermaid
+classDiagram
+    class List_T {
+        +Sort(IComparer comparer)
+    }
+    class IComparer_T {
+        <<interface>>
+        +Compare(x, y) int
+    }
+    class OrderByTotal {
+        +Compare(x, y) int
+    }
+    class OrderByDate {
+        +Compare(x, y) int
+    }
+    
+    List_T ..> IComparer_T : Uses
+    IComparer_T <|.. OrderByTotal
+    IComparer_T <|.. OrderByDate
+    
+    note for List_T "標準ライブラリのSort"
+    note for IComparer_T "「比較ルール」の差し込み口"
+```
+
+![.NET標準の比較ルール（Strategyの実例）](./picture/gof_cs_study_071_standard_comparers.png)
 
 * 「並び替えルール（比較ルール）を差し替える」っていう Strategy の感覚を、**.NET の定番API**で体感するよ〜🧠🔁
 * “自分でStrategy用フレームワーク作る”じゃなくて、**`IComparer<T>` と `Comparison<T>` をそのまま Strategy として使う**練習をするよ💪

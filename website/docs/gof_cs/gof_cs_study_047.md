@@ -19,7 +19,7 @@
 
 ### 1) `File` は「ファイル操作の入口（Facade）」📄🚪
 
-![Image](picture/gof_cs_study_047_facade_dotnet_apis.png)
+![Image](./picture/gof_cs_study_047_facade_dotnet_apis.png)
 
 `File` の良さは、**細かい設定を知らなくても**「読み書き」ができるところだよ😊
 たとえば本当は裏でこういう面倒がある👇
@@ -76,7 +76,34 @@ await sw.WriteAsync("Hello Low-level 👋🧰");
 * リクエスト/レスポンスのパイプライン（ハンドラ）🧩
 
 ここで大事なのが、**入口（HttpClient）はシンプルだけど、差し替え点（Handler）はちゃんとある**ってこと✨
-それを “ネット無しテスト” で体感するよ🧪
+
+```mermaid
+classDiagram
+    class HttpClient {
+        +GetAsync()
+        +PostAsync()
+    }
+    class HttpMessageHandler {
+        <<Abstract>>
+        #SendAsync()
+    }
+    class SocketsHttpHandler {
+        (Actual Network)
+    }
+    class DelegatingHandler {
+        (Middleware)
+    }
+    
+    HttpClient o-- HttpMessageHandler : Uses
+    HttpMessageHandler <|-- SocketsHttpHandler
+    HttpMessageHandler <|-- DelegatingHandler
+    DelegatingHandler --> HttpMessageHandler : Inner
+    
+    note for HttpClient "入口(Facade)"
+    note for HttpMessageHandler "差し替え点"
+```
+
+それは “ネット無しテスト” で体感するよ🧪
 
 ---
 

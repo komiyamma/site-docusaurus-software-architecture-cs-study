@@ -21,7 +21,7 @@
 
 ### 1) Flyweightが効く“症状”を見つける 🔍😵‍💫
 
-![Image](picture/gof_cs_study_049_flyweight_intrinsic_extrinsic.png)
+![Image](./picture/gof_cs_study_049_flyweight_intrinsic_extrinsic.png)
 
 Flyweightは「速くしたい！」より **“メモリと割り当て（allocation）が多すぎる！”**ときに効くことが多いよ💡
 特に、**同じ見た目/同じ設定/同じ文字列**を持つオブジェクトが大量にあるとき👇
@@ -29,6 +29,33 @@ Flyweightは「速くしたい！」より **“メモリと割り当て（alloc
 * 画面に表示する「ラベル」や「バッジ」が数万個🏷️🏷️🏷️
 * ログ用イベントが大量で、同じカテゴリ名やタグが何度も出る📝🔁
 * 大きめの配列を何回も `new` してGCが忙しい📈😵
+
+
+```mermaid
+classDiagram
+    class Client
+    class BadgeStyleFactory {
+        -cache : Dictionary
+        +Get(icon, color)
+    }
+    class BadgeStyle {
+        <<Immutable>>
+        +Icon
+        +Color
+    }
+    class BadgeInstance {
+        +Text
+        +Row
+        +Style : BadgeStyle
+    }
+    
+    Client --> BadgeStyleFactory : Request Style
+    BadgeStyleFactory --> BadgeStyle : Returns Cached
+    BadgeInstance --> BadgeStyle : References(Shared)
+    
+    note for BadgeStyle "共有(Intrinsic)"
+    note for BadgeInstance "個別(Extrinsic)"
+```
 
 > 参考：大きい配列の割り当ては **LOH（Large Object Heap）**に入りやすく、負担になりやすいよ（目安として **約85,000バイト以上**）。([Microsoft Learn][1])
 

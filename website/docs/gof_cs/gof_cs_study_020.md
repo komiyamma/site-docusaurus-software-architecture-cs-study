@@ -109,6 +109,26 @@ public interface INotificationFactory
 * 「Devセット」「Prodセット」を **Factoryの実装として分ける**
 * OrderService は “どのセットか” を知らない🙂✨
 
+
+```mermaid
+classDiagram
+    class INotificationFactory {
+        +CreateSender()
+        +CreateFormatter()
+    }
+    class DevFactory {
+        +CreateSender() Console
+        +CreateFormatter() PlainText
+    }
+    class ProdFactory {
+        +CreateSender() Email
+        +CreateFormatter() Html
+    }
+    
+    INotificationFactory <|.. DevFactory
+    INotificationFactory <|.. ProdFactory
+```
+
 ---
 
 ### 4) 演習ドメインを最小で用意 🛒🍰

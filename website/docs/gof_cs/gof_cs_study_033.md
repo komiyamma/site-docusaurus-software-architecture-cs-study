@@ -36,6 +36,29 @@
 ここがこの章のコアです💖
 以降は、全部この4語に戻ってOK🙆‍♀️✨
 
+
+```mermaid
+graph TD
+    subgraph Adapter [つなぐ🔌]
+        A1[四角] --変換--> A2[丸]
+    end
+    
+    subgraph Decorator [包む🎁]
+        D1[本体] --包--> D2[機能A] --包--> D3[機能B]
+    end
+    
+    subgraph Facade [まとめる🚪]
+        F1[Client] --> F2[Facade]
+        F2 --> S1[Sub1]
+        F2 --> S2[Sub2]
+    end
+    
+    subgraph Flyweight [共有する🪶]
+        W1[Obj1] -.-> Share[共通部分]
+        W2[Obj2] -.-> Share
+    end
+```
+
 ---
 
 ### 2) 「壊さない」って具体的に何？🧨→🛡️

@@ -36,6 +36,16 @@
 
 ---
 
+
+```mermaid
+flowchart LR
+    Arrange[Arrange<br>準備🧰] --> Act[Act<br>実行▶️]
+    Act --> Assert[Assert<br>確認✅]
+    style Arrange fill:#e1f5fe
+    style Act fill:#fff3e0
+    style Assert fill:#e8f5e9
+```
+
 ## 1) まずは最小ドメインで練習する🍰
 
 GoFの前に「テストの練習台」が必要だよね😊

@@ -15,6 +15,26 @@ BuilderのFluent API（`xxx().WithA().WithB().Build()`みたいな“つなげ�
 * `UriBuilder`（Fluentより **プロパティ設定型** が読みやすい代表）🌐
 * `DbConnectionStringBuilder`（接続文字列を“段階的に安全に”組み立てる）🗄️
 
+
+```mermaid
+graph TD
+    Bad[読めない連鎖🤯] -->|分割| Good[意味の塊に分ける🤩]
+    
+    subgraph BadStyle
+    A[Builder.WithA.WithB.WithC.WithD.WithE...]
+    end
+    
+    subgraph GoodStyle
+    B1[Builder.WithA.WithB]
+    B2[Builder.WithC.WithD]
+    B3[Builder.WithE...]
+    B1 --> B2 --> B3
+    end
+    
+    style Bad fill:#ffcdd2
+    style Good fill:#c8e6c9
+```
+
 ---
 
 ## 到達目標 ✅

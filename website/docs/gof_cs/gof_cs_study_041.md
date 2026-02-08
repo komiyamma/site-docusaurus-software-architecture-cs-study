@@ -35,6 +35,30 @@ Compositeはざっくりこう👇
 
 この「**共通の型で、ファイルもフォルダも受け取れる**」って時点で、Compositeの空気が出てる☺️✨
 
+
+```mermaid
+classDiagram
+    class FileSystemInfo {
+        <<Abstract>>
+        +Name
+        +LastWriteTimeUtc
+    }
+    class FileInfo {
+        +Length
+    }
+    class DirectoryInfo {
+        +EnumerateFileSystemInfos()
+    }
+    
+    FileSystemInfo <|-- FileInfo
+    FileSystemInfo <|-- DirectoryInfo
+    
+    DirectoryInfo o-- FileSystemInfo : Contains
+    
+    note for FileSystemInfo "共通の型(Component)"
+    note for DirectoryInfo "子を持つ(Composite)"
+```
+
 ---
 
 ### 2) 子要素を取るAPIを “読む”（ここが .NET のCompositeっぽさ）📚👀

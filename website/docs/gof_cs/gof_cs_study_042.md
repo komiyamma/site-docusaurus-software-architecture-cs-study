@@ -21,7 +21,7 @@
 
 ### 1) まず“Compositeが欲しくなる前”を体験 😵‍💫🔥
 
-![Image](picture/gof_cs_study_042_composite_menu_tree.png)
+![Image](./picture/gof_cs_study_042_composite_menu_tree.png)
 
 「単品」と「セット（中に単品が入る）」を別クラスで持つと、合計計算がこうなりがち👇
 
@@ -81,6 +81,28 @@ public interface IMenuComponent
     decimal GetPrice();                      // どの階層でも「価格（合計）」を返せる💰
     IEnumerable<IMenuComponent> GetChildren(); // 子を列挙（単品は空）🌿
 }
+```
+
+
+```mermaid
+classDiagram
+    class IMenuComponent {
+        <<interface>>
+        +GetPrice()
+    }
+    class MenuItem {
+        +Price
+    }
+    class MenuGroup {
+        -children : List
+        +Add()
+    }
+    
+    IMenuComponent <|.. MenuItem
+    IMenuComponent <|.. MenuGroup
+    MenuGroup o-- IMenuComponent : Contains
+    
+    note for IMenuComponent "どれでも GetPrice() OK!"
 ```
 
 ---

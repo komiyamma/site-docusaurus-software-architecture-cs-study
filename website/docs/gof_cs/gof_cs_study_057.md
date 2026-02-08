@@ -23,7 +23,27 @@ ASP.NET Core の「ミドルウェア・パイプライン」を **Chain of Resp
 
 ### 1) まずコレだけ覚えよう：「ミドルウェアは“前後に挟める”責務の連鎖」🧸🔗
 
-![Image](picture/gof_cs_study_057_cor_aspnet_middleware.png)
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant MW1 as Middleware 1
+    participant MW2 as Middleware 2
+    participant App as Endpoint
+    
+    Client->>MW1: Request
+    MW1->>MW1: Pre-proc (Log)
+    MW1->>MW2: next()
+    MW2->>MW2: Pre-proc (Auth)
+    MW2->>App: next()
+    App-->>MW2: Response
+    MW2->>MW2: Post-proc
+    MW2-->>MW1: Return
+    MW1->>MW1: Post-proc (Log)
+    MW1-->>Client: Response
+```
+
+![Image](./picture/gof_cs_study_057_cor_aspnet_middleware.png)
 
 ASP.NET Core のミドルウェアは、リクエストが来るたびに
 

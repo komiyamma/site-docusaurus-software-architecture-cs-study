@@ -226,6 +226,27 @@ public sealed class CashOnDeliveryPaymentCreator : PaymentMethodCreator
 
 ### 4) PaymentService から switch を消す（Creatorに任せる）🧹✨
 
+
+```mermaid
+classDiagram
+    class PaymentService {
+        -creators: Dictionary
+        +PayAsync()
+    }
+    class PaymentMethodCreator {
+        +Create()
+    }
+    class IPaymentMethod {
+        +PayAsync()
+    }
+    
+    PaymentService --> PaymentMethodCreator : Uses (Map)
+    PaymentMethodCreator <|-- CreditCardPaymentCreator
+    PaymentMethodCreator <|-- BankTransferPaymentCreator
+    CreditCardPaymentCreator ..> CreditCardPayment : Creates
+    CreditCardPayment ..|> IPaymentMethod
+```
+
 PaymentService は「生成の詳細」を知らない状態にするよ〜 😌
 
 ```csharp

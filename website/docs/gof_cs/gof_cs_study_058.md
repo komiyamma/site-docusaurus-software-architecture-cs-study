@@ -21,7 +21,22 @@
 
 ### 1) まず全体像：HttpClientは“ハンドラの鎖”を通して通信するよ 🔗🌊
 
-![Image](picture/gof_cs_study_058_cor_http_handler_pipeline.png)
+
+```mermaid
+flowchart LR
+    Client[HttpClient]
+    DA[Delegating\nHandler A]
+    DB[Delegating\nHandler B]
+    Primary[Primary\nHandler]
+    Net((Network))
+    
+    Client --> DA
+    DA --> DB
+    DB --> Primary
+    Primary <--> Net
+```
+
+![Image](./picture/gof_cs_study_058_cor_http_handler_pipeline.png)
 
 HttpClientは、リクエストを「HttpMessageHandler（処理担当）」に渡して送信する仕組みだよ。
 その中でも DelegatingHandler は“次のハンドラに委譲する前提のハンドラ”で、いわば「外側にかぶせる中間処理（アウトゴーイング・ミドルウェア）」になってるよ 📦✨ ([Microsoft Learn][2])

@@ -2,7 +2,35 @@
 
 ## ねらい 🎯
 
-![状態クラスのカプセル化（入れ子クラスによる実装）](picture/gof_cs_study_075_state_encapsulation.png)
+
+```mermaid
+classDiagram
+    class Order {
+        -state: IOrderState
+        +Pay()
+        +Ship()
+    }
+    class IOrderState {
+        <<interface>>
+        <<private>>
+        +Pay()
+        +Ship()
+    }
+    class NewState {
+        <<private>>
+    }
+    class PaidState {
+        <<private>>
+    }
+    
+    Order *-- IOrderState : Private Composition
+    IOrderState <|.. NewState
+    IOrderState <|.. PaidState
+    
+    note for Order "State型を外に見せない\n完全カプセル化"
+```
+
+![状態クラスのカプセル化（入れ子クラスによる実装）](./picture/gof_cs_study_075_state_encapsulation.png)
 
 * 「Stateパターン＝クラスを増やすこと」じゃなくて、**状態による振る舞いの分岐を、読みやすく・壊れにくくする**感覚をつかむよ〜🧠✨
 * まずは **C#のswitch式（パターンマッチング）**で“軽く”解ける範囲を知る🙂🔀 ([Microsoft Learn][1])

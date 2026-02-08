@@ -2,7 +2,26 @@
 
 ## ねらい 🎯
 
-![Template Methodパターンのアルゴリズムの骨組み](picture/gof_cs_study_077_template_skeleton.png)
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant Base as Template Method
+    participant Sub as SubClass (Impl)
+    
+    Client->>Base: RunAsync()
+    activate Base
+    Base->>Base: Validate() (virtual)
+    Base->>Sub: ExecuteCore() (abstract)
+    Sub-->>Base: Result
+    Base->>Base: LogSuccess()
+    Base-->>Client: Return
+    deactivate Base
+    
+    note over Sub: ここだけ実装すればOK
+```
+
+![Template Methodパターンのアルゴリズムの骨組み](./picture/gof_cs_study_077_template_skeleton.png)
 
 * 「処理の**手順（順番）は毎回同じ**だけど、途中の一部だけ**差分がある**」みたいな場面で、if/switch地獄を増やさずに整理できるようになる🧠🌸
 * 継承を使う設計のときに「**どこまでを共通化して、どこを差し替え点にするか**」の線引きを作れるようになる✂️🙂

@@ -30,10 +30,29 @@
 
 ### 2) `Lazy<T>`：.NETの「遅延プロキシ」ド本命⏳🌟
 
-![Image](picture/gof_cs_study_053_proxy_lazy_virtual.png)
+![Image](./picture/gof_cs_study_053_proxy_lazy_virtual.png)
 
 `Lazy<T>` は **“必要になるまで初期化しない”** を安全にやるための標準クラスだよ😊
 アクセスは `Value` で行うのが基本ね🔑✨
+
+
+```mermaid
+sequenceDiagram
+    participant User
+    participant Lazy as Lazy<T>
+    participant Factory as ValueFactory
+    
+    User->>Lazy: Access .Value
+    alt Not Created
+        Lazy->>Factory: Execute()
+        Factory-->>Lazy: Result
+        Lazy->>Lazy: Store Result
+    end
+    Lazy-->>User: Result
+    
+    User->>Lazy: Access .Value (2nd)
+    Lazy-->>User: Cached Result
+```
 
 #### ✅ 最小で体感：Valueを触るまで作られない
 

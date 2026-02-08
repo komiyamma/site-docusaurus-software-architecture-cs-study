@@ -116,6 +116,21 @@ public static class OrderTemplates
 
 ---
 
+
+```mermaid
+flowchart TD
+    Store["Template Store<br>(Dictionary)"]
+    Factory[OrderDraftFactory]
+    NewOrder["新しい注文"]
+    
+    Store -->|Get| Factory
+    Factory -->|Clone Collection| Factory
+    Factory -->|with| NewOrder
+    
+    note["List/Arrayは<br>作り直して渡す！"]
+    Factory -.-> note
+```
+
 ### 4) テンプレから複製して “ちょい編集” する（with）🔁✨
 
 Prototypeの本体です！

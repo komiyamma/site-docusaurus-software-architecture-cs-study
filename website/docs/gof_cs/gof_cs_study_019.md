@@ -71,6 +71,23 @@ Visual Studioで `DbProviderFactory` を覗いてみてね✨（F12や「定義�
 
 ここからは、**同じ処理を、Dbが変わっても同じ手順で実行**する例だよ〜😊
 
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Factory as DbProviderFactory
+    participant Conn as DbConnection
+    participant Cmd as DbCommand
+    
+    App->>Factory: CreateConnection()
+    Factory-->>App: conn (Abstract)
+    App->>Factory: CreateCommand()
+    Factory-->>App: cmd (Abstract)
+    App->>Cmd: cmd.Connection = conn
+    App->>Cmd: ExecuteScalarAsync()
+    Cmd-->>App: Result
+```
+
 #### ✅ 例：注文合計を1つ取る（ExecuteScalar）🛒💰
 
 ```csharp

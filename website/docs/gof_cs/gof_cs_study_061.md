@@ -2,7 +2,34 @@
 
 ## ねらい 🎯
 
-![WPFのコマンドバインディングとハンドラの関係](picture/gof_cs_study_061_wpf_command.png)
+
+```mermaid
+classDiagram
+    class Invoker {
+        <<Button / MenuItem>>
+        +Command
+        +CommandParameter
+    }
+    class ICommand {
+        <<interface>>
+        +Execute()
+        +CanExecute()
+    }
+    class RoutedCommand {
+        +InputGestures
+    }
+    class CommandBinding {
+        +Executed
+        +CanExecute
+    }
+    
+    Invoker --> ICommand : Binds to
+    ICommand <|-- RoutedCommand
+    RoutedCommand ..> CommandBinding : Connects via UI Tree
+    CommandBinding --> CodeBehind : Event Handlers
+```
+
+![WPFのコマンドバインディングとハンドラの関係](./picture/gof_cs_study_061_wpf_command.png)
 
 WPFの「コマンド」って、**ボタンのクリック処理を“その場で書く”**のとは発想がちょっと違います🙂
 「やりたい操作」を **ICommand（命令）として別物にして**、ボタン・メニュー・ショートカットキーから**同じ操作を呼べる**ようにします✨

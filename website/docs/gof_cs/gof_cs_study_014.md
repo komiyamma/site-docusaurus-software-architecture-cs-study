@@ -89,6 +89,29 @@ public sealed class CreditCardPaymentWorkflow : PaymentWorkflow
 * これで、**ExecuteAsyncの中から `new CreditCardGateway()` が消える**🎉
 * 「流れ」と「生成」が分離されて、読みやすくなる📚✨
 
+
+```mermaid
+classDiagram
+    class Creator {
+        +ExecuteAsync()
+        #CreateGateway()* IPaymentGateway
+    }
+    class ConcreteCreator {
+        #CreateGateway() ConcreteProduct
+    }
+    class Product {
+        <<interface>>
+        +PayAsync()
+    }
+    class ConcreteProduct {
+        +PayAsync()
+    }
+    
+    Creator <|-- ConcreteCreator
+    Product <|.. ConcreteProduct
+    ConcreteCreator ..> ConcreteProduct : Creates
+```
+
 ### 6) “分岐地獄”をどこへ移したか意識する 🧠🚦
 
 Factory Methodは魔法じゃない🪄

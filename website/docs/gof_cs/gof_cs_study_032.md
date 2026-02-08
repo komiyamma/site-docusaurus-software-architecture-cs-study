@@ -32,6 +32,25 @@
 3. Factoryで「支払い手段」を作る🏭
 4. それらを「注文作成サービス」でつなげる🔗
 
+
+```mermaid
+flowchart TD
+    Client[呼び出し側]
+    
+    subgraph Flow [注文作成フロー]
+        Proto[Prototype: テンプレ複製🧬]
+        Build[Builder: 注文組み立て🧱]
+        Fact[Factory: 支払い生成🏭]
+        Svc[Service: 実行⚙️]
+    end
+    
+    Client --> Proto
+    Proto --> Build
+    Build --> Fact
+    Fact --> Svc
+    Svc --> Result[完了✅]
+```
+
 ---
 
 ### 1) Prototype：注文テンプレを record + with で複製する 🧬✨

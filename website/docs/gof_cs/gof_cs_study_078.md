@@ -2,7 +2,26 @@
 
 ## ねらい 🎯✨
 
-![共通フローを定型化する演習（Template Method）](picture/gof_cs_study_078_template_exercise.png)
+
+```mermaid
+flowchart TD
+    Start([ExecuteAsync]) --> Step1[Log Scope Start]
+    Step1 --> Step2[Validate]
+    Step2 --> Step3{Valid?}
+    
+    Step3 --No--> Err[Throw Exception]
+    Step3 --Yes--> Core["ExecuteCoreAsync\n(Abstract)"]
+    
+    Core --Success--> LogOK[Log Success]
+    Core --Fail--> LogErr[Log Error]
+    
+    LogOK --> Stop([End])
+    LogErr --> Err
+    
+    style Core fill:#ffecb3,stroke:#ff6f00,stroke-width:2px
+```
+
+![共通フローを定型化する演習（Template Method）](./picture/gof_cs_study_078_template_exercise.png)
 
 * 「処理の手順（骨組み）は共通 ✅ でも、ところどころ差分がある 🤏」を**綺麗に整理**できるようになるよ〜😺
 * 具体的には、どのユースケースでも同じになりがちな

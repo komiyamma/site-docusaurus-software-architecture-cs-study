@@ -2,7 +2,32 @@
 
 ## ねらい 🎯💡
 
-![Mediatorパターン（MediatR）を用いた注文確定の演習](picture/gof_cs_study_084_mediator_exercise.png)
+
+```mermaid
+flowchart LR
+    UI[Client] -->|Send| Cmd["ConfirmOrder\n(Command)"]
+    
+    subgraph MediatR
+        H_Cmd[ConfirmOrderHandler]
+        Event["OrderConfirmed\n(Notification)"]
+        
+        H_Inv[InventoryHandler]
+        H_Mail[EmailHandler]
+        H_Log[AuditHandler]
+    end
+    
+    Cmd --> H_Cmd
+    H_Cmd -->|Publish| Event
+    
+    Event -.-> H_Inv
+    Event -.-> H_Mail
+    Event -.-> H_Log
+    
+    note["1つのコマンドから\n複数の処理が走る"]
+    Event --- note
+```
+
+![Mediatorパターン（MediatR）を用いた注文確定の演習](./picture/gof_cs_study_084_mediator_exercise.png)
 
 * 「注文確定」という**1つの入口**から、在庫引当・通知・監査ログ…みたいな**複数の後処理**を“疎結合”で追加できるようになる 🧩✨
 * 依存が増えても、呼び出し側（UI/Controller/Console）が**太らない**形を体験する 🏋️‍♀️➡️🪶

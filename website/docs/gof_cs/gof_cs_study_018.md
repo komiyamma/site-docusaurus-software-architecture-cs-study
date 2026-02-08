@@ -77,6 +77,31 @@ Abstract Factory は “役割のセット” を覚えると一気に楽にな�
 呼び出し側は **Abstract Products だけ見て仕事する**✨
 具体型（SQL Serverのなんとか…）は **工場の中に隠す**🙈
 
+
+```mermaid
+graph TD
+    subgraph Client[呼び出し側]
+        Logic[アプリロジック]
+    end
+    
+    subgraph SqlServer[SQL Server Family]
+        S_Conn[Connection]
+        S_Cmd[Command]
+    end
+    
+    subgraph SQLite[SQLite Family]
+        L_Conn[Connection]
+        L_Cmd[Command]
+    end
+    
+    Logic -->|Use| AbsFactory[DbProviderFactory]
+    AbsFactory -.->|Create| S_Conn
+    AbsFactory -.->|Create| L_Conn
+    
+    style SqlServer fill:#e3f2fd
+    style SQLite fill:#f3e5f5
+```
+
 ---
 
 ### 4) “セットで作る” をコード感覚でつかむ 👀🧪

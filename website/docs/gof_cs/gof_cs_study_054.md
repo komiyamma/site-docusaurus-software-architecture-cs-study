@@ -32,11 +32,35 @@
 
 ### 2) 「どこが何パターン？」対応づけメモ 🧠📝
 
-![Image](picture/gof_cs_study_054_structural_summary_pipeline.png)
+![Image](./picture/gof_cs_study_054_structural_summary_pipeline.png)
 
 * **Decorator**：`GZipStream` で `Stream` を包んで「圧縮/解凍」を後付け🎁
 * **Adapter**：`StreamReader / StreamWriter` で「Stream ↔ テキスト」を変換🔌
 * **Facade**：複雑な手順（Open→Wrap→Read→Deserialize→Map）を `OrderArchive` みたいな窓口にまとめる🚪✨
+
+
+```mermaid
+flowchart LR
+    File((File))
+    GZip["GZipStream\n(Decorator)"]
+    Reader["StreamReader\n(Adapter)"]
+    Json[JsonSerializer]
+    DTO[OrderDto]
+    Domain[Order]
+    
+    File <--> GZip
+    GZip <--> Reader
+    Reader <--> Json
+    Json <--> DTO
+    DTO <--> Domain
+    
+    subgraph Facade [OrderArchive]
+        GZip
+        Reader
+        Json
+        DTO
+    end
+```
 
 ---
 

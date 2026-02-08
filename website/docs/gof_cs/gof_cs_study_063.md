@@ -2,7 +2,27 @@
 
 ## ねらい🎯✨
 
-![Iteratorの基本概念：MoveNextとCurrent](picture/gof_cs_study_063_iterator_concept.png)
+
+```mermaid
+sequenceDiagram
+    participant Foreach
+    participant Enumerator
+    
+    Foreach->>Enumerator: MoveNext()
+    Enumerator-->>Foreach: true
+    Foreach->>Enumerator: Current
+    Enumerator-->>Foreach: Item 1
+    
+    Foreach->>Enumerator: MoveNext()
+    Enumerator-->>Foreach: true
+    Foreach->>Enumerator: Current
+    Enumerator-->>Foreach: Item 2
+    
+    Foreach->>Enumerator: MoveNext()
+    Enumerator-->>Foreach: false (End)
+```
+
+![Iteratorの基本概念：MoveNextとCurrent](./picture/gof_cs_study_063_iterator_concept.png)
 
 * 「Iterator（イテレータ）」が解く困りごと――**“走査（なめる）方法を統一して、内部構造を隠したい”**――を、ちゃんと言葉で説明できるようになるよ🙂📣
 * C#では Iterator が **ほぼ標準機能として完成してる**ので、「それっぽいクラス」を作るよりも、まずは **IEnumerable<T> / IEnumerator<T> / foreach** の役割を体感するよ🧠💡

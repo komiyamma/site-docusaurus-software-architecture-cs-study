@@ -36,6 +36,18 @@
 
 ---
 
+
+```mermaid
+flowchart TD
+    Start[メソッド開始] --> LogIn[入口ログ🚪]
+    LogIn --> Process[処理実行🛠️]
+    Process --> Check{エラー？}
+    Check -->|Yes| LogErr[エラーログ💥<br>with Exception]
+    Check -->|No| LogOut[出口ログ🚪]
+    LogErr --> End
+    LogOut --> End
+```
+
 ### 2) Consoleアプリに “最小のログ” を導入する 🧁
 
 まずは DI なしで、**LoggerFactoryだけ**で始めよう（スッキリ）😊

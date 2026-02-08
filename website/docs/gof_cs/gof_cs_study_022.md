@@ -97,6 +97,28 @@ var order = OrderService.Create(req);
 > 「引数が多い」だけなら、この時点で勝てることが多いです🏆✨
 > でも次に出る条件があるなら、Builder が輝きます💎
 
+
+```mermaid
+classDiagram
+    class OrderBuilder {
+        -cust
+        -lines
+        -addr
+        +ForCustomer()
+        +AddLine()
+        +ShipTo()
+        +Build() Order
+    }
+    class Order {
+        +CustomerId
+        +Lines
+        +Address
+    }
+    
+    OrderBuilder ..> Order : Creates
+    note for OrderBuilder "・途中状態を持つ<br>・Build()で検証"
+```
+
 ---
 
 ### 3) ここからが本題：Builderが“強い”条件を覚えよう💪🧱

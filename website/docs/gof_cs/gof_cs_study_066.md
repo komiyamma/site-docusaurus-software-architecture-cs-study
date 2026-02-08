@@ -2,7 +2,27 @@
 
 ## ねらい 🎯
 
-![Observerパターンの基本：PublisherとSubscriber](picture/gof_cs_study_066_observer_event.png)
+
+```mermaid
+classDiagram
+    class Publisher {
+        <<Order>>
+        +event StatusChanged
+        -Notify()
+    }
+    class Subscriber {
+        <<Logger>>
+        +OnStatusChanged()
+    }
+    
+    Publisher o-- Subscriber : Knows via Delegate
+    Subscriber --> Publisher : Subscribes (+=)
+    
+    note for Publisher "通知先を知らない\n(疎結合)"
+    note for Subscriber "自分から登録する"
+```
+
+![Observerパターンの基本：PublisherとSubscriber](./picture/gof_cs_study_066_observer_event.png)
 
 Observer は、**ある場所で起きた変化（イベント）を、関係者（購読者）に“疎結合”で通知する**ための考え方だよ〜！🔔✨
 C# では **`event` / `EventHandler`** がまさに定番の実装手段で、**発行者（publisher）** と **購読者（subscriber）** をゆる〜くつなげられるのが強み😊

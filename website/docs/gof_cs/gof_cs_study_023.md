@@ -29,6 +29,20 @@ BuilderっぽいAPIには、だいたいこの特徴があるよ👇
 * **最後に完成品を取り出す**（`ToString()` / `Uri`）🎁
 * （ありがち）完成品は **イミュータブル**（変更できない）になってることが多い✨
 
+
+```mermaid
+stateDiagram-v2
+    [*] --> Building
+    Building --> Building : Append / AppendLine
+    Building --> Completed : ToString()
+    Completed --> [*] : string生成
+    
+    note right of Building
+        内部バッファに
+        文字がたまる
+    end note
+```
+
 ---
 
 ### 2) StringBuilderで体感しよう🧵🧵

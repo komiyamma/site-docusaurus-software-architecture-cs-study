@@ -2,7 +2,23 @@
 
 ## ねらい 🎯
 
-![.NET標準のイベントパターン：senderとEventArgs](picture/gof_cs_study_067_standard_events.png)
+
+```mermaid
+sequenceDiagram
+    participant S as Sender (OrderService)
+    participant E as EventArgs
+    participant H1 as Handler 1 (Email)
+    participant H2 as Handler 2 (Log)
+    
+    S->>S: Event Occurs
+    S->>E: Create(Data)
+    S->>H1: Invoke(sender, e)
+    S->>H2: Invoke(sender, e)
+    
+    note over S,H2: Multicast Delegate (順番に呼ばれる)
+```
+
+![.NET標準のイベントパターン：senderとEventArgs](./picture/gof_cs_study_067_standard_events.png)
 
 * 「Observer（観測者）」を **C#の“標準のやり方”＝`event`** でスッと説明できるようになる📣
 * **発行側（Subject）** が **購読者（Observer）を知らなくてよい** 状態を、実コードで体感する🧩✨

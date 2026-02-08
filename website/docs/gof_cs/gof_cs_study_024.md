@@ -123,6 +123,23 @@ public sealed record Order(
 
 ---
 
+
+```mermaid
+stateDiagram-v2
+    [*] --> Active : Create()
+    Active --> Active : ForCustomer()
+    Active --> Active : AddItem()
+    Active --> Active : ...
+    Active --> Built : Build()
+    Built --> [*] : Order生成
+    
+    Built --> Error : 再操作
+    note right of Built
+        再利用禁止
+        (InvalidOperation)
+    end note
+```
+
 ### 3) `OrderBuilder` を作る（段階的に集める🧱）
 
 「途中はBuilderが持つ」「完成はOrder」—これが基本だよ🙂✨

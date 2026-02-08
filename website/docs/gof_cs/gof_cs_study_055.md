@@ -21,7 +21,7 @@
 
 ### 1) まず分岐を“3分類”する（これが本章のメイン！）🎨
 
-![Image](picture/gof_cs_study_055_behavioral_three_roads.png)
+![Image](./picture/gof_cs_study_055_behavioral_three_roads.png)
 
 分岐って、だいたいこの3つのどれかだよ👇
 
@@ -37,6 +37,24 @@
   例：注文確定したら「メール送信」「在庫引当」「ログ保存」…反応が増えるやつ
   👉 **Observer**（C#なら `event` / `EventHandler` が王道🔔）
   さらに発展すると `IObservable<T>` の世界もある🌊（.NET標準のObserver例も公式にあるよ）([Microsoft Learn][1])
+
+
+```mermaid
+flowchart TD
+    Start[分岐がある？]
+    
+    Q1{"やり方を\n選んでる？"}
+    Q2{"段階(State)で\n変わる？"}
+    Q3{"反応する人が\n増える？"}
+    
+    Start --> Q1
+    Q1 --Yes--> Strategy["🅰 Strategy\n(方針)"]
+    Q1 --No--> Q2
+    Q2 --Yes--> State["🅱 State\n(状態)"]
+    Q2 --No--> Q3
+    Q3 --Yes--> Observer["🅲 Observer\n(通知)"]
+    Q3 --No--> Keep[まだif/switchでOKかも]
+```
 
 ---
 

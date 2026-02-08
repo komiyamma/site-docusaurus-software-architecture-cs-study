@@ -2,7 +2,23 @@
 
 ## ねらい 🎯✨
 
-![Delegateを使用した軽量なコマンド実行](picture/gof_cs_study_062_delegate_command.png)
+
+```mermaid
+flowchart LR
+    Input[Console Input] --> Parser[Parser]
+    Parser --> Runner[CommandRunner]
+    
+    subgraph Commands [Dictionary]
+        Cmd1["help (Func)"]
+        Cmd2["place (Func)"]
+        Cmd3["pay (Func)"]
+    end
+    
+    Runner --Name--> Commands
+    Cmd2 --Calls--> Service["OrderService\n(Receiver)"]
+```
+
+![Delegateを使用した軽量なコマンド実行](./picture/gof_cs_study_062_delegate_command.png)
 
 * 「操作（コマンド）」を **実行ループ（呼ぶ側）から切り離す** 感覚を、Consoleアプリでも体に入れるよ〜😊
 * “Commandっぽい専用クラス”を増やさず、**`Func` / `Action`（標準のデリゲート）** で軽く実装して、読みやすさ＆差し替えやすさを作るよ🧠💡

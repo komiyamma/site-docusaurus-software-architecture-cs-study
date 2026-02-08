@@ -21,7 +21,7 @@
 
 ### 1) まず「導入前」のつらさを見る 😵‍💫🌀
 
-![Image](picture/gof_cs_study_045_decorator_payment_pipeline.png)
+![Image](./picture/gof_cs_study_045_decorator_payment_pipeline.png)
 
 ありがちな地獄👇
 
@@ -30,6 +30,30 @@
 * テストもしづらい（本体に横断処理が混ざってるから）💦
 
 この章では、**本体は本体の仕事だけ**に戻して、横断処理は **Decoratorで外に出す**よ🎁✨
+
+
+```mermaid
+sequenceDiagram
+    participant App
+    participant Retry as RetryDecorator
+    participant Log as LoggingDecorator
+    participant Real as PaymentApi
+    
+    App->>Retry: ChargeAsync()
+    loop リトライ試行
+        Retry->>Log: ChargeAsync()
+        Log->>Real: ChargeAsync()
+        Real-->>Log: ❌ Error
+        Log-->>Retry: (Log & Throw)
+        Retry->>Retry: Wait & Retry
+    end
+    
+    Retry->>Log: ChargeAsync()
+    Log->>Real: ChargeAsync()
+    Real-->>Log: ✅ Success
+    Log-->>Retry: (Log & Return)
+    Retry-->>App: Success
+```
 
 ---
 

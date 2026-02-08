@@ -2,7 +2,27 @@
 
 ## ねらい 🎯
 
-![MediatRによるパイプライン処理のイメージ](picture/gof_cs_study_083_mediatr_pipeline.png)
+
+```mermaid
+sequenceDiagram
+    participant Client
+    participant MediatR
+    participant Behavior as PipelineBehavior
+    participant Handler
+    
+    Client->>MediatR: Send(Request)
+    MediatR->>Behavior: Handle(next)
+    activate Behavior
+    Behavior->>Behavior: Pre-process (Log)
+    Behavior->>Handler: Handle(Request)
+    Handler-->>Behavior: Response
+    Behavior->>Behavior: Post-process (Log)
+    Behavior-->>MediatR: Response
+    deactivate Behavior
+    MediatR-->>Client: Result
+```
+
+![MediatRによるパイプライン処理のイメージ](./picture/gof_cs_study_083_mediatr_pipeline.png)
 
 * **Mediator（仲介役）** を、.NET界隈の定番ライブラリ **MediatR** で体験するよ😊
 * 「呼び出し側が何を知らなくてよくなるの？」を、**DI + ハンドラ + パイプライン**で“目で見て”理解する✨

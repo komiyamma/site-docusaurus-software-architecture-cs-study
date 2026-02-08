@@ -79,7 +79,19 @@
 
 ### 5) 最小コードで「流れる」を体験する 🧪✨
 
-![Image](picture/gof_cs_study_056_cor_handler_chain.png)
+
+```mermaid
+flowchart LR
+    Req[Request] --> H1[Handler 1]
+    H1 --Next--> H2[Handler 2]
+    H2 --Next--> H3[Handler 3]
+    H3 --> End((End))
+    
+    H1 --Fail--> Stop1[Stop]
+    H2 --Fail--> Stop2[Stop]
+```
+
+![Image](./picture/gof_cs_study_056_cor_handler_chain.png)
 
 ```csharp
 using System;
