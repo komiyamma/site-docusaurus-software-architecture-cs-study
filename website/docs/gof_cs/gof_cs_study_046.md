@@ -47,7 +47,7 @@ graph TD
     style SubSystem fill:#fff9c4
 ```
 
-![Image](./picture/gof_cs_study_046_facade_concept.png)
+
 ![Image](./picture/gof_cs_study_046_facade_simplified_gate.png)
 
 Facadeが刺さるのは、だいたいこんな症状のとき👇

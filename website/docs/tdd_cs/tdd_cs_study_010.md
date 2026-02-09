@@ -175,11 +175,11 @@ TDDは「失敗の理由を素早く見る」競技だから、ここ最強〜�
 - csprojいじったら、VS Codeを `Reload Window`（再読込）  
 
 ### ② dotnet が無い（SDK無い）😵  
-- .NET 10系は **10.0.2 が最新版案内**になってるよ :contentReference[oaicite:11]{index=11}  
-- .NET Install Toolで “SDK System-Wide” 入れるルートもある :contentReference[oaicite:12]{index=12}  
+- .NET 10系は **10.0.2 が最新版案内**になってるよ  
+- .NET Install Toolで “SDK System-Wide” 入れるルートもある  
 
 ### ③ “企業PCでC# Dev Kitが使えない”っぽい🤔  
-- 組織利用はVisual Studioサブスク範囲の扱い（個人/学校/OSSは無償枠） :contentReference[oaicite:13]{index=13}  
+- 組織利用はVisual Studioサブスク範囲の扱い（個人/学校/OSSは無償枠）  
 （ここは環境ルール次第だから、引っかかったら会社の規定確認だね🙏）
 
 ---
