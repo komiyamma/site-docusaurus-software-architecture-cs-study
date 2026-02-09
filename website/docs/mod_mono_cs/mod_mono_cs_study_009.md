@@ -1,4 +1,4 @@
-# 第9章　DIP/DI超入門：境界はinterfaceで守る🧩🔌
+﻿# 第09章：DIP/DI超入門：境界はinterfaceで守る🧩🔌
 
 ※いまの最新は **C# 14 + .NET 10** だよ〜！🎀（この章のコードもその前提でOK） ([Microsoft Learn][1])
 

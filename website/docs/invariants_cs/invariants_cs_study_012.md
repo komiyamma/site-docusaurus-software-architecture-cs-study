@@ -1,4 +1,4 @@
-# 第12章 値オブジェクト②：Email/文字列VOを作る📧💎
+﻿# 第12章：値オブジェクト②：Email/文字列VOを作る📧💎
 
 ![Email Normalization](./picture/invariants_cs_study_012_ok.png)
 

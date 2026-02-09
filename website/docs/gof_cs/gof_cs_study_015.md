@@ -1,4 +1,4 @@
-# 第15章. Factory Method ②：.NET定番例を読む🔐
+﻿# 第15章：Factory Method ②：.NET定番例を読む🔐
 
 ![第15章. Factory Method ②：標準クラスで体感](./picture/gof_cs_study_015_dotnet_factories.png)
 

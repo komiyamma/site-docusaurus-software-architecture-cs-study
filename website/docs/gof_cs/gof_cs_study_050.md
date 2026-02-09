@@ -1,4 +1,4 @@
-# 第50章. Flyweight ②：.NET定番（stringの共有 / ArrayPool<T>）🧵📦
+﻿# 第50章：Flyweight ②：.NET定番（stringの共有 / ArrayPool<T>）🧵📦
 
 ## ねらい 🎯✨
 

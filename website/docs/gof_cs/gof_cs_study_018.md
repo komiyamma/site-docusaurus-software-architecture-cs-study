@@ -1,4 +1,4 @@
-# 第18章. Abstract Factory ①：ファミリーをセットで差し替える🏭🏭
+﻿# 第18章：Abstract Factory ①：ファミリーをセットで差し替える🏭🏭
 
 ![第18章. Abstract Factory ②：標準クラス（DbProviderFactory）](./picture/gof_cs_study_018_db_factory.png)
 

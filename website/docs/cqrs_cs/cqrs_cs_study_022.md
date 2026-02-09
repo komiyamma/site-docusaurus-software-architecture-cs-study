@@ -1,4 +1,4 @@
-﻿# 第22章　API層は薄く① Controller / Minimal APIの作法🔌✨
+﻿# 第22章：API層は薄く① Controller/Minimal APIの作法🔌
 
 この章はひとことで言うと――
 **「APIは“受付”だけやる」**を体にしみこませる回だよ😺📮

@@ -1,4 +1,4 @@
-# 第54章. 構造まとめミニ演習：Stream系でDecorator/Adapter/Facadeを一気に回収🎉
+﻿# 第54章：構造まとめミニ演習：Stream系でDecorator/Adapter/Facadeを一気に回収🎉
 
 ## ねらい 🎯
 

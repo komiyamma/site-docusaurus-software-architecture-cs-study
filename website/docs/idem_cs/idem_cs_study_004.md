@@ -1,4 +1,4 @@
-# 第4章：副作用ってなに？（冪等性の敵）💣
+﻿# 第04章：副作用ってなに？（冪等性の敵）💣
 ![第4章：副作用](./picture/idem_cs_study_004_side_effects_machine.png)
 
 

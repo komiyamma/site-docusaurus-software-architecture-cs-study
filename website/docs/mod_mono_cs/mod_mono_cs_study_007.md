@@ -1,4 +1,4 @@
-# 第7章　モジュール内レイヤー：Domain / Application / Infrastructure 🧅✨
+﻿# 第07章：モジュール内レイヤー：Domain / Application / Infrastructure 🧅✨
 
 ## 今日のゴール🎯
 

@@ -1,4 +1,4 @@
-# 第27章. Prototype ②：C#らしく（record + with）🧾
+﻿# 第27章：Prototype ②：C#らしく（record + with）🧾
 
 ![第27章. Prototype ②：C#らしく（record + with）](./picture/gof_cs_study_027_blueprint.png)
 

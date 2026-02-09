@@ -1,4 +1,4 @@
-# 第17章. Factory Method ④：AIで雛形→人間が設計レビュー🤖👀
+﻿# 第17章：Factory Method ④：AIで雛形→人間が設計レビュー🤖👀
 
 ![第17章. Abstract Factory ①：シリーズで揃える](./picture/gof_cs_study_017_abstract_factory.png)
 

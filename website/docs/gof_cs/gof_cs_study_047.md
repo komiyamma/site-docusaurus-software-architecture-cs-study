@@ -1,4 +1,4 @@
-# 第47章. Facade ②：.NETで体感（File / HttpClient）📦🌐
+﻿# 第47章：Facade ②：.NETで体感（File / HttpClient）📦🌐
 
 ## ねらい 🎯✨
 

@@ -1,4 +1,4 @@
-# 第06章：Bounded Contextを1行で言うと📝✨
+﻿# 第06章：Bounded Contextを1行で言うと📝
 
 ## 1行でいうと✅
 

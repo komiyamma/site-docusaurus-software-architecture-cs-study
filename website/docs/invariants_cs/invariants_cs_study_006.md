@@ -1,4 +1,4 @@
-# 第6章 失敗の表現①：例外って何者？⚡😵‍💫
+﻿# 第06章：失敗の表現①：例外って何者？⚡😵‍💫
 
 ![Exceptions Bell](./picture/invariants_cs_study_006_red_emergency.png)
 

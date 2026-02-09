@@ -1,4 +1,4 @@
-# 第31章. Singleton ②：.NET流（Lazy<T>）で安全に🛡️🐢
+﻿# 第31章：Singleton ②：.NET流（Lazy<T>）で安全に🛡️🐢
 
 ![第31章. Singleton ②：.NET流（Lazy<T>）で安全に](./picture/gof_cs_study_031_lazy_shield.png)
 

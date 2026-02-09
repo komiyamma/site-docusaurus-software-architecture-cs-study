@@ -1,4 +1,4 @@
-# 第19章. Abstract Factory ②：.NETの定番（DbProviderFactory）🗄️
+﻿# 第19章：Abstract Factory ②：.NETの定番（DbProviderFactory）🗄️
 
 ![第19章. Abstract Factory ③：演習（DB差し替え）](./picture/gof_cs_study_019_swappability.png)
 

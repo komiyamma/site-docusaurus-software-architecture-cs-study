@@ -1,4 +1,4 @@
-# 第34章：Published Language（公開する言葉）📢🧾✨
+﻿# 第34章：Published Language（公開する言葉）📢
 
 ## ねらい🎯
 

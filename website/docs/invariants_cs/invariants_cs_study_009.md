@@ -1,4 +1,4 @@
-# 第9章 “型で守る”入門：ifチェック地獄から卒業🎓✨
+﻿# 第09章：“型で守る”入門：ifチェック地獄から卒業🎓✨
 
 ![Type Safe Box](./picture/invariants_cs_study_009_type.png)
 

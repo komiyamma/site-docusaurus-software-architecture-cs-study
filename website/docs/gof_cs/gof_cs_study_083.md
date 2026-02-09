@@ -1,4 +1,4 @@
-# 第83章. Mediator ②：デファクト（MediatR）を使う🤝✨
+﻿# 第83章：Mediator ②：デファクト（MediatR）を使う🤝✨
 
 ## ねらい 🎯
 

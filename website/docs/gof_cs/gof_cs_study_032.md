@@ -1,4 +1,4 @@
-# 第32章. 生成まとめミニ演習：Factory＋Builder＋Prototypeで「注文作成」完成🎉
+﻿# 第32章：生成まとめミニ演習：Factory＋Builder＋Prototypeで「注文作成」完成🎉
 
 ## ねらい 🎯✨
 

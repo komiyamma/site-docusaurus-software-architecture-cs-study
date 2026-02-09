@@ -1,4 +1,4 @@
-# 第56章. Chain of Responsibility ①：流れを“通す”設計🔗
+﻿# 第56章：Chain of Responsibility ①：流れを“通す”設計🔗
 
 ## ねらい 🎯✨
 

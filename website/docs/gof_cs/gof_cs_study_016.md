@@ -1,4 +1,4 @@
-# 第16章. Factory Method ③：演習（支払い手段の生成）💳
+﻿# 第16章：Factory Method ③：演習（支払い手段の生成）💳
 
 ![第16章. Factory Method ③：演習（支払い方法）](./picture/gof_cs_study_016_payment_factory.png)
 

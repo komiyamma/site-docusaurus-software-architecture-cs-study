@@ -1,4 +1,4 @@
-# 第14章 record / immutable を味方にする❄️🧊
+﻿# 第14章：record / immutable を味方にする❄️🧊
 
 ![Immutable Iceblock](./picture/invariants_cs_study_014_immutable.png)
 

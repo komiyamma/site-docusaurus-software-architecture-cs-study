@@ -1,4 +1,4 @@
-# 第59章. Chain of Responsibility ④：演習（HttpClientパイプラインでログ＋リトライ）📝🔁
+﻿# 第59章：Chain of Responsibility ④：演習（HttpClientパイプラインでログ＋リトライ）📝🔁
 
 ## ねらい 🎯✨
 

@@ -1,4 +1,4 @@
-# 第8章：最小の設計型（Commands/Queriesクラスで分離）🏗️🧱
+﻿# 第08章：最小の設計型（Commands/Queriesクラスで分離）🏗️🧱
 
 この章は「とりあえずCQSを“形”にする」回だよ〜😊
 **TodoCommands / TodoQueries を分けて、依存（Repository）を外から渡す**ところまでいきます🔌✨

@@ -1,4 +1,4 @@
-# 第17章 不変条件パターン②：文字列（長さ・禁止文字・形式）🔤📌✨
+﻿# 第17章：不変条件パターン②：文字列（長さ・禁止文字・形式）🔤📌
 
 ![String Length Measure](./picture/invariants_cs_study_017_length.png)
 

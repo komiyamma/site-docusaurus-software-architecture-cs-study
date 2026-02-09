@@ -1,4 +1,4 @@
-# 第14章. Factory Method ①：考え方（生成を押し出す）🏭
+﻿# 第14章：Factory Method ①：考え方（生成を押し出す）🏭
 
 ![第14章. Factory Method ①：生成の判断を“あとまわし”](./picture/gof_cs_study_014_factory_method.png)
 

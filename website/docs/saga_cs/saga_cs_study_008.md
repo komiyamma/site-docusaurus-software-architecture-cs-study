@@ -1,4 +1,4 @@
-# 第8章：補償の基本（“逆操作”ではなく“帳尻合わせ”）🙅‍♀️🧾
+﻿# 第08章：補償の基本（“逆操作”ではなく“帳尻合わせ”）🙅‍♀️🧾
 
 ![Icons for Refund, Void, Substitute.](./picture/saga_cs_study_008_compensation_types.png)
 

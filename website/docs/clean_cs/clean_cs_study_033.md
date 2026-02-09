@@ -1,4 +1,4 @@
-# 第33章：Persistence Adapterの考え方（DBは“詳細”）🗄️✨
+﻿# 第33章：Persistence Adapterの考え方（DBは“詳細”）🗄️
 
 この章はひとことで言うと、**「DBの都合を、Core（Entities / UseCases）に一切入れない」**ための作法だよ〜！😺💕
 

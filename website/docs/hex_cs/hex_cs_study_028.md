@@ -1,4 +1,4 @@
-# 第28章　Outbound Adapter③：DB実装（最低限の実例）🗃️⚙️
+﻿# 第28章：Outbound Adapter③：DB実装（最低限の実例）🗃️⚙️
 
 
 ここでやることは超シンプルだよ〜！😆

@@ -1,4 +1,4 @@
-# 第24章 状態と不変条件②：状態遷移表を作る📋🖊️✨
+﻿# 第24章：状態と不変条件②：状態遷移表を作る📋🖊️
 
 ![Transition Table](./picture/invariants_cs_study_024_simplified_matrix.png)
 

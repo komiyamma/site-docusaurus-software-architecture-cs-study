@@ -1,4 +1,4 @@
-# 第2章：同心円の4層を覚える（Entities / Use Cases / Adapters / Frameworks）⭕🧠✨
+﻿# 第02章：同心円の4層を覚える（Entities / Use Cases / Adapters / Frameworks）⭕
 
 この章は「クリーンアーキって、結局どこに何を置くの？」を**一撃で整理する回**だよ〜！💪😊
 クリーンアーキの“同心円”は、**大事なものほど中心に置いて、外側は交換できるようにする**考え方だよ。([blog.cleancoder.com][1])

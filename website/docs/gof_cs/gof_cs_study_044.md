@@ -1,4 +1,4 @@
-# 第44章. Decorator ②：.NET最強例（Streamデコレータ）💧
+﻿# 第44章：Decorator ②：.NET最強例（Streamデコレータ）💧
 
 ## ねらい 🎯✨
 

@@ -1,4 +1,4 @@
-# 第26章 Outbound Adapter①：InMemory実装でまず完成🧪📦
+﻿# 第26章：Outbound Adapter①：InMemory実装でまず完成🧪📦
 
 
 まず今の “最新土台” は **.NET 10（LTS）**＆**C# 14**＆**Visual Studio 2026** が中心だよ〜！✨（.NET 10 は 2025/11/11 リリース、2026/1/13 時点の最新パッチは 10.0.2） ([Microsoft][1])

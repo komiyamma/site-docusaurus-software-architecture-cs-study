@@ -1,4 +1,4 @@
-# 第28章. Prototype ③：演習（注文テンプレを複製）🛒🔁
+﻿# 第28章：Prototype ③：演習（注文テンプレを複製）🛒🔁
 
 ![第28章. Prototype ③：演習（注文テンプレ）](./picture/gof_cs_study_028_template_library.png)
 

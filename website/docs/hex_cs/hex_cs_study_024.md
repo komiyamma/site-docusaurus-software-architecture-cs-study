@@ -1,4 +1,4 @@
-# 第24章　Inbound Adapter①：Controllerは薄く！🌐🙂
+﻿# 第24章：Inbound Adapter①：Controllerは薄く！🌐🙂
 
 
 この章はひとことで言うと、**「Controllerを“ただの受付”にする」**練習だよ〜！🧾➡️🧠➡️✅

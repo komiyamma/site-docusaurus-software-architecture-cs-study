@@ -1,4 +1,4 @@
-﻿# 第9章　ライトCQRSの最小形② Handlerを分ける🧑‍🍳✨
+﻿# 第09章：ライトCQRSの最小形② Handlerを分ける🧑‍🍳
 
 この章のゴールはこれだよ〜！🎯
 **Controller（API）から「処理の本体」を追い出して、Command用 / Query用の Handler に分ける**こと😊

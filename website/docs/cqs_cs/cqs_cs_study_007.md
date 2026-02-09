@@ -1,4 +1,4 @@
-# 第7章：まずは小さい題材でCQS（ToDoで分ける）📝🍰
+﻿# 第07章：まずは小さい題材でCQS（ToDoで分ける）📝🍰
 
 この章は「**分けるだけで、読みやすさが上がる**」を体で覚える回だよ〜😊✨
 （最新は **.NET 10（LTS）＋C# 14** が公式に出てるよ📦✨ ([Microsoft for Developers][1]) / Visual Studio 2026 も更新が出てるよ🧰 ([Microsoft Learn][2]) / VS には Copilot 体験が統合されてるよ🤖 ([Visual Studio][3])）

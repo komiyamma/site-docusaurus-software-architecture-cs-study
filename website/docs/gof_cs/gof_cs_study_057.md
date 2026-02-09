@@ -1,4 +1,4 @@
-# 第57章. Chain of Responsibility ②：デファクト①（ASP.NET Core Middleware）🌐
+﻿# 第57章：Chain of Responsibility ②：デファクト①（ASP.NET Core Middleware）🌐
 
 ## ねらい 🎯
 

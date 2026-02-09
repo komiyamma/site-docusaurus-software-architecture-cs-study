@@ -1,4 +1,4 @@
-# 第6章：設計がないとAIへの指示がブレる 😵‍💫💬
+﻿# 第06章：部：【DDD以外の選択肢と割り切り】現実的な設計者へ (76-90)
 
 ![AI Confusion](./picture/ddd_cs_study_006_ai_confusion.png)
 

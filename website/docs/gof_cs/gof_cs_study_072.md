@@ -1,4 +1,4 @@
-# 第72章. Strategy ③：C#らしく（FuncでStrategyを渡す）⚡
+﻿# 第72章：Strategy ③：C#らしく（FuncでStrategyを渡す）⚡
 
 ## ねらい 🎯✨
 

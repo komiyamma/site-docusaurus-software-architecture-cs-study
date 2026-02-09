@@ -1,4 +1,4 @@
-# 第53章. Proxy ②：.NET定番（Lazy<T> / DispatchProxy）⏳🧙
+﻿# 第53章：Proxy ②：.NET定番（Lazy<T> / DispatchProxy）⏳🧙
 
 ## ねらい 🎯✨
 

@@ -1,4 +1,4 @@
-# 第25章. Builder ④：Fluent APIの落とし穴（読めない連鎖）😵
+﻿# 第25章：Builder ④：Fluent APIの落とし穴（読めない連鎖）😵
 
 ![第25章. Builder ④：Fluent APIの落とし穴](./picture/gof_cs_study_025_fluent_readability.png)
 

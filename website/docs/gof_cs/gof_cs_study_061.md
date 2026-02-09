@@ -1,4 +1,4 @@
-# 第61章. Command ②：標準（ICommand）で体験（WPFのミニ）🖱️✨
+﻿# 第61章：Command ②：標準（ICommand）で体験（WPFのミニ）🖱️✨
 
 ## ねらい 🎯
 

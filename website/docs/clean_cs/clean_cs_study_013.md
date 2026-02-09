@@ -1,4 +1,4 @@
-# 第13章：Domain Serviceは“最後の手段”🧩🛟✨
+﻿# 第13章：Domain Serviceは“最後の手段”🧩
 
 〜Serviceに逃げすぎない、でも“必要なときは堂々と使う”回〜
 

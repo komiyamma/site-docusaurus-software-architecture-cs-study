@@ -1,4 +1,4 @@
-# 第6章：方式の選び方（初心者が迷わない判断軸）🧭✨
+﻿# 第06章：方式の選び方（初心者が迷わない判断軸）🧭✨
 
 ![Balance scale between Complexity (Orchestration) and Simplicity (Choreography).](./picture/saga_cs_study_006_pattern_decision.png)
 

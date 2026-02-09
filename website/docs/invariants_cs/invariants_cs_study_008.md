@@ -1,4 +1,4 @@
-# 第8章 失敗の表現③：境界で“変換”する🚪🔁
+﻿# 第08章：失敗の表現③：境界で“変換”する🚪🔁
 
 ![Translation Booth](./picture/invariants_cs_study_008_translator_booth.png)
 

@@ -1,4 +1,4 @@
-# 第71章. Strategy ②：標準例（IComparer<T> / Comparison<T>）📏✨
+﻿# 第71章：Strategy ②：標準例（IComparer<T> / Comparison<T>）📏
 
 ## ねらい 🎯
 

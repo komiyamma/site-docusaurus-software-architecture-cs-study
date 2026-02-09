@@ -1,4 +1,4 @@
-# 第9章：Domain層入門②🧠（振る舞いを持たせる）
+﻿# 第09章：Domain層入門②🧠（振る舞いを持たせる）
 
 ![貧血vsリッチ](./picture/layer_cs_study_009_rich_model.png)
 

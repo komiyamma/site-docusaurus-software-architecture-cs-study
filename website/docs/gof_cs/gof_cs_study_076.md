@@ -1,4 +1,4 @@
-# 第76章. State ③：演習（注文の状態：New→Paid→Shipped）📦🚚
+﻿# 第76章：State ③：演習（注文の状態：New→Paid→Shipped）📦🚚
 
 ## ねらい 🎯
 

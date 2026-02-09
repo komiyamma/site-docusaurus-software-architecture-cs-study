@@ -1,4 +1,4 @@
-# 第23章. Builder ②：標準クラスで体感（StringBuilder / UriBuilder）🧵
+﻿# 第23章：Builder ②：標準クラスで体感（StringBuilder / UriBuilder）🧵
 
 ![第23章. Builder ②：標準クラスで体感](./picture/gof_cs_study_023_string_builder.png)
 

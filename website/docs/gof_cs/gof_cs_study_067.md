@@ -1,4 +1,4 @@
-# 第67章. Observer ②：C#標準（event / EventHandler）🔔
+﻿# 第67章：Observer ②：C#標準（event / EventHandler）🔔
 
 ## ねらい 🎯
 

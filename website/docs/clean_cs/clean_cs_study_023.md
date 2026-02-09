@@ -1,4 +1,4 @@
-# 第23章：Gateway / Repository（外部依存の出口）🚪🗄️✨
+﻿# 第23章：Gateway/Repository（外部依存の出口）🚪
 
 この章は「DBとか外部サービスの都合」を **UseCaseから切り離す** ための超重要ポイントだよ〜！😊💕
 

@@ -1,4 +1,4 @@
-# 第2章：Red / Green / Refactor の意味を体で覚える🚦
+﻿# 第02章：Red / Green / Refactor の意味を体で覚える🚦
 
 ## この章でできるようになること🎯
 

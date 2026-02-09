@@ -1,4 +1,4 @@
-# 第8章 （任意）Visual Studio Code版の最小セット💻✨
+﻿# 第08章：（任意）Visual Studio Code版の最小セット💻✨
 
 ## 8.0 この章のゴール🎯
 

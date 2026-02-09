@@ -1,4 +1,4 @@
-# 第5章　境界づけ入門：Bounded Contextのミニ版🧱🌍
+﻿# 第05章：境界づけ入門：Bounded Contextのミニ版🧱🌍
 
 ### 今日のゴール🎯
 

@@ -1,4 +1,4 @@
-# 第9章：冪等性の超入門（同じのが2回来る世界）🔁😇
+﻿# 第09章：冪等性の超入門（同じのが2回来る世界）🔁😇
 
 ![Multiple button presses, single effect.](./picture/saga_cs_study_009_idempotency_safe.png)
 

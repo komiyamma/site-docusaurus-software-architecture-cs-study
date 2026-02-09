@@ -1,4 +1,4 @@
-# 第11章 ドメインモデル入門：EntityとValueObject🌸
+﻿# 第11章：ドメインモデル入門：EntityとValueObject🌸
 
 ## この章のゴール🎯✨
 

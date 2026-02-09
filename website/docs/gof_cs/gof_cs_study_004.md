@@ -1,4 +1,4 @@
-# 第4章. Visual Studioで学習用ソリューションを作る📁✨
+﻿# 第04章：Visual Studioで学習用ソリューションを作る📁✨
 
 ![第4章. プロジェクト構成の「基本のキ」](./picture/gof_cs_study_004_structure.png)
 

@@ -1,4 +1,4 @@
-# 第21章 更新で壊れない①：setterを減らす✂️🔒
+﻿# 第21章：更新で壊れない①：setterを減らす✂️🔒
 
 ![No Setters](./picture/invariants_cs_study_021_house_with.png)
 

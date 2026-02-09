@@ -1,4 +1,4 @@
-# 第30章 仕上げ総合演習：不変条件の壁を完成🏁🎉🛡️
+﻿# 第30章：仕上げ総合演習：不変条件の壁を完成🏁🎉
 
 ![Architecture Fortress](./picture/invariants_cs_study_030_fortress_diagram.png)
 

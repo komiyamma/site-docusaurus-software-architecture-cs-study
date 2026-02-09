@@ -1,4 +1,4 @@
-# 第30章：API DTO と UseCase Request を分ける🍱✨
+﻿# 第30章：API DTO と UseCase Request を分ける🍱
 
 （＝“外の形”で中身を汚さない練習だよ😊）
 

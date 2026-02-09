@@ -1,4 +1,4 @@
-# 第58章. Chain of Responsibility ③：デファクト②（HttpMessageHandler / DelegatingHandler）📨
+﻿# 第58章：Chain of Responsibility ③：デファクト②（HttpMessageHandler / DelegatingHandler）📨
 
 ## ねらい 🎯
 

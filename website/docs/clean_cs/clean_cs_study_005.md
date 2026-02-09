@@ -1,4 +1,4 @@
-# 第5章：Ports & Adapters を“処理の流れ”で理解する🔌✨
+﻿# 第05章：Ports & Adapters を“処理の流れ”で理解する🔌
 
 （Controller → InputPort → Interactor → OutputPort → Presenter）
 

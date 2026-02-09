@@ -1,4 +1,4 @@
-# 第2章：SemVer超入門（MAJOR.MINOR.PATCH）🧱✨
+﻿# 第02章：SemVer超入門（MAJOR.MINOR.PATCH）🧱✨
 
 ## この章でできるようになること 🎯
 

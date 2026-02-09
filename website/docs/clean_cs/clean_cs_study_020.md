@@ -1,4 +1,4 @@
-# 20章：Interactor（UseCase実装）の骨格🧱
+﻿# 第20章：Interactor（UseCase実装）の骨格🧱
 
 この章では、**「ユースケースの手順書」をコードにした中心人物＝Interactor**を、迷わず書けるようにします😊💕
 

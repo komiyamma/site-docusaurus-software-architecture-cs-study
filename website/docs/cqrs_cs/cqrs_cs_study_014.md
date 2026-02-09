@@ -1,4 +1,4 @@
-﻿# 第14章　Write側DBアクセス① EF Coreで“更新”を通す🧱✨
+﻿# 第14章：Write側DBアクセス① EF Coreで“更新”を通す🧱
 
 この章は「Command（更新）」を **EF CoreでちゃんとDBに反映できる**ようになる回だよ〜！👀✍️
 （※2026-01時点の最新LTSである **.NET 10 + EF Core 10** を前提に話すね。EF Core 10は .NET 10 が必須＆LTSだよ📌） ([Microsoft Learn][1])

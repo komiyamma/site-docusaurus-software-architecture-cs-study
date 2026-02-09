@@ -1,4 +1,4 @@
-# 第17章　登録の基本：AddTransient / AddSingleton / AddScoped を覚える📝
+﻿# 第17章：登録の基本：AddTransient / AddSingleton / AddScoped を覚える📝
 
 この章は「DIコンテナに “どう作ってね” ってお願いする」回だよ〜😊
 **AddTransient / AddSingleton / AddScoped** の3つを、**まずは雰囲気でOK**レベルまで持っていこう〜🌷

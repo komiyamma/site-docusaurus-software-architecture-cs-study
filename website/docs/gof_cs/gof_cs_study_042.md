@@ -1,4 +1,4 @@
-# 第42章. Composite ③：演習（メニュー構造をCompositeで）🍱
+﻿# 第42章：Composite ③：演習（メニュー構造をCompositeで）🍱
 
 ## ねらい 🎯✨
 

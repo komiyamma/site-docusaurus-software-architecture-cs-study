@@ -1,4 +1,4 @@
-# 第23章：Unit of Workの感覚（DbContextの立ち位置）🧠💾
+﻿# 第23章：Unit of Workの感覚（DbContextの立ち位置）🧠
 
 ## この章でわかること🎯✨
 

@@ -1,4 +1,4 @@
-# 第7章：MVCのデータ流れを接続する（Model→Controller→View）🔁✨
+﻿# 第07章：MVCのデータ流れを接続する（Model→Controller→View）🔁✨
 
 この章はね、**「MVCが“回る”瞬間」**を体で覚える回だよ〜🌀💖
 （.NET 10 / C# 14 世代で作る想定だよ🧁） ([Microsoft for Developers][1])

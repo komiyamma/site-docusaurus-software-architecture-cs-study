@@ -1,4 +1,4 @@
-# 第20章. Abstract Factory ③：演習（通知セットを差し替え）🔔
+﻿# 第20章：Abstract Factory ③：演習（通知セットを差し替え）🔔
 
 ![第20章. Abstract Factory ④：演習（環境切り替え）](./picture/gof_cs_study_020_env_switch.png)
 

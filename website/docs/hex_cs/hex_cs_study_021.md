@@ -1,4 +1,4 @@
-# 第21章　UseCase入門：アプリの手順（Application層）🧭🛠️
+﻿# 第21章：UseCase入門：アプリの手順（Application層）🧭🛠️
 
 
 （いまのC#は **C# 14**、対応ランタイムは **.NET 10** が最新ど真ん中だよ〜✨） ([Microsoft Learn][1])

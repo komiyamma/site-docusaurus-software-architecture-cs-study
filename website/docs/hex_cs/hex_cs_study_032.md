@@ -1,4 +1,4 @@
-# 第32章 Composition Root：配線をここに集める📍🧩
+﻿# 第32章：Composition Root：配線をここに集める📍🧩
 
 
 ## 0. いきなり結論：Composition Root は「配線盤」だよ🧠⚡

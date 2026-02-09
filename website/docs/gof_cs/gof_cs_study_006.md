@@ -1,4 +1,4 @@
-# 第6章. AI補助（Copilot/Codex）の正しい使い方🤖✍️
+﻿# 第06章：AI補助（Copilot/Codex）の正しい使い方🤖✍️
 
 ![第6章. AI（Copilot）を“優秀な後輩”にする](./picture/gof_cs_study_006_ai_partner.png)
 

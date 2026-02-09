@@ -1,4 +1,4 @@
-# 第32章：Validationの責務（Adapterで止める / Domainで守る）🛑🛡️✨
+﻿# 第32章：Validationの責務（Adapterで止める/Domainで守る）🛑
 
 この章は「検証（Validation）をどこに置くと、コードが散らからず、クリーンアーキが崩れないか？」を**“ルール化”**する回だよ〜！😊💕
 

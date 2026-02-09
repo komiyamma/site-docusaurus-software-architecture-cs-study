@@ -1,4 +1,4 @@
-# 第13章：冪等キー保存（Redis/キャッシュ等）発展⚡🧠
+﻿# 第13章：冪等キー保存（Redis/キャッシュ等）発展⚡
 ![第13章：Redis保存](./picture/idem_cs_study_013_redis_cache_layer.png)
 
 

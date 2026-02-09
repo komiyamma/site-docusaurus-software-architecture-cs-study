@@ -1,4 +1,4 @@
-# 第22章：ハンズオン① ミニSagaを作る（OrchestrationでGO）🧑‍✈️🎮✨
+﻿# 第22章：ハンズオン① ミニSagaを作る（OrchestrationでGO）🧑‍✈️🎮
 
 ## この章で作るもの（完成イメージ）🎯
 

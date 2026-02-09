@@ -1,4 +1,4 @@
-# 第19章 C#で作る値オブジェクト：record / readonly / factory🛠️💠
+﻿# 第19章：C#で作る値オブジェクト：record / readonly / factory🛠️💠
 
 ## 19.1 この章でできるようになること🎯✨
 

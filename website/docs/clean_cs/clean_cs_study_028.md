@@ -1,4 +1,4 @@
-# 第28章：UseCases層の完成チェック ✅🎮📦✨
+﻿# 第28章：UseCases層の完成チェック✅
 
 ここまでで作った UseCases 層（InputPort / RequestModel / Interactor / OutputPort / ResponseModel / Repository interface）が、**“内側だけで成立してるか”**を総点検する章だよ〜！🕵️‍♀️🔍
 （2026/01/22時点だと、.NET 10（LTS）＋C# 14＋Visual Studio 2026 が最新の前提でOKだよ✨） ([Versions of .NET][1])

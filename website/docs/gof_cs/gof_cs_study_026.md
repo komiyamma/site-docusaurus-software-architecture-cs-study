@@ -1,4 +1,4 @@
-# 第26章. Prototype ①：コピーで量産する🧬✨
+﻿# 第26章：Prototype ①：コピーで量産する🧬✨
 
 ![第26章. Prototype ①：コピーで量産する](./picture/gof_cs_study_026_prototype_clone.png)
 

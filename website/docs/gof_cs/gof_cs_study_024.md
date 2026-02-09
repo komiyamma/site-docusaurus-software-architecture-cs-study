@@ -1,4 +1,4 @@
-# 第24章. Builder ③：演習（Orderを段階的に組み立て）🛒
+﻿# 第24章：Builder ③：演習（Orderを段階的に組み立て）🛒
 
 ![第24章. Builder ③：演習（Order組み立て）](./picture/gof_cs_study_024_order_assembly.png)
 

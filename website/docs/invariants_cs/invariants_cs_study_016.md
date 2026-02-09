@@ -1,4 +1,4 @@
-# 第16章 不変条件パターン①：数値（範囲・丸め・単位）🔢📌
+﻿# 第16章：不変条件パターン①：数値（範囲・丸め・単位）🔢📌
 
 ![Numeric Gauge](./picture/invariants_cs_study_016_gauge_or.png)
 

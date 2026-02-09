@@ -1,4 +1,4 @@
-# 第17章：Use Caseとは？（アプリの手順書）🧾🎮✨
+﻿# 第17章：Use Caseとは？（アプリの手順書）🧾
 
 この章はね、**「Entity（ルールの核）」を、アプリとして“どう使うか”をまとめる場所**が Use Case だよ〜って話です😊
 （いまの最新だと .NET 10 / C# 14 / Visual Studio 2026 が中心になってるよ〜🆕✨） ([Microsoft for Developers][1])

@@ -1,4 +1,4 @@
-# 第35章. Adapter ②：.NET定番（Stream → StreamReader）📚
+﻿# 第35章：Adapter ②：.NET定番（Stream → StreamReader）📚
 
 ## ねらい 🎯✨
 

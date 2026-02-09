@@ -1,4 +1,4 @@
-# 第5章：AIとKISS 🤖💗（AIに“ややこしくしない改善”をさせる！）
+﻿# 第05章：AIとKISS🤖💗（AIに“シンプル化”させるコツ）
 
 ![](./picture/kiss_cs_study_005_ai_partner.png)
 

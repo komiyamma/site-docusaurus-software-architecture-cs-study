@@ -1,4 +1,4 @@
-# 第3章：トランザクションの限界と“分割”の考え方🧱🔪
+﻿# 第03章：トランザクションの限界と“分割”の考え方🧱🔪
 
 ![Heavy lock (ACID) vs Loose chain (Saga).](./picture/saga_cs_study_003_acid_vs_saga.png)
 

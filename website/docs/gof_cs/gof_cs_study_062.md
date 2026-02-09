@@ -1,4 +1,4 @@
-# 第62章. Command ③：Consoleでも使う（Func/Actionで軽量Command）⚡
+﻿# 第62章：Command ③：Consoleでも使う（Func/Actionで軽量Command）⚡
 
 ## ねらい 🎯✨
 

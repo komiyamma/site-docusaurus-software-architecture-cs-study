@@ -1,4 +1,4 @@
-# 第7章：用語セット（Command / Event / State / Projection）📮📜🧠🔎
+﻿# 第07章：用語セット（Command / Event / State / Projection）📮📜🧠🔎
 
 ## 今日のゴール🎯✨
 

@@ -1,4 +1,4 @@
-# 第21章：Output Port（出力境界）を設計する🔌➡️💖
+﻿# 第21章：Output Port（出力境界）を設計する🔌➡️
 
 （※2026/01/23 時点の前提：C# 14 / .NET 10 が最新ラインで、Visual Studio 2026 で扱えるよ〜）([Microsoft Learn][1])
 

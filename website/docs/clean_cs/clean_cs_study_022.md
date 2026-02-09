@@ -1,4 +1,4 @@
-# 第22章：Presenter（出力のAdapter）を理解する🎤✨
+﻿# 第22章：Presenter（出力のAdapter）を理解する🎤
 
 この章は「**出力を“見せる形”に整えるのは誰？**」をハッキリさせる回だよ〜😊💖
 結論から言うと、**UseCaseの結果（ResponseModel）を、画面やAPIレスポンス向け（ViewModel/DTO）に変換する係**がPresenterだよ🎁✨

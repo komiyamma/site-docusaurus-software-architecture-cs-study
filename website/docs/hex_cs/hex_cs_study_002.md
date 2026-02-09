@@ -1,4 +1,4 @@
-# 第2章　ヘキサゴナルを一言で！🔷✨
+﻿# 第02章：ヘキサゴナルを一言で！🔷✨
 
 ![hex_cs_study_002](./picture/hex_cs_study_002_core_boundary.png)
 

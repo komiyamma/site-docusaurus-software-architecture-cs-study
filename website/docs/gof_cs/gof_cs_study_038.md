@@ -1,4 +1,4 @@
-# 第38章. Bridge ②：.NETの感覚（Streamの実装差し替え）🧃
+﻿# 第38章：Bridge ②：.NETの感覚（Streamの実装差し替え）🧃
 
 ## ねらい 🎯✨
 

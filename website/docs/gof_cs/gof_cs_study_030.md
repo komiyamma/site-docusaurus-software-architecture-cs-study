@@ -1,4 +1,4 @@
-# 第30章. Singleton ①：有名だけど慎重に👑⚠️
+﻿# 第30章：Singleton ①：有名だけど慎重に👑⚠️
 
 ![第30章. Singleton ①：有名だけど慎重に](./picture/gof_cs_study_030_singleton_chaos.png)
 

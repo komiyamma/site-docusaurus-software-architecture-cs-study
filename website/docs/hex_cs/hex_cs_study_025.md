@@ -1,4 +1,4 @@
-# 第25章　Outbound Port設計①：Repositoryの約束🗄️📝
+﻿# 第25章：Outbound Port設計①：Repositoryの約束🗄️📝
 
 
 ここからいよいよ「Coreが外部（保存先）にお願いする約束＝Outbound Port」を作るよ〜！😆

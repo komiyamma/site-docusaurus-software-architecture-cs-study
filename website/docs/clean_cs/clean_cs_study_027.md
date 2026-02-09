@@ -1,4 +1,4 @@
-# 第27章：UseCaseを増やしても崩れない“型”を作る📐✨
+﻿# 第27章：UseCaseを増やしても崩れない“型”を作る📐
 
 今まで作ってきた **InputPort / Interactor / OutputPort / Presenter / Repository** の流れ、1個なら作れるけど……
 ユースケースが増えてくると、だんだんこうなりがち👇😵‍💫

@@ -1,4 +1,4 @@
-# 第8章：Domain層入門①💎（モデルとルール）
+﻿# 第08章：Domain層入門①💎（モデルとルール）
 
 ![ドメインは心臓](./picture/layer_cs_study_008_core.png)
 

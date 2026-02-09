@@ -1,4 +1,4 @@
-# 第5章：要求から「状態」を抜き出すコツ🏷️😊
+﻿# 第05章：部：失敗の扱い・ログ・テスト（19〜23章）🧪📜
 
 ![005 State Extraction](./picture/state_machine_cs_study_005_state_extraction.png)
 

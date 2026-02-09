@@ -1,4 +1,4 @@
-# 第9章：ログレベル設計🎚️（Trace/Debug/Info/Warn/Error）
+﻿# 第09章：ログレベル設計🎚️（Trace/Debug/Info/Warn/Error）
 
 〜本番で「出しすぎ地獄😵‍💫」を回避して、必要なときだけスッと調査できるログにする〜
 

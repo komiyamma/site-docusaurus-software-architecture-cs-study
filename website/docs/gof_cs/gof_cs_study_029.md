@@ -1,4 +1,4 @@
-# 第29章. Prototype ④：浅い/深いコピー注意⚠️
+﻿# 第29章：Prototype ④：浅い/深いコピー注意⚠️
 
 ![第29章. Prototype ④：浅い/深いコピー注意](./picture/gof_cs_study_029_deep_vs_shallow.png)
 

@@ -1,4 +1,4 @@
-# 第2章：失敗パターン図鑑（何が壊れる？）💥📚
+﻿# 第02章：失敗パターン図鑑（何が壊れる？）💥📚
 
 ![Double Charge and Ghost Transaction visualization.](./picture/saga_cs_study_002_failure_scenarios.png)
 

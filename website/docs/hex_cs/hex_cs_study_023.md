@@ -1,4 +1,4 @@
-# 第23章　Inbound Port設計②：DTO（入力/出力）を作る📦✨
+﻿# 第23章：Inbound Port設計②：DTO（入力/出力）を作る📦✨
 
 
 前の章で「ユースケースの入口＝Inbound Port（interface）」を用意したよね？😊

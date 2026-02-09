@@ -1,4 +1,4 @@
-# 第21章. Abstract Factory ④：やりすぎ注意（Factory増殖）🐣💦
+﻿# 第21章：Abstract Factory ④：やりすぎ注意（Factory増殖）🐣💦
 
 ![第21章. Abstract Factory ⑤：やりすぎ注意](./picture/gof_cs_study_021_factory_pollution.png)
 

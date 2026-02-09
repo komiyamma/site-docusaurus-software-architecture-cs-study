@@ -1,4 +1,4 @@
-# 第7章：SemVer入門🔢（MAJOR/MINOR/PATCH）
+﻿# 第07章：SemVer入門🔢（MAJOR/MINOR/PATCH）
 
 ## この章のゴール🎯✨
 

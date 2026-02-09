@@ -1,4 +1,4 @@
-# 第7章：用語と境界をそろえる（ミニDDD風の準備）📖🧼
+﻿# 第07章：用語と境界をそろえる（ミニDDD風の準備）📖🧼
 
 ![Bounded contexts map.](./picture/saga_cs_study_007_ubiquitous_language.png)
 

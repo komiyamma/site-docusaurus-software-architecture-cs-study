@@ -1,4 +1,4 @@
-# 第68章. Observer ③：発展 IObservable<T> と Reactive の入口 🌊
+﻿# 第68章：Observer ③：発展（IObservable<T> / Reactive系の入口）🌊
 
 ## ねらい 🎯💡
 

@@ -1,4 +1,4 @@
-# 第6章：Presentation層入門🎨（UIは薄く）
+﻿# 第06章：Presentation層入門🎨（UIは薄く）
 
 ![受付係](./picture/layer_cs_study_006_receptionist.png)
 

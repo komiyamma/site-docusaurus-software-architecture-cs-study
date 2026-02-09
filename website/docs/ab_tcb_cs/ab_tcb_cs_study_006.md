@@ -1,4 +1,4 @@
-# 第6章：EntityとValueObject（最小でOK）🧩
+﻿# 第06章：EntityとValueObject（最小でOK）🧩
 
 ## 6.0 この章でできるようになること🎯✨
 
