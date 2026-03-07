@@ -11,6 +11,10 @@ type FeatureItem = {
   link: string;
 };
 
+type HomepageFeaturesProps = {
+  CategorySvg: React.ComponentType<React.ComponentProps<'svg'>>;
+};
+
 const FeatureList: FeatureItem[] = [
   {
     title: 'KISS C#版',
@@ -449,12 +453,17 @@ const FeatureList: FeatureItem[] = [
   },
 ];
 
-function Feature({title, Svg, description, link}: FeatureItem) {
+function Feature({
+  title,
+  description,
+  link,
+  CategorySvg,
+}: Omit<FeatureItem, 'Svg'> & HomepageFeaturesProps) {
   return (
     <div className={clsx('col col--4')}>
       <div className="text--center">
         <Link to={link}>
-          <Svg className={styles.featureSvg} role="img" />
+          <CategorySvg className={styles.featureSvg} role="img" />
         </Link>
       </div>
       <div className="text--center padding-horiz--md">
@@ -465,13 +474,15 @@ function Feature({title, Svg, description, link}: FeatureItem) {
   );
 }
 
-export default function HomepageFeatures(): ReactNode {
+export default function HomepageFeatures({
+  CategorySvg,
+}: HomepageFeaturesProps): ReactNode {
   return (
     <section className={styles.features}>
       <div className="container">
         <div className="row">
           {FeatureList.map((props, idx) => (
-            <Feature key={idx} {...props} />
+            <Feature key={idx} {...props} CategorySvg={CategorySvg} />
           ))}
         </div>
       </div>
