@@ -407,6 +407,13 @@ const config: Config = {
           position: 'left',
           label: '境界づけられたコンテキスト C#版',
         },
+        // { to: '/blog', label: 'Blog', position: 'left' },
+        {
+          href: 'https://komiyamma.net',
+          label: 'komiyamma.net',
+          position: 'right',
+          className: 'navbar-link-site-home',
+        },
         {
           href: 'https://github.com/komiyamma/site-docusaurus-software-architecture-cs-study',
           label: 'GitHub',
