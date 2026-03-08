@@ -8,7 +8,7 @@ import * as path from 'path';
 
 const config: Config = {
   title: 'ソフトウェア設計の学習教材 C#版',
-  tagline: 'ソフトウェアアーキテクチャ入門者用の学習教材',
+  tagline: 'ソフトウェア設計の学習教材 C#版',
   favicon: 'img/architecture_logo.svg',
 
   // Future flags, see https://docusaurus.io/docs/api/docusaurus-config#future
