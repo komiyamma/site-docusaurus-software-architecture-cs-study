@@ -14,7 +14,7 @@ type CategoryItem = {
  * Each entry maps a sidebar to its index page and display label.
  * Order matches the original navbar order.
  */
-const categories: CategoryItem[] = [
+export const categories: CategoryItem[] = [
   { label: 'KISS C#版',                    sidebarId: 'kissCsSidebar',           path: '/docs/kiss_cs/kiss_cs_index' },
   { label: 'YAGNI C#版',                   sidebarId: 'yagniCsSidebar',          path: '/docs/yagni_cs/yagni_cs_index' },
   { label: 'SoC C#版',                     sidebarId: 'socCsSidebar',            path: '/docs/soc_cs/soc_cs_index' },
