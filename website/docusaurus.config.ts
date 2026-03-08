@@ -7,7 +7,7 @@ import * as path from 'path';
 // This runs in Node.js - Don't use client-side code here (browser APIs, JSX...)
 
 const config: Config = {
-  title: 'software-architecture-cs-study.komiyamma.net',
+  title: 'ソフトウェア設計 C#',
   tagline: 'ソフトウェアアーキテクチャ入門者用の学習教材',
   favicon: 'img/architecture_logo.svg',
 
