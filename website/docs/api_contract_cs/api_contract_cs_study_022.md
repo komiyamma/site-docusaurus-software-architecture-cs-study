@@ -10,6 +10,7 @@
 ---
 
 ## 22.2 まず結論：成功レスポンスで「絶対に決める5点」🧩✅
+![5 Pillars of Success Response](./picture/api_contract_cs_study_022_five_pillars.png)
 
 成功レスポンスの契約は、最低これだけ決めると事故が激減するよ😊✨
 
@@ -61,6 +62,7 @@ graph LR
 ---
 
 ## 22.4 ルート + メソッドの約束（成功レスポンスとセット）🛣️🧠
+![Route + Method Combination](./picture/api_contract_cs_study_022_method_route_lock.png)
 
 成功レスポンスは、**どのURLで、何をした結果なのか**とセットで契約になるよ✨
 
@@ -78,6 +80,7 @@ graph LR
 **フィールド名が変わる／型が変わる／意味が変わる** が地雷！
 
 ### ① 返す形は2パターンに絞る🍡
+![JSON Packaging Patterns](./picture/api_contract_cs_study_022_json_patterns.png)
 
 **A. そのまま返す（シンプル）**
 
@@ -95,11 +98,13 @@ graph LR
 👉 公開APIや一覧が多いなら **B** が安定しやすいよ😊🍀
 
 ### ② フィールド名の大文字小文字（camelCase）を揃える🐫
+![CamelCase Standardization](./picture/api_contract_cs_study_022_camel_case_mold.png)
 
 Web API では **camelCase** が一般的。
 ASP.NET Core の JSON でも、既定が camelCase で、設定で PascalCase に変えられる（＝逆に言うと、ここは契約として固定しようね！）って公式にも書かれてるよ📘 ([Microsoft Learn][3])
 
 ### ③ “省略” と “null” を混ぜない☂️🧼
+![Null vs Missing Visualized](./picture/api_contract_cs_study_022_null_vs_missing_chair.png)
 
 たとえば `nickname` が無いとき…
 
@@ -112,6 +117,7 @@ ASP.NET Core の JSON でも、既定が camelCase で、設定で PascalCase �
 ---
 
 ## 22.6 成功レスポンスの「代表レシピ」🍳✨（迷ったらコレ）
+![Success Response Recipes](./picture/api_contract_cs_study_022_success_recipes.png)
 
 ### GET（一覧）✅
 
@@ -145,6 +151,7 @@ ASP.NET Core の JSON でも、既定が camelCase で、設定で PascalCase �
 ---
 
 ## 22.7 実装で“契約が伝わる”書き方（Minimal API）🧰✨
+![TypedResults Contract](./picture/api_contract_cs_study_022_typed_results_contract.png)
 
 Minimal API は「返り値の型」を工夫すると、**人にもツールにも契約が伝わる**よ😊
 公式でも、Minimal API の返り値として `IResult` や `Results<T...>`、そして TypedResults が紹介されてるよ📘 ([Microsoft Learn][1])

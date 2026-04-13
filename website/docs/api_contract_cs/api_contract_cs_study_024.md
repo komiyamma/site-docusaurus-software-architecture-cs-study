@@ -10,6 +10,7 @@
 ---
 
 ## 24.1 OpenAPIってなに？どうして「契約書」なの？🤝📄
+![Human-Robot Contract](./picture/api_contract_cs_study_024_human_robot_contract.png)
 
 OpenAPI は、HTTP API の「できること」を **言語に依存せず** 書ける標準の仕様書フォーマットだよ🧩
 仕様書がちゃんとしていると、利用側はソースコードを読まなくても「どう呼べばいいか」「何が返るか」を理解できるのが強み✨ ([OpenAPI Initiative Publications][2])
@@ -53,6 +54,7 @@ OpenAPI の基本パーツはこんな感じ👇
 ---
 
 ## 24.3 “契約書として強いOpenAPI”にするための必須ポイント✅✨
+![4 Points of Strong Contract](./picture/api_contract_cs_study_024_four_strong_points.png)
 
 ## ① operationId（操作のID）を安定させる🆔
 
@@ -81,6 +83,7 @@ Minimal API なら **WithTags** が使えるよ✨ ([Microsoft Learn][1])
 ## 24.4 ハンズオン①：OpenAPI 3.1 を “自動生成” して見てみよう👀✨
 
 ## 24.4.1 OpenAPI を出す最小構成（Minimal API）🧩
+![Code to JSON Generation](./picture/api_contract_cs_study_024_code_to_json_machine.png)
 
 ASP.NET Core では、組み込みの OpenAPI 生成が用意されていて、**AddOpenApi** と **MapOpenApi** で JSON を出せるよ✨ ([Microsoft Learn][6])
 
@@ -123,6 +126,7 @@ if (app.Environment.IsDevelopment())
 ---
 
 ## 24.5 ハンズオン②：Swagger UI（見た目）を付けて “眺めやすく” する🧁🔍
+![Swagger UI Viewer](./picture/api_contract_cs_study_024_swagger_ui_glasses.png)
 
 ここ注意⚠️
 組み込みの OpenAPI 生成は **仕様書は出せるけど、UIは同梱じゃない** よ。UI を出すなら別ツールを足す感じ🧰 ([Microsoft Learn][7])
@@ -160,6 +164,7 @@ Swagger UI みたいな「触れるUI」は **開発環境だけで有効にす�
 ---
 
 ## 24.6 ハンズオン③：“契約として読める” メタデータを盛ろう🌸✨
+![Metadata Decoration](./picture/api_contract_cs_study_024_metadata_decoration.png)
 
 ここからが「契約設計」っぽさ出るところだよ〜！🥳
 
@@ -193,6 +198,7 @@ app.MapGet("/todoitems", () => Results.Ok(Array.Empty<object>()))
 ---
 
 ## 24.7 ハンズオン④：DTO（スキーマ）に “制約” を載せよう🍡⚡
+![Schema Constraints Mold](./picture/api_contract_cs_study_024_schema_constraints_mold.png)
 
 「型は合ってるのに、何入れていいか分からない😵」を防ぐには、制約が効くよ✨
 例えば：必須、最大長、範囲、フォーマット（メール等）📌
@@ -219,6 +225,7 @@ public sealed record CreateTodoRequest(
 ---
 
 ## 24.8 仕様書を “固定する” 2つのやり方📌🧾
+![Freezing the Contract](./picture/api_contract_cs_study_024_freezing_contract.png)
 
 契約は「その時の実装」じゃなくて、**合意したドキュメント** が大事だよね🤝
 なので仕様書を **成果物として保存** しよう✨

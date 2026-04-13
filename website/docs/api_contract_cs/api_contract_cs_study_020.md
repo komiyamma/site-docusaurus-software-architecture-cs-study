@@ -10,6 +10,7 @@
 ---
 
 ## 1) 変更ログとリリースノートの違い 🗂️✨
+![Changelog vs Release Note](./picture/api_contract_cs_study_020_changelog_vs_releasenote.png)
 
 ### 変更ログ（CHANGELOG）📚
 
@@ -26,6 +27,7 @@
 ---
 
 ## 2) いちばん大事：読む人の気持ちを想像する 🧠💞
+![Anxious User](./picture/api_contract_cs_study_020_anxious_user_update.png)
 
 リリースノートって、読む人はだいたいこんな状態😇👇
 
@@ -82,6 +84,7 @@ Keep a Changelog の思想はシンプルだよ👇
 * **注意**：既定値変更・挙動の微妙な変更・例外メッセージ変更など 😇
 
 ### Step 2：分類（6箱に投げる）📦
+![Sorting Changes](./picture/api_contract_cs_study_020_sorting_6_bins.png)
 
 Keep a Changelog の箱に仕分けすると速いよ👇
 
@@ -102,6 +105,7 @@ Keep a Changelog の箱に仕分けすると速いよ👇
 ---
 
 ## 5) GitHub Release向け：リリースノートの“完成形テンプレ” 📰✨
+![Release Note Blueprint](./picture/api_contract_cs_study_020_release_note_structure.png)
 
 ```md
 ## vX.Y.Z - YYYY-MM-DD 🎉
@@ -179,6 +183,7 @@ This project follows Semantic Versioning. 🔢
 ---
 
 ## 7) NuGet向け：PackageReleaseNotes は “短文で刺す” 📦💘
+![NuGet Note Constraint](./picture/api_contract_cs_study_020_nuget_sticky_note.png)
 
 NuGetは「リリースノートを毎回入れてね」って公式に推奨してるよ📌（特に Breaking / Features / Fixes） ([Microsoft Learn][2])
 
@@ -209,6 +214,7 @@ NuGetは「リリースノートを毎回入れてね」って公式に推奨し
 ---
 
 ## 8) 自動生成を“下書き係”にする 🤖📝
+![AI Drafting](./picture/api_contract_cs_study_020_ai_drafting_robot.png)
 
 ### GitHubの自動生成リリースノート（UI）✨
 
@@ -280,6 +286,7 @@ gh release create v1.2.3 --generate-notes
 ---
 
 ## 10) よくある事故あるある 😇💥（回避ワザつき）
+![Release Accident Prevention](./picture/api_contract_cs_study_020_release_minefield.png)
 
 * **事故①：変更の羅列だけで、利用者の行動が書いてない**
   → “対応：何を変える？” を1行でも入れる🧭✨

@@ -12,6 +12,7 @@
 ---
 
 ## 27.1 イベントってなに？📣 〜「通知」より「記録」〜
+![Event as Snapshot](./picture/api_contract_cs_study_027_camera_snapshot.png)
 
 イベントは、ざっくり言うと **「起きた事実の記録」** だよ📸✨
 たとえば👇
@@ -26,6 +27,7 @@
 ---
 
 ## 27.2 なぜイベントは「契約」が超重要なの？😱💥
+![Event Broadcast Metaphor](./picture/api_contract_cs_study_027_newspaper_broadcast.png)
 
 イベントは、APIみたいに「その場で失敗したからやり直し」が効きにくいことが多いのがポイント💦
 さらに、イベントは **“後から増える利用者（Consumer）”** が出やすいのも特徴だよ👥
@@ -42,6 +44,7 @@
 ---
 
 ## 27.3 良いイベント名の付け方📝✨（過去形・事実・ドメインの言葉）
+![Event Naming Stamp](./picture/api_contract_cs_study_027_naming_stamp.png)
 
 イベント名は「何をしたいか」じゃなくて、**「何が起きたか」** を表すのがコツだよ😊
 
@@ -92,6 +95,7 @@ CloudEvents では、少なくとも以下が必須になるのが基本だよ�
 ---
 
 ## 27.5 “まずこれだけ”入れるイベント契約の最小セット✅✨
+![Standard Envelope Label](./picture/api_contract_cs_study_027_envelope_label.png)
 
 ここでは CloudEvents に寄せつつ、超実務で困りにくい **最小フィールド** を作るよ😊
 
@@ -124,6 +128,7 @@ CloudEvents では、少なくとも以下が必須になるのが基本だよ�
 ---
 
 ## ① イベントの型を作る（封筒＋データ）📦✨
+![Extension Data Backpack](./picture/api_contract_cs_study_027_extension_backpack.png)
 
 ポイントは👇
 
@@ -258,6 +263,7 @@ Consume(json);
 ---
 
 ## 27.7 受け取り側の鉄則🛡️✨（“未来の変更”に強くなる）
+![Tolerant Consumer Puzzle](./picture/api_contract_cs_study_027_tolerant_puzzle.png)
 
 ## ✅ 鉄則1：未知フィールドで落ちない（追加に強く）➕
 
@@ -293,6 +299,7 @@ System.Text.Json は既定で未知プロパティを無視できるから、追
 ---
 
 ## 27.9 練習問題✍️✨
+![Command vs Event Sort](./picture/api_contract_cs_study_027_command_vs_event_sort.png)
 
 ## 問1✅：これはイベント？コマンド？
 

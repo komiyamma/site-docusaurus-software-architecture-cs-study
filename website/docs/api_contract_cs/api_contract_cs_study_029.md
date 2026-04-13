@@ -83,6 +83,8 @@ mindmap
 
 ## 29.5 提供側の契約テスト：統合テストで“形”を固定する🧪🧱
 
+![Provider Shape Test](./picture/api_contract_cs_study_029_provider_test_shape.png)
+
 ASP.NET Core は **テスト用ホスト＋インメモリのテストサーバー**で統合テストができます🧪✨ ([Microsoft Learn][2])
 ここを使うと「返す JSON の形」をめちゃ守りやすいです😊
 
@@ -226,6 +228,8 @@ HTTP モックには WireMock.Net が便利です🧰（.NET向けモックサ�
 ---
 
 ## 29.7 Consumer-Driven Contract Testing：Pactで“期待”を契約ファイルにする📜🤖✨
+
+![Pact Handshake](./picture/api_contract_cs_study_029_pact_handshake.png)
 
 ここが契約テストの花形🌸
 Pact は「利用側が契約を書く」タイプで、契約ファイル（pact）を共有して提供側が検証します🧠✨ ([GitHub][1])
@@ -406,6 +410,8 @@ public static class BooksApiTcpHost
 
 ## 29.8 Pact Broker と Can I Deploy（CIで超強い）🚦🏁
 
+![Pact Broker Dashboard](./picture/api_contract_cs_study_029_pact_broker_dashboard.png)
+
 契約ファイル（pact）を「どこに置くの？」問題、CIで「今デプロイして大丈夫？」問題…ありますよね🥺
 
 そこで Pact Broker が便利です📦✨
@@ -422,6 +428,8 @@ public static class BooksApiTcpHost
 ---
 
 ## 29.9 OpenAPI を“契約書”としてテストする📘🔎✨
+
+![OAS Diff Alert](./picture/api_contract_cs_study_029_oasdiff_alert.png)
 
 Web API だと OpenAPI はかなり強い契約書です📘✨
 

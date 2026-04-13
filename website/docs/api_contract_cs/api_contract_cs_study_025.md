@@ -47,6 +47,7 @@ OpenAPIって、作った瞬間がゴールじゃなくて **“育て続ける�
 差分運用のコツはシンプルで、OpenAPIを「毎回同じ場所に」「同じ手順で」出力できるようにすること✨
 
 ### 2.1 実行時生成 vs ビルド時生成（運用はどっちが楽？）🤔
+![Runtime vs Build-time Generation](./picture/api_contract_cs_study_025_runtime_vs_buildtime.png)
 
 * 実行時に `/openapi/v1.json` みたいに出す（APIが動けば取れる）
 * ビルド時にファイルを生成する（CIでも安定して取れる）
@@ -75,6 +76,7 @@ type obj\{ProjectName}.json
 ---
 
 ## 3. “破壊的変更”を差分で止める🛑🔍
+![Diff Filter](./picture/api_contract_cs_study_025_diff_filter.png)
 
 差分の見方は2種類あるよ👇
 
@@ -87,6 +89,7 @@ type obj\{ProjectName}.json
 ---
 
 ## 4. oasdiffでローカル差分チェック（超基本）🧪🧰
+![oasdiff Machine](./picture/api_contract_cs_study_025_oasdiff_machine.png)
 
 ### 4.1 用意するもの📄
 
@@ -111,6 +114,7 @@ oasdiff diff openapi\base.json openapi\revision.json
 ---
 
 ## 5. GitHub ActionsでPRに「契約アラート」を出す📣🤖
+![CI Gatekeeper](./picture/api_contract_cs_study_025_ci_gatekeeper.png)
 
 CIで差分チェックすると、**壊れる変更がPRの時点で見える**から事故が激減するよ😇✨
 `oasdiff-action` は `oasdiff` を使ったGitHub Actionで、差分や破壊的変更チェックを簡単に組み込めるよ⚙️ ([GitHub][3])
@@ -136,6 +140,7 @@ CIで差分チェックすると、**壊れる変更がPRの時点で見える**
 ---
 
 ## 6. 生成（Codegen）で「ズレ」を減らす🤝🧩
+![Codegen Bridge](./picture/api_contract_cs_study_025_codegen_bridge.png)
 
 差分だけ見てても、利用側が手で書いてるとズレやすい…！
 だから **OpenAPIからクライアントを生成**して「仕様＝コード」に近づけるのが強いよ💪✨
@@ -153,6 +158,7 @@ CIで差分チェックすると、**壊れる変更がPRの時点で見える**
 ---
 
 ## 7. ここが地雷！差分レビューで見るべきポイント💥👀
+![Breaking Change Mines](./picture/api_contract_cs_study_025_breaking_change_mines.png)
 
 PRでOpenAPIが変わったら、まずここを見よう👇✅
 
@@ -185,6 +191,7 @@ ASP.NET Coreの組み込みOpenAPIは **OpenAPI 3.1 を既定**にできて、�
 ---
 
 ## 8. Lint（仕様書のお作法チェック）で品質を揃える🧹✨
+![Lint Stylist](./picture/api_contract_cs_study_025_lint_stylist.png)
 
 差分で壊れを止めるのが「安全」だとしたら、Lintは「読みやすさ・統一感」担当💄✨
 

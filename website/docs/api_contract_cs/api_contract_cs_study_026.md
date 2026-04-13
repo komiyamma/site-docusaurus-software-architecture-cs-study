@@ -18,6 +18,7 @@ DTOは「通信で渡すデータの形（JSONの形）」だよ😊
 ---
 
 ## 2) まず押さえる“互換性の2方向”↔️
+![Compatibility Directions](./picture/api_contract_cs_study_026_compatibility_directions.png)
 
 DTO変更は、だいたいこの2方向で事故るよ😇
 
@@ -73,6 +74,7 @@ graph TD
 ---
 
 ## 4) “追加は基本OK”の条件🍀（ここがコツ！）
+![Optional Addition Metaphor](./picture/api_contract_cs_study_026_optional_addition.png)
 
 「追加OK」は、**“任意として追加”できたときだけ**だよ😊
 
@@ -85,6 +87,7 @@ graph TD
 ---
 
 ## 5) “削除・名前変更”が危険な理由🧨
+![Deletion Danger](./picture/api_contract_cs_study_026_deletion_bridge_collapse.png)
 
 * 削除すると、古いクライアントが参照してたら即死💀
 * 名前変更は、相手から見ると **「削除＋追加」** と同じ💥
@@ -99,6 +102,7 @@ graph TD
 ---
 
 ## 6) “型変更”が危険な理由🔁💥
+![Type Change Trap](./picture/api_contract_cs_study_026_type_change_trap.png)
 
 例：`age: "20"`（string）→ `age: 20`（number）
 見た目は近いけど、受け側のパースが死ぬ😵‍💫
@@ -157,6 +161,7 @@ System.Text.Json には **必須を表す属性**があるよ。
 ---
 
 ## 8) “未知のフィールド”はどう扱う？🧩
+![Unknown Field Gatekeeper](./picture/api_contract_cs_study_026_unknown_field_gatekeeper.png)
 
 DTOを進化させると、新しいクライアントは **新しいフィールドを送る**よね📮
 古いサーバがそれに遭遇したときどうするか、方針が必要！
@@ -191,6 +196,7 @@ public sealed class StrictDto
 ---
 
 ## 9) OpenAPIで“DTOの契約”を見える化📘✨
+![DTO Contract Shadow](./picture/api_contract_cs_study_026_dto_shadow.png)
 
 OpenAPIは「このAPIはこのJSONを返す/受けるよ」っていう契約書📘
 .NET 9 以降、ASP.NET Coreには **組み込みのOpenAPIサポート**があるよ（Microsoft.AspNetCore.OpenApi）([Microsoft Learn][1])
@@ -319,6 +325,7 @@ public sealed record CreateOrderRequestV1_1(
 ---
 
 ## 10-4) “v1のまま動く”をテストで固定✅🧪
+![Contract Witness](./picture/api_contract_cs_study_026_contract_witness.png)
 
 DTO進化は、**テストがあると急に平和になる**よ😊💕
 

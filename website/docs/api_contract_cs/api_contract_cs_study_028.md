@@ -63,6 +63,8 @@ graph LR
 
 ## 3. “封筒（Envelope）” を固定すると、一気に強くなる📩🛡️
 
+![CloudEvents Envelope](./picture/api_contract_cs_study_028_cloud_events_envelope.png)
+
 イベントは「データ本体」だけじゃなくて、メタ情報（いつ/どこ/何が起きた）も超重要です✨
 この“封筒”を標準化する代表例が **CloudEvents** 🎁
 
@@ -94,6 +96,8 @@ Azure Event Grid なども CloudEvents v1.0 をサポートしてます☁️✨
 ---
 
 ## 4. バージョンの付け方：3つの代表パターン🔢🧩
+
+![Versioning Strategies](./picture/api_contract_cs_study_028_version_strategies.png)
 
 ### パターンA：イベント名（type）に v1 / v2 を入れる🏷️
 
@@ -152,6 +156,8 @@ Azure Event Grid なども CloudEvents v1.0 をサポートしてます☁️✨
 
 ## 6. C#で “前方互換” を取りに行くコツ（未知フィールドを無視する）🧸✨
 
+![Unknown Field Handling](./picture/api_contract_cs_study_028_unknown_field_handling.png)
+
 イベントは「古いConsumerが読む」可能性があるから、
 Consumer側は **知らないフィールドが来ても落ちない** のが理想です💗
 
@@ -163,6 +169,8 @@ System.Text.Json は、.NET 8以降「未知（マッピング不能）なプロ
 ---
 
 ## 7. 実装の型：Consumerに “Upcaster” を置く🧙‍♀️🛠️
+
+![Upcaster Pattern](./picture/api_contract_cs_study_028_upcaster_pattern.png)
 
 「古いイベント」→「最新モデル」に変換してから処理するのが王道です✨
 これで Consumer の本体ロジックが **最新版だけ** を相手にできるよ🎀
@@ -229,6 +237,8 @@ public static class UserRegisteredUpcaster
 
 ## 8. 「段階的リリース」の鉄板手順（事故らない順番）🚦✨
 
+![Release Traffic Light](./picture/api_contract_cs_study_028_release_traffic_light.png)
+
 ### 8.1 追加（互換）リリース：v1 → v1.1 みたいな感じ➕
 
 1. Consumer を先に更新（新フィールドが来ても読める状態）👂✨
@@ -246,6 +256,8 @@ public static class UserRegisteredUpcaster
 ---
 
 ## 9. Schema Registry を使うと「勝手に壊す」が減る🧯📚
+
+![Schema Registry Box](./picture/api_contract_cs_study_028_schema_registry_box.png)
 
 Schema Registry は、ざっくり言うと
 「イベントの設計図（スキーマ）を保管して、互換性チェックもしてくれる箱」📦✨

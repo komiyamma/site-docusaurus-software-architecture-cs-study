@@ -10,6 +10,7 @@
 ---
 
 ## 1) 失敗レスポンスは「仕様書そのもの」📘⚡
+![Failure Response Hub](./picture/api_contract_cs_study_023_failure_hub.png)
 
 成功レスポンスはみんな丁寧に作るのに、失敗側は「とりあえず 400」になりがち😵
 でも実務だと、困るのはだいたい失敗側…！
@@ -57,6 +58,7 @@ Problem Details は、タイトルなどの言語を **Accept-Language** でネ�
 ---
 
 ## 3) ステータスコードの選び方🍀（迷子にならない早見）
+![Status Code Router](./picture/api_contract_cs_study_023_status_router.png)
 
 「どれを返すの？」は、**意味**で決めるのが大事✨
 （一覧の根拠は HTTP の標準と IANA レジストリだよ）([iana.org][3])
@@ -78,6 +80,7 @@ Problem Details は、タイトルなどの言語を **Accept-Language** でネ�
 ---
 
 ## 4) “エラーコード（code）”を作ると運用が激ラク🏷️✨
+![Error Code Granularity](./picture/api_contract_cs_study_023_error_code_zoom.png)
 
 HTTPステータスだけだと、粒度が粗いよね。
 
@@ -100,6 +103,7 @@ Problem Details は拡張フィールドを載せていい前提の仕様だよ�
 ---
 
 ## 5) バリデーション失敗の設計🍡（この章のメイン実習！）
+![Validation Error Marking](./picture/api_contract_cs_study_023_validation_marking.png)
 
 ## どんな形にする？（理想）✨
 
@@ -112,6 +116,7 @@ RFC 9457 の例でも、422 と "errors" 拡張で複数の入力エラーを表
 ---
 
 ## 6) 実装：.NET 10 Minimal API で “失敗レスポンス統一”🧰⚙️
+![Minimal API Error Pipeline](./picture/api_contract_cs_study_023_minimal_api_pipeline.png)
 
 ここからは、**全部の失敗を同じ型（Problem Details）** で返す構成にするよ😊
 
@@ -319,6 +324,7 @@ public sealed class ApiExceptionHandler : IExceptionHandler
 ---
 
 ## 7) 返ってくる失敗レスポンス例（これが“契約”）📨✨
+![Error Response Cards](./picture/api_contract_cs_study_023_error_cards.png)
 
 ## ① 400：入力エラー（バリデーション）🧾
 
@@ -368,6 +374,7 @@ public sealed class ApiExceptionHandler : IExceptionHandler
 ---
 
 ## 8) 失敗レスポンス設計のチェックリスト✅💕
+![Quality Control Checklist](./picture/api_contract_cs_study_023_qc_checklist.png)
 
 * [ ] 失敗時の Content-Type が統一されてる？（"application/problem+json"）([RFCエディタ][1])
 * [ ] status と HTTP ステータスコードが一致してる？

@@ -12,6 +12,7 @@
 ---
 
 ## 21.1 「契約レビュー」ってなに？🔍🧩
+![Contract Review Lens](./picture/api_contract_cs_study_021_contract_lens.png)
 
 コードレビューって、ついこうなりがち👇
 
@@ -32,6 +33,7 @@
 ---
 
 ## 21.2 PRを開いた瞬間に見る「3つ」👀⚡
+![3 PR Check Points](./picture/api_contract_cs_study_021_pr_check_triangle.png)
 
 PRを開いたら、まずここだけ見て “方向” を決めるよ🧭✨
 
@@ -70,6 +72,7 @@ PRをレビューするとき、毎回この順番でいくとブレないよ✨
 * “内部実装だけ”のつもりに見えて、publicに触れてない？😳
 
 ### Step 2：変更点を「契約の言葉」に翻訳する📝✨
+![Code to Contract Translator](./picture/api_contract_cs_study_021_translation_device.png)
 
 コードの差分を、そのまま“約束の変更”に言い換えるよ👇
 
@@ -86,6 +89,7 @@ PRをレビューするとき、毎回この順番でいくとブレないよ✨
 * **挙動互換**：動くけど意味が変わってない？（一番事故る😇）([Microsoft Learn][3])
 
 ### Step 4：変更を「互換OK / グレー / 破壊」に仕分ける✅⚠️💥
+![Change Sorting Machine](./picture/api_contract_cs_study_021_sorting_machine.png)
 
 * 互換OK：基本 MINOR / PATCH
 * 破壊：基本 MAJOR
@@ -167,6 +171,7 @@ PR本文に貼って運用できる形にするね💞
 ---
 
 ## 21.5 事故りがちな変更 Top10💥😇
+![Top 10 Accident Hazards](./picture/api_contract_cs_study_021_top10_hazards.png)
 
 「やりがち」なのに、壊れやすいやつまとめ🥺
 
@@ -184,6 +189,7 @@ PR本文に貼って運用できる形にするね💞
 ---
 
 ## 21.6 AI支援でレビューを速くする🤖✨（でも最後は人間が決める🧠）
+![AI Assistant Reviewer](./picture/api_contract_cs_study_021_ai_assistant_reviewer.png)
 
 ### ① エディタ内のセルフレビュー（Copilot Code Review）🧑‍💻👀
 
@@ -209,6 +215,7 @@ PR差分を貼って、こう聞くと契約レビューが速いよ✨
 ---
 
 ## 21.7 “自動化”で契約を守る🛡️⚙️（PRの門番）
+![Automated Gatekeeper](./picture/api_contract_cs_study_021_automated_gatekeeper.png)
 
 レビューは人間がやるけど、**破壊の検知**は機械が得意だよ✨
 

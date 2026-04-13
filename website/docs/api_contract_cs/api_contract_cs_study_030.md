@@ -56,6 +56,8 @@ NuGetはSemVer 2.0.0のルールで考えるのが基本だよ📦([Microsoft Le
 
 ## 1️⃣ v1.0.0：最小の契約で「動く」を作る🌱
 
+![v1 Architecture](./picture/api_contract_cs_study_030_v1_architecture.png)
+
 ### 1-1. 契約（DTO）を“拡張しやすい形”で作る🧩
 
 ポイントはここ👇
@@ -190,6 +192,8 @@ Console.WriteLine($"送料: {body!.PriceYen}円 / 目安: {body.EstimatedDays}�
 
 ## 2️⃣ v1.1.0：後方互換のまま拡張する➕✨
 
+![Optional Addition](./picture/api_contract_cs_study_030_optional_addition.png)
+
 ### 2-1. 互換を壊さない変更例（超おすすめ）🍡
 
 * **Requestに任意フィールド追加（nullable / default）**
@@ -262,6 +266,8 @@ SemVerの考え方とも一致する👍([Semantic Versioning][3])
 ---
 
 ## 3️⃣ v2.0.0：破壊変更＋段階的廃止＋移行ガイド🧭💥
+
+![v2 Migration Path](./picture/api_contract_cs_study_030_v2_migration.png)
 
 ### 3-1. v2で「壊す」理由を作る（設計の筋トレ）🏋️‍♀️
 
@@ -371,6 +377,8 @@ ASP.NET Core の OpenAPI 生成や `MapOpenApi` の挙動は公式にまとま�
 
 ### 4-1. 依存関係の健全性チェック（.NET 10 の新コマンド順）🧹
 
+![NuGet Vulnerability Scan](./picture/api_contract_cs_study_030_nuget_vulnerability_scan.png)
+
 .NET 10 から `dotnet package list` で、復元も含めて一覧・脆弱性チェックしやすいよ🧰
 （`--vulnerable` や `--outdated` が便利✨）([Microsoft Learn][5])
 
@@ -387,6 +395,8 @@ dotnet package list --vulnerable --include-transitive
 * `Update all my packages to the latest compatible versions` ([Microsoft Learn][2])
 
 ### 4-2. ライブラリ契約の破壊検知（ApiCompat）🧪
+
+![CI Pipeline Gates](./picture/api_contract_cs_study_030_ci_pipeline_gates.png)
 
 公開APIの互換性チェックには **ApiCompat** が使えるよ🛡️
 （公式のツール説明＆使い方がある）([Microsoft Learn][6])

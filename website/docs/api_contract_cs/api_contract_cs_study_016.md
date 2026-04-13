@@ -46,6 +46,7 @@ graph TD
 ## ① publicメンバーを削除する（削除）🗑️💥
 
 **壊れ方：** 呼び出し側が「存在しない」と言われてコンパイルエラー😵
+![Public Member Deletion](./picture/api_contract_cs_study_016_delete_member_hole.png)
 
 ### 例（Before → After）
 
@@ -77,6 +78,7 @@ public class PriceService
 ## ② 名前を変える（リネーム）📝💥
 
 **壊れ方：** 古い名前で呼んでいる側が全滅😇
+![Renaming Break](./picture/api_contract_cs_study_016_rename_ignored_call.png)
 
 * 型名の変更（Class名）
 * メソッド名の変更
@@ -93,6 +95,7 @@ public class PriceService
 ## ③ public → internal/private にする（公開範囲を狭める）🔒💥
 
 **壊れ方：** 利用側から見えなくなってコンパイル不能😵
+![Public to Internal Access Denied](./picture/api_contract_cs_study_016_public_to_internal_shutter.png)
 
 ### よくある流れ😇
 
@@ -130,6 +133,7 @@ public int Add(int a, int b, int scale) => (a + b) * scale;
 ```
 
 利用側は `Add(1, 2)` が通らなくなるよ💥
+![Signature Mismatch](./picture/api_contract_cs_study_016_signature_key_mismatch.png)
 
 ### 安全な代替案🛟（王道）
 
@@ -158,6 +162,7 @@ C#には `Foo(x: 1, y: 2)` みたいな **名前付き引数** があるよね�
 ## ⑥ interface にメンバーを追加する（実装側が壊れる）🧱💥
 
 **壊れ方：** そのinterfaceを実装してるクラスが「未実装だよ！」でコンパイルエラー😵
+![Interface Implementation Burden](./picture/api_contract_cs_study_016_interface_burden.png)
 
 これは「利用側がConsumer」だけじゃなくて、**実装側が利用者** のケースで大事故になりがち💣
 
@@ -203,6 +208,7 @@ interfaceは追加に弱いから、拡張余地が必要なら **抽象基底�
 
 `const` は「コンパイル時定数」なので、使い方によっては壊れ方がややこしいよ😵‍💫
 特に **属性引数** や **switch case** みたいに「定数が必要」な場所で、`const` を `static readonly` に変えるとコンパイルエラーになりやすい⚡
+![Const vs Readonly Trap](./picture/api_contract_cs_study_016_const_stone_tablet.png)
 
 ### 安全なコツ🛟
 
@@ -300,6 +306,7 @@ Consumerから見えなくなる😇
 * 新しい型を追加して誘導
 
 ## ✅ 旧APIはすぐ消さない（移行路を作る）🛣️
+![Safe Evolution Path](./picture/api_contract_cs_study_016_safe_evolution_path.png)
 
 * [Obsolete("代わりはこれだよ")] を付ける
 * 移行方法が分かるメッセージを書く✍️

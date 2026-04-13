@@ -39,6 +39,7 @@ graph LR
 ![Behavioral Trap](./picture/api_contract_cs_study_017_behavioral_trap.png)
 
 ## パターンA：**オプション引数（既定値）の変更**🎁➡️🎁
+![Default Value Surprise](./picture/api_contract_cs_study_017_default_value_surprise.png)
 
 **見た目は同じ呼び出し**なのに、結果が変わります😵
 しかも「再コンパイルした人だけ挙動が変わる」みたいな事故が起きがち💥
@@ -54,6 +55,7 @@ graph LR
 ---
 
 ## パターンB：**オーバーロード追加で、別のメソッドが呼ばれる**🌀
+![Overload Hijacking](./picture/api_contract_cs_study_017_overload_hijack.png)
 
 「同じ呼び出しコード」なのに、**オーバーロード追加**で解決先が変わることがあります😱
 しかも **コンパイルは通る**ので気づきにくい…！
@@ -69,6 +71,7 @@ graph LR
 ---
 
 ## パターンC：**例外型が変わって、catchが効かない**🧨
+![Exception Type Mismatch](./picture/api_contract_cs_study_017_exception_miss.png)
 
 利用側がこう書いてたら👇
 
@@ -90,6 +93,7 @@ catch (ArgumentException) { /* リカバリ */ }
 ---
 
 ## パターンD：**丸め・精度・パースの微変更**🔢🧊
+![Precision Change Impact](./picture/api_contract_cs_study_017_precision_tipping_point.png)
 
 * 返す数値の精度が変わる
 * パースが厳密になって例外が増える
@@ -106,6 +110,7 @@ catch (ArgumentException) { /* リカバリ */ }
 ---
 
 ## パターンE：**遅延実行化（IEnumerableの返し方変更）**🐢➡️🐇
+![Deferred Execution Risk](./picture/api_contract_cs_study_017_deferred_bomb.png)
 
 v1は `ToList()` して返してたのに、v2で “賢く” 遅延にしたら…
 
@@ -120,6 +125,7 @@ v1は `ToList()` して返してたのに、v2で “賢く” 遅延にした�
 ---
 
 ## パターンF（最新・実例）：**C# 14（.NET 10）で span 系が“より適用される”問題**🧠⚡
+![Span Binding Trap](./picture/api_contract_cs_study_017_span_magnet_trap.png)
 
 C# 14（.NET 10）では **span 変換と型推論の改善**で、
 `Span<T>` / `ReadOnlySpan<T>` 系のメソッドが **より多くの場面で候補になり**、呼ばれる先が変わることがあります🌀 ([Microsoft Learn][4])
@@ -376,6 +382,7 @@ void M(Expression<Func<int[], int, bool>> e) => e.Compile(preferInterpretation: 
 ---
 
 ## 17.5 AI（下書き係🤖）の使い方：この章に刺さるプロンプト集🪄✨
+![AI Behavior Review](./picture/api_contract_cs_study_017_ai_behavior_diff.png)
 
 ## ✅ 変更の“破壊ポイント”洗い出し
 

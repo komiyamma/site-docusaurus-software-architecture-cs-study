@@ -10,6 +10,7 @@
 ---
 
 ## 1) 「非推奨」と「削除」は別ものだよ🧩
+![Deprecated vs Removed](./picture/api_contract_cs_study_018_deprecated_vs_removed_signs.png)
 
 ## 非推奨（Deprecated）🧓
 
@@ -25,6 +26,7 @@
 ---
 
 ## 2) “廃止”を伝える場所は2つあるよ📍
+![Two Announce Channels](./picture/api_contract_cs_study_018_announce_locations.png)
 
 ## A. コード上（APIレベル）🧑‍💻
 
@@ -44,6 +46,7 @@
 ---
 
 ## 3) `[Obsolete]` の基本：警告にする？エラーにする？🚦
+![Warning vs Error Levels](./picture/api_contract_cs_study_018_warning_vs_error_light.png)
 
 `[Obsolete]` には大きく2段階があるよ👇
 
@@ -60,6 +63,7 @@
 ---
 
 ## 4) 2026っぽい親切設計：DiagnosticId と UrlFormat🧷🔗
+![Diagnostic ID & URL](./picture/api_contract_cs_study_018_smart_tag_diagnostic.png)
 
 .NET 5 以降、`ObsoleteAttribute` に **2つの強化ポイント**が追加されてるよ✨([Microsoft Learn][6])
 
@@ -146,6 +150,7 @@ Console.WriteLine(MathApi.Add(2, 3));
 ---
 
 ## 6-2) v1.1：新APIを追加して、旧APIは「警告」にする⚠️✨
+![Code Warning Visualization](./picture/api_contract_cs_study_018_code_warning_bubble.png)
 
 ポイントはここ👇
 
@@ -208,6 +213,7 @@ public static class MathApi
 ## 7) “移行させる文章”テンプレ集📝💕（すぐ使える）
 
 ## 7-1) `[Obsolete]` メッセージの黄金構成👑
+![Golden Message Template](./picture/api_contract_cs_study_018_message_template_card.png)
 
 品質ルール的にも「メッセージは重要」で、置換先やサポート期間を書くのが推奨されてるよ([Microsoft Learn][9])
 
@@ -237,6 +243,7 @@ public static class MathApi
 ---
 
 ## 8) NuGet 側の「パッケージ非推奨化」も一緒にやろう📦👀
+![NuGet Deprecation Banner](./picture/api_contract_cs_study_018_nuget_deprecation_banner.png)
 
 nuget.org では、パッケージを **一覧削除せずに** “非推奨” にできるよ。
 

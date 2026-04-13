@@ -9,6 +9,7 @@
 ---
 
 ## 19.1 パッケージのバージョンは「契約の顔」🏷️🙂
+![Package Version Face](./picture/api_contract_cs_study_019_version_face_label.png)
 
 Microsoftの .NET 10 は LTS（長期サポート）として提供され、今のC#開発の土台はここが基準になってるよ〜🧱✨ ([Microsoft for Developers][1])
 その上で、ライブラリを配るときの **NuGet パッケージのバージョン**は、利用者にとって「アップデートして大丈夫？😳」を判断するラベルになるの📦🏷️
@@ -16,6 +17,7 @@ Microsoftの .NET 10 は LTS（長期サポート）として提供され、今�
 ---
 
 ## 19.2 まずは基本：SemVer（セマンティック バージョニング）🔢
+![SemVer Building Blocks](./picture/api_contract_cs_study_019_semver_building_blocks.png)
 
 NuGet のバージョンは SemVer 2.0.0 を前提に整理されてるよ（範囲指定や正規化の話もここにまとまってる）📘 ([Microsoft Learn][2])
 
@@ -37,6 +39,7 @@ NuGet のバージョンは SemVer 2.0.0 を前提に整理されてるよ（範
 ---
 
 ## 19.3 依存関係の指定には「幅」がある📏（そして事故は幅から来る）
+![Dependency Ranges](./picture/api_contract_cs_study_019_dependency_ranges_net.png)
 
 NuGet では、利用側（Consumer）が「どのバージョンまで許すか」を指定できるよ🧩 ([Microsoft Learn][2])
 
@@ -82,6 +85,7 @@ graph TD
 これが「依存関係更新こわい」最大の理由〜🫠
 
 ## 事故パターンB：同じ範囲指定でも「解決結果」が環境で変わる🌀
+![Local vs CI Difference](./picture/api_contract_cs_study_019_works_on_my_machine_ci.png)
 
 * ローカルは通るのに、別PC/CIで落ちる…あるある😭
 
@@ -93,6 +97,7 @@ graph TD
 ## 19.5 実務のおすすめ：2つの立場で分けて考える👀
 
 ## ①提供側（Producer）：自分のパッケージの数字をどう上げる？📦⬆️
+![Versioning Decision Tree](./picture/api_contract_cs_study_019_versioning_decision_tree.png)
 
 判断はこの3つだけでOK😊
 
@@ -247,6 +252,7 @@ dotnet add package Komi.ContractsDemo --version 1.1.0
 ---
 
 ## 19.7 事故を防ぐ「固定化」2点セット🔒🧷
+![Central Package Management](./picture/api_contract_cs_study_019_central_package_management.png)
 
 ## ①中央管理（複数プロジェクトで超便利）📌
 
@@ -277,6 +283,7 @@ dotnet restore --locked-mode
 ---
 
 ## 19.8 AIで依存関係アップデートを“安全に”進める🤖🧯
+![AI Dependency Guard](./picture/api_contract_cs_study_019_ai_dependency_guard.png)
 
 Visual Studio 2026 のリリースノートには、Copilot から NuGet 情報を使う仕組み（NuGet MCP server）が紹介されてて、脆弱性修正や更新提案にも使えるよ🧰✨ ([Microsoft Learn][6])
 
