@@ -18,6 +18,8 @@ CQRSのRead側は“表示のためのデータ取得”が主役なので、こ
 
 ## 1) まず「追跡」ってなに？🧠📝
 
+![tracking_overhead_backpack](./picture/cqrs_cs_study_018_tracking_overhead_backpack.png)
+
 EF Coreは、通常のクエリだと取得したEntityを**変更トラッカー（Change Tracker）**に登録して、あとで更新できるようにするよ〜。
 
 * ✅ Tracking：あとで更新しやすい（変更検知してSaveChangesできる）
@@ -62,6 +64,8 @@ var dtos = orders.Select(o => new OrderListItemDto(
 ---
 
 ## 3) “良い”例：DTOへ投影＋AsNoTracking ✨⚡
+
+![select_projection_filter](./picture/cqrs_cs_study_018_select_projection_filter.png)
 
 ```mermaid
 flowchart LR

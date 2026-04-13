@@ -38,6 +38,8 @@ flowchart TD
 
 ## 1) .NET 10 SDK を入れる（いちばんラクな方法）💿✨
 
+![sdk_installation](./picture/cqrs_cs_study_004_sdk_installation.png)
+
 ### ✅ winget で入れる（おすすめ）
 
 PowerShell を開いて、これだけ👇 ([Microsoft Learn][3])
@@ -62,6 +64,8 @@ dotnet --list-sdks
 
 ## 2) Visual Studio 2026 を入れる 🧠🧰
 
+![vs_cockpit](./picture/cqrs_cs_study_004_vs_cockpit.png)
+
 ### ✅ ダウンロード（公式）
 
 Visual Studio 2026 は Microsoft Learn のリリースノートが出ています📌 ([Microsoft Learn][1])
@@ -77,6 +81,8 @@ Visual Studio 2026 は Microsoft Learn のリリースノートが出ていま�
 ---
 
 ## 3) 最小Web APIを作る（Visual Studio編）🛠️✨
+
+![new_project_blueprint](./picture/cqrs_cs_study_004_new_project_blueprint.png)
 
 ### 手順 🧑‍🍳
 
@@ -96,6 +102,8 @@ Visual Studio 2026 は Microsoft Learn のリリースノートが出ていま�
 
 ## 4) 最小Web APIを作る（CLI編：コピペでOK）⌨️✨
 
+![cli_terminal](./picture/cqrs_cs_study_004_cli_terminal.png)
+
 フォルダを作って、テンプレで生成します👇
 （テンプレは `dotnet new` の既定テンプレとして提供されています） ([Microsoft Learn][5])
 
@@ -114,6 +122,8 @@ dotnet run
 ---
 
 ## 5) 起動確認（Swagger / ブラウザ）🧪🌈
+
+![verification_success](./picture/cqrs_cs_study_004_verification_success.png)
 
 ### ✅ Swagger UI がある場合
 
@@ -135,6 +145,8 @@ curl https://localhost:****/weatherforecast
 
 ## 6) ここで詰まりがちな「HTTPS証明書」🔐😵‍💫
 
+![https_trust](./picture/cqrs_cs_study_004_https_trust.png)
+
 初回だけ「HTTPSが信用されてないよ〜」って怒られることがあります⚡
 そのときはこれ👇（Windows はこれでOK） ([Microsoft Learn][7])
 
@@ -145,6 +157,8 @@ dotnet dev-certs https --trust
 ---
 
 ## ミニ演習 🎯（5〜10分）✨
+
+![ping_pong_exercise](./picture/cqrs_cs_study_004_ping_pong_exercise.png)
 
 ### ✅ お題：動作確認エンドポイントを1個だけ増やす🍬
 

@@ -62,6 +62,8 @@ SQLiteプロバイダーは `UseSqlite` を使うよ〜って公式にも書い�
 
 ## 14-5. Entity（Writeモデル）を作る🧩✨
 
+![entity_protection](./picture/cqrs_cs_study_014_entity_protection.png)
+
 ポイントはこれ👇
 
 * 🧠 **エンティティ自身にルール（最小でOK）**
@@ -346,6 +348,8 @@ public async Task<int> FastDelete(Guid id, CancellationToken ct)
 * 変更しても **SaveChangesAsyncしないとDBに反映されない**よ！
 
 ### ② `Update(entity)` 乱用で全部更新マン👑
+
+![update_pitfall](./picture/cqrs_cs_study_014_update_pitfall.png)
 
 * 「DTOをentityに詰めて `Update`」は簡単だけど、
   ✅ **意図しない列まで更新**しやすい＆競合にも弱い💦

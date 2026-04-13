@@ -2,6 +2,8 @@
 
 ### 第1章　CQRSってなに？まずは“絵”で理解しよ🎨
 
+![separation_concept](./picture/cqrs_cs_index_separation_concept.png)
+
 * ねらい：CQRS＝「読む」と「書く」を分ける考え方👀✍️
 * 学ぶこと：Command / Query の超ざっくり定義
 * ミニ演習：身近な例（SNS・EC・ToDo）で「読む」「書く」を分けて書く📝
@@ -36,6 +38,8 @@
 
 ### 第6章　あえて“混ぜた実装”を作ってツラさ体験😵‍💫
 
+![mixed_complexity](./picture/cqrs_cs_index_mixed_complexity.png)
+
 * 学ぶこと：読み書き混在の悪さ（変更が怖い、テストしにくい）
 * ミニ演習：1つのServiceに全部入れて、後で苦しむ😇
 * AI：改善点レビューをAIにさせる→自分で採点🧑‍🏫🤖
@@ -47,6 +51,8 @@
 * つまずき：更新しつつ戻り値で色々返したくなる問題😅
 
 ### 第8章　ライトCQRSの最小形① DTOを分ける📦
+
+![light_cqrs_split](./picture/cqrs_cs_index_light_cqrs_split.png)
 
 * 学ぶこと：CreateXxxCommand / GetXxxQuery の“形”
 * ミニ演習：DTOをrecordで作る🧩
@@ -86,6 +92,8 @@
 
 ### 第14章　Write側DBアクセス① EF Coreで“更新”を通す🧱
 
+![write_integrity](./picture/cqrs_cs_index_write_integrity.png)
+
 * 学ぶこと：Writeは整合性重視（追跡・変更管理が便利）
 * ミニ演習：Create/Update/Delete をEFで実装
 * AI：EFのベースコード生成→例外処理を自分で整える🤖🛠️
@@ -105,6 +113,8 @@
 ---
 
 ### 第17章　Queryの基本① Read DTO（表示用モデル）を作る👀
+
+![query_projection](./picture/cqrs_cs_index_query_projection.png)
 
 * 学ぶこと：Read DTOは“画面に都合の良い形”でOK📄
 * ミニ演習：一覧用DTO（ListItem）を設計
@@ -164,6 +174,8 @@
 
 ### 第26章　横断関心① Logging（Command/Queryの開始・終了を揃える）🧾
 
+![cross_cutting_logging](./picture/cqrs_cs_index_cross_cutting_logging.png)
+
 * 学ぶこと：どこでログを取るか（入口で統一）
 * ミニ演習：成功/失敗/所要時間をログに出す⏱️
 * AI：ログメッセージ案を作らせて整える🤖
@@ -221,6 +233,8 @@
 * つまずき：Writeと同じ形で作ってメリットが出ない問題💦
 
 ### 第35章　Readモデル分離② 最終的整合性（ゆるく体験）⏳
+
+![eventual_consistency](./picture/cqrs_cs_index_eventual_consistency.png)
 
 * 学ぶこと：「反映がちょい遅れる」世界観
 * ミニ演習：反映遅延がある前提のUI文言を考える🗣️

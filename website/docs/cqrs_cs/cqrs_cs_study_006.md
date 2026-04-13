@@ -11,6 +11,8 @@ DBは EF Core 10 がセットで扱いやすい👍([Microsoft Learn][3])
 
 ## 1 この章のゴール🎯✨
 
+![pain_experience](./picture/cqrs_cs_study_006_pain_experience.png)
+
 最後にこうなれば勝ち！
 
 * ✅ 「読み取り」と「更新」を1つのサービスに突っ込むと、何が起きるか体験した
@@ -121,6 +123,8 @@ public class AppDbContext : DbContext
 
 ### 4.3 欲張りDTOを作る😈📦
 
+![greedy_dto](./picture/cqrs_cs_study_006_greedy_dto.png)
+
 `TodoDto.cs`
 
 ```csharp
@@ -145,6 +149,8 @@ public record TodoDto(
 ---
 
 ### 4.4 すべてを背負う TodoService を作る👑💦
+
+![god_service](./picture/cqrs_cs_study_006_god_service.png)
 
 `TodoService.cs`
 
@@ -349,6 +355,8 @@ app.Run();
 
 ## 6 痛みポイントまとめ😵‍💫📝
 
+![pain_points_xray](./picture/cqrs_cs_study_006_pain_points_xray.png)
+
 混ぜこぜ実装のツラさ、代表例を列挙するね👇
 
 1. **DTOが肥大化**して、どの項目が必須か不明になる📦💥
@@ -365,6 +373,8 @@ app.Run();
 ---
 
 ## 7 AIにレビューさせるとめちゃ効く🤖🩷
+
+![ai_detective](./picture/cqrs_cs_study_006_ai_detective.png)
 
 Copilot / Codex みたいなAIを使って、**設計の痛みを言語化**しよう✨
 おすすめプロンプト👇
@@ -403,6 +413,8 @@ AIの案をそのまま採用じゃなくて、**“痛みの言語化メモ”*
 ---
 
 ## 9 次章への予告📣💖
+
+![cqs_sunrise](./picture/cqrs_cs_study_006_cqs_sunrise.png)
 
 次の第7章は **CQS** だよ✂️
 ここで今日の地獄を救うルールが来る👇

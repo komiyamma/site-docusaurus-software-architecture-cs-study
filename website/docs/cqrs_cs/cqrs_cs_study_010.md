@@ -5,6 +5,8 @@
 ---
 
 ## 0. まず結論：CQRSは「置き場所」を決めないと崩壊しやすい😇💥
+![maze_developer](./picture/cqrs_cs_study_010_maze_developer.png)
+
 
 CQRSって「読む/書く」を分けるから、放っておくと…
 
@@ -27,6 +29,8 @@ CQRSって「読む/書く」を分けるから、放っておくと…
 ---
 
 ## 2. おすすめ構成：最初は「縦割り（Feature）+ CQRS箱」🍱✨
+![cake_slice](./picture/cqrs_cs_study_010_cake_slice.png)
+
 
 ![A vertical shelving unit representing folder structure.](./picture/cqrs_cs_study_010_folder_structure.png)
 
@@ -89,6 +93,8 @@ ASP.NET Core は Controller ベースのWeb API と Minimal API の両方が選�
 ---
 
 ## 3. もう一段きれいに：Solutionを「4プロジェクト」に分ける版🏗️✨
+![four_layer_building](./picture/cqrs_cs_study_010_four_layer_building.png)
+
 
 チーム開発っぽくしたいなら、早めに分けると後がラク！💕
 
@@ -112,6 +118,8 @@ tests/
 ---
 
 ## 4. 命名規約：これだけ固定すれば迷子ほぼゼロ🏷️🐣
+![luggage_tags](./picture/cqrs_cs_study_010_luggage_tags.png)
+
 
 ### ✅ Command / Query / Handler の命名テンプレ
 
@@ -132,6 +140,8 @@ tests/
 ---
 
 ## 5. 責務ルール：Controller/Handler/DB の境界線を引く🚧✨
+![border_map](./picture/cqrs_cs_study_010_border_map.png)
+
 
 ### ✅ Controller / Minimal API がやること
 
@@ -256,6 +266,8 @@ public sealed class CreateOrderHandler
 ## 10. よくある事故と対策🚑💦
 
 ### 😵 事故1：Shared に何でも入れて巨大化
+![shared_closet_mess](./picture/cqrs_cs_study_010_shared_closet_mess.png)
+
 
 ✅ 対策：Shared は **“本当に共通で変わりにくい物だけ”**（インターフェースやResult型くらい）
 

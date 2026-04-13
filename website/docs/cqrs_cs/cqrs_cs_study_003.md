@@ -50,6 +50,8 @@ mindmap
 
 ### ✅ Handler（ハンドラ）🧑‍🍳
 
+![handler_focused](./picture/cqrs_cs_study_003_handler_focused.png)
+
 * **1行**：Command/Query を受け取って、**1ユースケース分だけ**実行する係
 * **例**：`CreateOrderCommandHandler`（注文を作るだけ）
 * **勘違いあるある**：
@@ -58,6 +60,8 @@ mindmap
   * ❌「Handlerが巨大化」→ **“1機能=1Handler”**で小さく保つ🍱
 
 ### ✅ DTO（Data Transfer Object）📦
+
+![dto_container](./picture/cqrs_cs_study_003_dto_container.png)
 
 * **1行**：層と層の間で渡す“ただのデータの箱”
 * **例**：`CreateOrderCommand` / `OrderDetailDto`
@@ -68,6 +72,8 @@ mindmap
 
 ### ✅ WriteModel（書きモデル）✍️🧱
 
+![writemodel_integrity](./picture/cqrs_cs_study_003_writemodel_integrity.png)
+
 * **1行**：**更新・整合性**を守りやすい形（ルールを置く場所）
 * **例**：`Order` エンティティ、集約、更新用の構造
 * **勘違いあるある**：
@@ -76,6 +82,8 @@ mindmap
 
 ### ✅ ReadModel（読みモデル）👀📄
 
+![readmodel_display](./picture/cqrs_cs_study_003_readmodel_display.png)
+
 * **1行**：**表示・検索**しやすい形（画面都合に寄せてOK）
 * **例**：一覧用 `OrderListItemDto`（合計金額、件数、表示用文字列が入っててもOK）
 * **勘違いあるある**：
@@ -83,6 +91,8 @@ mindmap
   * ❌ ReadModel = DBのテーブル名だと思う → “形”の話だよ（置き場所は後で選べる）🙂
 
 ### ✅ Projection（プロジェクション）🪞✨
+
+![projection_transform](./picture/cqrs_cs_study_003_projection_transform.png)
 
 * **1行**：Write側のデータを、Read側の形へ“変換して作る”こと
 * **例**：注文＋明細＋顧客名をJOINして「一覧用の1行」にする
@@ -93,6 +103,8 @@ mindmap
 ---
 
 ## 3) すぐ使える「用語カード」テンプレ🗂️✍️✨
+
+![term_cards](./picture/cqrs_cs_study_003_term_cards.png)
 
 ノートでも `glossary.md` でもOK！これをコピペして埋めるだけで強い💪💕
 
@@ -165,6 +177,8 @@ public sealed class GetOrderDetailQueryHandler
 ---
 
 ## 5) 迷子になりがちな“似てる言葉”セットを整理🧭💡
+
+![handler_vs_service](./picture/cqrs_cs_study_003_handler_vs_service.png)
 
 ここ、超大事！テストに出る（出ない）けど現場で死ぬやつ😇
 

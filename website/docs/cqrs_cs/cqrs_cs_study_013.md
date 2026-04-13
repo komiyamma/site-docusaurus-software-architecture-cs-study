@@ -9,6 +9,8 @@
 ---
 
 ## 1) まず「業務ルール」って何？（バリデーションとの違い）🔍🧠
+![ruler_vs_judge](./picture/cqrs_cs_study_013_ruler_vs_judge.png)
+
 
 同じ `if` でも、種類が違うと置き場所が変わるよ〜！
 
@@ -47,6 +49,8 @@
 業務ルールの置き場所は、だいたいこの3つに落ちるよ〜👇😺
 
 ### ① ドメイン（Entity / ValueObject / Aggregate）に置く🏰
+![entity_castle](./picture/cqrs_cs_study_013_entity_castle.png)
+
 
 **その集約（＝そのオブジェクト）が守るべき掟**は、そこに置く！
 例：注文（Order）が「出荷済みならキャンセル不可」を守る🚚❌
@@ -58,6 +62,8 @@
 * テストしやすい🧪
 
 ### ② ドメインサービス / ポリシーに置く🧙‍♀️
+![wizard_service](./picture/cqrs_cs_study_013_wizard_service.png)
+
 
 **「1つのEntityだけじゃ判断できない」** とき
 例：
@@ -71,6 +77,8 @@
 * “状態変更の確定” は集約へ戻す（ここ大事！）🔁
 
 ### ③ CommandHandlerに置く（オーケストレーション）🎻
+![conductor_handler](./picture/cqrs_cs_study_013_conductor_handler.png)
+
 
 Handlerの役目は **段取り**！
 
@@ -141,6 +149,8 @@ public readonly struct Result<T>
 ---
 
 ## 5) ドメインに「破れない掟」を置く🏰🛡️（在庫・期限の表現）
+![shield_deflection](./picture/cqrs_cs_study_013_shield_deflection.png)
+
 
 ここは最小例として、「注文を確定できるか？」をドメイン側で判断する感じにするね✨
 （在庫やクーポンを“参照する”のはHandler側、**決定はドメイン**に寄せるのが気持ちいい）
@@ -237,6 +247,8 @@ public sealed class PlaceOrderHandler
 ---
 
 ## 7) 置き場所の判断ゲーム🎮💡（迷ったらコレ）
+![decision_tree_map](./picture/cqrs_cs_study_013_decision_tree_map.png)
+
 
 次の質問に **YES** なら、だいたい正解に近づくよ〜！🧁✨
 

@@ -53,6 +53,8 @@ Writeモデルは変更されやすいけど、Read DTOは「画面契約」と�
 
 ## 3) Read DTO設計のコツ（迷子防止の型）🧭✨
 
+![screen_blueprint_mapping](./picture/cqrs_cs_study_017_screen_blueprint_mapping.png)
+
 ### まず「画面」を1枚選ぶ📱
 
 例：注文一覧（Order List）
@@ -178,6 +180,8 @@ public static class OrderStatusExtensions
 ## 6) つまずきポイントあるある😅（そして回避✨）
 
 ### ❌ Writeモデル（Entity）をそのまま返しがち
+
+![entity_vs_dto_weight](./picture/cqrs_cs_study_017_entity_vs_dto_weight.png)
 
 * ナビゲーションプロパティがズルズル付いて重い
 * JSONが巨大化しがち

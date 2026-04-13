@@ -10,6 +10,8 @@ IDEも **Visual Studio 2026** が出てて、AI連携もより深くなってる
 ---
 
 ## 1) まず「Handler」ってなに？🍳
+![relay_race](./picture/cqrs_cs_study_009_relay_race.png)
+
 
 ![A chef representing the Handler.](./picture/cqrs_cs_study_009_handler_chef.png)
 
@@ -57,6 +59,8 @@ Handler分離すると、いきなりこうなるよ〜✨
 ## 3) この章で作る“最小形”のルール📏✨
 
 ### ✅ ルールA：CommandHandler と QueryHandler は別クラス
+![two_workers](./picture/cqrs_cs_study_009_two_workers.png)
+
 
 * **CommandHandler**：状態を変える（Create/Update/Delete など）✍️
 * **QueryHandler**：読むだけ（一覧・詳細・検索など）👀
@@ -67,6 +71,8 @@ Handler分離すると、いきなりこうなるよ〜✨
   ※これは次章でもさらに深掘りするよ！
 
 ### ✅ ルールC：HandlerにHttpの匂いを入れない🙅‍♀️
+![no_http_zone](./picture/cqrs_cs_study_009_no_http_zone.png)
+
 
 * `HttpContext` とか `Request` とか触らない
 * “アプリの処理”に集中する🧠✨
@@ -92,6 +98,8 @@ public sealed record TodoListItemDto(
 ---
 
 ## 4-2) “Write側”の CommandHandler を作る✍️🔥
+![blinders_horse](./picture/cqrs_cs_study_009_blinders_horse.png)
+
 
 まずは最小で、**Commandを受け取って、作って、ID返す**だけ😊
 
@@ -215,6 +223,8 @@ builder.Services.AddScoped<GetTodoListQueryHandler>();
 ## 5) つまずきポイントあるある😵‍💫→回避法💊✨
 
 ### つまずき①：Handlerがデカくなる🍔
+![bloated_chef](./picture/cqrs_cs_study_009_bloated_chef.png)
+
 
 **症状**：1つのHandlerに「検索」「集計」「通知」「ログ整形」「例外握りつぶし」…全部入りがち😇
 **回避**：まずはこの合言葉👇
@@ -235,6 +245,8 @@ builder.Services.AddScoped<GetTodoListQueryHandler>();
 ---
 
 ### つまずき③：Controllerにifが増殖する👑💦
+![thin_receptionist](./picture/cqrs_cs_study_009_thin_receptionist.png)
+
 
 **症状**：気づくとControllerが“神クラス”に…
 **回避**：Controllerは **薄く**！

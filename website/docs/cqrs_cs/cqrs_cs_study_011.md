@@ -15,6 +15,8 @@
 ---
 
 ## 1) なんで「全部返す」はダメになりがち？😵‍💫
+![dump_truck_overload](./picture/cqrs_cs_study_011_dump_truck_overload.png)
+
 
 Commandで「作ったデータ全部返すね！」をやると、地味に事故が増えるの…💥
 
@@ -32,6 +34,8 @@ Commandで「作ったデータ全部返すね！」をやると、地味に事�
 ---
 
 ## 2) Commandの戻り値は「成功/失敗 + IDくらい」でOK👌✨
+![receipt_printer](./picture/cqrs_cs_study_011_receipt_printer.png)
+
 
 Commandは“状態を変える”のが仕事。
 だから戻り値も、基本はこれで十分だよ👇
@@ -57,6 +61,8 @@ Commandは“状態を変える”のが仕事。
 ![Handing over a small ID ticket instead of a large package.](./picture/cqrs_cs_study_011_return_ticket.png)
 
 ### ✅ Create（POST）
+![mailbox_201](./picture/cqrs_cs_study_011_mailbox_201.png)
+
 
 ```mermaid
 flowchart LR
@@ -180,6 +186,8 @@ app.MapPost("/todos", async (
 ---
 
 ## 5) 「でも画面が作成直後に詳細を表示したい…」問題😅
+![step_by_step_flow](./picture/cqrs_cs_study_011_step_by_step_flow.png)
+
 
 あるある！めちゃある！😂
 
@@ -198,6 +206,8 @@ app.MapPost("/todos", async (
 ---
 
 ## 6) エラーの返し方も“欲張らない”🧯
+![polite_robot_error](./picture/cqrs_cs_study_011_polite_robot_error.png)
+
 
 * 失敗時は **ProblemDetails** 形式で返すと、APIがスッキリしやすいよ✨
   ASP.NET Coreのエラー取り扱いはProblemDetails中心で整理されてる📌 ([Microsoft Learn][3])

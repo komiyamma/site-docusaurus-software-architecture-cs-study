@@ -6,6 +6,8 @@
 ---
 
 ## 8-1. そもそもDTOってなに？📦🙂
+![dto_concept](./picture/cqrs_cs_study_008_dto_concept.png)
+
 
 DTOはざっくり言うと、
 
@@ -31,6 +33,8 @@ DTOはざっくり言うと、
 ## 8-2. 「読むDTO」と「書くDTO」を分けると何が嬉しいの？🎁✨
 
 ### ✅メリット1：事故が減る（勝手に更新されない）🧯
+![safety_shield](./picture/cqrs_cs_study_008_safety_shield.png)
+
 
 たとえば「ToDoを作る(Create)」の入力に `IsDone` が入ってたら…
 ユーザーが勝手に「完了済み」で作れちゃうかも😱
@@ -38,6 +42,8 @@ DTOはざっくり言うと、
 👉 **作成入力に“作成に必要なものだけ”を置く**と、自然に安全になるよ！
 
 ### ✅メリット2：APIが読みやすくなる（意図が見える）👀✨
+![readability_label](./picture/cqrs_cs_study_008_readability_label.png)
+
 
 `CreateTodoCommand` って名前なら
 「これは作成の意図だな✍️」って一瞬でわかる！
@@ -152,6 +158,8 @@ public sealed record CreateTodoResult(
 ### ② Controller（またはMinimal API）で「入力と出力が別」なのを体感する👀✨
 
 #### Controller例（超ざっくり）
+![api_entrance_exit](./picture/cqrs_cs_study_008_api_entrance_exit.png)
+
 
 「DTOが分かれてると、APIの意図が見える」って体感する用だよ🥳
 
@@ -238,6 +246,8 @@ public sealed record CreateTodoCommand
 ## 8-6. よくあるミス集（これ避けるだけで強くなる）🧠🛡️
 
 ### ❌ミス1：1個のDTOを全APIで使い回す
+![god_dto_monster](./picture/cqrs_cs_study_008_god_dto_monster.png)
+
 
 * CreateにもUpdateにもGetにも同じDTO…
 * だんだん「何のためのプロパティ？」って混乱する😵‍💫
@@ -247,6 +257,8 @@ public sealed record CreateTodoCommand
 ---
 
 ### ❌ミス2：Writeモデル（Entity）をそのまま返す
+![leaking_entity](./picture/cqrs_cs_study_008_leaking_entity.png)
+
 
 * DB都合の項目まで外に出ちゃう
 * 将来の変更でAPIが壊れやすい💥

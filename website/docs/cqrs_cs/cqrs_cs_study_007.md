@@ -26,6 +26,8 @@ Martin Fowlerの説明がいちばんスッキリしてるので、それを軸�
 ---
 
 ## 2) “混ぜると何が困るの？”あるある3連発😵‍💫💥
+![mixed_pitfalls](./picture/cqrs_cs_study_007_mixed_pitfalls.png)
+
 
 ## あるある①：テストがしんどい🧪💦
 
@@ -53,6 +55,8 @@ Queryが“読むだけ”なら、
 ---
 
 ## 3) いちばん多い落とし穴：「更新しつつ、色々返したい問題」😅🍱
+![mixed_temptation](./picture/cqrs_cs_study_007_mixed_temptation.png)
+
 
 例：
 「注文を作成して、そのまま画面に必要な情報（明細・合計・表示用の形）も返したい！」
@@ -107,6 +111,8 @@ public async Task<OrderDetailDto> CreateOrderAndReturnDetailAsync(CreateOrderReq
 ---
 
 ## 5) 正しい分け方①：Commandは“IDだけ返す”のが最強に安定💎✨
+![clean_separation](./picture/cqrs_cs_study_007_clean_separation.png)
+
 
 ## ✅ Command：作る（状態を変える）
 
@@ -150,6 +156,8 @@ public async Task<OrderDetailDto> GetOrderDetailAsync(int orderId)
 ---
 
 ## 6) 正しい分け方②：「でも“作成直後の画面表示”どうするの？」🎀
+![two_step_flow](./picture/cqrs_cs_study_007_two_step_flow.png)
+
 
 王道はこの2ステップだよ😊✨
 
@@ -200,6 +208,8 @@ sequenceDiagram
 ---
 
 ## 7) “副作用ってどこまでダメ？”の目安🔍🧠
+![side_effects_rule](./picture/cqrs_cs_study_007_side_effects_rule.png)
+
 
 CQSで言う「副作用なし」は、**観測できる状態を変えない**が軸だよ ([martinfowler.com][1])
 
@@ -213,6 +223,8 @@ CQSで言う「副作用なし」は、**観測できる状態を変えない**�
 ---
 
 ## 8) ミニ演習①：メソッドをCommand/Queryに分類しよ🔍✅
+![sorting_exercise](./picture/cqrs_cs_study_007_sorting_exercise.png)
+
 
 次のメソッド名を見て、どっちか当ててみてね😊✨
 （※“何が起きるか”を想像するのがコツ！）

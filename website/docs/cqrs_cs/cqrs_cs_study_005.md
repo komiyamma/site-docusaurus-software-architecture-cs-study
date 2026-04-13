@@ -35,6 +35,8 @@ CQRSの「読む側」が楽しくなる要素を入れやすいのがコレ！
 
 ## 5.2 CQRSが“効く題材”のチェックリスト✅✨
 
+![checklist_signs](./picture/cqrs_cs_study_005_checklist_signs.png)
+
 次のどれかが入ってたら、CQRSの練習として最高だよ〜！😻
 
 ### ✅「読む」が強いサイン👀
@@ -55,6 +57,8 @@ CQRSの「読む側」が楽しくなる要素を入れやすいのがコレ！
 
 ## 5.3 要件づくりの“型” 🧩（この順で作ると迷子にならない🧭✨）
 
+![requirement_path](./picture/cqrs_cs_study_005_requirement_path.png)
+
 ```mermaid
 flowchart TD
   P[1. ペルソナ決定] --> S[2. 画面を決める]
@@ -65,6 +69,8 @@ flowchart TD
 ```
 
 ### ステップ1：登場人物（ペルソナ）を1つだけ決める👤
+
+![persona_profile](./picture/cqrs_cs_study_005_persona_profile.png)
 
 例（ミニEC）：
 
@@ -87,6 +93,8 @@ CQRSは “読む” が主役になりがちだから、先に決めちゃう�
 * 明細数、商品名の一部（表示用）など
 
 ### ステップ4：検索の “条件” を3〜6個に絞って入れる🔍✨（ここがCQRSの花💐）
+
+![search_funnel](./picture/cqrs_cs_study_005_search_funnel.png)
 
 入れすぎ注意だけど、**少なすぎるとCQRSの旨味が出ない**😇
 おすすめ構成（ちょうど良い）：
@@ -117,6 +125,8 @@ CQRSは “読む” が主役になりがちだから、先に決めちゃう�
 
 ## 5.4 ミニEC：ユーザーストーリー5本セット（教材用）🛒📝✨
 
+![story_cards](./picture/cqrs_cs_study_005_story_cards.png)
+
 ここからコピペして使ってOKだよ〜！😻
 
 1. **商品登録**📦
@@ -145,6 +155,8 @@ CQRSは “読む” が主役になりがちだから、先に決めちゃう�
 
 ### コツ①：一覧は “表示に都合の良い形” にしていい👀✨
 
+![view_shaping](./picture/cqrs_cs_study_005_view_shaping.png)
+
 CQRSのRead側は **画面に最適化してOK**🙆‍♀️
 
 * 例：合計金額は明細から計算済みで持ってきたい
@@ -163,6 +175,8 @@ CQRSのRead側は **画面に最適化してOK**🙆‍♀️
 * 「未発送だけ」📦⏳
 
 ### コツ③：集計を1つだけ入れるとCQRSが一気に楽しくなる📊🎉
+
+![aggregation_widget](./picture/cqrs_cs_study_005_aggregation_widget.png)
 
 注文一覧ページの上に、こんな小さな集計を付けるとか：
 

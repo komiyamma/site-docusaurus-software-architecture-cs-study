@@ -170,6 +170,8 @@ sequenceDiagram
 
 ## 7) 欲張り注意！トランザクションは“短く・小さく”⏱️🐇
 
+![transaction_scope_breath](./picture/cqrs_cs_study_015_transaction_scope_breath.png)
+
 トランザクションを広げすぎると：
 
 * 🔒 ロックが長くなって、他の人が待たされる
@@ -188,6 +190,8 @@ sequenceDiagram
 ---
 
 ## 8) ちょい上級：リトライ（接続回復）とトランザクションの相性⚡🔁
+
+![retry_strategy_bubble](./picture/cqrs_cs_study_015_retry_strategy_bubble.png)
 
 クラウドDBとかだと一時的に接続が落ちることがあるよね🥲
 EF Coreには **Connection Resiliency（自動リトライ）**の仕組みがあるよ ([Microsoft Learn][2])

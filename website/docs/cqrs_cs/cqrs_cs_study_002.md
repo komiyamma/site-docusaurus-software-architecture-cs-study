@@ -6,6 +6,8 @@
 
 ## 0) まず最初に：CQRSは「必殺技」じゃなくて「道具」だよ🧰🙂
 
+![tool_not_magic](./picture/cqrs_cs_study_002_tool_not_magic.png)
+
 CQRSは、**読み取り（Query）**と**書き込み（Command）**を、**別モデルとして分ける設計パターン**だよ〜👀✍️
 分けると、読み側と書き側をそれぞれ最適化できて、**性能・拡張性・セキュリティ**を上げられることがあるの✨
 ただし、分けるぶん設計の手間も増えるから、**合う場面だけ**使うのが大事！ ([Microsoft Learn][1])
@@ -13,6 +15,8 @@ CQRSは、**読み取り（Query）**と**書き込み（Command）**を、**別
 ---
 
 ## 1) CQRSが「効く」サイン✅（こうなったら検討しよっ😺）
+
+![pain_dashboard](./picture/cqrs_cs_study_002_pain_dashboard.png)
 
 ここからは「痛み」が出てるかどうかで見るよ〜🩹✨
 
@@ -49,6 +53,8 @@ CQRSは、**読み取り（Query）**と**書き込み（Command）**を、**別
 ---
 
 ## 2) CQRSを「やめとく」サイン❌（ここ、超だいじ🥺）
+
+![over_engineering](./picture/cqrs_cs_study_002_over_engineering.png)
 
 ### ❌ サイン1：ほぼCRUDで、画面も検索も単純📄
 
@@ -111,6 +117,8 @@ Microsoftの説明でも、CQRSは「読み/書きのモデルを分けて最適
 
 ## 4) 「この機能はCQRS向き？」チェックリスト✅（ミニ演習つき🎯）
 
+![checklist_evaluation](./picture/cqrs_cs_study_002_checklist_evaluation.png)
+
 ### ✅ チェックリスト（Yesに丸つけてね⭕）
 
 **読みの痛み（Query側）**
@@ -142,6 +150,8 @@ Microsoftの説明でも、CQRSは「読み/書きのモデルを分けて最適
 
 ## 5) ミニ演習📝✨（3つの例で練習しよ！）
 
+![complexity_scale](./picture/cqrs_cs_study_002_complexity_scale.png)
+
 ### 演習①：ToDoアプリ✅
 
 * 検索：単純（期限・完了のみ）
@@ -162,6 +172,8 @@ Microsoftの説明でも、CQRSは「読み/書きのモデルを分けて最適
 ---
 
 ## 6) AIで「CQRS必要度」を点数化する🤖📊（コピペOK✨）
+
+![ai_scoring](./picture/cqrs_cs_study_002_ai_scoring.png)
 
 下の要件を貼って、AIに“採点役”をさせるよ〜！
 
@@ -187,6 +199,8 @@ CQRSを採用しない場合の代替案（CQS、DTO投影、キャッシュ、�
 ---
 
 ## 7) よくある落とし穴😱（ここ踏むとつらい…）
+
+![pitfalls_warning](./picture/cqrs_cs_study_002_pitfalls_warning.png)
 
 * 最初から **Read/WriteでDB分ける前提**で始める → 運用が一気に難しくなる🌀
 * “CQRS=イベントソーシング必須”と思う → そんなことないよ（組み合わせは多いけど別物） ([martinfowler.com][3])

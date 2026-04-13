@@ -45,6 +45,8 @@ EF Coreは基本的に「競合はたまにしか起きないよね？」とい�
 
 ## 3) 競合検知の定番：RowVersion（行バージョン）🧬✨
 
+![row_version_ticket](./picture/cqrs_cs_study_016_row_version_ticket.png)
+
 SQL Serverなら **rowversion**（昔のtimestampの後継）を使うのが王道だよ👍
 C#側は `byte[]` で持つのが定番で、`[Timestamp]` を付けると「更新のたびにDB側で自動更新されるトークン」になるよ。 ([Microsoft Learn][2])
 
@@ -119,6 +121,8 @@ app.MapGet("/stocks/{id:guid}", async (Guid id, AppDbContext db) =>
 ```
 
 ### 5-3) PUT：更新（Command）で競合を検知する✍️💥
+
+![api_conflict_response](./picture/cqrs_cs_study_016_api_conflict_response.png)
 
 コツはここ👇
 

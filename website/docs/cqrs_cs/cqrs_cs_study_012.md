@@ -15,6 +15,8 @@
 ---
 
 ## 12.1 まず結論：Validationは「入口」で止めるのが一番ラク😇🚪
+![drowning_in_ifs](./picture/cqrs_cs_study_012_drowning_in_ifs.png)
+
 
 ### なぜ分けるの？🤔
 
@@ -33,6 +35,8 @@ CommandHandlerに検証を混ぜると…
 ---
 
 ## 12.2 Validationの3分類：ここが一番大事🌟🗂️
+![three_sieves](./picture/cqrs_cs_study_012_three_sieves.png)
+
 
 ```mermaid
 mindmap
@@ -95,6 +99,8 @@ mindmap
 ---
 
 ## 12.4 実装①：.NET 10 の「組み込みValidation」で入口ガード🚪⚡
+![auto_turnstile](./picture/cqrs_cs_study_012_auto_turnstile.png)
+
 
 .NET 10 の Minimal API は、**DataAnnotations を使った組み込みValidation**を `AddValidation()` で有効化できるよ。
 失敗したら **400** を自動で返してくれるのが超便利！ ([Microsoft Learn][1])
@@ -146,6 +152,8 @@ app.Run();
 ---
 
 ## 12.5 実装②：Validatorクラスに分けて “設計” をきれいにする🧼✨
+![dedicated_inspector](./picture/cqrs_cs_study_012_dedicated_inspector.png)
+
 
 DataAnnotationsは強いけど、**条件が増えると読みづらくなる**ことがあるよね😵‍💫
 そこで「Validatorクラス」を作って分離するのがCQRS的にキレイ💖
@@ -242,6 +250,8 @@ app.MapPost("/orders", async (
 ---
 
 ## 12.6 エラーメッセージのコツ（地味に重要）🗣️✨
+![friendly_guide_error](./picture/cqrs_cs_study_012_friendly_guide_error.png)
+
 
 Validationのメッセージは「人に見せる」前提で書くと嬉しいよ😊
 

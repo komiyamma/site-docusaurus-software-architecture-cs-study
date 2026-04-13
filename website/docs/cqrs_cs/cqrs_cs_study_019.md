@@ -237,6 +237,8 @@ public sealed class OrdersQueryHandler
 `Skip/Take` の offset 方式は直感的だけど、深いページで重くなったり、更新があるとズレたりすることがあるよ⚠️ ([Microsoft Learn][3])
 だからこそ **「必ずソートしてからページング」**＆**安定化の ThenBy** が効くよ😊✨
 
+![stable_sort_cards](./picture/cqrs_cs_study_019_stable_sort_cards.png)
+
 ---
 
 ## 5) APIに繋ぐ（Minimal API例）🔌✨
@@ -272,6 +274,8 @@ app.MapGet("/api/orders", async (
 ---
 
 ## 7) おまけ：重い一覧なら“カーソル方式（keyset pagination）”も視野👀✨
+
+![keyset_vs_offset_bookmark](./picture/cqrs_cs_study_019_keyset_vs_offset_bookmark.png)
 
 EF Core公式でも、offsetの弱点を避ける **keyset pagination（seek / cursor）** を推してるよ✅ ([Microsoft Learn][3])
 

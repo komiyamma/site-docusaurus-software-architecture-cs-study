@@ -38,10 +38,14 @@ Martin Fowlerも「更新用モデルと参照用モデルを分ける」って�
 
 ### ✅ Command（コマンド）✍️
 
+![command_definition](./picture/cqrs_cs_study_001_command_definition.png)
+
 * **状態を変える**（作る/更新する/消す）
 * 例：`ToDoを追加する`、`注文を確定する`、`いいねする` ❤️
 
 ### ✅ Query（クエリ）👀
+
+![query_definition](./picture/cqrs_cs_study_001_query_definition.png)
 
 * **状態を“読む”だけ**（取得/検索/一覧/集計）
 * 例：`ToDo一覧を見る`、`注文履歴を見る`、`人気順で並べる` 🔍
@@ -53,6 +57,8 @@ Martin Fowlerも「更新用モデルと参照用モデルを分ける」って�
 ---
 
 ## 3) CQRSって結局、なにが嬉しいの？🎁✨（超入門版）
+
+![optimization_benefit](./picture/cqrs_cs_study_001_optimization_benefit.png)
 
 第1章では“効果”を細かく覚えなくてOK！でも雰囲気だけ👇
 
@@ -69,6 +75,8 @@ Martin Fowlerも「更新用モデルと参照用モデルを分ける」って�
 ---
 
 ## 4) 身近な例で「読む/書く」を分けてみよ🧁📱🛒
+
+![real_world_examples](./picture/cqrs_cs_study_001_real_world_examples.png)
 
 ### 例A：SNS📱
 
@@ -91,6 +99,8 @@ Martin Fowlerも「更新用モデルと参照用モデルを分ける」って�
 
 ## 5) ミニ演習：あなたの題材で「読む/書く」を仕分けしてみよ📝💕
 
+![exercise_sorting](./picture/cqrs_cs_study_001_exercise_sorting.png)
+
 次のテンプレを埋めてみてね！（題材はSNS/EC/ToDoどれでもOK）
 
 **①機能を10個書く**
@@ -111,6 +121,8 @@ Martin Fowlerも「更新用モデルと参照用モデルを分ける」って�
 ---
 
 ## 6) C#で見る「それっぽい形」🧩（まだ実装は薄味でOK）
+
+![code_structure_blocks](./picture/cqrs_cs_study_001_code_structure_blocks.png)
 
 この章では雰囲気だけでOK！「名前の付け方」を先に見せちゃうね👀
 
@@ -141,6 +153,8 @@ public sealed record TodoListItemDto(Guid Id, string Title, bool IsDone, DateOnl
 ---
 
 ## 8) ちょい最新メモ🆕（安心して進める用）
+
+![modern_stack](./picture/cqrs_cs_study_001_modern_stack.png)
 
 いまのC#周りは **.NET 10（LTS）+ C# 14** が軸だよ〜（2025年11月リリース）。([Microsoft for Developers][4])
 .NET 10 はLTSとしてサポートが続く前提で、サポート方針の表でも追えるよ。([Microsoft][5])
