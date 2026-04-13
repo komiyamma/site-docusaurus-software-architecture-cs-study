@@ -9,6 +9,8 @@
 
 ## 3.2 境界（public）で守るのが効率的🛡️🚪
 
+![public_boundary_gate](./picture/dbc_cs_study_003_public_boundary_gate.png)
+
 ![入口（public境界）で契約を守るイメージ](./picture/dbc_cs_study_003_public_boundary.png)
 
 DbCでいちばん大切なのは、「**どこで契約をチェックするか？**」なんだ💡
@@ -16,6 +18,8 @@ DbCでいちばん大切なのは、「**どこで契約をチェックするか
 ここでいう「public境界」は、C#のキーワード「public」だけの話じゃないよ〜！😊
 
 ### public境界に含めて考える場所🧭
+
+![boundary_definition_compass](./picture/dbc_cs_study_003_boundary_definition_compass.png)
 
 * **publicメソッド / publicプロパティ**（クラスの外から触れる入口）🔓
 * **publicな型（DTO・Request/Response・公開してるモデル）**📦
@@ -37,6 +41,8 @@ flowchart TD
 ---
 
 ## 3.2 なぜ“境界”が最重要？（入口でチェック、内部は信頼）🧘‍♀️🌸
+
+![check_flow_funnel](./picture/dbc_cs_study_003_check_flow_funnel.png)
 
 DbCの気持ちいい流れはこれです👇
 
@@ -67,6 +73,8 @@ flowchart LR
 ## 3.3 “悪い例”と“良い例”（チェックが散る vs 入口に集める）😵‍💫➡️😌✨
 
 ### 😵‍💫 悪い例：チェックが内部に散って、何が正しいか分からなくなる
+
+![bad_scattered_checks](./picture/dbc_cs_study_003_bad_scattered_checks.png)
 
 * privateメソッドの奥深くで例外が出る
 * 同じチェックが複数に重複する
@@ -100,6 +108,8 @@ public sealed class OrderService
 ---
 
 ### 😌 良い例：public境界で契約を完結させ、内部はスッキリ✨
+
+![good_concentrated_checks](./picture/dbc_cs_study_003_good_concentrated_checks.png)
 
 入口で「契約（Pre）」を満たすことを強制して、内部は信頼して進めます🚪✅
 
@@ -149,6 +159,8 @@ public sealed class OrderService
 
 #### よく使う“入口チェック”セット🧰
 
+![guard_clause_toolbox](./picture/dbc_cs_study_003_guard_clause_toolbox.png)
+
 * null：ArgumentNullException.ThrowIfNull 🧷 ([Microsoft Learn][2])
 * 文字列：ArgumentException.ThrowIfNullOrWhiteSpace（空白も弾ける）🧼 ([Microsoft Learn][1])
 * 範囲：ArgumentOutOfRangeException.ThrowIfNegative / ThrowIfNegativeOrZero 📏 ([GitHub][3])
@@ -165,6 +177,8 @@ public sealed class OrderService
 ---
 
 ## 3.5 ここは注意！「境界でやりすぎ」もあるよ⚠️🍙
+
+![balance_scale_overdoing](./picture/dbc_cs_study_003_balance_scale_overdoing.png)
 
 境界で全部やればいい…とはいえ、**境界で“複雑な業務判断”までやり始める**と逆に読みにくくなることも😵‍💫
 

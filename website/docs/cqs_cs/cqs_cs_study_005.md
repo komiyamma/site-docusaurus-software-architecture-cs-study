@@ -43,6 +43,8 @@ CQSの一番コアな考え方はこれ👇
 
 ## 5-3 逆にダメ：Commandが返しちゃいけないもの🙅‍♀️💥
 
+![forbidden_returns](./picture/cqs_cs_study_005_forbidden_returns.png)
+
 ここが事故ポイント！⚠️
 
 * ❌ **Entity丸ごと**（`Todo` とか `Order` とか）
@@ -82,6 +84,8 @@ flowchart TD
 
 ### パターンA：何も返さない（基本形）✅
 
+![pattern_a_void](./picture/cqs_cs_study_005_pattern_a_void.png)
+
 「完了したらOK」な操作はこれで十分😊
 
 ```csharp
@@ -113,6 +117,8 @@ public sealed class CompleteTodoHandler
 
 ### パターンB：IDだけ返す（作成系の定番）🪪✨
 
+![pattern_b_id](./picture/cqs_cs_study_005_pattern_b_id.png)
+
 「作った直後に詳細画面へ行きたい」→ **IDだけ**で十分！
 
 ```csharp
@@ -141,6 +147,8 @@ public sealed class CreateTodoHandler
 ---
 
 ### パターンC：Resultを返す（失敗を“仕様”として扱いたい時）🎁🧠
+
+![pattern_c_result](./picture/cqs_cs_study_005_pattern_c_result.png)
 
 「入力ミス」みたいな**予測できる失敗**は `Result` が相性いいです😊
 （例外を乱発しない設計にしやすい✨）
@@ -192,6 +200,8 @@ public sealed class CreateTodoHandler
 ---
 
 ## 5-5 Web APIの「戻り値」とCommandの「戻り値」は別モノにする🌐🔁
+
+![api_boundary](./picture/cqs_cs_study_005_api_boundary.png)
 
 API（HTTP）は「ステータスコード」「Locationヘッダー」「レスポンスボディ」など、**外向けの契約**が必要になります📮
 Minimal APIだと、`201 Created` と `Location` を返すのが定番！✨

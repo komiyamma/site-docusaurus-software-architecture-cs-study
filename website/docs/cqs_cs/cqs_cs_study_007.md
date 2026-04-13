@@ -15,6 +15,8 @@
 
 ## 1) ミニToDoの仕様（小さく！）🧁
 
+![todo_scope](./picture/cqs_cs_study_007_todo_scope.png)
+
 **データ**はこれだけ👇
 
 * `Id`（Guid）🪪
@@ -51,6 +53,8 @@ mindmap
 
 ## 2) 命名のコツ（ここ超大事）✍️💎
 
+![naming_strategy](./picture/cqs_cs_study_007_naming_strategy.png)
+
 ## Query は「Get/List/Search」系で統一🔍
 
 * `GetTodo` / `GetTodos`
@@ -68,6 +72,8 @@ mindmap
 ---
 
 ## 3) Console版：CQSを“分けるだけ”で作ってみる🎮🪟
+
+![console_menu](./picture/cqs_cs_study_007_console_menu.png)
 
 ここでは **DBなし**・**メモリだけ**でいくよ（まずは味見🍰）
 
@@ -261,6 +267,8 @@ switch の中が「Query/Command」で揃ってるから、読む人が迷子に
 
 ## 5) Minimal API版（同じ発想で、HTTPにする🌐🍰）
 
+![minimal_api_map](./picture/cqs_cs_study_007_minimal_api_map.png)
+
 Minimal API のチュートリアルは公式も更新されてるよ（ASP.NET Core 10.0）📚 ([Microsoft Learn][4])
 しかも **.NET 10 で Minimal API のバリデーション強化**も入ってる（後の章で効くやつ！）✨ ([Microsoft Learn][5])
 
@@ -396,6 +404,8 @@ flowchart LR
 
 ## 6) ありがちなミス集（ここだけ避ければ勝ち🏆）😇
 
+![common_mistakes](./picture/cqs_cs_study_007_common_mistakes.png)
+
 ## ❌ Query の中でこっそり更新しちゃう👻
 
 例：`GetTodos()` の中で「古いToDoを削除」とか「アクセス回数を増やす」とか
@@ -431,6 +441,8 @@ flowchart LR
 ---
 
 ## 8) Copilot/Codex活用（事故らせない使い方つき🤖🧷）
+
+![ai_security](./picture/cqs_cs_study_007_ai_security.png)
 
 ## ① まずAIに「CQSの意図」を短く伝える📝
 

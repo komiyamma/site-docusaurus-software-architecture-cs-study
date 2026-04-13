@@ -7,6 +7,8 @@
 
 ## 0) この章のゴール🎯💖
 
+![Graduation Goals](./picture/cqs_cs_study_015_graduation_goals.png)
+
 * **Command と Query を絶対に混ぜない**（“分ける癖”を体にしみ込ませる）🧠✨
 * **Handler化**して「1機能＝1クラス」に固定する（大きくなっても崩れにくい）🏗️
 * **依存関係ルール（Dependency Rule）**を“触って覚える”（内側を汚さない）🧭
@@ -50,6 +52,8 @@ stateDiagram-v2
 * キャンセル（Cancel）
 
 ## 1-2. ルール（バグを防ぐ大事な縛り）🚧
+
+![Rules Barrier](./picture/cqs_cs_study_015_rules_barrier.png)
 
 * Paid になった注文は **キャンセルできない** 🙅‍♀️
 * Cancelled になった注文は **支払いできない** 🙅‍♀️
@@ -115,6 +119,8 @@ graph BT
 * GetOrderDetailQuery：入力（orderId）
 
 ## 3-2. Handler（1機能＝1ハンドラ）👩‍🍳📨
+
+![Handler Map](./picture/cqs_cs_study_015_handler_map.png)
 
 * CreateOrderHandler
 * PayOrderHandler
@@ -199,6 +205,8 @@ public interface IOrderRepository
 ```
 
 ## 2) Result型（超ミニ）🎁
+
+![Result Pattern Box](./picture/cqs_cs_study_015_result_pattern_box.png)
 
 ```csharp
 namespace Order.Application;
@@ -330,6 +338,8 @@ public sealed class InMemoryOrderRepository : IOrderRepository
 
 ## Step D：Api（Minimal APIは“薄く”🌐🧼）
 
+![Thin API Flow](./picture/cqs_cs_study_015_thin_api_flow.png)
+
 ポイントはこれだけ👇
 
 * エンドポイントは「入力を受ける」
@@ -418,6 +428,8 @@ VS 2026 自体もAI統合を前面に出してる感じだよ〜🧠⚡ ([Micros
 
 ## 6-2. “事故らない”レビュー質問テンプレ🧷👀
 
+![AI Reviewer](./picture/cqs_cs_study_015_ai_reviewer.png)
+
 AIに「正解を作らせる」より、**レビュー係にする**と強いよ💪✨
 
 ```text
@@ -451,6 +463,8 @@ Orderの状態遷移（Draft/Paid/Cancelled）に対して、
 ---
 
 ## 8) 次に進む道👣📚（CQRSはいつ触る？）
+
+![Next Step CQRS](./picture/cqs_cs_study_015_next_step_cqrs.png)
 
 「書き込みが増えすぎて遅い」「読み取りが複雑で別最適にしたい」みたいに
 **“読みと書きを別モデルにすると楽”** になってきたら、CQRSを触るタイミングだよ〜😊✨

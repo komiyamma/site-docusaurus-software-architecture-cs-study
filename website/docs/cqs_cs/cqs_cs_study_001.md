@@ -26,6 +26,8 @@
 
 ## まずは感覚でOK！CommandとQueryの違い🧩
 
+![method_flowchart](./picture/cqs_cs_study_001_method_flowchart.png)
+
 ```mermaid
 flowchart LR
   A[メソッド] --> B{状態変わる？}
@@ -86,6 +88,8 @@ CQSはこういう **“隠れ副作用”** を減らすための超基本ル�
 
 ## 何が嬉しい？CQSのごほうび🍰✨
 
+![cqs_benefits_mindmap](./picture/cqs_cs_study_001_cqs_benefits_mindmap.png)
+
 ```mermaid
 mindmap
   root((CQSのメリット))
@@ -124,6 +128,8 @@ CQSを意識すると…
 
 ### Q. 「ログ書くのって副作用じゃない？」🤔
 
+![logging_side_effect](./picture/cqs_cs_study_001_logging_side_effect.png)
+
 うん、ログは副作用！📌
 でも現実では「観測のためのログ」はほぼ必須だから、入門ではこう考えるのが楽だよ😊
 
@@ -152,6 +158,8 @@ CQSを意識すると…
 
 ## AI活用コーナー🤖✨（Copilot/Codex向けの“安全な頼み方”）
 
+![ai_prompts](./picture/cqs_cs_study_001_ai_prompts.png)
+
 「混ぜてる関数」を見つけたら、AIにこう頼むと強いよ😊
 
 **プロンプト例①：分離してほしい**
@@ -171,6 +179,8 @@ CQSを意識すると…
 ---
 
 ## ちょい補足：CQSとCQRSって同じ？🧠
+
+![cqs_vs_cqrs](./picture/cqs_cs_study_001_cqs_vs_cqrs.png)
 
 名前が似てて混乱しがちだけど…
 

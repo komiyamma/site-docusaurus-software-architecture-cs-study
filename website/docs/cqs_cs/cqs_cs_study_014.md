@@ -19,6 +19,7 @@ Visual Studio 2026 で .NET 10 SDK が入る流れも案内されてるよ🛠�
 ## 1. なんでHandler化するの？🤔💭
 
 ![Handler Chef](./picture/cqs_cs_study_014_handler_chef.png)
+![Restaurant Floor Plan](./picture/cqs_cs_study_014_restaurant_floor_plan.png)
 
 第13章で「Command/Queryオブジェクト化」したら、引数地獄は減ったよね👍✨
 でも実務で増えてくるのがコレ👇😇💥
@@ -56,6 +57,8 @@ graph LR
 
 ## 2. Handlerの役割を1行で言うと？✍️✨
 
+![Handler Specialists](./picture/cqs_cs_study_014_handler_specialists.png)
+
 **「1つのユースケース（機能）を、最後まで責任持って実行する人」**👩‍🍳🎯
 
 例：ToDoならこんな感じ👇
@@ -89,6 +92,8 @@ graph LR
 ---
 
 ## 4. 依存の向き（Dependency Rule）の“入口”🧭✨
+
+![Dependency Onion](./picture/cqs_cs_study_014_dependency_onion.png)
 
 超ざっくり図でいくね👇（矢印が依存の向きだよ〜）
 
@@ -132,6 +137,8 @@ graph BT
 ---
 
 ## 5-1. フォルダ構成例🗂️✨（迷ったらこれ）
+
+![Clean Architecture Folders](./picture/cqs_cs_study_014_clean_architecture_folders.png)
 
 * `Presentation/`（Program.cs, Endpoints）
 * `Application/`
@@ -252,6 +259,8 @@ public sealed class Result<T>
 
 ## 6-1. Command Handler：Create（作成）✅
 
+![Create Handler Recipe](./picture/cqs_cs_study_014_create_handler_recipe.png)
+
 ```csharp
 using Application.Abstractions;
 using Domain;
@@ -358,6 +367,8 @@ public sealed class GetTodosHandler
 
 ## 7. Presentation：Endpointは“呼ぶだけ”にする📞🧼✨
 
+![Thin Endpoint Waiter](./picture/cqs_cs_study_014_thin_endpoint_waiter.png)
+
 ```csharp
 using Application.Commands;
 using Application.Handlers;
@@ -444,6 +455,8 @@ public sealed class TodosController : ControllerBase
 ---
 
 ## 9. ここが“実務で崩れない”ポイント集🧱✨
+
+![Four Golden Rules](./picture/cqs_cs_study_014_four_golden_rules.png)
 
 ## ✅ ルール1：Handlerは「1機能だけ」🎯
 

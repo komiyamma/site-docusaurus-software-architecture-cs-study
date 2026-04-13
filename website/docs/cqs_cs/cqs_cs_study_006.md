@@ -22,6 +22,8 @@ CQSのキモは「混ぜない」だけど、混ざりやすいのがこの **�
 
 ## 6-2. 副作用ってなに？（超やさしく）🧠🌱
 
+![side_effect_types](./picture/cqs_cs_study_006_side_effect_types.png)
+
 ざっくり言うと👇
 
 ![副作用の例](./picture/cqs_cs_study_006_side_effect_examples.png)
@@ -63,6 +65,8 @@ mindmap
 ---
 
 ## 6-3. CQS的に「ヤバい副作用」と「許容しやすい副作用」🚧💡
+
+![dangerous_vs_allowed](./picture/cqs_cs_study_006_dangerous_vs_allowed.png)
 
 副作用は全部ダメ！…って話じゃないよ😊
 **CQSで一番避けたい**のはこれ👇
@@ -187,6 +191,8 @@ public sealed class SystemClock : IClock
 
 ## 6-6. 「でも閲覧数って、画面表示とセットじゃない？」問題🤔💭
 
+![view_count_dilemma](./picture/cqs_cs_study_006_view_count_dilemma.png)
+
 ここ、めっちゃ実務で揉めるポイント！😆💥
 結論はこれ👇
 
@@ -268,6 +274,8 @@ public sealed class CachedTodoQueryService : ITodoQueryService
 
 ## ③ 「GetOrCreate」系（取得なのに作る）🧟‍♀️💥
 
+![get_or_create_split](./picture/cqs_cs_study_006_get_or_create_split.png)
+
 `GetUserByEmailOrCreate()` みたいなのは、ほぼ **Commandの香り**…！
 
 * 見つからない場合に登録する → 状態変更
@@ -278,6 +286,8 @@ public sealed class CachedTodoQueryService : ITodoQueryService
 ---
 
 ## 6-8. テストで「Queryに副作用がない」を守る🧪🛡️
+
+![test_verification](./picture/cqs_cs_study_006_test_verification.png)
 
 ここ超大事！**設計はテストで固定**すると強い💪✨
 

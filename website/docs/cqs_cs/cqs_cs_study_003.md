@@ -20,6 +20,8 @@ Visual Studio も **Visual Studio 2026** が最新ラインにいるよ〜🛠�
 
 ## 2) 判断のいちばん強い軸：「観測できる状態が変わった？」👀
 
+![state_definition](./picture/cqs_cs_study_003_state_definition.png)
+
 ここでいう「状態」は、だいたいこういうやつ👇
 
 * DBのデータ 🗄️
@@ -70,6 +72,8 @@ flowchart TD
 
 ### 4-1) 「Getなのに更新」タイプ 👻（←ほぼ事故）
 
+![get_trap](./picture/cqs_cs_study_003_get_trap.png)
+
 例：既読を付ける、回数を増やす、最後に見た日時を更新する、など。
 
 ```csharp
@@ -91,6 +95,8 @@ public Message GetMessageAndMarkAsRead(Guid id)
 ---
 
 ### 4-2) ログ・メトリクスって状態変更じゃないの？🤔📈
+
+![cache_log_distinction](./picture/cqs_cs_study_003_cache_log_distinction.png)
 
 ログ出力やメトリクス加算は「書き込み」だけど、**業務状態（ドメイン状態）じゃない**ことが多いよね。
 
@@ -123,6 +129,8 @@ YESなら Command っぽい！👀
 ---
 
 ## 5) 命名で8割ラクになる（でも信用しすぎない）✍️💡
+
+![naming_conventions](./picture/cqs_cs_study_003_naming_conventions.png)
 
 ### ✅ Commandっぽい動詞
 
@@ -188,6 +196,8 @@ mindmap
 ---
 
 ## 8) AI（Copilot/Codex）に手伝わせる“良い聞き方”🤖✨
+
+![ai_judgment_prompt](./picture/cqs_cs_study_003_ai_judgment_prompt.png)
 
 AIに丸投げすると、たまに「それっぽい嘘」で突っ走るので😇
 **判定＋理由＋副作用チェック**までセットで聞くのがコツ！

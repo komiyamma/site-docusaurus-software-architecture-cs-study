@@ -15,6 +15,7 @@ Commandのテストは「返り値を見る」よりも、次の2つをちゃん
 ## 1) まず結論：Commandテストの見取り図🗺️🧠
 
 ![Side Effect Check](./picture/cqs_cs_study_012_side_effect_check.png)
+![Command Test Flow](./picture/cqs_cs_study_012_command_test_flow.png)
 
 Commandはだいたいこう👇
 
@@ -45,6 +46,8 @@ flowchart TD
 
 ## 2) “モック/スタブ”って何？（最小だけ）🎭🧸
 
+![Test Doubles Icons](./picture/cqs_cs_study_012_test_doubles_icons.png)
+
 難しい言葉は最小でOK〜😊
 よく使うのはこの4つ！
 
@@ -71,6 +74,8 @@ mindmap
 
 ## 3-1. 依存を“差し替え可能”にする（テストの入口🔑）
 
+![Dependency Replacement](./picture/cqs_cs_study_012_dependency_replacement.png)
+
 Command側が **DBやメール送信を直接newしてたら** テストは地獄になるよね😇💥
 なので、**インターフェースにして外から注入**するよ🔌
 
@@ -80,6 +85,8 @@ Command側が **DBやメール送信を直接newしてたら** テストは地�
 ---
 
 ## 3-2. 最小の実装例（Resultで返すパターン🎁）
+
+![Frozen Time](./picture/cqs_cs_study_012_frozen_time.png)
 
 ```csharp
 // ドメイン
@@ -161,6 +168,8 @@ public sealed class CompleteTodoHandler
 
 ## 4-1. Fake/Spyを作る🧸🕵️‍♀️
 
+![Spy Email Sender](./picture/cqs_cs_study_012_spy_email_sender.png)
+
 ```csharp
 public sealed class FakeTodoRepository : ITodoRepository
 {
@@ -195,6 +204,8 @@ public sealed class SpyEmailSender : IEmailSender
 ```
 
 ## 4-2. テストを書く（AAA：Arrange-Act-Assert）🧪✨
+
+![AAA Pattern](./picture/cqs_cs_study_012_aaa_pattern.png)
 
 （ここではテストフレームワークは例としてMSTestっぽい書き方にするね。MSTestは最近も更新が続いてて、v4の移行ガイドも公式にあるよ📘） ([Microsoft Learn][3])
 
@@ -291,6 +302,8 @@ email.Verify(e => e.SendCompletedAsync("レポート提出", It.IsAny<Cancellati
 ---
 
 ## 6) 外部I/Oごとの“差し替え”アイデア集🔌📦
+
+![IO Replacement Toolbox](./picture/cqs_cs_study_012_io_replacement_toolbox.png)
 
 ## DB（Repository）
 

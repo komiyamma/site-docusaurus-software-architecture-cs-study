@@ -1,5 +1,7 @@
 ﻿# 第01章：DbCってなに？「約束」で守る設計🤝📌
 
+![contract_handshake](./picture/dbc_cs_study_001_contract_handshake_01.png)
+
 ## 1. この章でつかむこと🎯✨
 
 * DbC（Design by Contract）が「なにをする考え方」なのかを、ふんわりじゃなく説明できるようになる😊🗣️
@@ -50,6 +52,8 @@ DbCの中心は、だいたいこの3つ（この章では“名前だけ”OK�
 
 ### 3-1. バグの混入点が早く見つかる⚡🐞
 
+![bug_searchlight](./picture/dbc_cs_study_001_bug_searchlight_01.png)
+
 約束がコード上にあると、壊れた瞬間に「入口で止められる」ことが増えるよ🚪🛑
 結果として、**デバッグ時間が短くなる**✨
 
@@ -90,6 +94,8 @@ C#には、Eiffelみたいな“言語機能としてのDbC”が標準である
 ---
 
 ## 5. 身近な例で理解しよ！コンビニの“契約”🏪📜✨
+
+![convenience_store_rules](./picture/dbc_cs_study_001_convenience_store_rules.png)
 
 たとえば「お酒の販売」って、暗黙のルールがあるよね🍺🔞
 これを“契約”にするとこう👇
@@ -143,6 +149,8 @@ DbCは、一気に全部やろうとしなくて大丈夫🌱
 
 ### 6-1. まずは Pre を入口で止める🚪🛑
 
+![guard_at_gate](./picture/dbc_cs_study_001_guard_at_gate.png)
+
 ```csharp
 using System;
 using System.Diagnostics;
@@ -178,6 +186,8 @@ public static class TransferService
 * 数値チェックは「ArgumentOutOfRangeException.ThrowIfNegativeOrZero」みたいな形も用意されてる（ジェネリック数値対応のものもある）よ🔢🚫 ([Microsoft Learn][4])
 
 ### 6-2. どうして“入口で”やるの？🌟
+
+![clean_inside](./picture/dbc_cs_study_001_clean_inside.png)
 
 入口で止めると、メリットが大きい👇
 

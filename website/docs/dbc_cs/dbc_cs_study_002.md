@@ -9,6 +9,8 @@
 ---
 
 ## 1. DbCの「契約」って、なに？📜✨
+
+![three_pillars_dbc](./picture/dbc_cs_study_002_three_pillars_dbc.png)
  
  ![DbCの三本柱：契約の三点セット](./picture/dbc_cs_study_002_three_pillars.png)
  
@@ -41,6 +43,8 @@ mindmap
 
 ## 2.3 カフェで例えると？☕️🥐
 
+![cafe_analogy](./picture/dbc_cs_study_002_cafe_analogy.png)
+
 ![DbCの基本：カフェの注文に例えると](./picture/dbc_cs_study_002_pre_post_inv_cafe.png)
 
 DbCを身近な「カフェの注文」でイメージしてみよう☕️
@@ -72,6 +76,8 @@ DbCを身近な「カフェの注文」でイメージしてみよう☕️
 
 ## 3. Pre（事前条件）＝「呼ぶ側が守る」☎️🛡️
 
+![pre_phone_call](./picture/dbc_cs_study_002_pre_phone_call.png)
+
 ### 3.1 何を書く？（典型パターン）📌
 
 * `null`禁止🙅‍♀️
@@ -99,6 +105,8 @@ public static int Divide(int a, int b)
 
 ## 4. Post（事後条件）＝「呼ばれた側が保証する」🎁✅
 
+![post_guarantee_gift](./picture/dbc_cs_study_002_post_guarantee_gift.png)
+
 ### 4.1 Postは「戻り値」だけじゃないよ🔄
 
 Postで大事なのは
@@ -125,6 +133,8 @@ Postは最初、コードより **文章** が強い味方だよ😊💗
 ---
 
 ## 5. Inv（不変条件）＝「クラスの健康状態」🏥🧱
+
+![invariant_heart](./picture/dbc_cs_study_002_invariant_heart.png)
 
 Invは、**そのクラスが“存在する限り”ずっと守るルール**だよ💎
 （守れないなら、そのクラスは“壊れてる”状態😵‍💫）
@@ -180,6 +190,8 @@ public sealed class BankAccount
 ---
 
 ## 6. ぜったい迷うところ：「誰が守るんだっけ？」早見表🧠📌
+
+![responsibility_flow_map](./picture/dbc_cs_study_002_responsibility_flow_map.png)
 
 * **Inv**：クラス自身が守る（生成・更新経路で崩さない）🏥🧱
 
@@ -268,6 +280,8 @@ flowchart TD
 ---
 
 ## 8. よくある落とし穴あるある😵‍💫🧨
+
+![pitfall_warning_sign](./picture/dbc_cs_study_002_pitfall_warning_sign.png)
 
 ### 落とし穴1：PreとPostを混ぜる🌀
 

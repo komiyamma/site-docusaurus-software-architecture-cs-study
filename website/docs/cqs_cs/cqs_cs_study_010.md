@@ -9,6 +9,8 @@
 
 ## 1) 今日のゴール🎯✨
 
+![Failure Paths](./picture/cqs_cs_study_010_failure_paths.png)
+
 この章が終わると、これができるようになるよ！
 
 * Query の失敗（見つからない等）を **例外にしない**で扱える👀🧊
@@ -19,6 +21,8 @@
 ---
 
 ## 2) まず大原則：例外は“通常運転”に使わない🙅‍♀️💥
+
+![No Exception Logic](./picture/cqs_cs_study_010_no_exception_logic.png)
 
 .NET の設計ガイドラインでも、**「通常の制御フローに例外を使うな」**って強く言ってるよ！ ([Microsoft Learn][2])
 
@@ -45,6 +49,8 @@ flowchart TD
 
 ## 3) Query はどう失敗する？🤔🔍（おすすめ方針つき）
 
+![Query Null Ghost](./picture/cqs_cs_study_010_query_null_ghost.png)
+
 Query の失敗で多いのはこの2つ！
 
 ## A. 「見つからない」＝仕様（普通に起こる）👻➡️😌
@@ -61,6 +67,8 @@ Query の失敗で多いのはこの2つ！
 
 ## 4) Command はどう失敗する？✅🔧（Result が一番ハマる）
 
+![Command Referee](./picture/cqs_cs_study_010_command_referee.png)
+
 Command は「変更する」から、失敗が起きやすい！
 
 * 入力が変（バリデーション）📋
@@ -75,6 +83,7 @@ Command は「変更する」から、失敗が起きやすい！
 ## 5) 入門用 Result 型を作ろう🎁🧱（超シンプル版）
 
 ![Result Box](./picture/cqs_cs_study_010_result_box.png)
+![Result Object Internals](./picture/cqs_cs_study_010_result_object_internals.png)
 
 まずは「1章で使い回せる最小セット」でいくね😊
 
@@ -180,6 +189,8 @@ public sealed class TodoCommands
 
 ## 7) 例外はどこで受け止める？→「例外境界」🚧🧯
 
+![Exception Boundary Net](./picture/cqs_cs_study_010_exception_boundary_net.png)
+
 おすすめはこう👇
 
 * Command/Query の中で、何でもかんでも try/catch しない🙅‍♀️
@@ -235,6 +246,8 @@ app.MapGet("/todos/{id:guid}", async (Guid id, TodoQueries q) =>
 ---
 
 ## 10) Command の Result を HTTP に変換する🎁➡️🌐（超実務っぽい！）
+
+![HTTP Translator](./picture/cqs_cs_study_010_http_translator.png)
 
 ここがこの章のメインディッシュ🍝✨
 「アプリ内部は Result」「外側で HTTP に変換」にすると、依存の向きもキレイになりやすいよ🧭

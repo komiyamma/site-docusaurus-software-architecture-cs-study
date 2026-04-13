@@ -2,6 +2,7 @@
 # CQS（コマンド・クエリ分離）教育コンテンツ：15章アウトライン😊✨
 
 ## 第1章：CQSってなに？まずは超ざっくり掴もう🧠🌱
+![cqs_cs_index_concept_split.png](./picture/cqs_cs_index_concept_split.png)
 
 * CQSの一言：**「変更するなら返さない／返すなら変更しない」**📌
 * 何が嬉しい？（バグ減る・読みやすい・テストしやすい）✨
@@ -10,6 +11,7 @@
 ---
 
 ## 第2章：準備（Windows＋Visual Studio）とミニプロジェクト作成🪟🛠️
+![cqs_cs_index_environment_setup.png](./picture/cqs_cs_index_environment_setup.png)
 
 * Visual StudioでConsole/Minimal APIどっちでやる？（教材は両対応）🎮🌐
 * テストプロジェクトも一緒に作る（後で超ラク）🧪
@@ -20,6 +22,7 @@
 ---
 
 ## 第3章：CommandとQueryの見分け方（判断の軸）🎯🧩
+![cqs_cs_index_command_vs_query_icons.png](./picture/cqs_cs_index_command_vs_query_icons.png)
 
 * Command：状態変更（Create/Update/Delete）🔧
 * Query：参照（Get/List/Search）🔍
@@ -38,6 +41,7 @@
 ---
 
 ## 第5章：戻り値の基本ルール（Commandは何を返す？）📦✅
+![cqs_cs_index_return_rules.png](./picture/cqs_cs_index_return_rules.png)
 
 * Commandは基本 `void/Task`（＋失敗は別で扱う）
 * 例外：IDだけ返したい／作成結果を知りたい🪪
@@ -50,6 +54,7 @@
 ---
 
 ## 第6章：副作用の整理（見えない変更を見える化）👻⚠️
+![cqs_cs_index_hidden_side_effect.png](./picture/cqs_cs_index_hidden_side_effect.png)
 
 * 副作用の種類：DB・外部API・ファイル・メール・イベント📨
 * Query側に副作用が混ざる典型例（キャッシュ更新等）🧊
@@ -70,6 +75,7 @@
 ---
 
 ## 第8章：最小の設計型（Commands/Queriesクラスで分離）🏗️🧱
+![cqs_cs_index_folder_structure.png](./picture/cqs_cs_index_folder_structure.png)
 
 * `TodoCommands` と `TodoQueries` の作り方
 * 依存（Repositoryなど）を外から渡す（DIの入口）🔌
@@ -97,6 +103,7 @@
 ---
 
 ## 第11章：CQSとテスト①（Queryはラク勝ち🧪🏆）
+![cqs_cs_index_testing_benefits.png](./picture/cqs_cs_index_testing_benefits.png)
 
 * Queryは入力→出力のテストが書きやすい😍
 * テスト観点：境界値、空、並び順、フィルタなど🔍

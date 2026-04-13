@@ -21,6 +21,8 @@
 
 ### 2-1. 引数が増えると起こる悲劇😇💥
 
+![Argument Juggling Fail](./picture/cqs_cs_study_013_argument_juggling_fail.png)
+
 たとえば追加がこうなると…
 
 * `AddTodo(title, dueDate, priority, tags, memo, createdBy, ...)`
@@ -59,6 +61,8 @@ graph LR
 
 ## 3) Command/Queryオブジェクトの基本ルール📌✨
 
+![CQ Containers](./picture/cqs_cs_study_013_cq_containers.png)
+
 ここは超大事〜！🫶
 
 * 🛠️ **Command**：何かを変更する（作る/更新/削除/確定…）
@@ -78,6 +82,8 @@ graph LR
 ## 4) まずは作ってみよう！C#での書き方✍️✨
 
 ### 4-1. いちばん実務寄り：`record` で“入力DTO”を作る📦
+
+![Immutable Record Block](./picture/cqs_cs_study_013_immutable_record_block.png)
 
 Command/Queryは「運ぶもの」なので、**record**が相性いいよ〜😊
 （イミュータブル寄りで事故りにくい🧊）
@@ -115,6 +121,8 @@ public sealed record GetTodosQuery
 
 ### 5-1. “引数じゃなくて箱📦を渡す”に変える
 
+![Passing the Box](./picture/cqs_cs_study_013_passing_the_box.png)
+
 Before（つらい）😵‍💫
 `AddTodo(title, dueDate, priority, tags, memo)`
 
@@ -151,6 +159,8 @@ public sealed class TodoCommands
 
 ## 6) Minimal APIだともっと気持ちいい😍（自動で箱に詰めてくれる📦）
 
+![Auto Binding Machine](./picture/cqs_cs_study_013_auto_binding_machine.png)
+
 POST（Command）は **Body(JSON)** から “箱📦” に入れてくれるよ〜✨
 Minimal APIのパラメータバインドがそれをやってくれる感じ！ ([Microsoft Learn][2])
 
@@ -182,6 +192,8 @@ app.MapGet("/todos", async ([AsParameters] GetTodosQuery query, TodoQueries quer
 ここ、悩みがち〜！でも最初はこう覚えよ😊
 
 ### 7-1. 3つの置き場所（ざっくり）🧠
+
+![Validation Checkpoints](./picture/cqs_cs_study_013_validation_checkpoints.png)
 
 1. **入口（Endpoint/Controller）**：型の形・必須・簡単な範囲チェック
 2. **ユースケース層（Commands/Handlers）**：ビジネス的にダメ（例：期限が過去は不可）
@@ -241,6 +253,8 @@ app.MapPost("/todos", async (CreateTodoCommand cmd, TodoCommands commands) =>
 ---
 
 ## 8) 命名＆フォルダ構成（迷子にならない地図🗺️）🗂️✨
+
+![Feature Folders](./picture/cqs_cs_study_013_feature_folders.png)
 
 “機能単位”で固めるのが実務で強いよ〜💪
 

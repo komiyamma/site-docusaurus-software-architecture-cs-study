@@ -10,6 +10,8 @@ Visual Studioも **Visual Studio 2026（2026/1/13 のアップデートあり）
 
 ## 1) 今日のゴール🎯✨
 
+![Goal Trophy Tools](./picture/cqs_cs_study_011_goal_trophy_tools.png)
+
 ゴールはこれだけ！シンプル！😊
 
 * Queryのテストがラクな理由を体感する🧠🌱
@@ -58,6 +60,8 @@ graph LR
 ---
 
 ## 4) まずは “テストしやすいQuery” の形にする🏗️✨
+
+![Query Structure Dependency](./picture/cqs_cs_study_011_query_structure_dependency.png)
 
 ポイントはこれ👇
 Queryが依存するのは「読むための窓口」だけにする（＝読み取り専用の依存）😊
@@ -118,6 +122,8 @@ public sealed class TodoQueries
 
 ## 5) テスト用の “インメモリRepo” を作る🧊✅（モック不要！）
 
+![InMemory Sandbox](./picture/cqs_cs_study_011_inmemory_sandbox.png)
+
 Queryテストはまず **in-memory**（メモリ上のリスト）で十分！👍
 
 ```csharp
@@ -139,6 +145,8 @@ public sealed class InMemoryTodoReadRepository : ITodoReadRepository
 ---
 
 ## 6) Queryテストで見る観点（ここが超大事！）🔍✨
+
+![Test Perspectives Lenses](./picture/cqs_cs_study_011_test_perspectives_lenses.png)
 
 Queryのテストは、だいたいこの4種類で勝てます🏆
 
@@ -169,6 +177,8 @@ Microsoft公式にも xUnit/NUnit/MSTest の流れがまとまってるので、
 （今回は例として xUnit で！）
 
 ### 7-1) 並び順テスト（ソート）🔃✅
+
+![Sort Test Logic](./picture/cqs_cs_study_011_sort_test_logic.png)
 
 ```csharp
 using Xunit;
@@ -226,6 +236,8 @@ public void GetCompleted_should_return_only_completed_items()
 ---
 
 ### 7-3) 検索テスト（大文字小文字無視）🔎✨
+
+![Search Case Insensitive](./picture/cqs_cs_study_011_search_case_insensitive.png)
 
 検索は境界が多いので **Theory** が相性最高！😍
 
@@ -285,6 +297,8 @@ public void SearchByTitle_should_return_empty_when_keyword_is_blank(string? keyw
 ---
 
 ## 8) Visual Studioでテスト実行＆デバッグ🛠️🪲
+
+![VS Test Explorer UI](./picture/cqs_cs_study_011_vs_test_explorer_ui.png)
 
 ### Test Explorerでやること😊
 

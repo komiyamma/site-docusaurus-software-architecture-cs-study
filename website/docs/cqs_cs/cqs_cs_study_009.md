@@ -37,6 +37,8 @@ flowchart TD
 
 ### ① 予測できる失敗（＝仕様どおりの失敗）📋✅
 
+![Spec vs Accident](./picture/cqs_cs_study_009_spec_vs_accident.png)
+
 ユーザー入力や業務ルールで**起きてもおかしくない失敗**です😊
 例👇
 
@@ -67,6 +69,8 @@ flowchart TD
 
 ## “境界”の考え方：どこまでが仕様？どこからが障害？🚧🧭
 
+![Failure Sorting Conveyor](./picture/cqs_cs_study_009_sorting_conveyor.png)
+
 初心者向けの固定ルールを置いちゃうのが一番ラクです😊✨
 この章では、いったんこれで統一しましょう👇
 
@@ -92,6 +96,8 @@ flowchart TD
 
 ### Query（参照）🔍
 
+![Query Failure Empty Shelf](./picture/cqs_cs_study_009_query_failure_empty_shelf.png)
+
 * 仕様どおりの失敗：
 
   * 「見つからない」→ 仕様として扱う（例：null相当 / “見つからない”扱い）🫥
@@ -106,6 +112,8 @@ flowchart TD
 
 ### Command（変更）🔧
 
+![Command Failure Complexity](./picture/cqs_cs_study_009_command_failure_complexity.png)
+
 * 仕様どおりの失敗：
 
   * Validation / ルール違反 / NotFound / Conflict を返す📋🎁
@@ -118,6 +126,8 @@ flowchart TD
 ---
 
 ## ToDo題材で“失敗の種類”を仕分けしてみよう📝✨
+
+![ToDo Error Examples](./picture/cqs_cs_study_009_todo_error_examples.png)
 
 ### 例：ToDoを追加する（CreateTodo）
 
@@ -135,6 +145,8 @@ flowchart TD
 ---
 
 ## ミニ実装：失敗の“種類だけ”を型にしてみる🧩🎁（第10章の前準備）
+
+![Failure Object Structure](./picture/cqs_cs_study_009_failure_object_structure.png)
 
 ※この章は「分類」が主役なので、**Result型の完成形は次章**でやります😊
 でも、分類用の型だけは先に持つと超ラクです✨
@@ -166,6 +178,8 @@ public sealed record CommandOutcome(bool IsSuccess, IReadOnlyList<Failure> Failu
 ---
 
 ## ミニ演習①：これは仕様？それとも障害？🧩📝（仕分けゲーム）
+
+![Sorting Game Show](./picture/cqs_cs_study_009_sorting_game_show.png)
 
 次を **「仕様どおり」or「障害」** に分けてみてね😊✨
 

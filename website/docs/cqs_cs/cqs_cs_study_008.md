@@ -22,6 +22,8 @@
 
 ## 2) まず“設計の最小セット”を置こう🧩✨
 
+![Minimal Design Set](./picture/cqs_cs_study_008_minimal_set_characters.png)
+
 登場人物はこれだけ！
 
 * **TodoItem**：データ（モデル）📝
@@ -57,6 +59,8 @@ graph TD
 
 ## 3) まずはモデル📝✨（TodoItem）
 
+![TodoItem Encapsulation](./picture/cqs_cs_study_008_todo_item_encapsulation.png)
+
 ```csharp
 public sealed class TodoItem
 {
@@ -84,6 +88,8 @@ public sealed class TodoItem
 
 ## 4) Repositoryの「約束」を作る📮✨（ITodoRepository）
 
+![Repository Interface Contract](./picture/cqs_cs_study_008_repository_contract.png)
+
 ```csharp
 public interface ITodoRepository
 {
@@ -104,6 +110,8 @@ public interface ITodoRepository
 ---
 
 ## 5) とりあえず動かす：InMemory版🧠✨
+
+![InMemory Storage](./picture/cqs_cs_study_008_inmemory_brain.png)
 
 まずはDBなしでOK！動くのが正義😊✨
 
@@ -184,6 +192,8 @@ public sealed class TodoCommands
 }
 ```
 
+![Command Worker DI](./picture/cqs_cs_study_008_command_worker_di.png)
+
 ここでの学び😊✨
 
 * `TodoCommands` は **Repositoryをnewしてない**👏
@@ -192,6 +202,8 @@ public sealed class TodoCommands
 ---
 
 ## 7) 次！TodoQueries（参照）🔍✨
+
+![Query Librarian](./picture/cqs_cs_study_008_query_librarian_search.png)
 
 Query は「読むだけ」✨
 （読むだけだから、ここに更新が混ざると事故る😇💥）
@@ -229,6 +241,8 @@ public sealed class TodoQueries
 ---
 
 ## 8) 「newしない」を体験しよう✨（入口だけnewする）🚪
+
+![Manual vs Auto Assembly](./picture/cqs_cs_study_008_assembly_comparison.png)
 
 ## A) Consoleアプリ版：入口（Program）でだけ組み立てる🧩✨
 

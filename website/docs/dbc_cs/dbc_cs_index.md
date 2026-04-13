@@ -8,7 +8,11 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 
 ## 第1部：DbCの“考え方”をつかむ（迷子防止の地図）🗺️💡
 
+![course_map_dbc](./picture/dbc_cs_index_course_map_dbc.png)
+
 ### 第1章 DbCってなに？「約束」で守る設計🤝📌
+
+![contract_scroll](./picture/dbc_cs_index_contract_scroll.png)
 
 * DbCのイメージ：メソッドとクラスの“契約書”📝
 * 何が嬉しい？：バグの混入点が早く見つかる🔍✨
@@ -24,6 +28,8 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 
 ### 第3章 契約を書く場所：いちばん大事なのは“public境界”🚪🌟
 
+![entrance_guard](./picture/dbc_cs_index_entrance_guard.png)
+
 * public API / publicメソッドが最重要ポイント🔑
 * 入口でチェック、内部は信頼（内部をシンプルに）🧘‍♀️✨
 * ミニ演習：入口の1箇所に検証を集める🧹✅
@@ -35,6 +41,8 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 * ミニ演習：例を分類（どっち？）して表にする📋✨
 
 ### 第5章 DbCの導入スタイル3つ（軽く→強く）🪜🌱
+
+![three_styles_ladder](./picture/dbc_cs_index_three_styles_ladder.png)
 
 * ①コメントで明文化（最軽量）📝
 * ②ガード節＋例外/Resultで強制（実行時）🛡️
@@ -85,6 +93,8 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 
 ## 第3部：事後条件（Postconditions）で“保証”を設計する🎁✨
 
+![post_gift](./picture/dbc_cs_index_post_gift.png)
+
 ### 第12章 Postの基本：戻り値の保証を言語化する📦✅
 
 * 「nullを返さない」「範囲に入る」などの保証🎯
@@ -112,6 +122,8 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 ---
 
 ## 第4部：不変条件（Invariants）と“壊れないモデル”🧱💎
+
+![invariant_shield](./picture/dbc_cs_index_invariant_shield.png)
 
 ### 第16章 不変条件とは？クラスの健康診断ルール🏥🧱
 
@@ -146,6 +158,8 @@ AI支援：GitHub Copilot / OpenAI Codex 等は導入済み前提🤖✨
 ---
 
 ## 第5部：境界・エラー・ツール・AIで“実戦投入”🚀🤖
+
+![ai_assistant_dbc](./picture/dbc_cs_index_ai_assistant_dbc.png)
 
 ### 第21章 DTO→ドメイン：入口で汚れを落としてから渡す🧳➡️🏠
 

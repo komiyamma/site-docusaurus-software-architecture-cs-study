@@ -19,6 +19,8 @@
 
 ## 1) 2026時点の“前提バージョン感”だけ確認👀✨
 
+![tech_stack_2026](./picture/cqs_cs_study_002_tech_stack_2026.png)
+
 * **C#の最新は C# 14**、**.NET 10 上でサポート**されてるよ🧡 ([Microsoft Learn][1])
 * **Visual Studio 2026** には **.NET 10** が入ってくる前提でOK（公式のリリースノートにも .NET 10 前提の話が出てくるよ）🛠️ ([Microsoft Learn][2])
 * もし **Visual Studio 2022** を使う場合でも、**17.14 は長くサポートされる**って明記があるので安心寄り👌 ([Microsoft Learn][3])
@@ -43,6 +45,8 @@ mindmap
 ---
 
 ## 2) まずは「Console」か「Minimal API」どっちで作る？🎮🌐
+
+![project_choice](./picture/cqs_cs_study_002_project_choice.png)
 
 迷ったらこれでOK〜😊
 
@@ -107,6 +111,8 @@ dotnet sln add src/CqsTodo.Api/CqsTodo.Api.csproj
 
 ## 5) テストプロジェクトを“最初から”作る🧪✨（ここ大事〜！）
 
+![test_project_setup](./picture/cqs_cs_study_002_test_project_setup.png)
+
 後で作ると「参照追加し忘れ」「配置迷子」が起きがち😇💥
 最初から作っちゃお！
 
@@ -170,6 +176,8 @@ dotnet new gitignore
 
 ## 8) AI拡張を“教材用に安全設定”する🤖🧷（Copilot/Codex）
 
+![git_copilot_settings](./picture/cqs_cs_study_002_git_copilot_settings.png)
+
 ### 8-1) Copilot：まずここだけは押さえる✅
 
 GitHubの設定で、**公開コードに似すぎる提案をブロック**できるよ🧯✨
@@ -196,6 +204,8 @@ Codexは「コーディング**エージェント**」として、**サンドボ
 ---
 
 ## 9) ここまでのミニ演習🧩✨（5分）
+
+![success_checklist](./picture/cqs_cs_study_002_success_checklist.png)
 
 できたらスクショ撮りたくなるやつ📸😆
 

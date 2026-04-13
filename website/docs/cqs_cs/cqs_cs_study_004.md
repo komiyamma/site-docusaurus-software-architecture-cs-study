@@ -18,6 +18,8 @@
 
 ## 2) まず結論：混ぜると何が起きるの？😇💥
 
+![mixing_consequences](./picture/cqs_cs_study_004_mixing_consequences.png)
+
 混ぜると、だいたいこうなるよ👇
 
 * 😱 **同じ Query を2回呼んだだけ** なのに結果が変わる（または状態が変わる）
@@ -163,6 +165,8 @@ public sealed class TodoService
 
 ## 6) デバッグ地獄を“再現”しよう🪦🧯（体験パート）
 
+![debug_hell](./picture/cqs_cs_study_004_debug_hell.png)
+
 ### ✅ 体験1：ブレークポイントで「GETなのに保存してる」現場を見よう👀
 
 1. `TodoRepository.Save()` にブレークポイント🧷
@@ -206,6 +210,8 @@ public void GetTodo_ShouldNotChangeState()
 ---
 
 ## 7) じゃあどう直す？：分ける型（最小形）✂️✨
+
+![separation_solution](./picture/cqs_cs_study_004_separation_solution.png)
 
 ここでは **いちばん初心者に優しい直し方** にするよ😊🧡
 
@@ -286,6 +292,8 @@ public sealed class TodoCommands
 
 ## 8) Minimal APIでも事故る例（GETで更新しちゃうやつ）🌐💥
 
+![minimal_api_split](./picture/cqs_cs_study_004_minimal_api_split.png)
+
 ### 🚫 ダメな例：GETで閲覧回数増やす
 
 ```csharp
@@ -343,6 +351,8 @@ GET は“安全”という期待があるから、混ぜると被害が広が�
 ---
 
 ## 10) AI活用（Copilot/Codex）プロンプト例🤖✨
+
+![ai_refactoring](./picture/cqs_cs_study_004_ai_refactoring.png)
 
 Visual Studio 側でも Copilot がどんどん統合されてて、エディタからタスクを委任する流れも増えてるよ〜([The GitHub Blog][2])
 
