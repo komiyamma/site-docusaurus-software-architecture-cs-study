@@ -32,6 +32,7 @@
 * さらに「普通に起こる失敗は null/default を返す」という回避策も、ベストプラクティスで言及があります🧩([Microsoft Learn][3])
 
 ### Result型（戻り値で成功/失敗を表す）🎁
+![Exception vs Result Contrast](./picture/api_contract_cs_study_014_exception_siren_vs_gift.png)
 
 * 「失敗も通常フローの一部だよ」を表現できる🌿
 * 例：入力バリデーション、検索0件、在庫なし、権限不足 など
@@ -60,6 +61,7 @@ graph LR
 2. **コードの使い方が間違ってる / 想定外 / 続行困難** → 例外🚨
 
 ### 具体例でスパッと分類✂️
+![Error Classification](./picture/api_contract_cs_study_014_error_sorting_bins.png)
 
 * 入力が不正（メール形式NG）✉️ → Result（期待される失敗）🎁
 * DBが落ちた / ネットワーク遮断🌩️ → 例外（環境要因で続行困難）🚨
@@ -74,6 +76,7 @@ graph LR
 Result型を public API に出すと、それ自体が契約になります。だから…👇
 
 * `Result<T>` のプロパティ名変更 → **破壊的変更**💥
+![Result Contract Break](./picture/api_contract_cs_study_014_breaking_result_prop.png)
 * `Error` の形（Code/Message/Details）変更 → **利用側の分岐が壊れる**💥
 * 「失敗の種類」を enum で表すと、**後から値追加で switch が揺れる**ことがある（利用者の書き方次第）🌀
 
@@ -232,6 +235,7 @@ catch (Exception ex)
 ```
 
 ### 14.8.2 Result版の利用（if で分岐）🎁
+![Flow Control Comparison](./picture/api_contract_cs_study_014_flow_try_vs_if.png)
 
 ```csharp
 using Producer;
@@ -282,6 +286,7 @@ public static bool TryNormalizeEmail(string? email, out string normalized)
 
 * **失敗理由を返しづらい**（false しか返らない）
 * なので「理由が大事」なら Result の方が向いてることが多い🎁
+![Try Pattern Limitations](./picture/api_contract_cs_study_014_try_pattern_blackbox.png)
 
 ---
 
@@ -294,6 +299,7 @@ public static bool TryNormalizeEmail(string? email, out string normalized)
 * 利用側が switch/if で分岐できる🧠
 
 例：おすすめ命名🍡
+![Error Code Hierarchy](./picture/api_contract_cs_study_014_error_code_tree.png)
 
 * `validation.email.empty`
 * `validation.email.invalid_format`
@@ -347,6 +353,7 @@ public class EmailServiceResultTests
 ```
 
 これで「Code が変わったら落ちる」＝契約違反が即バレる😎🧪
+![Test as Contract Lock](./picture/api_contract_cs_study_014_test_locking_contract.png)
 
 ---
 

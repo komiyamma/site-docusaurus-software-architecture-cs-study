@@ -37,6 +37,8 @@ graph LR
 
 ---
 
+![Risks of Undefined Users](./picture/api_contract_cs_study_003_ambiguous_risks.png)
+
 ## 2. 利用者を決めないと、何が困るの？😵
 
 利用者が曖昧だと、契約はだいたいこうなります👇💥
@@ -54,6 +56,8 @@ graph LR
 
 ---
 
+![Peaceful Update](./picture/api_contract_cs_study_003_peaceful_update.png)
+
 ## 3. 利用者が求めてるのは、だいたいコレ🧡
 
 利用者がほんとに欲しいものは、派手な新機能よりこれが多いです👇
@@ -68,6 +72,8 @@ graph LR
 > **“アップデートしても平和でいられるための約束”**🌿✨
 
 ---
+
+![User Classification Map](./picture/api_contract_cs_study_003_user_map.png)
 
 ## 4. 利用者の分類マップ🗺️（ざっくりでOK）
 
@@ -103,6 +109,8 @@ mindmap
 * いきなり壊すと信用が終わる😇
 
 ---
+
+![Update Constraints](./picture/api_contract_cs_study_003_update_frequency.png)
 
 ## 5. “更新できる事情”が超重要🔁⚠️
 
@@ -144,6 +152,8 @@ mindmap
 * バッチ/ジョブ（DTOを読む）⏰
 
 ---
+
+![Persona Card Template](./picture/api_contract_cs_study_003_persona_card.png)
 
 ## Step 2) ペルソナカードを書く📝（テンプレ）
 
@@ -215,6 +225,8 @@ mindmap
 * [ ] “何を壊されたら致命傷”か言える？🧱
 
 ---
+
+![AI Persona Generation](./picture/api_contract_cs_study_003_ai_helper.png)
 
 ## 8. AIに手伝ってもらう🤖✨（ペルソナ作りが爆速になる！）
 

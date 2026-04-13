@@ -47,6 +47,7 @@ graph TD
 ---
 
 ## 10.2 まずは「公開面」を棚卸ししよう👀🧹
+![Public Surface Iceberg](./picture/api_contract_cs_study_010_surface_iceberg.png)
 
 ## 公開面（surface）ってどこ？🪟
 
@@ -109,6 +110,7 @@ sequenceDiagram
 ```
 
 ## 10.4 実習②：PublicApiAnalyzers を導入して“公開API一覧”を作る🛠️✨
+![Analyzer Toolbox](./picture/api_contract_cs_study_010_analyzer_toolbox.png)
 
 ## Step 1：ライブラリ側（Producer）にパッケージ追加📦
 
@@ -155,6 +157,7 @@ dotnet add .\YourLibrary\YourLibrary.csproj package Microsoft.CodeAnalysis.Publi
 ---
 
 ## 10.5 “Shipped と Unshipped” の運用ルール🧭📅
+![Shipped/Unshipped Pipeline](./picture/api_contract_cs_study_010_shipped_pipeline.png)
 
 ## ざっくりルール（覚えるのこれだけ！）😽
 
@@ -170,6 +173,7 @@ dotnet add .\YourLibrary\YourLibrary.csproj package Microsoft.CodeAnalysis.Publi
 ---
 
 ## 10.6 実習③：契約一覧（Contract list）をドキュメント化する📝✨
+![Contract Menu](./picture/api_contract_cs_study_010_contract_menu.png)
 
 公開API一覧は「形」だけ。
 でも契約って「意味」も超大事！
@@ -217,6 +221,7 @@ dotnet add .\YourLibrary\YourLibrary.csproj package Microsoft.CodeAnalysis.Publi
 ---
 
 ## 10.7 実習④：破壊変更を“比較”で見える化する（ApiCompat）🔍⚙️
+![ApiCompat Diff](./picture/api_contract_cs_study_010_apicompat_diff.png)
 
 公開API一覧を作ったら、次は「差分チェック」もできると強いです💪
 
@@ -239,6 +244,7 @@ dotnet tool install --global Microsoft.DotNet.ApiCompat.Tool
 ---
 
 ## 10.8 AI活用：契約の“抜け”を見つける🤖🔎✨
+![AI Code Scanner](./picture/api_contract_cs_study_010_ai_scanner.png)
 
 AIは「下書き係」として最強です💡
 ただし **契約はウソつけない**ので、最後は必ず人間が確認ね😇

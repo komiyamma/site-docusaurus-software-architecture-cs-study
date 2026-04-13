@@ -38,6 +38,7 @@ graph TD
 ### non-nullable と nullable🍀🌧️
 
 * `string`：**non-nullable**（null は来ない想定🍀）
+![Non-nullable vs Nullable](./picture/api_contract_cs_study_015_string_vs_nullable.png)
 * `string?`：**nullable**（null が来る想定🌧️）
 
 この “`?`” は「型の趣味」じゃなくて、**利用者に対する説明書**です📘✨
@@ -51,6 +52,7 @@ graph TD
 3. **プロパティ（property）**：読み取り時に null あり？
 4. **DTO/JSON**：欠損（未指定）と null を区別する？
 5. **イベント/コールバック**：渡される値が null あり？
+![Null Impact Hotspots](./picture/api_contract_cs_study_015_null_impact_map.png)
 
 ここがブレると、利用者のコードに「`?.` と `??` と null チェックの森」が生えます🌳🌳🌳😵
 
@@ -59,6 +61,7 @@ graph TD
 ## 15.5 “後から厳しくする” が危険な理由💣（`string?` → `string`）
 
 ### 何が起きるの？😇
+![Tightening Contract Trap](./picture/api_contract_cs_study_015_tightening_bridge_trap.png)
 
 たとえば v1 でこうだった👇
 
@@ -143,6 +146,7 @@ nullable はプロジェクト全体で有効化できます👇（`csproj`）
 ---
 
 ## 15.8 公開APIは「警告」だけに頼らず、実行時でも守る🛡️✨
+![Compiler vs Runtime Check](./picture/api_contract_cs_study_015_ghost_vs_guard.png)
 
 NRT は “コンパイラが親切に教えてくれる” 仕組みだけど、呼び出し側が警告を無視することもあります😇
 なので public API では、入口でガードを置くのが安全です👇
@@ -168,6 +172,7 @@ public void SetName(string name)
 * `MaybeNull` / `NotNull`
 * `AllowNull` / `DisallowNull`
 * `MemberNotNullWhen` など
+![Conditional Null Attributes](./picture/api_contract_cs_study_015_conditional_attribute_lock.png)
 
 これらは **nullable 静的解析を強化するための属性**として整理されています📘 ([Microsoft Learn][6])
 
@@ -252,6 +257,7 @@ Console.WriteLine(nick.ToUpper()); // 警告なし
 ---
 
 ## 15.11 実習②：DTO/JSON の null を契約として扱う🍡📦
+![JSON Null vs Missing](./picture/api_contract_cs_study_015_json_null_vs_missing.png)
 
 JSON は「フィールド未指定」と「null」が混ざりがちで、ここが契約の地雷原です😇💣
 
@@ -292,6 +298,7 @@ var options = new JsonSerializerOptions
 ## 15.12 AI 活用：null 契約のレビューを爆速にする🤖💨
 
 ### 使いどころ①：公開APIの「null ルール」を洗い出す🔍
+![AI Null Scanner](./picture/api_contract_cs_study_015_ai_xray_null_scan.png)
 
 * 「public なメソッドとプロパティを列挙して、`?` の有無を要約して」
 * 「`string?` を使ってる理由（意味）を1行コメント案で添えて」

@@ -5,6 +5,8 @@
 * AI支援は GitHub Copilot や OpenAI 系ツールを「下書き係」として使う前提🤖✨（※VSでもCopilotが使える前提でOK） ([Visual Studio][3])
 * 開発元は Microsoft の公式ドキュメントに合わせます📘 ([Microsoft for Developers][1])
 
+![Agreement between parties](./picture/api_contract_cs_index_contract_handshake.png)
+
 ## Part 1：まずは「契約」って何？を体に入れる（1〜6章）🌸
 
 ### 1章：はじめに🌷「契約」って結局なに？
@@ -45,6 +47,8 @@
 
 ---
 
+![Semantic Versioning Structure](./picture/api_contract_cs_index_semver_blocks.png)
+
 ## Part 2：バージョニングの基礎を固める（7〜10章）🔢
 
 ### 7章：SemVer入門🔢（MAJOR/MINOR/PATCH）
@@ -72,6 +76,8 @@
 * AI活用：公開面の候補を抽出→レビュー
 
 ---
+
+![Encapsulation and Surface](./picture/api_contract_cs_index_public_private_scope.png)
 
 ## Part 3：C#の「ライブラリ契約」を安全に育てる（11〜18章）🔧
 
@@ -146,6 +152,8 @@
 
 ---
 
+![Web API Contract Matching](./picture/api_contract_cs_index_web_api_matching.png)
+
 ## Part 5：Web APIの契約（22〜26章）🌐
 
 ### 22章：Web API契約①（成功レスポンスの約束）🍀
@@ -195,6 +203,8 @@
 * AI活用：互換ルール表を作って運用に落とす🤖
 
 ---
+
+![Software Evolution Timeline](./picture/api_contract_cs_index_version_evolution.png)
 
 ## Part 7：テスト＆自動化＆総合演習（29〜30章）🧪⚙️🎓
 

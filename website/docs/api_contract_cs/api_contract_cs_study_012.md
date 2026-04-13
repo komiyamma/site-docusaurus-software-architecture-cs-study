@@ -11,6 +11,7 @@
 ---
 
 ## 12.1 ドキュメントが「契約」ってどういうこと？🤝📜
+![Code vs Contract](./picture/api_contract_cs_study_012_code_vs_contract.png)
 
 ### ✅ 契約は「コード」だけじゃない
 
@@ -66,6 +67,7 @@ graph LR
 ---
 
 ## 12.3 C#のXMLドキュメントコメント基本🧷📘
+![XML Ingredients](./picture/api_contract_cs_study_012_xml_ingredients.png)
 
 `///` のコメント欄にXMLタグを書いていく方式です。C#公式の言語リファレンスにもまとまっています📘 ([Microsoft Learn][2])
 
@@ -85,6 +87,7 @@ graph LR
 ---
 
 ## 12.4 実例：v1の最小APIに「契約コメント」を入れる🧪✨
+![Slugger Guarantees](./picture/api_contract_cs_study_012_slugger_guarantees.png)
 
 ここでは「文字列をスラッグ化する」小さいAPIを例にします😊
 **ポイント：コメントは“利用者が困らないための約束”を書く** です🤝
@@ -224,6 +227,7 @@ VS Codeでも、右クリックの “Generate Docs” 系の導線でドキュ�
 ---
 
 ## 12.7 ドキュメント変更も「破壊的変更」になりうる💥😇
+![Documentation Breaking Change](./picture/api_contract_cs_study_012_doc_breaking.png)
 
 コードを変えてないのに、**契約を変えた** ことになるパターンがあります👇
 
@@ -245,6 +249,7 @@ VS Codeでも、右クリックの “Generate Docs” 系の導線でドキュ�
 ---
 
 ## 12.8 ビルドで「コメント漏れ」を検知する✅🧰
+![Missing Comment Alert](./picture/api_contract_cs_study_012_missing_comment_alert.png)
 
 ### 12.8.1 XMLドキュメントファイルを出力する
 
@@ -278,6 +283,7 @@ XML出力をONにすると、**公開型/公開メンバーにコメントが無
 ---
 
 ## 12.9 NuGetのREADMEは“契約の入口”📦🚪
+![NuGet Entry Door](./picture/api_contract_cs_study_012_nuget_entry.png)
 
 ライブラリ利用者は、まず **NuGetのページ** と README を見ます👀
 `PackageReadmeFile` を設定すると、READMEをパッケージに同梱できます📦 ([Microsoft Learn][7])

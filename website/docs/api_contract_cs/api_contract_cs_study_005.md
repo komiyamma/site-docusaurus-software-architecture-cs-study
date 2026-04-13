@@ -33,6 +33,8 @@ graph LR
 
 ---
 
+![3 Types of Breakage](./picture/api_contract_cs_study_005_breakage_types.png)
+
 ## 5-2. 破壊の“壊れ方”は3パターン🧨（超大事）
 
 ```mermaid
@@ -87,6 +89,8 @@ flowchart TD
 
 ---
 
+![Method Disappearance](./picture/api_contract_cs_study_005_method_missing.png)
+
 ## あるある①：publicメソッドの削除／名前変更✂️
 
 * **壊れ方**：コンパイルエラー（気づける）
@@ -94,6 +98,8 @@ flowchart TD
 * **利用者の気持ち**：「え、急に消えたんだけど！？😭」
 
 ---
+
+![Argument Mismatch](./picture/api_contract_cs_study_005_argument_mismatch.png)
 
 ## あるある②：引数の追加（特に“後ろに1個足す”）➕
 
@@ -105,6 +111,8 @@ flowchart TD
 * **ポイント**：「シグネチャが変わる」＝だいたい危険⚠️
 
 ---
+
+![Field to Property Change](./picture/api_contract_cs_study_005_field_property.png)
 
 ## あるある③：publicフィールド→publicプロパティに変更🧱
 
@@ -124,6 +132,8 @@ flowchart TD
   * 例外型が変わって `catch` が拾えない
 
 ---
+
+![Meaning Change (Silent)](./picture/api_contract_cs_study_005_meaning_change.png)
 
 ## あるある⑤：「意味」を変える（最凶）🕳️
 
@@ -147,6 +157,8 @@ flowchart TD
 * **コツ**：最初に「null許可/不許可」を決めるのが超大事⚡
 
 ---
+
+![Broken Signs Dashboard](./picture/api_contract_cs_study_005_broken_signs.png)
 
 ## 5-4. 「壊れたサイン」早見表🔍（現場で役立つやつ）
 

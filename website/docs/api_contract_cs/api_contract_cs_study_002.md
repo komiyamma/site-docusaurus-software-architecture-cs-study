@@ -14,6 +14,8 @@
 契約はだいたい **「境界（Boundary）」** に出ます🌈
 境界＝「外の誰か（別プロセス・別チーム・未来の自分）と接する場所」だよ😊
 
+![Boundary Concept](./picture/api_contract_cs_study_002_boundary.png)
+
 ```mermaid
 mindmap
   root((契約の場所))
@@ -42,6 +44,8 @@ mindmap
 
 ## 2. 契約4種類の“ざっくり地図”🗺️✨
 
+![Web API Contract](./picture/api_contract_cs_study_002_web_api.png)
+
 ### A) Web APIの契約🌐🍀
 
 **何が契約？**
@@ -63,6 +67,8 @@ mindmap
 
 ---
 
+![Library Contract](./picture/api_contract_cs_study_002_library.png)
+
 ### B) ライブラリ（public API）の契約📦🛠️
 
 **何が契約？**
@@ -82,6 +88,8 @@ mindmap
   ※「public APIを変えると、古いアセンブリが呼べなくなる」タイプの破壊が起きます ([Microsoft Learn][1])
 
 ---
+
+![DTO Contract](./picture/api_contract_cs_study_002_dto.png)
 
 ### C) DTO（データの形）の契約🍡📄
 
@@ -106,6 +114,8 @@ C#だと `record` や `class`、WebだとJSONとして登場しがち。
 * nullの扱い変更 → 地味に事故る😇
 
 ---
+
+![Event Contract](./picture/api_contract_cs_study_002_event.png)
 
 ### D) イベント（メッセージ）の契約📨⏳
 
@@ -230,6 +240,8 @@ public sealed record UserRegistered(
 （例：Registered / Created / Deleted みたいな）
 
 ---
+
+![Protection Strategies](./picture/api_contract_cs_study_002_protection.png)
 
 ## 5. “壊れ方”が違うから、守り方も違う🛡️✨（超ざっくり表）
 

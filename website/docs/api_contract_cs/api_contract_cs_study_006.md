@@ -37,6 +37,8 @@ graph TD
 
 ---
 
+![Access Modifiers as Doors](./picture/api_contract_cs_study_006_access_doors.png)
+
 ## 2) 公開面（surface）ってどこ？🧠🔍
 
 C#の世界だと、ざっくりこう👇
@@ -49,6 +51,8 @@ C#の世界だと、ざっくりこう👇
 アクセス修飾子の意味自体はこの公式説明が基準だよ📘 ([Microsoft Learn][1])
 
 ---
+
+![Public Surface Liability](./picture/api_contract_cs_study_006_surface_liability.png)
 
 ## 3) なんで「公開面は小さいほどいい」の？🧨➡️🛡️
 
@@ -113,6 +117,8 @@ graph LR
 公開メソッドの型に、内部クラスが混ざると契約が太るよ⚡
 公開側は「安定しやすい型（DTO/record/enum）」に寄せるのが基本🍡
 
+![Facade Pattern](./picture/api_contract_cs_study_006_facade_metaphor.png)
+
 ### コツ④：公開クラスは “入口（Facade）” を用意する🚪✨
 
 内部の細かい部品をいっぱい公開せずに、
@@ -134,6 +140,8 @@ graph LR
 （10章で“見える化”をもっと強化するよ📌）
 
 ---
+
+![Lab Architecture](./picture/api_contract_cs_study_006_lab_structure.png)
 
 ## ミニ実習🛠️✨：公開面を“入口1つ”に絞って v1 を作る
 
@@ -293,6 +301,8 @@ Console.WriteLine(formatter.Format("徳川", "家康", NameOrder.GivenFamily));
   * `InternalNameRules`：整形ルール
 
 ---
+
+![AI Architect](./picture/api_contract_cs_study_006_ai_architect.png)
 
 ## AI活用🤖✨（下書き係として使うと超ラク！）
 

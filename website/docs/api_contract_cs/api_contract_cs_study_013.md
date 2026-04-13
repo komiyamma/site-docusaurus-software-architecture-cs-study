@@ -10,6 +10,7 @@
 ---
 
 ## 例外は契約の一部だよ 🧾🚦
+![Exception as Contract](./picture/api_contract_cs_study_013_exception_shape.png)
 
 「例外」は単なるエラーじゃなくて、**公開APIが外に約束する仕様の一部**だよ😊
 たとえば呼び出し側が
@@ -55,6 +56,7 @@
 ---
 
 ## 例外を投げるか迷ったときの判断フロー 🧭💡
+![Throw Decision Tree](./picture/api_contract_cs_study_013_throw_decision.png)
 
 次の3つを順番に考えるとブレないよ😊
 
@@ -118,6 +120,7 @@ flowchart TD
 ---
 
 ## 引数チェックは最初にやるのが基本 ✅🧼
+![Argument Bouncer](./picture/api_contract_cs_study_013_argument_bouncer.png)
 
 公開メソッドは外から何が来るかわからないので、**最初に引数を検証**するのが定番だよ😊
 静的解析ルールでも「公開メソッドはnullチェックしよう」って言われてる✨ ([Microsoft Learn][4])
@@ -182,6 +185,7 @@ public readonly record struct EmailAddress(string Value)
 ---
 
 ## 実装例 Consumer側 例外をハンドリングする 🎮🧑‍💻
+![Catch Nets](./picture/api_contract_cs_study_013_catch_nets.png)
 
 呼び出し側は「例外型」で分岐できると、すごく読みやすいよ😊
 
@@ -236,6 +240,7 @@ catch (FormatException)
 ---
 
 ## よくある失敗は Tryパターンも検討しよう 🧪✨
+![Try Pattern Safe](./picture/api_contract_cs_study_013_try_pattern.png)
 
 「入力が不正」はよく起きるから、例外コストを避ける設計として **Tryパターン**が推奨されてるよ😊 ([Microsoft Learn][3])
 
@@ -273,6 +278,7 @@ public readonly record struct EmailAddress(string Value)
 ---
 
 ## 非同期の例外 ここだけ注意 ⚡️🧵
+![Async Validation](./picture/api_contract_cs_study_013_async_validation.png)
 
 `Task` を返すメソッドは、例外が **awaitしたタイミングで出てくる**ことがあるよ😵
 でも「引数がダメ」みたいな **使い方ミス**は、できれば **同期的に先に投げる**のが推奨だよ✅ ([Microsoft Learn][6])

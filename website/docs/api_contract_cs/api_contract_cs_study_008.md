@@ -44,6 +44,7 @@ graph TD
 ---
 
 ## 8-2. まず決めるべきは「何を契約扱いにするか」🧩
+![Scope of Protection](./picture/api_contract_cs_study_008_contract_shield.png)
 
 互換ポリシーは、いきなりバージョン番号を語る前に **“守る対象”** を決めます🛡️
 
@@ -72,6 +73,7 @@ SemVerの基本はこう👇
 ---
 
 ## 8-4. 「後方互換」の定義をチーム（＝自分）用に固定しよう🧷
+![Backward Compatibility Bridge](./picture/api_contract_cs_study_008_backward_compat_bridge.png)
 
 後方互換って、ふわっとしてると事故ります😇
 なので、ポリシーではこういう文章にします👇
@@ -92,6 +94,7 @@ SemVerの基本はこう👇
 ---
 
 ## 8-5. 互換ポリシーに必ず入れる「変更分類」🧱
+![Classification of Changes](./picture/api_contract_cs_study_008_change_buckets.png)
 
 ポリシーは「判断の瞬間」に役立つ必要があります⚡
 なので、**変更を分類して、バージョン上げルールに直結**させます🧠✨
@@ -122,6 +125,7 @@ SemVerの基本はこう👇
 ---
 
 ## 8-6. 一番事故るやつ：「バグ修正」のグレーゾーン😇🌀
+![Bug Dependency Trap](./picture/api_contract_cs_study_008_bug_dependency.png)
 
 「バグ修正だからPATCHでしょ？」と思いがちだけど、利用者が“バグに依存”してたら、それは実質破壊です😵
 
@@ -136,6 +140,7 @@ SemVerの基本はこう👇
 ---
 
 ## 8-7. 「例外」も最初に決めておく🚑📌
+![Emergency Exception](./picture/api_contract_cs_study_008_emergency_exception.png)
 
 ポリシーって、例外がないと運用で破綻しがちです😇
 よくある例外パターンを、最初から文章で決めましょう✨
@@ -273,6 +278,7 @@ SemVerの増分ルール自体は上の通り定義されています。([Semant
 ---
 
 ## 8-11. AIを「下書き係」にする使い方🤖✍️✨
+![AI Drafting Policy](./picture/api_contract_cs_study_008_ai_drafter.png)
 
 AIは便利だけど、**契約の最終決定は人間がやる**のが安全です🧠🛡️
 （とくに破壊判定は事故が高い😇）

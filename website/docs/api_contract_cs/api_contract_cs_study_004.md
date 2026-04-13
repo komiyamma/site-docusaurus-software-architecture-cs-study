@@ -33,6 +33,8 @@ graph TD
 
 ---
 
+![Compatibility Brothers Metaphor](./picture/api_contract_cs_study_004_three_brothers.png)
+
 ## 2) 3兄弟のイメージ図🧠💡
 
 イメージはこう👇
@@ -70,6 +72,8 @@ graph TD
 * `ConsumerApp`（利用側：コンソール）🖥️
 
 ---
+
+![Source Compatibility Break](./picture/api_contract_cs_study_004_lab_source_break.png)
 
 ## 実習A：ソース互換が壊れる瞬間🧩💥
 
@@ -122,6 +126,8 @@ public static class Calculator
 
 ---
 
+![Binary Compatibility Break](./picture/api_contract_cs_study_004_lab_binary_break.png)
+
 ## 実習B：バイナリ互換が壊れる瞬間📦💣
 
 ソース互換は「ビルド時」に分かるけど、バイナリ互換は **実行時に爆発**しがち😇
@@ -154,6 +160,8 @@ public static class Calculator
 公式ガイダンスでも「公開APIの変更（例：引数追加など）はバイナリ破壊になり得て、MissingMethodException が起き得る」って説明されてるよ📘 ([Microsoft Learn][2])
 
 ---
+
+![Behavioral Compatibility Break](./picture/api_contract_cs_study_004_lab_behavior_break.png)
 
 ## 実習C：挙動互換が壊れる瞬間🎭😇（一番こわい）
 
@@ -226,6 +234,8 @@ public static class Price
 ※「.NET の breaking changes 公式ページ」も、変更を **binary incompatible / source incompatible / behavioral change** に分類して説明してるよ📘 ([Microsoft Learn][1])
 
 ---
+
+![Compatibility Check Order](./picture/api_contract_cs_study_004_check_order.png)
 
 ## 6) 現場での“確認の順番”🚦✨（迷ったらこれ）
 

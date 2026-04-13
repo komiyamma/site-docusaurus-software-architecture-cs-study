@@ -27,6 +27,7 @@
 ---
 
 ## 11.2 まず“小さく”作るのが最強な理由🔥
+![Small Start Strategy](./picture/api_contract_cs_study_011_small_seed.png)
 
 .NET の公式ガイドでも「破壊的変更は利用者に大きな悪影響」ってはっきり書かれています。特に低レベル（基盤）ライブラリほどキツい😱
 さらに、**“新しいオーバーロード追加”ですら、以前は曖昧じゃなかった呼び出しが曖昧になってコンパイルエラー**になることもあります（＝ソース互換が壊れる）⚡ ([Microsoft Learn][1])
@@ -98,6 +99,7 @@ graph TD
 ---
 
 ### ルール3：`public field` は基本やめよう（プロパティで！）🚫🧱
+![Field vs Property](./picture/api_contract_cs_study_011_field_vs_property.png)
 
 公式ガイドは **「フィールドは避ける」**方針で、プロパティ推奨です。 ([Microsoft Learn][3])
 理由はシンプル：フィールドは後から仕様を入れにくい（検証・通知・遅延計算とか）😭
@@ -105,6 +107,7 @@ graph TD
 ---
 
 ### ルール4：`public const` は“値が利用者に焼き付く”ので超注意🔥
+![Const Trap](./picture/api_contract_cs_study_011_const_tattoo.png)
 
 `const` は呼び出し側に値が埋め込まれやすく、あとで変えると事故りやすいです（公式ガイドでも注意されてます）。 ([Microsoft Learn][3])
 「変わるかも」の値は `static readonly` を検討しよ🧯
@@ -119,6 +122,7 @@ graph TD
 ---
 
 ### ルール6：オーバーロード追加も安全とは限らない⚡
+![Overload Ambiguity](./picture/api_contract_cs_study_011_overload_maze.png)
 
 公式ガイドでも「新しいオーバーロードで以前の呼び出しが曖昧になる」例が出てます。 ([Microsoft Learn][1])
 
@@ -128,6 +132,7 @@ graph TD
 ---
 
 ### ルール7：`virtual` / `protected` は“公開契約の爆増装置”🎇
+![Virtual/Protected Risk](./picture/api_contract_cs_study_011_virtual_risk.png)
 
 公式ガイドは **virtual メンバーをむやみに増やさない**ことを推奨しています。 ([Microsoft Learn][6])
 継承を許すと、将来の変更で「派生クラスが壊れる」タイプの事故が起きやすい😱
@@ -135,6 +140,7 @@ graph TD
 ---
 
 ## 11.5 実習：最小の公開APIで v1 を作る✨🛠️
+![Shipping Calculator v1](./picture/api_contract_cs_study_011_shipping_calc.png)
 
 題材：送料計算ライブラリ（わかりやすくて契約が見えるやつ）📦💨
 

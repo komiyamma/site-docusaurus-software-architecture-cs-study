@@ -13,6 +13,7 @@
 
 ## Producer / Consumer ってなに？🧩
 ![Producer/Consumer Setup](./picture/api_contract_cs_study_009_setup_lab.png)
+![Contract Handshake Detail](./picture/api_contract_cs_study_009_contract_handshake_detail.png)
 
 超ざっくり言うと、こうです👇✨
 
@@ -36,6 +37,7 @@ Producer（契約を公開📦）  ──▶  Consumer（契約を利用🧩）
 ---
 
 ## まず作るリポジトリ構成📁✨
+![Solution Structure](./picture/api_contract_cs_study_009_solution_structure.png)
 
 この章では、こういう形にします👇（超スタンダードで分かりやすい！）
 
@@ -159,6 +161,7 @@ dotnet new editorconfig
 ---
 
 ## 実習③：Producer に「v1の契約」を置く📦✨
+![Greeting Data Flow](./picture/api_contract_cs_study_009_data_flow.png)
 
 ここがこの章のメイン🌟
 まずは **小さくて分かりやすい契約** を作るよ😊
@@ -212,6 +215,7 @@ public sealed record GreetingResult(string Message);
 ---
 
 ## 2) internal の “自由に変えていい場所” を作る（任意）🧸
+![Internal vs Public Gearbox](./picture/api_contract_cs_study_009_internal_gearbox.png)
 
 同じ Producer に `GreetingTemplates.cs` を作って👇
 
@@ -299,6 +303,7 @@ git commit -m "ch09 scaffold producer-consumer"
 ---
 
 ## AI活用（“下書き係”にするコツ）🤖✨
+![AI Over-Engineering](./picture/api_contract_cs_study_009_ai_overengineering.png)
 
 この章は **AIに手伝わせやすい** ところが多いよ💕
 
@@ -341,6 +346,7 @@ git commit -m "ch09 scaffold producer-consumer"
 ---
 
 ## この章で作った“契約（v1）”まとめ📌✨
+![v1 Contract Summary](./picture/api_contract_cs_study_009_v1_summary.png)
 
 * `Greeter`
 

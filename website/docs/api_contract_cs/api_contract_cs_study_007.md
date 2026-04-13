@@ -29,6 +29,7 @@ SemVerの仕様（ルール本体）はここにまとまってるよ📘 ([Sema
 ---
 
 ## 2. まず大事：SemVerが守るのは「公開API」🧸🔒
+![Public API Scope](./picture/api_contract_cs_study_007_public_api_scope.png)
 
 SemVerは、**公開API（外に約束してる部分）** がどう変わるかで数字を決めるよ✨ ([Semantic Versioning][1])
 
@@ -44,6 +45,7 @@ SemVerは、**公開API（外に約束してる部分）** がどう変わるか
 ---
 
 ## 3. 3つの数字の意味🔢✨（超重要）
+![Version Odometer](./picture/api_contract_cs_study_007_version_odometer.png)
 
 SemVer 2.0.0 ではこう決まってるよ👇 ([Semantic Versioning][1])
 
@@ -95,6 +97,7 @@ flowchart TD
 ---
 
 ## 5. “0.y.z” と “1.0.0” の意味🌱➡️🌳
+![Stability Comparison](./picture/api_contract_cs_study_007_stability_scale.png)
 
 ## `0.y.z`（例：`0.4.2`）は “まだ不安定” 🧪
 
@@ -108,6 +111,7 @@ SemVer的には、**0系は「何でも変わり得る」** 扱いなんだよ�
 ---
 
 ## 6. プレリリース（`-alpha` / `-beta` / `-rc`）ってなに？🧪✨
+![Pre-release Stages](./picture/api_contract_cs_study_007_prerelease_stages.png)
 
 SemVerでは、安定版の前にこういうのを付けられるよ👇
 
@@ -128,6 +132,7 @@ NuGetも基本はSemVerの優先順位に従うよ（安定版が優先、プレ
 ---
 
 ## 7. ビルドメタデータ（`+something`）はどう扱う？🧩
+![Build Metadata](./picture/api_contract_cs_study_007_metadata_tag.png)
 
 SemVerでは `+` 以降は **優先順位に影響しない**（同じ扱い）ってルールだよ✨ ([Semantic Versioning][1])
 例：`1.0.0+001` と `1.0.0+999` は “並び順” には関係ない😊
@@ -262,6 +267,7 @@ public static int Sum(int a, int b) => a + b;
 ---
 
 ## 10. AI（Copilot / Codex等）に頼るときの“使い方”🤖✨
+![AI SemVer Judge](./picture/api_contract_cs_study_007_ai_semver_judge.png)
 
 AIは超便利だけど、**「契約の境界」を誤解しやすい** のが落とし穴😇
 なので、聞き方をテンプレ化すると安定するよ💕

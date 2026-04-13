@@ -33,7 +33,11 @@ graph LR
 ここでいう「相手」って、他人だけじゃないよ👀
 **未来の自分**も、めちゃくちゃ強い利用者です😵‍💫（半年後に自分が泣くやつ…）
 
+![Future Self as a Consumer](./picture/api_contract_cs_study_001_future_self.png)
+
 ---
+
+![Three Layers of Contract](./picture/api_contract_cs_study_001_three_layers.png)
 
 ## 2. 契約には “3つの層” があるよ🧅✨（超ざっくり）
 
@@ -69,6 +73,8 @@ graph TD
 
 ---
 
+![Types of Breaking Changes](./picture/api_contract_cs_study_001_breaking_types.png)
+
 ## 3. 契約を破ると何が起きる？😇💥（初回はここだけでOK）
 
 ```mermaid
@@ -96,6 +102,8 @@ flowchart TD
 この3兄弟は、あとで章4〜5でガッツリやるよ👨‍👩‍👧✨
 
 ---
+
+![Producer and Consumer](./picture/api_contract_cs_study_001_producer_consumer.png)
 
 ## 4. ミニ体験🧪：契約を壊すと“即”どうなる？（5〜10分）
 
@@ -152,6 +160,8 @@ public string SayHello(string name)
 > * Producerは「ちょっと名前変えただけ」の気分でも、Consumerは「世界が崩壊」することがある😇
 
 ---
+
+![Real World Contract Examples](./picture/api_contract_cs_study_001_real_world_examples.png)
 
 ## 5. ミニ実習✍️：身近な“契約”を3つ書き出す
 
