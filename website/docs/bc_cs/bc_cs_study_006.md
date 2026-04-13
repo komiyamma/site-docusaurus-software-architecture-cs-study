@@ -13,6 +13,8 @@ Bounded Context（BC）＝**「この境界の中では、このモデルと言�
 
 BCが無い（または曖昧）だと、こうなるよ😵‍💫💦
 
+![twisted spec knot](./picture/bc_cs_study_006_twisted_spec_knot.png)
+
 * 同じ単語なのに、部署や人で**意味がズレる**（例：「顧客」「注文」）🌀
 * みんなが「自分の意味のつもり」で話して、**仕様がねじれる**🧨
 * コードでは「1つのクラスに全部詰める」になって、**if地獄**＆**変更が怖い**😇🔥
@@ -25,6 +27,8 @@ BCはこの事故を、**“境界で止める”**ための考え方だよ🛡�
 ## BCの主役は「言葉」と「モデル」🗣️🧩
 
 BCを構成する主役はこの2つだよ👇
+
+![word model sync](./picture/bc_cs_study_006_word_model_sync.png)
 
 * **言葉（ユビキタス言語）**：チーム内で「その意味」で通じる単語セット📖
 * **モデル**：その言葉の意味を、ルール込みで表したもの（コード）🧠💻
@@ -64,6 +68,8 @@ flowchart TD
 ```
 
 BCは「言葉の辞書が切り替わる境界」だと思うと分かりやすいよ📚✨
+
+![dictionary switch border](./picture/bc_cs_study_006_dictionary_switch_border.png)
 そして、境界をまたぐときは「翻訳」や「契約」が必要になる（これは後半でやるよ）📨🛡️ ([martinfowler.com][2])
 
 ---
@@ -79,6 +85,8 @@ BCは「言葉の辞書が切り替わる境界」だと思うと分かりやす
 
 ここで「注文（Order）」が衝突しがち😇
 
+![three order pillars](./picture/bc_cs_study_006_three_order_pillars.png)
+
 * 受注の「注文」＝**お客様との約束（何を買う？いくら？）**
 * 配送の「注文」＝**出荷の指示（いつ出す？どこに？）**
 * 請求の「注文」＝**請求の根拠（課税・締め・入金）**
@@ -91,6 +99,8 @@ BCで「この注文はどの世界の注文？」を固定するのが目的だ
 ## よくある誤解ベスト4😇⚠️
 
 ### 誤解1：BC＝DB（テーブル）の境界？🧱
+
+![bc not db](./picture/bc_cs_study_006_bc_not_db.png)
 
 違うよ〜！BCの中心は**言葉とモデル**🗣️🧩
 DBは結果として分かれることもあるけど、「まずDBで切る」は事故りやすい⚠️ ([Domain Language][1])
@@ -126,6 +136,8 @@ BCは「学びながら育てる」もの。仮置きして改善でOK🌱 ([Mic
 
 ### 演習B：混ざってるサインを探す🔍🚨
 
+![god class monster](./picture/bc_cs_study_006_god_class_monster.png)
+
 次のサインが出たら「BC曖昧かも？」って疑ってOK👇
 
 * クラス名が **User / Customer / Order** みたいに万能化してる💣
@@ -138,6 +150,8 @@ BCは「学びながら育てる」もの。仮置きして改善でOK🌱 ([Mic
 
 同じ単語でも、BCが違えば「別の型」でOK🙆‍♀️
 まずは **名前空間で境界を見える化**する例だよ👇
+
+![namespace rooms](./picture/bc_cs_study_006_namespace_rooms.png)
 
 ```csharp
 namespace MiniEc.Billing; // 🫧請求BC

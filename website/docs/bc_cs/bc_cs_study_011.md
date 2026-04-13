@@ -36,6 +36,8 @@ Bounded Contextは「ある範囲の中では、モデルと言葉の意味が�
 
 ## ステップ① 業務を言葉にする（会話ログ化）💬📝
 
+![Word Basket](./picture/bc_cs_study_011_word_basket.png)
+
 ## 目的🎯
 
 **「同じ単語が、誰の視点でどういう意味か」** を拾うためだよ👀✨
@@ -66,6 +68,8 @@ Bounded Contextの核は「言葉の意味の一貫性」だから、最初は�
 
 ## ステップ② イベントにする（過去形で事実化）🌩️📌
 
+![Fact Factory](./picture/bc_cs_study_011_fact_factory.png)
+
 ## 目的🎯
 
 業務の流れを **「起きた事実」** で揃えると、部署や視点のズレが浮き出るよ👀✨
@@ -91,6 +95,8 @@ Bounded Contextの核は「言葉の意味の一貫性」だから、最初は�
 
 ## ステップ③ 固まりを見る（境界候補を“見える化”）🧺🔍
 
+![Sorting Context Stones](./picture/bc_cs_study_011_sorting_stones.png)
+
 ## 目的🎯
 
 イベントを並べると、自然に **「目的が同じっぽい塊」** が出てくるよ✨
@@ -110,6 +116,8 @@ Bounded Contextの核は「言葉の意味の一貫性」だから、最初は�
 ---
 
 ## ステップ④ 関係性を描く（Context Mapの入口）🗺️🤝
+
+![Context Islands](./picture/bc_cs_study_011_context_islands.png)
 
 ## 目的🎯
 
@@ -134,6 +142,8 @@ Bounded Contextの核は「言葉の意味の一貫性」だから、最初は�
 ---
 
 ## ステップ⑤ 実装で守る（“混ぜない仕組み”にする）🔒💻
+
+![Code Castle and DTO](./picture/bc_cs_study_011_code_castle_dto.png)
 
 ## 目的🎯
 

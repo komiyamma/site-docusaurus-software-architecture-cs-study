@@ -34,10 +34,14 @@ BCをこう分けたとするね👇
 
 ## 事故①：請求BCが “便利だから” 列を追加する💳➕
 
+![bc cs study 025 column pollution](./picture/bc_cs_study_025_column_pollution.png)
+
 `Orders` に `BillingStatus` を追加して運用開始。
 → 受注管理BCは「注文状態だけで完結したい」のに、請求の都合が混ざる😵‍💫
 
 ## 事故②：配送BCが “一回で取りたい” からJOINしまくる🚚🔗
+
+![bc cs study 025 join web](./picture/bc_cs_study_025_join_web.png)
 
 「注文＋請求＋顧客＋住所」をJOINして画面表示。
 → いつの間にか「配送BCが、他BCの内部構造に依存」してて、変更できなくなる🧱
@@ -66,6 +70,8 @@ DBは列名が同じなら同じに見えるけど、BCが違えば意味が違�
 
 ## 3) データの主導権が不明（所有者がいない）🏠❓
 
+![bc cs study 025 tug of war](./picture/bc_cs_study_025_tug_of_war.png)
+
 「このデータのルールは誰が決めるの？」が曖昧になると、
 
 * 不整合が起きる
@@ -77,6 +83,8 @@ DBは列名が同じなら同じに見えるけど、BCが違えば意味が違�
 ---
 
 ## 最初に決める：データの「所有者」ルール🏠🔒
+
+![bc cs study 025 data owner key](./picture/bc_cs_study_025_data_owner_key.png)
 
 共有DBを避ける第一歩はこれ！
 
@@ -108,6 +116,8 @@ DBは列名が同じなら同じに見えるけど、BCが違えば意味が違�
 
 ## レベルB：物理DBは1つでも、スキーマを分ける（現実的）🏢🏠
 
+![bc cs study 025 schema apartments](./picture/bc_cs_study_025_schema_apartments.png)
+
 * `sales` スキーマは受注管理BCの家🏠
 * `billing` スキーマは請求BCの家🏠
 * `shipping` スキーマは配送BCの家🏠
@@ -129,6 +139,8 @@ graph LR
 「DBは1つで楽したいけど、好き勝手に触るのは防ぎたい」人におすすめ👍
 
 ## レベルC：他BCは“読むだけ”＋公開ビュー（Published View）👀📢
+
+![bc cs study 025 read only window](./picture/bc_cs_study_025_read_only_window.png)
 
 * 他BCは **SELECTだけ**（書き込み権限なし）
 * 読む対象は「公開用ビュー（または公開用テーブル）」に限定
@@ -173,6 +185,8 @@ public sealed class BillingDbContext : DbContext
 ```
 
 ## 2) “読むだけDbContext” を作って、SaveChangesを封印する🧊🔒
+
+![bc cs study 025 sealed savechanges](./picture/bc_cs_study_025_sealed_savechanges.png)
 
 「他BCのデータが必要。でも書いちゃダメ」をコードで強制✨
 

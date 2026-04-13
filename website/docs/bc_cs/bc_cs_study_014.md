@@ -12,6 +12,8 @@
 
 ## 1) まずは「盤面」を作ろう🧱✨
 
+![Timeline Setup](./picture/bc_cs_study_014_timeline_setup.png)
+
 ## 使うもの（リアルでもオンラインでもOK）🧡
 
 * **長い横軸（タイムライン）**：左→右に時間が流れるようにする⏩
@@ -42,6 +44,8 @@
 ## 3) ステップA：イベントを時系列に並べる⏳🟧
 
 ![イベントの流れ](./picture/bc_cs_study_014_event_flow.png)
+
+![Anchor Events](./picture/bc_cs_study_014_anchor_events.png)
 
 ## ルールはこれだけ（超だいじ）✅
 
@@ -95,6 +99,8 @@
 
 ## 5) ステップC：似たイベントを「固める」🧺✨（グルーピング）
 
+![Grouping Magnet](./picture/bc_cs_study_014_grouping_magnet.png)
+
 ## グルーピングって何するの？🤔
 
 タイムライン上で、イベントを見て
@@ -133,6 +139,8 @@ flowchart LR
 ---
 
 ## 6) ステップD：「そこで使われる言葉」を横に書く📝🟨
+
+![Term Stickies](./picture/bc_cs_study_014_term_stickies.png)
 
 ここが **Bounded Contextに効く**ところ！💥✨
 
@@ -196,6 +204,8 @@ flowchart LR
 ---
 
 ## 8) ミニ演習🎮✅（30〜45分）
+
+![Mini Exercise Board](./picture/bc_cs_study_014_mini_exercise_board.png)
 
 ## お題：ミニECの「注文〜配送」だけでOK🛒🚚
 

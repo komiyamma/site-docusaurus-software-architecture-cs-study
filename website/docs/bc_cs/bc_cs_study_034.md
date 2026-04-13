@@ -12,6 +12,10 @@
 
 ## 1) Published Languageってなに？📚✨
 
+![dictionary_book](./picture/bc_cs_study_034_dictionary_book.png)
+
+
+
 ![公開された言葉](./picture/bc_cs_study_034_published_lang.png)
 
 **Published Language = 境界を越えてやり取りするために“公開する言葉”**です📢
@@ -81,6 +85,10 @@ DDDの定義でも、「既存のドメインモデルをそのままデータ�
 
 ## 5) “公開する言葉” の作り方：3つの型📦📨📣
 
+![xml_json_scroll](./picture/bc_cs_study_034_xml_json_scroll.png)
+
+
+
 Published Language は、だいたい次のどれか（または複合）です👇
 
 1. **HTTP APIの契約**（JSONレスポンス・URL・パラメータ）🌐
@@ -92,6 +100,10 @@ Published Language は、だいたい次のどれか（または複合）です�
 ---
 
 ## 6) 後方互換（Backward Compatibility）超入門☘️🔁
+
+![breaking_change](./picture/bc_cs_study_034_breaking_change.png)
+
+
 
 ## “後方互換”って？
 
@@ -111,6 +123,10 @@ Published Languageではこれがめっちゃ大事です🧡
 ---
 
 ## 7) 互換を壊しにくい「変更のコツ」🍀✨
+
+![add_field_safe](./picture/bc_cs_study_034_add_field_safe.png)
+
+
 
 ## ✅ やっていい変更（壊れにくい）
 
@@ -332,6 +348,10 @@ public sealed record OrderItemV2Dto(string Sku, int Quantity, string? DisplayNam
 
 ## 11) 実務の定番：APIバージョニング支援ライブラリ🧰✨
 
+![dual_support](./picture/bc_cs_study_034_dual_support.png)
+
+
+
 「ルートだけでバージョンを管理する」でも十分スタートできます👌
 でも、運用が大きくなってきたら **APIバージョニングの仕組み**が欲しくなります🙂
 
@@ -373,6 +393,10 @@ v1を残したまま、v2で次を追加してみよう✨
 ---
 
 ## 13) つまずきポイント集😵‍💫💡
+
+![fat_dto](./picture/bc_cs_study_034_fat_dto.png)
+
+
 
 * **DTOが太りすぎる**：
   「なんでも入れる」が始まったら黄色信号🚥（“必要最小”に戻す）

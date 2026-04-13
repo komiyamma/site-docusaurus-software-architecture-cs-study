@@ -24,6 +24,8 @@
 
 ## ステップA：イベントの“固まり”を眺める👀🧺
 
+![Event Clusters on Timeline](./picture/bc_cs_study_015_event_clusters.png)
+
 * **時系列**に並んだイベントの中で、**密集してるエリア**を探す
 * その固まりが「何のための流れ？」って聞かれて、**1行で言える**なら強い候補✨
 
@@ -48,6 +50,8 @@
 
 ## ステップC：同じ単語が“怪しい”場所に印を付ける🖊️🧨
 
+![Homonym Warning](./picture/bc_cs_study_015_homonym_warning.png)
+
 次の章（第16章）でガッツリやるけど、この章では“印付け”まででOK👌✨
 
 * 「注文」「顧客」「金額」「住所」「ステータス」あたりは**衝突しやすい**💥
@@ -56,6 +60,8 @@
 ---
 
 ## ステップD：境界候補に“仮ラベル”を付ける🏷️✨
+
+![Labeling Clusters](./picture/bc_cs_study_015_labeling_clusters.png)
 
 ここでの命名は仮でOK！
 「何をする固まり？」が伝われば勝ち😊
@@ -91,6 +97,8 @@
 ---
 
 ## A：イベントの“固まり”を見る👀🧺
+
+![Mini EC Clusters](./picture/bc_cs_study_015_mini_ec_clusters.png)
 
 密集してるところを、目でグルーピングするよ😊
 （※図は文章で表現するね✍️）
@@ -132,6 +140,8 @@
 
 ## C：“衝突しそうな単語”をマークする🖊️🧨
 
+![Order Ambiguity Map](./picture/bc_cs_study_015_order_ambiguity_map.png)
+
 例）「注文（Order）」
 
 * 固まり①では「購入の意思決定＋明細＋注文確定」っぽい
@@ -161,6 +171,8 @@ flowchart TD
 ---
 
 ## 3) “境界の匂い”あるあるチェックリスト✅👃
+
+![5 Boundary Smells](./picture/bc_cs_study_015_five_smells_icons.png)
 
 ## 匂い①：目的が違う（ゴールが違う）🎯
 
@@ -221,6 +233,8 @@ flowchart TD
 ---
 
 ## 5) “境界の匂い”をコードでもちょい体験💻✨（同名を分ける感じ）
+
+![Namespace Separation](./picture/bc_cs_study_015_namespace_separation.png)
 
 同じ「Order」でも、境界が違えば**別物**にしてOK🙆‍♀️
 （この章では“雰囲気をつかむ”だけでOK！）

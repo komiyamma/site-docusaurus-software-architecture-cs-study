@@ -32,6 +32,10 @@ graph LR
 
 ## 1) そもそも何が「腐敗（corruption）」なの？😵‍💫🧪
 
+![dirty_clean_water](./picture/bc_cs_study_031_dirty_clean_water.png)
+
+
+
 ここでいう腐敗は、「悪いことした」じゃなくて…
 **外の都合で、こっちのドメインがグチャグチャになること**😭💥
 
@@ -46,6 +50,10 @@ graph LR
 ---
 
 ## 2) ACLが必要になる典型パターン🏥🧩
+
+![adapter_plug](./picture/bc_cs_study_031_adapter_plug.png)
+
+
 
 ACLが活躍するのは、だいたいこのへん👇
 
@@ -87,6 +95,10 @@ Context Mapでいう「上流／下流」みたいな関係で、
 ---
 
 ## 5) 図で理解：ACLは“境界の玄関”🏠🚪
+
+![facade_vs_acl](./picture/bc_cs_study_031_facade_vs_acl.png)
+
+
 
 イメージはこれ👇
 
@@ -136,6 +148,10 @@ ACLがあると、**ドメインはドメインの言葉でテストできる** 
 
 ## 7) “翻訳”って、何を翻訳するの？📖🔁
 
+![translator_booth](./picture/bc_cs_study_031_translator_booth.png)
+
+
+
 ACLが翻訳するのは、主にこの4つだよ👇
 
 1. **名前（用語）**：`customer` がこっちの `Member` に相当する…など🏷️
@@ -160,6 +176,10 @@ ACLを置くと良いこと多いけど、万能ではないよ👇
 ---
 
 ## 9) “ACLを入れる？”判断チェック✅👀
+
+![maintenance_cost](./picture/bc_cs_study_031_maintenance_cost.png)
+
+
 
 次の質問に「うん…そうかも」が多いほど、ACLの出番だよ🛡️✨
 

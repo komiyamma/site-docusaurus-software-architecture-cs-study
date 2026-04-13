@@ -19,6 +19,8 @@ Bounded Contextは「この範囲では言葉とモデルの意味が一貫す�
 
 ## 2) 絞り込みの考え方：候補を「テストで壊れない単位」に寄せる🧪🛡️
 
+![bc cs study 022 boundary impact](./picture/bc_cs_study_022_boundary_impact.png)
+
 境界を切ると、変更の影響（爆風💥）が小さくなるのがうれしいポイント！
 「境界がしっかりしてると、機能を作る・テストする・デプロイする範囲が閉じる」みたいな話が出てくるよ。([martinfowler.com][2])
 
@@ -48,6 +50,8 @@ graph TD
 
 ## A. 言葉（ユビキタス言語）の一貫性チェック🗣️📘
 
+![bc cs study 022 word consistency](./picture/bc_cs_study_022_word_consistency.png)
+
 **Q1. 同じ単語が、ここでは同じ意味？**
 
 * ✅ Yes：OK！その候補は“言葉の一貫性”が強い✨
@@ -67,6 +71,8 @@ graph TD
 
 ## B. 責任（やること）の一貫性チェック🎒✨
 
+![bc cs study 022 responsibility check](./picture/bc_cs_study_022_responsibility_check.png)
+
 **Q3. この候補は「何を守る場所」？1行で言える？**
 
 * ✅ 言える：強い💪（例：在庫の引当ルールを守る）
@@ -83,6 +89,8 @@ graph TD
 
 ## C. 変更の波（変更頻度・理由）の一致チェック🌊🔁
 
+![bc cs study 022 change waves](./picture/bc_cs_study_022_change_waves.png)
+
 **Q5. その候補の中のルールは、だいたい一緒に変わる？**
 
 * ✅ 一緒に変わる：まとめる価値あり🙆‍♀️
@@ -98,6 +106,8 @@ graph TD
 
 ## D. 境界をまたぐと重い？チェック🪨⚡
 
+![bc cs study 022 heavy bridge](./picture/bc_cs_study_022_heavy_bridge.png)
+
 **Q6. 候補Aと候補Bの間に「確認・調整・例外対応」が多い？**
 
 * ✅ 多い：そこは境界っぽい（別チーム/別責任のサイン）
@@ -109,6 +119,8 @@ graph TD
 ---
 
 ## E. データ所有（どっちのもの？）チェック🏠🔐
+
+![bc cs study 022 data ownership](./picture/bc_cs_study_022_data_ownership.png)
 
 **Q7. そのデータの“最終決定権”はどこ？**
 
@@ -166,6 +178,8 @@ graph TD
 そこでおすすめが **簡易スコアリング**✨
 
 ## スコアの付け方（例）📊
+
+![bc cs study 022 scoring matrix](./picture/bc_cs_study_022_scoring_matrix.png)
 
 各項目を **0〜2点**でつけるよ👇
 

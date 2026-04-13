@@ -63,6 +63,8 @@
 
 ### ステップ②：変更の“理由”を書く（ここが主役）🧡
 
+![Sources of Change](./picture/bc_cs_study_019_change_sources.png)
+
 理由は、だいたいこのどれかです👇
 
 * 👩‍💼 どの部署（誰）が言い出す？
@@ -91,6 +93,8 @@
 
 ## 19.5 「変更の波メモ」テンプレ📒✨
 
+![Change Wave Memo](./picture/bc_cs_study_019_wave_memo.png)
+
 まずはこのフォーマットでOKです😊
 
 * 変更点：
@@ -103,6 +107,8 @@
 ---
 
 ## 19.6 ミニECで実例🛒✨（割引・送料・在庫）
+
+![EC Change Waves](./picture/bc_cs_study_019_ec_waves.png)
 
 たとえば、同じ「注文合計を出す」でも…中身は別世界です😇
 
@@ -193,6 +199,8 @@ public class OrderService
 
 ### 😊 変更理由ごとに分ける（小さく分離）
 
+![Separation Diagram](./picture/bc_cs_study_019_separation_diagram.png)
+
 ```
 csharp
 public interface IDiscountPolicy
@@ -272,6 +280,8 @@ flowchart TD
 ## 5) まとめ🧡
 
 ## 19.9 ミニ演習（10分）🧩⏱️
+
+![Grouping Task](./picture/bc_cs_study_019_grouping_task.png)
 
 次の変更リストを「変更理由（誰の都合）」でグルーピングしてみよう💪✨
 

@@ -15,6 +15,8 @@
 
 お客さんが「買う！」ってなると、裏側でこんなことが起きる👇
 
+![backstage roles](./picture/bc_cs_study_002_backstage_roles.png)
+
 * 注文を受ける（注文受付）🧾
 * 在庫を確保する（在庫引当）📦
 * 送る準備をする（出荷・配送手配）🚚
@@ -59,6 +61,8 @@ DDDでは、言葉とモデルの意味が一貫する範囲（＝境界）を�
 
 まずは「ECってこう動くよね！」を一本線で押さえよう👇
 
+![flow relay](./picture/bc_cs_study_002_flow_relay.png)
+
 1. お客さんが注文する🛒
 2. 注文内容を確定する（注文作成）🧾
 3. 在庫を確保する（引当）📦
@@ -95,6 +99,8 @@ DDDでよく言われるのが、**同じ言葉が複数の意味を持つと事
 
 ぜんぶ同じ「顧客」に見えるけど、**責任も必要情報も違う** のが罠😇
 
+![customer three hats](./picture/bc_cs_study_002_customer_three_hats.png)
+
 ## 4.2 「注文（Order）」🧾
 
 * 注文側：「購入意思が確定した1件」
@@ -103,6 +109,8 @@ DDDでよく言われるのが、**同じ言葉が複数の意味を持つと事
 
 “注文の状態”も部署で違ったりするよね（例：請求はOKでも出荷はNGなど）🔥
 
+![order lenses](./picture/bc_cs_study_002_order_lenses.png)
+
 ## 4.3 「金額（Amount）」💰
 
 * 注文側：「カート合計（見積り）」
@@ -110,6 +118,8 @@ DDDでよく言われるのが、**同じ言葉が複数の意味を持つと事
 * 返金側：「返金対象額（条件で変わる）」
 
 「金額」って言っても、どの金額！？ってなるやつ😵‍💫
+
+![amount confusion](./picture/bc_cs_study_002_amount_confusion.png)
 どこの「同じ名前だけど、中身が違う」状態が、放っておくと大きな混乱を招くんだよね。😵‍💫
 
 ![言葉の衝突](./picture/bc_cs_study_002_collision.png)
@@ -172,7 +182,9 @@ flowchart TD
 ## ここからどう良くしていく？✨
 
 * まず「起きた出来事（イベント）」を並べて、固まりを見つける🌩️
-  （Event Stormingは、ドメインをみんなで探検するためのワーク手法として広く使われるよ🧭） ([VMware Blogs][4])
+  （Event Stormingは、ドメインをみんなで探検するためのワーク手法として広く使われるよ🧭）
+
+![event storming dictionary](./picture/bc_cs_study_002_event_storming_dictionary.png) ([VMware Blogs][4])
 * 固まりごとに「この範囲ではこの言葉はこういう意味！」をそろえる📚✨
   （同じチーム内で使う言葉を、モデルに合わせて統一する考え方が有名だよ） ([Domain Language][5])
 * そして境界をまたぐところは、契約（DTOなど）でやり取りして混ざりを防ぐ🔒📨
@@ -227,6 +239,8 @@ flowchart TD
   → 分けるのは「意味」と「責任」。連携はするけど、混ぜないのがコツ🔒
 * **「同じデータなのに別物なの？」**
   → 見た目が同じでも、守るルール（責任）が違うと別物になりやすいよ📦✨
+
+![identical boxes diff content](./picture/bc_cs_study_002_identical_boxes_diff_content.png)
 * **「最初から境界を完璧に決めたい…！」**
   → 最初は仮でOK🙆‍♀️ “ズレが出る場所” を見つけたら勝ち🏁
 

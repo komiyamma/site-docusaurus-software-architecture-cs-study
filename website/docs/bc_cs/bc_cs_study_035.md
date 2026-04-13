@@ -10,6 +10,10 @@
 
 ## 1) 置き場所を分けると、何が嬉しいの？🧠💖
 
+![separate_houses](./picture/bc_cs_study_035_separate_houses.png)
+
+
+
 BCを分けるって、イメージは **「言葉（用語）とモデル（ルール）の世界が違う」** を守ることでしたよね🗺️✨
 でもコードは放っておくと、すぐこうなりがち👇😵‍💫
 
@@ -36,6 +40,10 @@ IDE側も **Visual Studio 2026** のリリースノートが出ています🛠�
 
 ## 3) まずは「モジュラーモノリス」でOK👌🧱
 
+![modular_monolith](./picture/bc_cs_study_035_modular_monolith.png)
+
+
+
 いきなりマイクロサービスにすると、境界は守れても…
 
 * デプロイ、認証、監視、通信、データ整合性…やること爆増💣😵‍💫
@@ -50,6 +58,10 @@ IDE側も **Visual Studio 2026** のリリースノートが出ています🛠�
 ---
 
 ## 4) “おすすめの置き場所”テンプレ🗂️✨（ミニEC例）
+
+![folder_tree](./picture/bc_cs_study_035_folder_tree.png)
+
+
 
 ![ソリューション構成](./picture/bc_cs_study_035_solution_structure.png)
 
@@ -96,6 +108,10 @@ MiniECommerce.sln
 ---
 
 ## 5) Visual Studioで作る手順（気持ちよく迷わない版）🧭✨
+
+![island_map](./picture/bc_cs_study_035_island_map.png)
+
+
 
 ## 5-1. ソリューション作成🧱
 
@@ -171,6 +187,10 @@ dotnet sln add src\Modules\Inventory\MiniECommerce.Inventory\MiniECommerce.Inven
 ---
 
 ## 8) “共通”の置き場所、3つの安全ライン🧯⚠️
+
+![common_dump](./picture/bc_cs_study_035_common_dump.png)
+
+
 
 ## 8-1. まず最強：外部ライブラリに寄せる📦✨
 

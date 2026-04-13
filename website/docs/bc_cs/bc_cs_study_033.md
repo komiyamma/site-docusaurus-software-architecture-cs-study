@@ -12,6 +12,10 @@
 
 ## 1. ACLって「壊れやすい場所」なの？😳💥
 
+![fragile_glass](./picture/bc_cs_study_033_fragile_glass.png)
+
+
+
 うん、壊れやすいです🥺
 なぜならACLは、**“外の世界の揺れ”**（仕様変更・欠損・命名・単位・enum追加など）を一身に受け止める場所だからです🌪️
 
@@ -145,6 +149,10 @@ public static class ShippingAclTranslator
 
 ## 5. 変換ルールのユニットテスト🧪✅（xUnit例）
 
+![unit_test_microscope](./picture/bc_cs_study_033_unit_test_microscope.png)
+
+
+
 xUnitは .NET 8以降に対応するv3系が案内されています([xunit.net][2])
 （この章の目的は「テストの型」を覚えることなので、フレームワークはxUnitで進めます💖）
 
@@ -234,6 +242,10 @@ public partial class ShippingAclTranslatorTests
 
 ## 6. 契約（Contract）テストで「相手の変更」を早めに掴む📜🔔
 
+![contract_radar](./picture/bc_cs_study_033_contract_radar.png)
+
+
+
 ここで大事なのは気持ちとして👇
 
 * ユニットテスト：**自分のルールを守る**
@@ -254,6 +266,10 @@ Consumer Driven Contract Testing（CDC）は、使ってる通信だけを契約
 ---
 
 ## 7. 結合テスト：現実の “汚いデータ” を拾う🧹🕵️‍♀️
+
+![dirty_data_mud](./picture/bc_cs_study_033_dirty_data_mud.png)
+
+
 
 現場でよくあるのがこれ👇😇
 
@@ -290,6 +306,10 @@ ACL運用は、**手順が命**です💖
 ---
 
 ## 9. 監視（Observability）：ACLは “静かに腐る” のが怖い😱🧊
+
+![silent_rot](./picture/bc_cs_study_033_silent_rot.png)
+
+
 
 ![ACLの監視ダッシュボード](./picture/bc_cs_study_033_monitor_dashboard.png)
 

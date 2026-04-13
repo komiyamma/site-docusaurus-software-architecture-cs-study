@@ -43,6 +43,8 @@ C#のアクセス修飾子は、大きく「4つ」＋組み合わせで「6段�
 
 ## ざっくり意味（BCを守る目線で）👀🔒
 
+![Access Modifier Levels](./picture/bc_cs_study_038_access_levels.png)
+
 * **private**：クラスの中だけ。いちばん安全🫶
 * **internal**：同じアセンブリ（＝同じプロジェクト成果物）だけ🏠
 * **public**：どこからでも見える（＝境界の外に出る）🌍
@@ -71,6 +73,8 @@ BCの中でだけ生きる概念は、外に見せないのが正解◎
 
 ## ルール③：BCごとにプロジェクトを分ける（超重要）🏗️✨
 
+![Project Boundary Dome](./picture/bc_cs_study_038_project_boundary.png)
+
 「internal」は **同一アセンブリ内**なら見えちゃう。
 だから、BCを守りたいなら **BCをプロジェクト単位（アセンブリ単位）に**して、internalが効く状態にするのが大事だよ🏠🔒
 
@@ -87,6 +91,8 @@ BCの外へ出る窓口は、できれば少数の「入口」だけにする。
 ---
 
 ## 4. 実装例：ドメインは閉じて、契約だけ出す📦🔒✨
+
+![Implementation Hiding Machine](./picture/bc_cs_study_038_implementation_hiding.png)
 
 ここからは “ミニEC” の雰囲気でいくね🛒🌸
 例：OrderManagement（受注管理BC）を1つのプロジェクトにして、外に出すのは契約だけにする！
@@ -211,6 +217,8 @@ internal interface IOrderRepository
 
 ## 5. さらに強い隠し技：「file」修飾子で“そのファイルだけ”にする📄🔒✨
 
+![File Modifier Secret](./picture/bc_cs_study_038_file_modifier.png)
+
 「internalですら広い…！このヘルパー、同じプロジェクト内でも使わせたくない！」ってときに便利なのが「file」だよ😊
 トップレベル型を「このファイル内限定」にできるやつ！ ([Microsoft Learn][5])
 
@@ -262,6 +270,8 @@ using System.Runtime.CompilerServices;
 ## 7. よくある事故パターン（あるある）🚨💥
 
 ## 事故①：Entityをpublicにして、他BCが参照し始める🧟‍♀️
+
+![Public Entity Zombie](./picture/bc_cs_study_038_public_entity_accident.png)
 
 「便利だから参照しとこ」が積み重なって、変更不能になる地獄🔥
 → ドメイン型は原則 internal 🧠🔒

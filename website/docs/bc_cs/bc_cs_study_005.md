@@ -30,6 +30,8 @@ DDDでは、業務の話をするときに使う語彙を **ユビキタス言�
 
 ### 事故①：同じ単語なのに意味が違う（同名異義）🧨
 
+![translator accident](./picture/bc_cs_study_005_translator_accident.png)
+
 例：**「顧客」**
 
 * 注文の世界：注文した人（会員とは限らないかも）🛒
@@ -46,6 +48,8 @@ DDDでは、業務の話をするときに使う語彙を **ユビキタス言�
 
 ### 事故③：コードが“日本語の翻訳ゲーム”になる🎮💦
 
+![translation game sweat](./picture/bc_cs_study_005_translation_game_sweat.png)
+
 会話： “請求金額”
 コード： `TotalPrice`（送料込？税抜？割引前？）
 こういう「意味のズレ」が、バグの温床になるよ🐛😵‍💫
@@ -55,6 +59,8 @@ DDDでは、業務の話をするときに使う語彙を **ユビキタス言�
 ## 3. ユビキタス言語は「用語集（ミニ辞書）」で作る📒✨
 
 いきなり完璧にしないでOK👌
+
+![a4 dictionary wall](./picture/bc_cs_study_005_a4_dictionary_wall.png)
 まずは **A4 1枚の用語集**から始めるのが最強🧡
 
 ### 用語集テンプレ（これだけでOK）✅
@@ -74,6 +80,8 @@ DDDでは、業務の話をするときに使う語彙を **ユビキタス言�
 まずは“仮”でいいから、形にしよう😊✨
 （※ここでは「受注管理」っぽい世界を想定して例を書くよ）
 
+![term card sorting](./picture/bc_cs_study_005_term_card_sorting.png)
+
 | 用語                    | 定義（短く！）                | 例                | 同義語/禁止          | 注意（混同しがち）            |
 | --------------------- | ---------------------- | ---------------- | --------------- | -------------------- |
 | 注文（Order）             | 顧客が購入を確定し、受注として登録されたもの | 注文番号 2026-000123 | OK: 受注 / NG: 発注 | 出荷指示や請求とは別（境界候補）     |
@@ -85,6 +93,8 @@ DDDでは、業務の話をするときに使う語彙を **ユビキタス言�
 
 この表を見て、「あ、これ同じ言葉だけど別世界っぽい👀」が出てきたら大当たり🎯
 そこが **Bounded Context の匂い**だよ👃✨
+
+![scent of boundary](./picture/bc_cs_study_005_scent_of_boundary.png)
 
 ```mermaid
 graph LR
@@ -108,6 +118,8 @@ graph LR
 
 ### コツ②：数字・税・送料など“揉める要素”は明記する💰📌
 
+![blurred vs clear definition](./picture/bc_cs_study_005_blurred_vs_clear_definition.png)
+
 * 「合計金額」は **税込？税抜？送料込？割引後？** を必ず言葉にする
   ここをサボると未来のバグが増えるよ🐛💦
 
@@ -122,6 +134,8 @@ graph LR
 
 ユビキタス言語は「辞書を作って終わり」じゃないよ😇
 **コード側にも“同じ言葉”を置く**のがコア✨
+
+![mirror code reflection](./picture/bc_cs_study_005_mirror_code_reflection.png)
 
 たとえば、用語集で「配送先＝Shipping Address」って決めたら…
 
@@ -144,6 +158,8 @@ public sealed record ShippingAddress(
 ## 7. AIで“用語ブレ”を減らす🤖✨（実務でめちゃ効く）
 
 AIは「用語のブレ探し」と「用語集の叩き台づくり」が得意だよ🔍📒✨
+
+![ai polishing terms](./picture/bc_cs_study_005_ai_polishing_terms.png)
 たとえば GitHub のCopilotは、IDE内でチャットやエージェント的な支援も提供されてるので、**用語統一タスク**に向いてるよ🧑‍💻✨ ([Visual Studio][2])
 また OpenAI のCodex系IDE拡張は、VS Code系IDEで使える形で案内されているよ🧩✨ ([OpenAI Developers][3])
 

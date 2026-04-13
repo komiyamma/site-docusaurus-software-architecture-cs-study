@@ -28,6 +28,10 @@ flowchart LR
 
 ## 2) ACLの完成形（部品のセット）🧩✨
 
+![acl_components](./picture/bc_cs_study_032_acl_components.png)
+
+
+
 ![ACLの構成部品](./picture/bc_cs_study_032_acl_blueprint.png)
 
 ACLはだいたいこの部品でできてるよ👇
@@ -60,6 +64,10 @@ HTTP接続をするなら、.NETでは `IHttpClientFactory` を使うのが王�
 ---
 
 ## 4) 手順①：まず Port（欲しい機能の口）を決める🚪✨
+
+![port_interface](./picture/bc_cs_study_032_port_interface.png)
+
+
 
 受注管理BCが欲しいのは「配送を作る」「配送状態を取る」みたいな **ユースケース**。
 相手APIの形じゃなくて、**自分の言葉で**インターフェイスを切ろう🗣️💡
@@ -145,6 +153,10 @@ public sealed record ShipmentResult(
 ---
 
 ## 7) 手順④：Translator（翻訳）を書く🔁🧠
+
+![translator_machine](./picture/bc_cs_study_032_translator_machine.png)
+
+
 
 翻訳はACLの心臓❤️
 揺れポイントをここで吸収するよ👇
@@ -241,6 +253,10 @@ public sealed class ShippingAclClient : IShippingPort
 
 ## 9) 手順⑥：Resilience（回復力）を“ACL側”で持つ🧯⚡
 
+![resilience_circuit](./picture/bc_cs_study_032_resilience_circuit.png)
+
+
+
 外部は落ちる！遅れる！たまに壊れる！😇
 だから **リトライ・タイムアウト・遮断**は、だいたいACL側で持つのが気持ちいいよ🛡️
 
@@ -251,6 +267,10 @@ public sealed class ShippingAclClient : IShippingPort
 ---
 
 ## 10) “変換が肥大化”したら黄色信号🚨📈
+
+![fat_translator](./picture/bc_cs_study_032_fat_translator.png)
+
+
 
 Translatorがどんどん太ってきたら、だいたいこのどれか👇
 

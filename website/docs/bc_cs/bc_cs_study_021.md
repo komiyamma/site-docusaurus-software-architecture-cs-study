@@ -34,6 +34,8 @@ flowchart LR
 
 ### パターンA：1つのサブドメインが、複数BCに割れる✂️
 
+![One Subdomain to Many BCs](./picture/bc_cs_study_021_one_sub_to_many_bc.png)
+
 理由はだいたいコレ👇
 
 * そのサブドメインの中で、**モデル（言葉の意味）が衝突する**💥
@@ -43,6 +45,8 @@ flowchart LR
 「BCは“設計上の選択”」なので、現場の事情で分割するのは自然だよ😊 ([Mathias Verraes' Blog][2])
 
 ### パターンB：複数サブドメインを、1つのBCにまとめる🧺
+
+![Many Subdomains to One BC](./picture/bc_cs_study_021_many_sub_to_one_bc.png)
 
 理由はだいたいコレ👇
 
@@ -55,6 +59,8 @@ flowchart LR
 ---
 
 ## 3) じゃあ何を基準に「BC」を決めるの？🔍✨
+
+![BC Criteria Pillars](./picture/bc_cs_study_021_bc_criteria.png)
 
 BCは「この中だけは言葉の意味がブレない！」を守る箱📦
 決めるときの見方は、ざっくりこの3つが強いよ👇
@@ -104,6 +110,8 @@ BCは「この中だけは言葉の意味がブレない！」を守る箱📦
 
 ### 例1：販売サブドメインが、2つのBCに割れる✂️🛒
 
+![Sales Split Example](./picture/bc_cs_study_021_sales_split_example.png)
+
 「販売」の中でも、会話が分かれがち👇
 
 * **Checkout（購入手続き）BC**
@@ -132,6 +140,8 @@ BCは「この中だけは言葉の意味がブレない！」を守る箱📦
 
 ## 6) “境界候補→あとで整える”が強い理由💪🌱
 
+![BC Evolution](./picture/bc_cs_study_021_bc_evolution.png)
+
 BCって、最初から完璧に当てるのは難しいの🥺
 だからおすすめの流れはこれ👇
 
@@ -145,6 +155,8 @@ BCは「設計上の選択」で、状況に合わせて育てるものだよ�
 ---
 
 ## 7) ありがちな勘違いトップ3😇💥
+
+![BC Misconceptions](./picture/bc_cs_study_021_misconceptions.png)
 
 1. **「サブドメイン＝そのままBC」だよね？**
    → “そうなることもある”けど、**決め打ちすると危険**⚠️（衝突が出たら割る/まとめるが必要） ([Mathias Verraes' Blog][2])

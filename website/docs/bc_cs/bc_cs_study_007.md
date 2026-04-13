@@ -3,6 +3,8 @@
 ## 1. 今日のテーマ🎯✨
 
 同じ「顧客」という言葉が、現場では **ぜんぜん別の人** を指していることがあるよ〜って話😊💥
+
+![customer mask reveal](./picture/bc_cs_study_007_customer_mask_reveal.png)
 これを **1つの `Customer` クラス** に押し込むと、コードも会話も壊れやすくなる…という事故を体験する章だよ🧯🔥
 
 ---
@@ -17,6 +19,8 @@
 
 このとき “顧客” って誰？🤔💭
 実は、**3人いる** んだよね👤👤👤
+
+![three roles scene](./picture/bc_cs_study_007_three_roles_scene.png)
 
 ### 「顧客」が3種類に分裂する例🧨
 
@@ -47,6 +51,8 @@
 
 もう **誰の何の情報なのか** が、じわじわ崩れていく😵‍💫🌀
 
+![frankenstein customer](./picture/bc_cs_study_007_frankenstein_customer.png)
+
 ---
 
 ## 4. 実際に「壊れる」ポイント🧯💥
@@ -68,6 +74,8 @@
 
 なのに、全部 `Customer` だと
 「どの住所？どの人？どのルール？」って混線する📞🔥
+
+![logic short circuit](./picture/bc_cs_study_007_logic_short_circuit.png)
 
 ### 壊れ方③：名前が会話を壊す🗣️💥
 
@@ -157,6 +165,8 @@ class Program
 ```
 
 このコード、動くけど…
+
+![who are you code](./picture/bc_cs_study_007_who_are_you_code.png)
 **「Customerって誰？」に答えられない** のがポイント😵‍💫💥
 
 ---
@@ -176,6 +186,8 @@ class Program
 
 「Customer」をやめる勇気💪✨
 **名前を変えるだけで会話が通る** こと、ほんとに多いよ😊
+
+![clear id badges](./picture/bc_cs_study_007_clear_id_badges.png)
 
 ### 6.2 衝突メモを作る📝💥
 
@@ -224,6 +236,8 @@ public class OrderV2
 ```
 
 これで会話がこう変わるよ👇✨
+
+![prism split customer](./picture/bc_cs_study_007_prism_split_customer.png)
 
 * 「この注文の **Member** は誰？」🔑
 * 「**BillTo** は会社？」🧾

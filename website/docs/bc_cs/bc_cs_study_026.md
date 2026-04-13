@@ -10,6 +10,8 @@
 
 ## 1) まずは超ざっくり：一貫性ってなに？✅
 
+![bc cs study 026 balanced consistency](./picture/bc_cs_study_026_balanced_consistency.png)
+
 ![一貫性の電車](./picture/bc_cs_study_026_saga_train.png)
 
 一貫性（Consistency）は、ざっくり言うとこう👇
@@ -28,6 +30,8 @@
 
 ## 2) トランザクションの“気持ち”ってこういうこと🥺🔁
 
+![bc cs study 026 all or nothing](./picture/bc_cs_study_026_all_or_nothing.png)
+
 トランザクションは、気持ち的にこう👇
 
 > 「いまやってる一連の処理、**全部成功ならOK**。
@@ -45,6 +49,8 @@
 ---
 
 ## 3) じゃあ、境界（BC）をまたぐと何が起きるの？🧱➡️🧱
+
+![bc cs study 026 distributed hell](./picture/bc_cs_study_026_distributed_hell.png)
 
 BCをまたぐと、だいたいこうなる👇
 
@@ -72,6 +78,8 @@ BCをまたぐと、だいたいこうなる👇
 ---
 
 ## 4) 境界と一貫性の決め方：3つの質問📝💡
+
+![bc cs study 026 consistency types](./picture/bc_cs_study_026_consistency_types.png)
 
 境界を切ったあと、次の3つを決めるとスッキリするよ✨
 
@@ -101,6 +109,8 @@ BCをまたぐと、だいたいこうなる👇
 
 ### パターンB：Saga（分割して、失敗したら“取り消し”する）🧩🧯
 
+![bc cs study 026 saga robot](./picture/bc_cs_study_026_saga_robot.png)
+
 * ざっくり：
 
   1. 各サービス（BC）で **ローカルトランザクション** を確定✅
@@ -121,6 +131,8 @@ sequenceDiagram
 ```
 
 ### パターンC：Outbox（DB保存とイベント発行の“二重書き込み”を潰す）📤📦
+
+![bc cs study 026 outbox package](./picture/bc_cs_study_026_outbox_package.png)
 
 * ありがちな事故：
 
@@ -189,6 +201,8 @@ catch
 ---
 
 ## 8) C#で “境界をまたぐ” を安全にする：Outboxの超ミニ例📤🧾
+
+![bc cs study 026 outbox architecture](./picture/bc_cs_study_026_outbox_architecture.png)
 
 Outboxは「注文保存」と「イベント発行予定」を **同じトランザクション** に入れるのがコツ✅ ([Microsoft Learn][4])
 

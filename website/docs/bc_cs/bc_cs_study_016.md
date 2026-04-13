@@ -11,6 +11,8 @@
 
 ## 1) まず「同名異義」ってなに？🤔🌀
 
+![Homonym Confusion](./picture/bc_cs_study_016_homonym_confusion.png)
+
 **同名異義**＝**同じ単語なのに、部署/目的/タイミングで意味が変わる**ことだよ🙋‍♀️✨
 たとえば「顧客」「注文」「金額」「住所」…ぜんぶ事故りやすい単語たち💥
 
@@ -38,6 +40,8 @@ DDDでは、こういう“言葉のあいまいさ”を放置すると、コ�
 ---
 
 ## 例B：「注文（Order）」が部署で別物📦🌀
+
+![Order Context Map](./picture/bc_cs_study_016_order_context_map.png)
 
 * 受注：**カート→確定→キャンセル**を扱う「注文」
 * 配送：**梱包単位・送り状**が主役の「注文」
@@ -79,6 +83,8 @@ mindmap
 
 ## ステップ②：その単語を「誰の視点？」で分解する👀🧩
 
+![3 Disambiguation Questions](./picture/bc_cs_study_016_three_questions.png)
+
 同じ単語でも、**視点が変わると意味がズレる**よ！
 
 単語ごとに、この3問を当てると超強い💪✨
@@ -99,6 +105,8 @@ mindmap
 ---
 
 ## 4) 衝突メモのテンプレ📝✨（この章の主役）
+
+![Conflict Memo Template](./picture/bc_cs_study_016_conflict_memo.png)
 
 下のテンプレをコピって、単語ごとに埋めるだけでOK👌💕
 
@@ -127,6 +135,8 @@ mindmap
 ---
 
 ## 5) “図（文章で）”でズレを可視化しよう🗺️✍️
+
+![Address Ambiguity](./picture/bc_cs_study_016_address_ambiguity.png)
 
 例：「住所」🏠が混ざってるケース
 
@@ -181,6 +191,8 @@ C. “顧客”という単語を禁止する🚫
 ---
 
 ## 8) C#で「同名異義を分ける」超ミニ実装💻🔒
+
+![Namespace Separation Boxes](./picture/bc_cs_study_016_namespace_boxes.png)
 
 ポイントはこれ👇
 

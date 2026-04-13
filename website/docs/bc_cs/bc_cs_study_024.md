@@ -10,6 +10,8 @@
 
 ## なんで「名前」がそんなに大事なの？🥺🧠
 
+![bc cs study 024 blurry sign](./picture/bc_cs_study_024_blurry_sign.png)
+
 Bounded Contextは、ざっくり言うと「ある範囲の中では言葉とモデルの意味が一貫して、外では別物でもOK」という考え方だよね。だからこそ、境界の“看板”になる **名前がブレると、会話もコードもブレる**の…！😵‍💫  ([martinfowler.com][1])
 
 名前が強いと、こんな良いことがあるよ👇✨
@@ -34,6 +36,8 @@ graph TD
 
 ## ✅ 条件1：**「何を決める場所か」**が分かる（決定権が見える）👑
 
+![bc cs study 024 decision power](./picture/bc_cs_study_024_decision_power.png)
+
 境界名は、「その境界が持つルール（決めごと）」を連想できるのが強いよ💪
 例：
 
@@ -46,6 +50,8 @@ graph TD
 ---
 
 ## ✅ 条件2：**名詞だけじゃなく“行為/目的”の匂い**がある🏃‍♀️💨
+
+![bc cs study 024 activity naming](./picture/bc_cs_study_024_activity_naming.png)
 
 DDDの文脈では、境界は「活動テーマ」で名付けられることが多い（例：Booking / Scheduling / Routing みたいに）と言われるよ📌 ([Stack Overflow][3])
 だから、**画面名やテーブル名**みたいな “ただの名詞” より、
@@ -66,6 +72,8 @@ DDDの文脈では、境界は「活動テーマ」で名付けられること�
 
 ## ✅ 条件4：**“同じ単語が別意味”を許す前提で、衝突を起こしにくい**💥➡️🛡️
 
+![bc cs study 024 contextual meaning](./picture/bc_cs_study_024_contextual_meaning.png)
+
 別の境界で同じ単語が使われても、意味が違うのは普通に起きる（むしろ起きる前提）だよ。だから「同じ名前＝同じ意味」と思わせると事故る⚠️
 同名でも意味が違う例（よくある）：
 
@@ -84,6 +92,8 @@ DDDの文脈では、境界は「活動テーマ」で名付けられること�
 
 ## ❌ “雑まとめ”ネーム：「Common」「Core」「General」「Master」みたいなやつ
 
+![bc cs study 024 common trash](./picture/bc_cs_study_024_common_trash.png)
+
 * 何でも入って、何でも参照されて、境界崩壊の温床🧱💥
 * “共通化”が進むほど、分割が不可能になる（こわい）😨
 
@@ -95,6 +105,8 @@ DDDの文脈では、境界は「活動テーマ」で名付けられること�
 ---
 
 ## 良い名前を作る「4ステップ」レシピ🍳✨
+
+![bc cs study 024 naming recipe](./picture/bc_cs_study_024_naming_recipe.png)
 
 ミニEC（注文・在庫・配送・請求）でやってみよう🛒📦🚚💳
 
@@ -156,6 +168,8 @@ DDDの文脈では、境界は「活動テーマ」で名付けられること�
 2026の最新C#環境だと、Visual Studio 2026 + .NET 10 + C# 14 が前提にできるよ（＝名前空間/プロジェクト分割もやりやすい）🧰✨ ([Microsoft Learn][5])
 
 ## ✅ “境界名＝プロジェクト名/名前空間の根っこ”にする🌳
+
+![bc cs study 024 namespace tree](./picture/bc_cs_study_024_namespace_tree.png)
 
 * 境界名が強いと、ソリューションが読書みたいに読める📚✨
 * 逆に境界名が弱いと、参照関係もフォルダも迷子になる🧭💦

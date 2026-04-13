@@ -11,6 +11,8 @@
 ## 1) そもそも「モデル」って何？🧠✨
 
 モデル＝**“業務の見方”を、言葉とルールごとコードにしたもの**だよ🧩
+
+![model definition box](./picture/bc_cs_study_004_model_definition_box.png)
 つまり「データの入れ物」だけじゃなくて、**その世界での正しさ（制約）**も一緒に持つのがポイント！✅
 
 たとえば、ミニECなら🛒
@@ -33,6 +35,8 @@
 
 クラス図（UML）って、描けたら便利だけど…
 **最初から図で固めようとすると、だいたい事故る**ことが多いよ😇💥
+
+![text over uml](./picture/bc_cs_study_004_text_over_uml.png)
 
 理由はカンタン👇
 
@@ -76,6 +80,8 @@ flowchart TD
 
 ## ❌ よくある“データ袋”スタイル（つらい）😵‍💫
 
+![databag vs model](./picture/bc_cs_study_004_databag_vs_model.png)
+
 * `public set;` だらけで、どこからでも値が書き換えできる
 * ルールは画面側やサービス側の `if` に散らばる
 * 気づいたら「正しくないデータ」が混入する💥
@@ -109,6 +115,8 @@ flowchart TD
 金額って、ただの数じゃなくて「意味」があるよね😊
 だから **Money** みたいな “意味つきの型” にすると、ミスが減るよ🛡️
 
+![money shield](./picture/bc_cs_study_004_money_shield.png)
+
 ```csharp
 public readonly record struct Money(decimal Amount, string Currency)
 {
@@ -136,6 +144,8 @@ public readonly record struct Money(decimal Amount, string Currency)
 
 ```csharp
 public sealed class OrderLine
+
+![orderline guard](./picture/bc_cs_study_004_orderline_guard.png)
 {
     public string ProductId { get; }
     public int Quantity { get; private set; }
@@ -206,6 +216,8 @@ public sealed class Order
 
 * 合計を `public set;` で持たない
 * **合計は“計算で決まる”**にする（手入力NG）🙅‍♀️💰
+
+![calculated total](./picture/bc_cs_study_004_calculated_total.png)
   → こうすると「矛盾」が入りにくい✨
 
 ---
@@ -219,6 +231,8 @@ public sealed class Order
 * 読む人が「この世界の正しさ」を理解しやすい📖✨
 
 逆に、ルールが外に散ってると…
+
+![centralized rules](./picture/bc_cs_study_004_centralized_rules.png)
 
 * 画面Aはチェックしてるけど画面Bは忘れてた😇
 * バッチ処理が素通しして壊れた💥
@@ -255,6 +269,8 @@ public sealed class Order
 ## 9) つまずきポイント集🧯😵‍💫
 
 ## つまずき①：とりあえず全部 `public set;` にしちゃう🔓
+
+![public setter thief](./picture/bc_cs_study_004_public_setter_thief.png)
 
 → **壊し放題**になっちゃうよ💥
 **変更はメソッド経由**にして、入口を絞ろう🔒✨

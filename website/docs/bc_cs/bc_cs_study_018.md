@@ -10,6 +10,8 @@
 
 ## 1. まず大事な前提：BCは「モデルが通用する範囲」🗺️
 
+![Model Boundary](./picture/bc_cs_study_018_model_boundary.png)
+
 Bounded Context は、**あるモデル（言葉・ルール・意味）が一貫して通用する範囲**だよ〜📌
 境界をまたぐと、同じ単語でも意味が変わってOK🙆‍♀️（むしろ混ぜると事故る）💥 ([martinfowler.com][1])
 
@@ -34,6 +36,8 @@ Bounded Context は、**あるモデル（言葉・ルール・意味）が一�
 
 ## 3. “責務が違う別物”を見抜く 5つの質問🔍📝✨
 
+![5 Responsibility Questions](./picture/bc_cs_study_018_five_questions.png)
+
 ![同じデータで違う責任](./picture/bc_cs_study_018_same_data_diff_resp.png)
 
 似てるデータを見たら、この5問を当ててみてね👇（ここ超つよい💪）
@@ -50,6 +54,8 @@ Bounded Context は、**あるモデル（言葉・ルール・意味）が一�
 ---
 
 ## 4. 例① 住所：配送住所 vs 請求住所 🏠📦💳
+
+![Address Comparison](./picture/bc_cs_study_018_address_comparison.png)
 
 ## ぱっと見：どっちも「住所」🏠
 
@@ -78,6 +84,8 @@ Bounded Context は、**あるモデル（言葉・ルール・意味）が一�
 
 ## 5. 例② 金額：注文合計 vs 請求金額 💰🧾
 
+![Money Comparison](./picture/bc_cs_study_018_money_comparison.png)
+
 ## ✅ 注文合計（Order Total）
 
 * 目的：購入画面で「いくらになりそう？」を出す🛒
@@ -102,6 +110,8 @@ Bounded Context は、**あるモデル（言葉・ルール・意味）が一�
 
 ## 1) まずは名前に責務を入れる✍️
 
+![Renaming Strategy](./picture/bc_cs_study_018_renaming_strategy.png)
+
 * 住所 → DeliveryAddress / BillingAddress
 * 金額 → OrderEstimatedTotal / InvoiceTotal
 
@@ -116,6 +126,8 @@ Value Object は「値＋不変条件（ルール）」を一緒に閉じ込め�
 ---
 
 ## 7. C#ミニ実装：住所を「混ぜない」🚫🧩💻
+
+![Separate Classes](./picture/bc_cs_study_018_separate_classes.png)
 
 ここでは、**Shipping** と **Billing** で “住所っぽいもの” を別モデルにするよ✨
 （同名にしたくなっても、今回はあえて分けて体感しよ〜！）
@@ -240,6 +252,8 @@ public sealed record BillingAddress(
 ---
 
 ## 10. チェックリスト（境界候補の確度を上げる✅）
+
+![Boundary Checklist](./picture/bc_cs_study_018_checklist_visual.png)
 
 * [ ] 目的が違う🎯
 * [ ] 正しさのルールが違う✅

@@ -42,6 +42,10 @@
 
 ## 3) Customer/Supplier と何が違うの？🤔🔍
 
+![power_balance](./picture/bc_cs_study_030_power_balance.png)
+
+
+
 ## Customer/Supplier（第29章）🧑‍🤝‍🧑
 
 * 下流が「こうしてほしい」と言える
@@ -73,6 +77,10 @@
 ---
 
 ## 5) 使っていいライン（超大事）📏🧡
+
+![survival_kit](./picture/bc_cs_study_030_survival_kit.png)
+
+
 
 Conformistは **使う場所を間違えると事故る**💥
 判断はこの表でOK👇
@@ -203,16 +211,28 @@ public sealed class ShippingLabelService
 
 ## 事故①：上流の都合でenumが変わって全部壊れる⚡
 
+![monitor_alert](./picture/bc_cs_study_030_monitor_alert.png)
+
+
+
 * `OrderStatus = Shipped` が `Dispatched` に変わった
 * 文字列比較してたら静かにバグる😇
   ✅ 対策：enum/定数は **型で扱う** + **コンパイルで落ちる**寄りにする🧱
 
 ## 事故②：相手用語がコアに侵入して会話が崩壊🗣️💔
 
+![blind_acceptance](./picture/bc_cs_study_030_blind_acceptance.png)
+
+
+
 * いつの間にか「相手の用語」で社内会話が進む
   ✅ 対策：**コアBCでは別の言葉を保つ**（ここが踏ん張りどころ💪）
 
 ## 事故③：上流の “変な都合” が下流の設計まで歪める🌀
+
+![facade_shield](./picture/bc_cs_study_030_facade_shield.png)
+
+
 
 ✅ 対策：
 

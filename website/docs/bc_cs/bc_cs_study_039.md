@@ -62,6 +62,8 @@ DTO（Data Transfer Object）は、
 
 ## コツA：1ユースケース＝1 DTO に寄せる🎯
 
+![One UseCase One DTO](./picture/bc_cs_study_039_one_dto_one_usecase.png)
+
 「なんでも入ったDTO（万能DTO）」はだいたい破滅します💣
 
 * 注文一覧に必要なDTO
@@ -83,6 +85,8 @@ DTO（Data Transfer Object）は、
 
 ## コツC：DTOに「意味の強い型」を詰めすぎない🧱
 
+![Primitive DTO Blocks](./picture/bc_cs_study_039_primitive_dto.png)
+
 境界の外では、相手の事情が違います👀
 
 * DTOは **プリミティブ寄り**（string, number, datetime, id）にしておくと壊れにくいです👌
@@ -101,6 +105,8 @@ DTO（Data Transfer Object）は、
 
 ## ✅ 後方互換（Backward Compatible）
 
+![Backward Compatibility Tolerance](./picture/bc_cs_study_039_backward_compatibility.png)
+
 **古いクライアントが、そのまま動く**状態を守ること💕
 
 例：
@@ -112,6 +118,8 @@ DTO（Data Transfer Object）は、
 ---
 
 ## 5. “安全な変更” と “危険な変更” 🟢🔴
+
+![Safe vs Dangerous Changes](./picture/bc_cs_study_039_safe_vs_dangerous.png)
 
 ## 🟢 比較的安全（まずはここで進化しよう）✨
 
@@ -206,6 +214,8 @@ public sealed record BillingOrderSummaryDto
 ここで **API Versioning** の考え方が出てきます📌
 
 ## 8.1 よくあるバージョンの持たせ方📦
+
+![API Versioning Strategies](./picture/bc_cs_study_039_versioning_strategies.png)
 
 代表例はこんな感じ👇
 

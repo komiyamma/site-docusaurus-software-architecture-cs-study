@@ -13,6 +13,8 @@
 DDD（ドメイン駆動設計）は、ざっくり言うと
 **「業務がややこしいときに、ソフトを壊れにくく育てるための設計の考え方」**だよ🌱💻
 
+![knight vs hydra](./picture/bc_cs_study_003_knight_vs_hydra.png)
+
 たとえばECだと👇
 
 * 「注文」って一言でも、部署や画面で意味が変わる📦😵‍💫
@@ -32,6 +34,8 @@ DDDは、ここに真正面から勝ちにいくための地図🗺️🔥
 ## 2) DDDの地図：大きく2つに分かれるよ🗺️✌️
 
 DDDはよく **2つの領域** に分けて説明されるよ👇
+
+![strategy vs tactics](./picture/bc_cs_study_003_strategy_vs_tactics.png)
 
 ## A. 戦略（Strategic Design）🧭🏰
 
@@ -77,6 +81,8 @@ mindmap
 
 **「言葉とモデルの “意味が一貫する範囲” を決める」**📝✅
 
+![bc consistency bubble](./picture/bc_cs_study_003_bc_consistency_bubble.png)
+
 イメージはこんな感じ🌈
 
 * **同じ単語でも、BCが違えば別モノでOK**🙆‍♀️
@@ -113,6 +119,8 @@ Martin Fowler も、BCをDDDの中心パターンとして説明していて、
 
 たとえば「注文」という単語が出てきたとして…👀
 
+![three order books](./picture/bc_cs_study_003_three_order_books.png)
+
 ## ① 受注管理の「注文」🛒
 
 * お客さんが買う行為
@@ -138,6 +146,8 @@ Martin Fowler も、BCをDDDの中心パターンとして説明していて、
 ---
 
 ## 6) BCを分けると、何が嬉しいの？🎁✨
+
+![benefits shield talk](./picture/bc_cs_study_003_benefits_shield_talk.png)
 
 ## ✅ 嬉しいこと①：会話がスムーズになる💬🚀
 
@@ -172,6 +182,8 @@ Martin Fowler も、BCをDDDの中心パターンとして説明していて、
 ## 8) ミニ演習：衝突しそうな単語を探してみよう🔍📝
 
 ミニECの文章を想像してね👇（頭の中でOK！）🧠✨
+
+![detective star mark](./picture/bc_cs_study_003_detective_star_mark.png)
 「注文が確定したら、在庫を引き当てて、出荷して、請求を立てる」
 
 ## ステップ🌸
@@ -219,6 +231,8 @@ Martin Fowler も、BCをDDDの中心パターンとして説明していて、
 ## 11) 現代C#開発の小ネタ（最新環境の空気感）💻✨
 
 DDDそのものは言語やIDEに依存しない考え方だけど、実務では環境が進化してるよ🚀
+
+![modern dev desk](./picture/bc_cs_study_003_modern_dev_desk.png)
 たとえば **.NET 10 はLTSとして 2025-11-11 リリース**で、2028-11-14までサポートの枠が見えるのが嬉しいポイント📅🛡️([Microsoft][3])
 そして **Visual Studio 2026** のリリースノートも公開されていて、AI支援（Copilot統合など）も前提にした開発が当たり前になってきてるよ🤖✨([Microsoft Learn][4])
 

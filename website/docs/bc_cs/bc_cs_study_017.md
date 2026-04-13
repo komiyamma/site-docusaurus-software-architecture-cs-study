@@ -50,6 +50,8 @@ graph LR
 
 ## あるある①：二重登録・二重更新が起きる🧟‍♂️🧟‍♀️
 
+![Database Sync Error](./picture/bc_cs_study_017_sync_error.png)
+
 「会員ID」と「顧客番号」を別物だと思って、別テーブルに保存しちゃう…
 → 後で「同期ズレ」が発生してカオス😇
 
@@ -80,6 +82,8 @@ graph LR
 
 ## Step 2：用語カードを作る📇✨（超おすすめ）
 
+![Term Card](./picture/bc_cs_study_017_term_card.png)
+
 「単語」じゃなくて「意味（定義）」が主役！
 
 | ID   | 用語     | 定義（1文）            | 使ってる場所      | 備考     |
@@ -99,6 +103,8 @@ graph LR
 ---
 
 ## 5. 判断ポイント：「統一」or「分離」or「翻訳」⚖️✨
+
+![Unify vs Translate](./picture/bc_cs_study_017_unify_vs_translate.png)
 
 ## ✅ A) **同じBCの中**なら：基本は“用語統一”🏷️✨
 
@@ -131,6 +137,8 @@ BCの中は「ユビキタス言語」が命！🗣️
 
 ## パターン①：**強い型（Strongly Typed ID）で“同じ物”を固定する**🧷
 
+![Strongly Typed ID](./picture/bc_cs_study_017_strongly_typed_id.png)
+
 文字列のままだと「memberId」「customerNo」が混ざりやすいよ〜！😇
 そこで、**同じ概念は同じ型**にしちゃう作戦✨
 
@@ -161,6 +169,8 @@ public sealed class OrderService
 ---
 
 ## パターン②：DTOの名前は“公開語彙”、ドメインは“内部語彙”で守る📨🏠
+
+![Translation Layer](./picture/bc_cs_study_017_translation_layer.png)
 
 外の世界がどう呼んでても、内側の言葉は守りたいよね🛡️
 
@@ -201,6 +211,8 @@ AI補助も相性いいよ✨
 ---
 
 ## 7. ミニ演習：同義語ズレを見つけて直そう🧩📝
+
+![Grouping Synonyms](./picture/bc_cs_study_017_grouping_exercise.png)
 
 ## お題：同じ意味っぽい言葉が混ざってる！😵‍💫
 

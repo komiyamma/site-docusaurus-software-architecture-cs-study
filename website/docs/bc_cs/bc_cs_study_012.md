@@ -2,6 +2,8 @@
 
 ## 12.1 なんで「材料集め」が先なの？🤔💡
 
+![Chef Gathering Ingredients](./picture/bc_cs_study_012_chef_ingredients.png)
+
 境界づけられたコンテキスト（BC）は、ざっくり言うと「同じ言葉が、同じ意味で通じる範囲」でした🗺️✨
 なので最初にやるべきは、**仕様を“文章”として読むことより、仕様を“会話”として集めること**なんだよね💬😊
 
@@ -35,6 +37,8 @@
 
 ## 12.3 会話を集めるときの“登場人物”🧑‍🤝‍🧑💬
 
+![Perspective Lenses](./picture/bc_cs_study_012_perspective_lenses.png)
+
 会話って、ふわっと集めると情報が散らばるから😵‍💫
 まずは「誰の視点の会話か」を固定して集めよう📌✨
 
@@ -50,6 +54,8 @@
 ---
 
 ## 12.4 仕様を「誰が・何を・いつ」に分解するテンプレ🧩📝
+
+![Sentence Chopper](./picture/bc_cs_study_012_sentence_chopper.png)
 
 会話や仕様文を見たら、まずこれに落とし込むよ👇
 
@@ -92,6 +98,8 @@
 ---
 
 ## 12.6 短文 → イベント候補（過去形）へ変換🌩️✨
+
+![Fact Stamper](./picture/bc_cs_study_012_fact_stamper.png)
 
 イベントストーミングで使う「イベント」は、よく **過去形の事実**として書くよ🌩️🧡 ([Bright IT][2])
 だから短文を作ったら、同時にイベント候補も作っちゃうのがラク😊✨
@@ -136,6 +144,8 @@ BCは“言葉”が中心🗣️✨
 
 ## 12.8 “未決事項リスト”は、むしろ宝物💎❓
 
+![Question Treasure](./picture/bc_cs_study_012_question_treasure.png)
+
 設計初心者さんほど「分からない＝ダメ」って思いがちだけど🙅‍♀️💦
 実は逆で、未決事項が出るほど会話が前に進んでる✨
 
@@ -150,6 +160,8 @@ BCは“言葉”が中心🗣️✨
 ---
 
 ## 12.9 文章でできる「ミニ図」📌🖼️
+
+![Distillation Flow](./picture/bc_cs_study_012_distillation_flow.png)
 
 今日の作業は、この流れを作ること👇
 

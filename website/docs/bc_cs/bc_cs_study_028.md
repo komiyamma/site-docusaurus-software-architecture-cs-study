@@ -10,6 +10,8 @@
 
 ## 1. Context Mapってなに？🗺️✨
 
+![bc cs study 028 context map concept](./picture/bc_cs_study_028_context_map_concept.png)
+
 **Context Map（コンテキストマップ）**は、複数のBCがあるときに、
 
 * それぞれのBCが
@@ -23,6 +25,8 @@
 ---
 
 ## 2. なんで必要？（図にできない関係はだいたい危険⚠️）🧯
+
+![bc cs study 028 hidden dependencies](./picture/bc_cs_study_028_hidden_dependencies.png)
 
 BCを分けても、現実には **完全に孤立**はしないよね🤝
 注文BCは在庫が気になるし、配送BCは住所が欲しいし、請求BCは金額が欲しい…🛒📦🚚💳
@@ -45,6 +49,8 @@ graph LR
 ---
 
 ## 3. Context Mapの“部品”🧩✨
+
+![bc cs study 028 map kit](./picture/bc_cs_study_028_map_kit.png)
 
 ![コンテキストマップの部品](./picture/bc_cs_study_028_pins_lines.png)
 
@@ -75,6 +81,8 @@ Context Mapは、だいたいこの4点が描ければOK🙆‍♀️✨
 
 ## 4. まず覚える：上流/下流の決め方⬆️⬇️🤔
 
+![bc cs study 028 upstream downstream river](./picture/bc_cs_study_028_upstream_downstream_river.png)
+
 迷ったら、この質問をしてみてね👇
 
 ## Q1：仕様変更で“痛い”のはどっち？😵‍💫
@@ -95,6 +103,8 @@ Context Mapは、だいたいこの4点が描ければOK🙆‍♀️✨
 
 ## 5. 関係パターン：今日は“ざっくり地図帳”📚🗺️
 
+![bc cs study 028 relationship patterns](./picture/bc_cs_study_028_relationship_patterns.png)
+
 ここでは「存在を知って、ラベルを貼れる」ことがゴールだよ〜🏷️✨
 （第29章以降で、1つずつちゃんとやるよ💪）
 
@@ -113,6 +123,8 @@ Context Mapは、だいたいこの4点が描ければOK🙆‍♀️✨
 ---
 
 ## 6. 描き方：5ステップで“地図”を作る✍️🗺️✨
+
+![bc cs study 028 mapping steps](./picture/bc_cs_study_028_mapping_steps.png)
 
 ## Step 1：BCを箱で並べる📦📦📦
 
@@ -140,6 +152,8 @@ Context Mapは、だいたいこの4点が描ければOK🙆‍♀️✨
 ---
 
 ## 7. ミニECで描く：Context Map（例）🛒📦🚚💳✨
+
+![bc cs study 028 mini ec map](./picture/bc_cs_study_028_mini_ec_map.png)
 
 BCをこんな感じで置くよ👇（第27章の例をベース）
 
@@ -197,6 +211,8 @@ BCをこんな感じで置くよ👇（第27章の例をベース）
   クラス名やテーブル名は今は主役じゃないよ🙅‍♀️
 
 ## 事故③：Shared Kernelが肥大化して全部共有になる🧨
+
+![bc cs study 028 kernel bloat](./picture/bc_cs_study_028_kernel_bloat.png)
 
 * 共有は最小にしないと、結局“境界が溶ける”⚠️
   「共有が増える＝境界設計を見直すサイン」になりやすいよ📛 ([vaadin.com][5])

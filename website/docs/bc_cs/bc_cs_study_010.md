@@ -26,6 +26,8 @@
 
 ## 2) 正体その①：変更理由が違うものが「同居」してる🏠💥
 
+![Shared House Chaos](./picture/bc_cs_study_010_shared_house_chaos.png)
+
 いちばん大事な合言葉はこれ👇
 
 **「変更理由が違うものは、同じ場所に住ませない」**✂️✨
@@ -45,6 +47,8 @@
 
 ## 3) 正体その②：同じ単語の「意味」が混ざってる🗣️🧨
 
+![Total Polysemy](./picture/bc_cs_study_010_total_polysemy.png)
+
 設計初心者がハマりやすい罠はこれ👇
 
 **同じ単語を、同じクラス名で、同じプロパティ名で扱う**😵‍💫
@@ -62,6 +66,8 @@
 
 ## 4) 「混ぜない」ことで、テストが楽になる🧪💕
 
+![Untestable Soup](./picture/bc_cs_study_010_untestable_soup.png)
+
 テストが書けないと「変更の安全確認」ができないよね😢
 テストが書けないコードの典型はこれ👇
 
@@ -75,6 +81,8 @@
 ---
 
 ## 5) BCがくれるもの：壊れる範囲を小さくする「防火壁」🧱🔥
+
+![Firewall Plan](./picture/bc_cs_study_010_firewall_plan.png)
 
 Bounded Context（BC）がやってくれる一番の価値はこれ👇
 
@@ -116,6 +124,8 @@ flowchart LR
 （※コードは最小にしてるよ🍀）
 
 ## 6-1) 事故るパターン：1つの `Order` に全部入れる😇
+
+![Balloon Class](./picture/bc_cs_study_010_balloon_class.png)
 
 ### 仕様変更シナリオ📌
 
@@ -275,6 +285,8 @@ namespace ShippingContext
 ---
 
 ## 9) つまずきポイント（ここで転びやすい😵‍💫）
+
+![Pitfall Signs](./picture/bc_cs_study_010_pitfall_signs.png)
 
 ## ❌ 「BC＝マイクロサービス」だと思う
 

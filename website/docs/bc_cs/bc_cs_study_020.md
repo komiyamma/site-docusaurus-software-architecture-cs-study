@@ -10,6 +10,8 @@
 
 ## まず超ざっくり：サブドメインってなに？ 🧩
 
+![Business Capabilities Map](./picture/bc_cs_study_020_business_capabilities.png)
+
 ビジネス全体を「ドメイン」だとしたら、サブドメインはその中の **“仕事のかたまり”** だよ📦✨
 ECならたとえば、注文・在庫・配送・請求・会員・決済…みたいに分かれる感じ🛒📦🚚💳
 
@@ -71,6 +73,8 @@ graph TD
 
 ### コア判定の3問クイズ 🎲✨
 
+![Core Quiz](./picture/bc_cs_study_020_core_quiz.png)
+
 次の質問に「YES」が多いほどCoreっぽい🔥
 
 1. これが強いと**他社に勝てる**？🏁
@@ -93,6 +97,8 @@ graph TD
 
 ### ケースA：配送がウリのEC 🚚✨
 
+![Delivery as Core](./picture/bc_cs_study_020_delivery_core.png)
+
 「翌日配送の精度」「置き配の最適化」「配送コスト最小化」が命！
 
 * **Core候補**：配送計画・配送ルール・例外対応（遅延/再配達）🚚🔥
@@ -100,6 +106,8 @@ graph TD
 * **Generic候補**：認証🔑、ログ📜、メール✉️、決済連携💳（既製品や外部連携が多い）
 
 ### ケースB：価格・販促がウリのEC 🏷️🔥
+
+![Pricing as Core](./picture/bc_cs_study_020_pricing_core.png)
 
 「クーポン」「会員ランク」「パーソナライズ割引」が命！
 
@@ -140,6 +148,8 @@ graph TD
 ## ミニ演習 ✍️😊
 
 ### 演習1：仕分けゲーム 🎮🧩
+
+![Subdomain Sorting Game](./picture/bc_cs_study_020_sorting_game.png)
 
 次を **Core / Supporting / Generic** に分けてみよう👇（理由も1行で！）
 

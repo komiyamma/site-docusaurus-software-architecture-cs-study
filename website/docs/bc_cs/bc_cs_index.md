@@ -9,6 +9,8 @@
 
 ## Part 1：まず「境界」って何？（導入〜イメージづくり）🌱
 
+![Bounded Context Map](./picture/bc_cs_index_context_map.png)
+
 ### 第01章：この教材でできるようになること🎯
 
 * ゴール：BCを見つけて、分けて、守れるようになる💪
@@ -35,6 +37,8 @@
 
 ### 第05章：ユビキタス言語って何？🗣️✨
 
+![Ubiquitous Language](./picture/bc_cs_index_ubiquitous_language.png)
+
 * そのチーム/領域で通じる“同じ言葉”📖
 * 仕様書より会話を大事にする理由💬
 * 用語集（ミニ辞書）を作る準備📒
@@ -50,6 +54,8 @@
 ## Part 2：衝突を体験して「必要性」を腹落ちさせる🔥
 
 ### 第07章：事故例①「顧客」が3人いる👤👤👤
+
+![Meaning Collision](./picture/bc_cs_index_customer_conflict.png)
 
 * 会員としての顧客／請求先／配送先…別物だよね？
 * 1つのCustomerに詰めるとどうなる？💥
@@ -96,6 +102,8 @@
 * まずは10〜20個でOK👌
 
 ### 第14章：イベントストーミング実施編🧩🌩️
+
+![Event Storming Wall](./picture/bc_cs_index_event_storming.png)
 
 * イベントを時系列に並べる⏳
 * 似たものを固める（グルーピング）🧺
@@ -187,6 +195,8 @@
 
 ## Part 5：Context Map（境界どうしの付き合い方）🗺️🤝
 
+![Context Relationships](./picture/bc_cs_index_relationship_types.png)
+
 ### 第28章：Context Mapとは？（描けるようになろう）🗺️
 
 * BC同士の関係を1枚にする
@@ -206,6 +216,8 @@
 * どこまで合わせるかの境界線📏
 
 ### 第31章：ACL入門A（なぜ必要？）🛡️
+
+![Anti-Corruption Layer](./picture/bc_cs_index_acl_shield.png)
 
 * 外部や別BCの“クセ”を中に入れない
 * ドメインを守る防波堤🌊🧱
@@ -234,6 +246,8 @@
 ## Part 6：C#で境界を守る（Windows＋最新環境想定）💻🔒
 
 ### 第35章：プロジェクト構成A（まず置き場所）🏗️
+
+![Solution Structure](./picture/bc_cs_index_project_structure.png)
 
 * Visual Studioでソリューションを切る
 * “BCごとにプロジェクト”の基本案📦

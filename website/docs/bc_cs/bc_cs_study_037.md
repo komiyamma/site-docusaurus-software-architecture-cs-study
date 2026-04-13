@@ -35,6 +35,8 @@ mindmap
 
 ### ルール①：最初に「Context名」を入れる（境界が先）🥇
 
+![Context First Naming](./picture/bc_cs_study_037_context_first.png)
+
 `Company.Product.<Context>...` の **`<Context>` を早めに出す**のがポイント💡
 これだけで「今どの世界の言葉？」がすぐ分かるよ👀✨ ([Microsoft Learn][1])
 
@@ -47,6 +49,8 @@ mindmap
 ---
 
 ### ルール②：フォルダ構造をnamespaceに寄せる（迷子防止）🧭
+
+![Folder and Namespace Alignment](./picture/bc_cs_study_037_folder_alignment.png)
 
 フォルダとnamespaceがズレると、探索が毎回「え、どこ…？」になる😵‍💫
 揃えると、見ただけで “どこに何があるか” 分かる📁✨
@@ -61,6 +65,8 @@ mindmap
 ---
 
 ## 4. おすすめ命名パターン🏷️✨（迷ったらこれ）
+
+![Naming Pattern Train](./picture/bc_cs_study_037_naming_pattern.png)
 
 「境界 → 層 → 目的」の順にするのが読みやすいよ😊
 
@@ -134,6 +140,8 @@ public sealed class OrderingCustomer
 
 ## 7. “同名クラス禁止”で衝突を見える化👀💥（初心者向け超おすすめ）
 
+![Class Name Collision Avoidance](./picture/bc_cs_study_037_class_name_collision.png)
+
 C#はnamespaceが違えば同名クラスを置けるけど、初心者のうちは事故が増えがち😇
 （`using` で意図せず別の `Customer` を掴む…とか）
 
@@ -160,6 +168,8 @@ namespaceの中に `using` を入れると、名前解決がややこしくな�
 
 ### ✅ “全ファイル共通”は `global using` を使う🌍
 
+![Global Using Sun](./picture/bc_cs_study_037_global_using.png)
+
 * `global using` は **プロジェクト内の全ファイルに効く**よ✨ ([Microsoft Learn][7])
 * ただしルールあり：
 
@@ -175,6 +185,8 @@ global using System.Collections.Generic;
 ---
 
 ## 9. 重要な注意：namespaceは“壁”じゃない🧱（壁はプロジェクト/アセンブリ）
+
+![Namespace Glass Wall](./picture/bc_cs_study_037_namespace_glass_wall.png)
 
 ここ、めっちゃ大事！⚠️
 C#の `internal` は「同じアセンブリ（プロジェクト出力物）内なら見える」なので、**namespaceで隠せるわけじゃない**よ👀

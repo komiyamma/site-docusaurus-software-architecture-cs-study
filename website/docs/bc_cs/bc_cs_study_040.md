@@ -31,6 +31,8 @@
 
 ## 分割前の悪い例　全部入り OrderService 💣
 
+![Monolith OrderService Pot](./picture/bc_cs_study_040_monolith_orderservice.png)
+
 * 受注・在庫・請求・配送が1クラスで混ざってます
 * 「注文ステータス」が**在庫/請求/配送の都合**で増殖します
 * “便利そう”が一番危ないやつ😇
@@ -79,6 +81,8 @@ public class OrderService
 
 ## 地雷チェックリスト　読んで印を付けよう 🖊️👀
 
+![Landmine Checklist Map](./picture/bc_cs_study_040_landmine_checklist.png)
+
 次を見つけたら、コードにコメントで印を付けます✅
 
 * ✅ “注文”の中に**在庫のルール**がいる
@@ -93,6 +97,8 @@ public class OrderService
 ## 40-3　BC案を決める　まずは4分割でOK 🧩✨
 
 ## BC案　この章ではこれで進めるよ 🧭
+
+![4 Bounded Contexts](./picture/bc_cs_study_040_bc_proposal.png)
 
 * **OrderManagement**：受注の意思決定（注文を作る、状態を進める）📦
 * **Inventory**：在庫の真実（引当/戻し/在庫数）🧺
@@ -132,6 +138,8 @@ public class OrderService
 
 ## 図　依存の向きだけは絶対に描く ✍️
 
+![Context Map Hub](./picture/bc_cs_study_040_context_map_flow.png)
+
 ```text
 [Inventory]  <--(ACL/DTO)--  [OrderManagement]  --(ACL/DTO)--> [Billing]
                                 |
@@ -148,6 +156,8 @@ public class OrderService
 ## 40-5　実装　プロジェクト分割と参照ルール 🔒🏗️
 
 ## フォルダとプロジェクト構成案 📁✨
+
+![Clean Project Structure](./picture/bc_cs_study_040_project_structure.png)
 
 ```text
 /src
@@ -209,6 +219,8 @@ public sealed record ReserveStockResponse(
 ```
 
 ## ACL　OrderManagement.Infrastructure 側 🔄
+
+![ACL Translation Machine](./picture/bc_cs_study_040_acl_translation.png)
 
 * OrderManagement は **IInventoryGateway** だけ知ってる
 * 中で Inventory の都合に合わせて変換する（翻訳）📖✨
@@ -314,6 +326,8 @@ public sealed class PlaceOrderHandler
 ---
 
 ## 40-8　テスト　境界が崩れたら赤くなるようにする 🧪🚨
+
+![3 Layer Test Shield](./picture/bc_cs_study_040_test_strategy.png)
 
 ## 1) Domain単体テスト　まずは各BCで勝つ 🏅
 

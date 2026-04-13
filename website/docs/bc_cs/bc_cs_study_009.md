@@ -12,6 +12,8 @@
 
 ## 1. 事故のはじまり：「とりあえずUserで」🧨
 
+![Heavy User Backpack](./picture/bc_cs_study_009_heavy_backpack.png)
+
 ミニECの世界で、こんな要望が順番に来るとします🛒📦
 
 1. ログインできる（会員）🔐
@@ -31,6 +33,8 @@
 ## 2. 万能Userクラス、爆誕💥👤
 
 ![万能Userクラス](./picture/bc_cs_study_009_swiss_army_user.png)
+
+![Mismatched Jigsaw](./picture/bc_cs_study_009_jigsaw_mismatch.png)
 
 最初はスッキリだったはずなのに、だんだんこうなります👇😇
 
@@ -77,6 +81,8 @@ public class User
 
 ## 3. “if増殖”が始まる😵‍💫🌱
 
+![If Statement Maze](./picture/bc_cs_study_009_if_maze.png)
+
 万能Userはだいたい「条件分岐の巣」になります🕸️
 
 ```csharp
@@ -107,6 +113,8 @@ public static bool CanUseCoupon(User user)
 
 ## 4. 事故の正体：Userの“意味”が1つじゃない🌀
 
+![User Polysemy](./picture/bc_cs_study_009_user_polysemy.png)
+
 同じ「User」という単語でも、実はこんな別物が混ざってます👇✨
 
 * 🔐 **ログインする人**（アカウント）
@@ -126,6 +134,8 @@ public static bool CanUseCoupon(User user)
 
 ## 5. 「境界が無いサイン」チェックリスト✅🚨
 
+![Code Smell Pot](./picture/bc_cs_study_009_code_smell_pot.png)
+
 万能Userの匂い、これで嗅ぎ分けられます👃🔍✨
 
 * ✅ プロパティが増え続ける（しかも用途がバラバラ）📈
@@ -138,6 +148,8 @@ public static bool CanUseCoupon(User user)
 ---
 
 ## 6. どう直す？：まず“呼び名”を分ける🏷️✨
+
+![Prism Splitting User](./picture/bc_cs_study_009_prism_split.png)
 
 まだBCを本格的に切る前でも、**言葉を分けるだけで世界が見えます**👀✨
 
@@ -198,6 +210,8 @@ C# 14 は .NET 10 上で使える最新のC#リリースとして整理されて
 ---
 
 ## 8. つまずきポイント集🌀（初心者あるある）
+
+![DRY Trap](./picture/bc_cs_study_009_dry_trap_plants.png)
 
 ### つまずき①：「DRYだから共有しなきゃ！」と思う🧻
 

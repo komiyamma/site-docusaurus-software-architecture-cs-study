@@ -12,6 +12,8 @@
 
 ## 13.2 そもそも「イベント」ってなに？📌
 
+![Fact Gavel](./picture/bc_cs_study_013_fact_gavel.png)
+
 イベントストーミングで言う **イベント**は、
 
 * **「起きた事実」**（もう起きたこと）
@@ -24,6 +26,8 @@
 ---
 
 ## 13.3 まず決める！「今回どこまでやる？」（スコープ）🗺️✂️
+
+![Scope Viewfinder](./picture/bc_cs_study_013_scope_viewfinder.png)
 
 いきなり全部をやろうとすると、イベントが爆発して詰みます😇💥
 なので最初に「この範囲だけやる」を決めよう！
@@ -40,6 +44,8 @@
 
 ## 13.4 参加メンバー（ひとりでもできるけど、複数が強い）👭👩‍💻👨‍💼
 
+![Three Hats](./picture/bc_cs_study_013_three_hats.png)
+
 イベントストーミングは「質問できる人（開発側）」と「答えを知ってる人（業務側）」が一緒にいるのが大事、とよく説明されます。([ウィキペディア][2])
 
 * 開発：質問して整理する役🧠🔍
@@ -54,7 +60,7 @@
 
 ![イベントの付箋](./picture/bc_cs_study_013_event_stickies.png)
 
-![イベントの付箋](./picture/bc_cs_study_013_event_stickies.png)
+![Analog vs Digital Tools](./picture/bc_cs_study_013_analog_digital_tools.png)
 
 イベントストーミングは「PCなしでもできる軽量ワーク」とされることが多く、壁＋付箋が基本です。([ウィキペディア][2])
 
@@ -76,6 +82,8 @@
 ---
 
 ## 13.6 付箋（イベント）の書き方ルール🟧📝
+
+![Event Grading](./picture/bc_cs_study_013_event_grading.png)
 
 ここ、いちばん大事！！！💎✨
 
@@ -100,6 +108,8 @@
 ---
 
 ## 13.7 色の伝説（でも、今日はイベントだけでOK）🎨✨
+
+![Focus on Orange](./picture/bc_cs_study_013_orange_focus.png)
 
 よくある色分けの例（流派はあるけど、初心者はこれでOK😊）
 
@@ -162,6 +172,8 @@ flowchart TD
 ---
 
 ## 13.10 ここでAIを使うと爆速🤖⚡（イベント出しサポート）
+
+![AI Sticky Generator](./picture/bc_cs_study_013_ai_sticky_generator.png)
 
 「文章→イベント化」はAIが得意です✨
 IDEのチャットで、コードだけじゃなく文章整理にも使えるよ😊

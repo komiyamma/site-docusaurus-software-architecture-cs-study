@@ -17,6 +17,8 @@
 
 最終的に「BC」を使って、こんなことができるようになるよ💪✨
 
+![final goal puzzle](./picture/bc_cs_study_001_final_goal_puzzle.png)
+
 * 1つの業務（ミニEC）を、**“言葉の意味がぶつからない”** ように分けられる🧩🧠
 * 分けた境界どうしの関係を、**Context Map** で説明できる🗺️🤝
 * コードでも境界を守れる（依存の向き・公開範囲・DTO/ACL）🔒💻
@@ -41,6 +43,8 @@ BCって、むずかしい理論というより **“トラブルを減らす境
 
 毎章だいたいこの流れで進むよ〜！🌈
 
+![learning steps path](./picture/bc_cs_study_001_learning_steps_path.png)
+
 1. **例を見る** 👀
    「ありがちなヤバい状態」をわざと見て、まず体験する🧨
 2. **気づく** 💡
@@ -57,6 +61,8 @@ BCって、むずかしい理論というより **“トラブルを減らす境
 ## 5) AI（コパイロット/コデックス）を“学習ブースト”にするコツ🤖💞
 
 AIが使える環境だと、学習がめちゃ速くなるよ〜！🚀✨
+
+![ai copilot handshake](./picture/bc_cs_study_001_ai_copilot_handshake.png)
 ただし **“丸投げ”** じゃなくて、**“一緒に考える相棒”** にするのがコツ🧠🤝
 
 * まず自分の言葉で「何が分からないか」を1行で言う🗣️
@@ -96,11 +102,15 @@ OpenAI の Codex IDE拡張もあって、VS Code系でサイドバーから使�
 
 ### ステップA：衝突しそうな単語を10個書く📝✨
 
+![word collision crash](./picture/bc_cs_study_001_word_collision_crash.png)
+
 例：
 
 * 顧客 / 注文 / 住所 / 金額 / ステータス / キャンセル / 返品 / 支払い / 発送 / 在庫 …などなど
 
 ### ステップB：「同じ単語だけど意味が違いそう」を3つ選ぶ🎯
+
+![prism meaning split](./picture/bc_cs_study_001_prism_meaning_split.png)
 
 たとえば（まだ正解とかじゃないよ！）👇
 
@@ -132,6 +142,8 @@ OpenAI の Codex IDE拡張もあって、VS Code系でサイドバーから使�
 
 ## 9) よくあるつまずき（最初に知っておくと安心）🧸💡
 
+![simple vs complex sign](./picture/bc_cs_study_001_simple_vs_complex_sign.png)
+
 * 「正しいBCを当てにいく」→ まだやらないでOK🙆‍♀️✨（まずは候補を出すだけ）
 * 「クラス図が描けない」→ いらないよ〜！🧩（言葉の整理が先）
 * 「DDD全部を理解しなきゃ」→ しなくてOK🙅‍♀️（この教材はBCが主役👑）
@@ -141,6 +153,8 @@ OpenAI の Codex IDE拡張もあって、VS Code系でサイドバーから使�
 ## 10) まとめ（今日持ち帰るもの）🎁✨
 
 * BCは “難しい設計技法” というより、**言葉の意味が一貫する範囲を守る** 発想🌱
+
+![garden fence protection](./picture/bc_cs_study_001_garden_fence_protection.png)
 * まずは **衝突しそうな単語を見つける目** を作る👀✨
 * 学び方は「例→気づく→手順→実装→演習」🔁📚
 

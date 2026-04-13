@@ -23,6 +23,8 @@
 
 ## 2. “注文”が部署で別物になる例👀🧩
 
+![Three Views of Order](./picture/bc_cs_study_008_three_views.png)
+
 ## 受注にとっての「注文」📩
 
 * 目的：**受け付けて、内容を確定し、キャンセル・変更に耐える**
@@ -43,6 +45,8 @@
 ---
 
 ## 3. 一番やりがちな事故：「状態（ステータス）を1本にする」🔥😵‍💫
+
+![Status Maze](./picture/bc_cs_study_008_status_maze.png)
 
 ## よくある“万能ステータス”地獄例💣
 
@@ -83,6 +87,8 @@ flowchart TD
 ## 4. “図（文章）”で見る：1つにすると何が混ざる？🗺️💥
 
 ## 1つのOrderに詰め込む世界（危険⚠️）
+
+![Bloated Order Room](./picture/bc_cs_study_008_bloated_room.png)
 
 * Orderの中に、受注・出荷・請求の情報が同居
 * 受注の変更が、出荷や請求のコードまで巻き込む
@@ -164,6 +170,8 @@ public sealed class Order
 
 ## Step 2：3部署の“要求”を足していく🧩
 
+![Jenga Rules](./picture/bc_cs_study_008_jenga_rules.png)
+
 次の要求を順番に追加してみてね👇
 
 1. **受注**：「Confirmedになったらキャンセル不可」🚫
@@ -189,6 +197,8 @@ public sealed class Order
 ---
 
 ## 6. 何が混ざってるかをメモする📝✨（超重要）
+
+![Separation Memo](./picture/bc_cs_study_008_separation_memo.png)
 
 この章のゴールはここ！🔥
 “混ざり”を言葉にできると、次に境界（BC）へ進めるよ🏃‍♀️💨
@@ -238,6 +248,8 @@ public sealed class Order
 
 ## 8. つまずきポイント集🥺🧯
 
+![Mirage of Simplicity](./picture/bc_cs_study_008_mirage_simplicity.png)
+
 * **「1本化すると見通しが良さそう」って思っちゃう**
   → 最初は良いけど、要件が増えた瞬間に破裂しやすい🎈💥
 * **ステータス＝進捗の一覧、だと思ってしまう**
@@ -264,6 +276,8 @@ public sealed class Order
 ---
 
 ## 10. お助けAIプロンプト集🤖✨（コピペOK）
+
+![AI Untangling](./picture/bc_cs_study_008_ai_untangle.png)
 
 ※ 「GitHub Copilot」やAI拡張がVisual Studioで統合されて使える前提だよ（Visual Studio 17.10以降で統合拡張が案内されてるよ）([Visual Studio][1])
 

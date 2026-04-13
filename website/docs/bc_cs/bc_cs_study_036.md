@@ -55,6 +55,8 @@ BCごとに「層」を分けて、参照方向を**片道**にします➡️�
 
 ## 3. ミニEC例：BCごとにプロジェクトを切る🏗️🛒
 
+![Recommended Solution Structure](./picture/bc_cs_study_036_solution_structure.png)
+
 たとえばこんなBCがあるとして👇
 
 * 受注管理（OrderManagement）📦
@@ -117,6 +119,8 @@ Shop.sln
 
 ## 5.2 参照関係の確認👀
 
+![Visual Studio Dependency Check](./picture/bc_cs_study_036_vs_dependency_check.png)
+
 * ソリューションエクスプローラーで、プロジェクトの **依存関係** を見て
   「Domainが孤立してるか（＝外へ出てないか）」をチェック🔍
 
@@ -125,6 +129,8 @@ Shop.sln
 ---
 
 ## 6. CLIでも確認できる（ミスの早期発見）⌨️✨
+
+![CLI Reference Check](./picture/bc_cs_study_036_cli_ref_check.png)
 
 PowerShellでOKだよ🪄
 
@@ -148,6 +154,8 @@ dotnet add .\src\OrderManagement\OrderManagement.Application\OrderManagement.App
 ## 7. “共通プロジェクト乱立”を避けるコツ🧨🧊
 
 ## 7.1 「共通」に入れたくなるものランキング（危険度つき）⚠️
+
+![Common Project Trap](./picture/bc_cs_study_036_common_project_trap.png)
 
 * **ドメインの型（Entity/VO/Enum）** → 共有したくなるけど、共有すると境界が溶ける🫠💥
 * **DTO/イベント** → これは「Contracts」に寄せると安全📨✅
@@ -298,6 +306,8 @@ dotnet new packagesprops
 ---
 
 ## 13. つまずきポイントあるある🪤😭
+
+![Circular Dependency](./picture/bc_cs_study_036_circular_dependency.png)
 
 * **「共通に置けば早い」病** → 最初だけ早くて、後で一番つらい😇
 * **循環参照が発生** → だいたい「Domainが外に手を出した」が原因👀💥

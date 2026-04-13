@@ -44,6 +44,10 @@ Customer/Supplierでは、特に **契約とリリース** が超重要になる
 
 ## 3. ミニECでの具体例🛒📦🚚💳
 
+![stock_clipboard](./picture/bc_cs_study_029_stock_clipboard.png)
+
+
+
 ### 例A：在庫管理BC🏬 と 受注管理BC🧾
 
 * 在庫管理BC（Supplier）🏬：在庫数・引当結果を供給
@@ -82,6 +86,10 @@ Customer/Supplierでは、特に **契約とリリース** が超重要になる
 
 ## 5. いつCustomer/Supplierを選ぶ？⚖️💡
 
+![negotiation_table](./picture/bc_cs_study_029_negotiation_table.png)
+
+
+
 ### 選びどき✅
 
 * 下流（Customer）が上流（Supplier）にちゃんと意見できる（交渉できる）🗣️
@@ -102,6 +110,10 @@ Customer/Supplierでは、特に **契約とリリース** が超重要になる
 ## 6. Customer/Supplierで一番やっちゃダメな事故💥😵‍💫
 
 ### 事故①：契約が無い（口約束）🫠
+
+![bridge_collapse](./picture/bc_cs_study_029_bridge_collapse.png)
+
+
 
 * 「たぶんこの項目使ってないよね？」で削除
 * 下流が本番で落ちる💣
@@ -129,6 +141,10 @@ Customer/Supplierでは、特に **契約とリリース** が超重要になる
 
 ### ステップ2：契約を“文章で”固定する📜🖊️
 
+![contract_stamp](./picture/bc_cs_study_029_contract_stamp.png)
+
+
+
 * APIなら：エンドポイント・項目・制約・例
 * イベントなら：イベント名・意味・発火タイミング・項目
 * DTOなら：各フィールドの意味、必須/任意、単位、桁、NULL扱い
@@ -155,6 +171,10 @@ Customer/Supplierでは、特に **契約とリリース** が超重要になる
 ---
 
 ### 8.1 上流 Supplier 側：契約DTOを定義する📨🏭
+
+![dto_sealed_box](./picture/bc_cs_study_029_dto_sealed_box.png)
+
+
 
 * ドメインの内部モデルをそのまま外に出さない
 * 外に出すのは「契約用の形（DTO）」だけにする
@@ -228,6 +248,10 @@ public sealed class StockContractTests
 ---
 
 ## 9. 判断ミスしやすいポイント集😇🧠
+
+![giant_supplier](./picture/bc_cs_study_029_giant_supplier.png)
+
+
 
 ### 「Supplierが強い」＝Customer/Supplier？🤔
 

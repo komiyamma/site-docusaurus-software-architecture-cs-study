@@ -10,6 +10,8 @@
 
 ## 1) 粒度ってなに？🍰📏
 
+![bc cs study 023 bc scope](./picture/bc_cs_study_023_bc_scope.png)
+
 ![粒度のケーキ](./picture/bc_cs_study_023_granularity_cake.png)
 
 BCの粒度＝「この“会話（言葉）とモデル”が、どこまで同じ意味で通じる範囲にするか」だよ〜🗣️✨
@@ -32,6 +34,8 @@ graph LR
 
 ## 2) 「大きすぎBC」あるある💥（衝突地獄）
 
+![bc cs study 023 bloated customer](./picture/bc_cs_study_023_bloated_customer.png)
+
 BCがデカすぎると、**同じ言葉が同じ意味で保てなくなる**のがしんどいポイント😵‍💫
 
 ### 大きすぎのサイン🚨
@@ -47,6 +51,8 @@ Eric Evans の DDDリファレンスでは、BC内で人数が増えるとモデ
 
 ## 3) 「小さすぎBC」あるある😵‍💫（連携地獄）
 
+![bc cs study 023 tiny bc web](./picture/bc_cs_study_023_tiny_bc_web.png)
+
 逆に、BCを細かくしすぎると今度は **“つなぐ作業” が主役**になるよ〜📡💦
 
 ### 小さすぎのサイン🚨
@@ -60,6 +66,8 @@ DDDの考え方でも、細かく分けすぎると **統合や一貫性とい�
 ---
 
 ## 4) じゃあ「ちょうどいい粒度」ってどう決めるの？🧭✨
+
+![bc cs study 023 decision pentagon](./picture/bc_cs_study_023_decision_pentagon.png)
 
 コツは **“1個のBCで、会話がスムーズに完結するか”** を見ることだよ💬🚀
 
@@ -91,6 +99,8 @@ DDDの考え方でも、細かく分けすぎると **統合や一貫性とい�
 
 ## 5) ミニECで「粒度の仮置き」をやってみよう🛒✨
 
+![bc cs study 023 mini ec boxes](./picture/bc_cs_study_023_mini_ec_boxes.png)
+
 まずは **“会話のまとまり”** で仮置きしてOK👌（最初から完璧はムリ！）
 
 例として、こういう分け方が自然になりやすい👇
@@ -108,6 +118,8 @@ DDDの考え方でも、細かく分けすぎると **統合や一貫性とい�
 ---
 
 ## 6) C#で“境界の違い”を見える化するミニ例💻✨
+
+![bc cs study 023 namespace separation](./picture/bc_cs_study_023_namespace_separation.png)
 
 「同名だけど意味が違う」を **namespace で分ける**と、衝突が目で見えるよ👀
 
@@ -131,6 +143,8 @@ namespace ECommerce.Shipping
 ---
 
 ## 7) 粒度ミスを直す「方向」だけ覚えよう🔧✨
+
+![bc cs study 023 granularity fix](./picture/bc_cs_study_023_granularity_fix.png)
 
 * **大きすぎ**っぽい → **言葉の衝突点（注文/顧客/金額/住所など）**から切る✂️
 * **小さすぎ**っぽい → **1ユースケース内の往復（連携回数）**が多いところをまとめる🧲

@@ -14,6 +14,8 @@
 
 ## まず大事な前提🧠💡：「BCは“発見して育てる”もの」
 
+![bc cs study 027 growing bc](./picture/bc_cs_study_027_growing_bc.png)
+
 BCは会議室で一発確定！…というより、
 **業務の流れ（イベント）を並べて → 固まりを見て → 境界を引く** ことで、かなり現実的な案に近づきます🌩️🗺️
 イベントストーミングが「境界（BCなど）を引く」ところまで繋がるワークであることもよく知られています。([Mathias Verraes' Blog][1])
@@ -37,6 +39,8 @@ BCは会議室で一発確定！…というより、
 ## 27.2 BC案を確定するための5ステップ🪜✨
 
 ## Step 1：イベントの“固まり”を作る🧺🌩️
+
+![bc cs study 027 event clustering](./picture/bc_cs_study_027_event_clustering.png)
 
 イベント（過去形）を並べて、近いものを寄せます。
 
@@ -75,6 +79,8 @@ graph TD
 
 ## Step 3：「その情報の所有者は誰？」を決める🏠🔒
 
+![bc cs study 027 master data](./picture/bc_cs_study_027_master_data.png)
+
 境界が壊れる典型はこれ👇
 **同じデータをみんなが勝手に更新しはじめる**😇
 
@@ -86,6 +92,8 @@ graph TD
 ---
 
 ## Step 4：境界をまたぐ“やり取り”を最小化する📨✂️
+
+![bc cs study 027 minimize crossing](./picture/bc_cs_study_027_minimize_crossing.png)
 
 BCを跨ぐたびに、やり取りは遅く・重くなりがちです🕒💦
 なので、次のどちらかに寄せるとスッキリします👇
@@ -137,6 +145,8 @@ BCの中では **言葉の意味を1つに揃える**のがルール✨
 
 ## 27.5 ミニ用語集（サンプル）📒✨
 
+![bc cs study 027 context dictionaries](./picture/bc_cs_study_027_context_dictionaries.png)
+
 「同じ単語でもBCが違うと意味が違う」を、**ちゃんと文章で固定**します📝
 
 ## 1) 「注文（Order）」の違い🧨
@@ -163,6 +173,8 @@ BCの中では **言葉の意味を1つに揃える**のがルール✨
 ---
 
 ## 27.6 Bounded Context Canvas（ミニ版テンプレ）🧩📄
+
+![bc cs study 027 bc canvas](./picture/bc_cs_study_027_bc_canvas.png)
 
 BCを説明するためのキャンバス（テンプレ）もよく使われます。DDD Crew が公開している **Bounded Context Canvas** を元に、ここでは“教材用ミニ版”で作ります🧡 ([miro.com][5])
 
@@ -222,6 +234,8 @@ BC案ができたら、最低これだけチェックします🧪
 ---
 
 ## 演習3：境界越えの“契約”を1つ作ろう📨
+
+![bc cs study 027 contract scroll](./picture/bc_cs_study_027_contract_scroll.png)
 
 例：「OrderPlaced」を Inventory に伝える、みたいなやつ📣
 
