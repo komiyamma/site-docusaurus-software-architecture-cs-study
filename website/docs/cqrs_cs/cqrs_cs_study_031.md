@@ -34,6 +34,8 @@ flowchart TD
 
 ### 1-1. 何を指標にする？（最低これだけでOK）📏
 
+![Measurement Metrics](./picture/cqrs_cs_study_031_measurement_metrics.png)
+
 まずはこれだけ覚えよう👇
 
 * **応答時間**：1回のAPIが何msかかった？（平均/中央値/最大）⏱️
@@ -78,6 +80,8 @@ flowchart TD
 
 ### 2-1. API全体の所要時間をログに出す（ミニミドルウェア）🧾✨
 
+![Middleware Stopwatch](./picture/cqrs_cs_study_031_middleware_stopwatch.png)
+
 「このAPI、何ms？」を自動で出すやつを入れるよ！
 
 ```csharp
@@ -116,6 +120,8 @@ app.UseMiddleware<RequestTimingMiddleware>();
 ---
 
 ## 3) “ベースライン” を作る（改善前の数字）📊🧊
+
+![Baseline Chart](./picture/cqrs_cs_study_031_baseline_chart.png)
 
 ここからが本番！
 「改善した気がする」を禁止して、**数字で現状把握**するよ😼
@@ -162,6 +168,8 @@ Measure-Command {
 
 ## 4) どこが苦しいか “体調チェック” する（dotnet-counters）🩺📟
 
+![dotnet-counters Dashboard](./picture/cqrs_cs_study_031_dotnet_counters_dashboard.png)
+
 次は **アプリの中身** を見るよ！
 `dotnet-counters` は「いまCPU高い？ GC暴れてる？」みたいな **健康診断ツール** だよ🧑‍⚕️✨ ([Microsoft Learn][1])
 
@@ -191,6 +199,8 @@ dotnet-counters monitor --process-id <PID>
 ---
 
 ## 5) “犯人の場所” を特定する（Visual Studio プロファイラ）🕵️‍♀️🧠
+
+![Profiler Hotspot](./picture/cqrs_cs_study_031_profiler_hotspot.png)
 
 数字で「遅いのは本当」って確認できたら、次は **どの関数が重いか** を見にいくよ！
 

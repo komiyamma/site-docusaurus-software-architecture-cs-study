@@ -7,6 +7,8 @@
 
 ## 1) まず結論：MediatRは「便利だけど、最初から必須じゃない」🙆‍♀️💡
 
+![Decision Tree](./picture/cqrs_cs_study_025_decision_tree.png)
+
 ```mermaid
 flowchart TD
   Start[自作Dispatcherで開始] --> Q{横断処理や<br>通知が増えてきた?}
@@ -30,6 +32,8 @@ MediatRは「リクエスト/レスポンス」「通知（Notification）」な
 
 ## 2) でも注意：導入コストもちゃんとあるよ😵‍💫💸
 
+![Cost vs Benefit](./picture/cqrs_cs_study_025_cost_scale.png)
+
 ### 2-1) 依存が増える（学習＋デバッグの難しさ）
 
 * 自作Dispatcherなら追いかける場所が少ない👀
@@ -44,6 +48,8 @@ MediatRは「商用版の提供」と「デュアルライセンス」へ移行�
 （※ここは会社の運用ルールに直結しがちなので、**必ず社内ルールに従って確認**してね🙏）
 
 ### 2-3) セキュリティ面：最近の動きも知っておくと安心🔐
+
+![Secure Package](./picture/cqrs_cs_study_025_signed_package.png)
 
 2025/12/03の公式投稿で、.NET 10対応のリリースに合わせて**NuGetパッケージ署名（package signing）**を追加した、という話も出てるよ✨ ([Jimmy Bogard][4])
 → つまり「配布元の正当性を確認しやすくする」方向に動いてる👍
@@ -207,6 +213,8 @@ public sealed class GetOrderListHandler
 
 ## 8) MediatRの“真価”：横断関心をパイプラインで揃える🎢✨
 
+![Pipeline Processing](./picture/cqrs_cs_study_025_pipeline_segments.png)
+
 MediatRは **Behavior** を登録できるよ（公式NuGetの説明にサンプルあり） ([NuGet Gallery][1])
 ここでは「処理時間を測る」だけの超ミニ版いくね⏱️
 
@@ -279,6 +287,8 @@ builder.Services.AddMediatR(cfg =>
 ---
 
 ## 10) よくある事故ポイント集😇💥
+
+![Overloaded Pipeline](./picture/cqrs_cs_study_025_rollercoaster_pitfall.png)
 
 * **Behaviorを盛りすぎて**、結局どこで何してるか分からなくなる🎢🌀
   → 最初は「Logging」「Validation」「Transaction」のどれか1個だけ！

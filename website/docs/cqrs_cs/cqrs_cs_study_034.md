@@ -41,6 +41,8 @@
 
 ### ✅ Readモデル（Read専用テーブル）
 
+![Write vs Read Model](./picture/cqrs_cs_study_034_write_vs_read_model.png)
+
 **「一覧表示に必要な形に整えたデータ」を、別テーブルに保存**しちゃう発想だよ📦✨
 
 * Writeモデル：正確・整合性が命（更新しやすい形）🧱
@@ -51,6 +53,8 @@
 これを作る作業が…
 
 ### ✅ Projection（投影）
+
+![Projection Mirror](./picture/cqrs_cs_study_034_projection_mirror.png)
 
 Write側の状態から、Read側の“表示用データ”を作って更新すること🪞✨
 
@@ -82,6 +86,8 @@ Write側の状態から、Read側の“表示用データ”を作って更新�
 ---
 
 ## 4. 実装の全体像（超ざっくり絵）🎨✨
+
+![Architecture Flow](./picture/cqrs_cs_study_034_architecture_flow.png)
 
 ```mermaid
 flowchart LR
@@ -126,6 +132,8 @@ public sealed class OrderListRow
 ---
 
 ### ステップB：DbContextにReadテーブルを追加する 🧱➕🪞
+
+![Read Model Index](./picture/cqrs_cs_study_034_read_model_index.png)
 
 いちばん簡単なスタートは **同じDbContextにDbSetを追加**する方法だよ（理解が速い）😊
 
@@ -176,6 +184,8 @@ dotnet ef database update
 ## 6. Projection本体：Commandの最後にReadテーブル更新する 🪄✨
 
 ### まずは「Projector（投影係）」を作ろう 🧹
+
+![Projector Worker](./picture/cqrs_cs_study_034_projector_worker.png)
 
 Handlerの中に全部書くと太りやすいから、1クラスにまとめるとキレイだよ🫶
 

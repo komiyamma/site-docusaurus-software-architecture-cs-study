@@ -20,6 +20,8 @@
 
 ## 1) N+1問題ってなに？🐛💥（超ざっくり）
 
+![N+1 Problem Loop](./picture/cqrs_cs_study_032_n_plus_one_loop.png)
+
 ```mermaid
 mindmap
   root((遅い原因))
@@ -135,6 +137,8 @@ public sealed class OrderRowDto
 
 ### パターンA：まとめて取って Dictionary で引く（超現実的）📦
 
+![Batch Fetching Cart](./picture/cqrs_cs_study_032_batch_fetching_cart.png)
+
 「必要なIDを先に集めて、まとめて取る」作戦！
 
 ```csharp
@@ -184,6 +188,8 @@ app.MapGet("/orders/fix-batch", async (AppDbContext db) =>
 
 ### パターンB：最初からDTOに投影して「1クエリで終わらせる」（おすすめ）🌟
 
+![DTO Projection Cookie Cutter](./picture/cqrs_cs_study_032_projection_cookie_cutter.png)
+
 一覧APIはこれが気持ちいい〜！
 
 ```csharp
@@ -224,6 +230,8 @@ EF Core には Single Query と Split Query の話があって、状況によっ
 
 ## 5) インデックス超入門📌（“どこに貼るか”の決め方）
 
+![Index Book Tabs](./picture/cqrs_cs_study_032_index_book_tabs.png)
+
 インデックスはね、超ざっくり言うと…
 
 > 本の「索引（目次＋単語索引）」みたいなもの📖✨
@@ -234,6 +242,8 @@ EF Core には Single Query と Split Query の話があって、状況によっ
 1. **遅いクエリを1個選ぶ**（ログから拾う）🧾
 2. WHERE / JOIN / ORDER BY に出てくる列を拾う🔍
 3. SELECTで返してる列のうち、よく使うものは「含める（include）」候補📎
+
+![Included Columns Backpack](./picture/cqrs_cs_study_032_include_columns_backpack.png)
 
 SQL Server だと「キー列」だけじゃなくて、**INCLUDE列（非キー列）**を付けられるよ。そうすると“テーブルに戻らなくて済む”ことがあるのが強い✨
 ([Microsoft Learn][4])

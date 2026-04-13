@@ -34,6 +34,8 @@ Microsoftの統合テストの公式ガイドでも、統合テストはDBなど
 
 ## まず結論：Queryのテストはこの3段階でOK💡🧪
 
+![Test Levels Pyramid](./picture/cqrs_cs_study_030_test_levels_pyramid.png)
+
 ```mermaid
 flowchart TD
   L1[1. ハンドラ統合テスト] -- 最速・内部確認 --> DB1[(SQLite in-memory)]
@@ -50,6 +52,8 @@ flowchart TD
 ---
 
 ## 大事な注意：EF Coreの“InMemoryプロバイダ”は万能じゃない⚠️🧊
+
+![EF InMemory Warning](./picture/cqrs_cs_study_030_ef_inmemory_warning.png)
 
 「楽そうだから InMemory 使お〜」ってやりがちなんだけど…
 公式でも **InMemoryは“限定的”**、インメモリでやるなら **SQLite推奨**って流れです。([Microsoft Learn][1])
@@ -70,6 +74,8 @@ flowchart TD
 ---
 
 ## 手順A：SQLite in-memory を“正しく”使うコツ🔑🧠
+
+![SQLite Open Connection](./picture/cqrs_cs_study_030_sqlite_open_connection.png)
 
 SQLiteのin-memoryは **接続（Connection）が閉じるとDBも消える**ので、
 テスト中は **接続を開きっぱなし**にします🚪🔓
@@ -134,6 +140,8 @@ public sealed class GetTodoListQueryIntegrationTests
 ```
 
 ### ここ、テストとしてめちゃ大事💖
+
+![Seed Data Sprout](./picture/cqrs_cs_study_030_seed_data_sprout.png)
 
 * **Seedは最小**でOK（3件とかで十分）🌱
 * Assertは「条件が効いてる」ことに絞る（全部チェックしない）🧪✨
@@ -229,6 +237,8 @@ public sealed class ApiFactory : WebApplicationFactory<Program>
 ---
 
 ## APIスモークテスト例（GET叩いてOKなら勝ち🎉）
+
+![API Smoke Test](./picture/cqrs_cs_study_030_api_smoke_test.png)
 
 ```csharp
 using System.Net;

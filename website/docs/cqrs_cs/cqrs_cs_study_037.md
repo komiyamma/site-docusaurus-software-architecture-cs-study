@@ -25,6 +25,7 @@
 ## 1. セキュリティ：いちばん事故るのは“Query”😱🔍
 
 ### 1-1. まず敵を知ろう（ありがち事故）🧨
+![Broken Access Control](./picture/cqrs_cs_study_037_broken_access_control.png)
 
 実務で多いのはこれ👇
 
@@ -119,6 +120,7 @@ public sealed class CanViewOrderHandler
 ---
 
 ### 2-3. ③Queryは“必ず絞る”（これが最後の砦）🛡️
+![Query Filtering](./picture/cqrs_cs_study_037_query_filtering.png)
 
 認可があっても、Query側で絞らないと漏れることがあるよ😱
 （例：一覧検索APIが「全件」返してて、フロント側で絞ってる…みたいな事故）
@@ -212,6 +214,7 @@ public static string NormalizeSort(string? sort)
 ---
 
 ## 4. API契約（Contract）：壊さず進化する設計🧷📜✨
+![API Contract Handshake](./picture/cqrs_cs_study_037_api_contract_handshake.png)
 
 ### 4-1. まず“仕様書＝OpenAPI”を育てよう🌱📘
 
@@ -252,6 +255,7 @@ app.MapPost("/orders", async (CreateOrderCommand cmd, Dispatcher dispatcher) =>
 ---
 
 ### 4-3. バージョニング：壊すなら“新バージョン”が正義🧊🧷
+![Versioning Strategy](./picture/cqrs_cs_study_037_versioning_strategy.png)
 
 「APIは一度出すと戻せない」って思うといいよ😇
 Microsoftのガイドでも **明示的なバージョニングは重要**って話が出てくる。([Microsoft Learn][14])

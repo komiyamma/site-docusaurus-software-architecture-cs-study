@@ -15,6 +15,8 @@
 
 ## 1) まず最重要：Readモデルは「画面都合でOK」🥳📺
 
+![Reverse Engineering DTO](./picture/cqrs_cs_study_021_reverse_engineering_dto.png)
+
 ```mermaid
 flowchart LR
   S[画面の列] --> D[Read DTOの形]
@@ -108,6 +110,8 @@ public sealed record OrderListQuery(
 
 ## 3) まずやりがち地雷：N+1（絶対踏みがち）💥😇
 
+![N+1 Problem](./picture/cqrs_cs_study_021_n_plus_one_truck.png)
+
 ダメな例（ループ内で毎回DBアクセス）👇
 
 ```csharp
@@ -135,6 +139,8 @@ foreach (var o in orders)
 ---
 
 ## 4) パターン①：GroupByで集計してJOINする（読みやすい王道）👑📊
+
+![GroupBy and Join](./picture/cqrs_cs_study_021_groupby_join_belt.png)
 
 OrderItemsを先に集計して、OrdersにJOINするよ！
 
@@ -200,6 +206,8 @@ EF Coreの「compiled query」みたいな高速化オプションも公式で�
 
 ## 5) パターン②：ページングしてから集計（大規模で強い）🦾📈
 
+![Paging Strategy](./picture/cqrs_cs_study_021_paging_sieve.png)
+
 データが増えると、**全体をJOINしてからSkip/Take** が重くなりやすいの。
 そんなときは「ページ対象のOrderIdを先に決める」作戦が強いよ！🧠✨
 
@@ -215,6 +223,8 @@ EF Coreの「compiled query」みたいな高速化オプションも公式で�
 ---
 
 ## 6) 「集計 + 総件数」って実は別腹 🍰📌
+
+![Total Count vs List](./picture/cqrs_cs_study_021_total_count_weight.png)
 
 一覧画面ってよく「総件数」も欲しくなるよね？
 
@@ -256,6 +266,8 @@ ON dbo.OrderItems(OrderId);
 
 ## 8) それでも重い時の“奥の手”紹介（読みが爆速になるやつ）🪄🏎️
 
+![Aggregation Options](./picture/cqrs_cs_study_021_aggregation_options_fork.png)
+
 「毎回SUM/COUNTするの重いよ〜😭」ってなったら、こういう選択肢があるよ👇
 
 * **Read専用テーブル**（OrderSummaryみたいに合計を保持）
@@ -286,6 +298,8 @@ ON dbo.OrderItems(OrderId);
 ---
 
 ## 10) AI活用プロンプト（超おすすめ）🤖💬✨
+
+![AI SQL Helper](./picture/cqrs_cs_study_021_ai_sql_helper.png)
 
 そのままコピペで使えるやつ置いとくね！😺🫶
 

@@ -15,6 +15,8 @@
 
 ## 1. なぜAPI層を薄くするの？🤔💡
 
+![Thin vs Fat API](./picture/cqrs_cs_study_022_thin_vs_fat_desk.png)
+
 CQRSで一番やりたいのは、結局これ👇
 
 * **書く（Command）**：業務ルール・整合性を守る💪
@@ -33,6 +35,8 @@ CQRSで一番やりたいのは、結局これ👇
 ---
 
 ## 2. “薄いAPI”の7ルール📏✨
+
+![7 Rules Flowchart](./picture/cqrs_cs_study_022_api_flowchart_rules.png)
 
 ```mermaid
 flowchart LR
@@ -65,6 +69,8 @@ flowchart LR
 
 ## 3. ControllerとMinimal API、どっちを使う？⚖️
 
+![Controller vs Minimal API](./picture/cqrs_cs_study_022_controller_vs_minimal_scale.png)
+
 どっちでもOK！ただし「薄くする」は共通ルールだよ😺✨
 
 ### Controllerが向いてるとき🎛️
@@ -95,6 +101,8 @@ flowchart LR
 ---
 
 ## 5. エラーはAPI層で頑張らない🧯➡️🧼
+
+![Global Error Handling](./picture/cqrs_cs_study_022_fire_extinguisher_error.png)
 
 **各エンドポイントにtry/catchを書き始めた瞬間、負け**😇💦
 代わりにこうする👇
@@ -243,6 +251,8 @@ Minimal APIは **短く保ちやすい**のがいいところだよね😺✂️
 
 ## 8. “薄さ”を守るためのコツ：Endpoint Filterで横断処理🧩✨
 
+![Endpoint Filter](./picture/cqrs_cs_study_022_endpoint_filter_checkpoint.png)
+
 Minimal APIには **Endpoint Filter** があるから、
 「毎回同じチェック」をエンドポイントから追い出せるよ🚚💨([Microsoft Learn][4])
 
@@ -283,6 +293,8 @@ Controller派の場合は、フィルタ（ActionFilter）やミドルウェア�
 ---
 
 ## 9. 例外を“共通形式”にする（Controller/Minimal共通）🧯➡️📄
+
+![ProblemDetails Standard](./picture/cqrs_cs_study_022_problem_details_form.png)
 
 **IExceptionHandler** を使うと、既知の例外だけ拾って
 「どう返すか」を一箇所にまとめられるよ🧼✨([Microsoft Learn][5])

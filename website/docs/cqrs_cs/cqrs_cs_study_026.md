@@ -47,6 +47,8 @@ flowchart TD
 
 ## 3) まずはログの“型”を決めよう🧩（テンプレ統一）
 
+![Structured Log Template](./picture/cqrs_cs_study_026_structured_log_form.png)
+
 ログは **文字列をつなげる**より、**メッセージテンプレート**（`{Name}` みたいな穴あき）で出すのが基本だよ📌
 （これが「構造化ログ」の超大事ポイント！）([Microsoft Learn][1])
 
@@ -65,6 +67,8 @@ flowchart TD
 ---
 
 ## 4) 実装：Dispatcherで開始・終了を包む📬⏱️
+
+![Dispatcher Wrapper](./picture/cqrs_cs_study_026_dispatcher_envelope.png)
 
 ここからがハンズオンだよ！👩‍💻✨
 （第24章で作った `Dispatcher` がある前提で、そこにログを追加するイメージ）
@@ -190,6 +194,8 @@ public sealed class Dispatcher : IDispatcher
 
 **ポイント解説（ここ大事💡）**
 
+![TraceId Thread](./picture/cqrs_cs_study_026_traceid_thread.png)
+
 * `BeginScope(...)` で **TraceId / 種別 / 操作名** を“全ログに付ける”感じになるよ🧷✨ ([Microsoft Learn][3])
 * `try/catch` で **失敗ログを必ず出す**（例外も添える）🔥
 * `Stopwatch` で **時間を測る**⏱️
@@ -219,6 +225,8 @@ ASP.NET Core のログ設定自体の考え方はこのへんが公式にまと�
 
 ## 6) ログに“何を書かないか”ルール🚫（初心者ほどここが事故る😇）
 
+![Confidential Logging](./picture/cqrs_cs_study_026_shredder_confidential.png)
+
 ログは便利だけど、**書きすぎると地獄**になるよ〜😵‍💫💦
 
 ### 絶対避けたいログ🙅‍♀️
@@ -237,6 +245,8 @@ ASP.NET Core のログ設定自体の考え方はこのへんが公式にまと�
 ---
 
 ## 7) もう一歩：高頻度ログは Source Generator で軽くできる🏎️✨（任意）
+
+![High Performance Logger](./picture/cqrs_cs_study_026_racecar_logger.png)
 
 ログがめっちゃ多いところ（超ホットパス）では、`LoggerMessageAttribute` の **コンパイル時生成**が便利だよ📌
 Microsoft Learn が最新めで解説してる！([Microsoft Learn][6])

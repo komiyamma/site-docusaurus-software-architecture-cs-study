@@ -176,6 +176,8 @@ EFは**投影＋NoTracking**でかなり速くなることが多いよ⚡（第1
 
 ### 7-1) “危ないポイント”はソート（ORDER BY）⚠️
 
+![sql_injection_shield](./picture/cqrs_cs_study_020_sql_injection_shield.png)
+
 SQLのパラメータって、`WHERE`の値は守れるんだけど、
 **列名（ORDER BYの対象）**はパラメータ化できないことが多いの。
 
@@ -216,6 +218,8 @@ public sealed class SqlConnectionFactory : IDbConnectionFactory
 ---
 
 ### 7-3) Dapper QueryHandler（QueryMultipleで“一覧＋件数”を1往復）🚀
+
+![query_multiple_shopping](./picture/cqrs_cs_study_020_query_multiple_shopping.png)
 
 ```csharp
 using Dapper;

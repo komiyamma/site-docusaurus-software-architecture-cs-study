@@ -20,6 +20,8 @@
 
 ## キャッシュってなに？（超ざっくり）🧊
 
+![Cache Flow Diagram](./picture/cqrs_cs_study_033_cache_flow_diagram.png)
+
 ```mermaid
 flowchart TD
   Q[Request] --> C{Cacheにあり?}
@@ -79,9 +81,13 @@ flowchart TD
 
 ### 事故①：表示が古い（stale）📆💦
 
+![Stale Data Warning](./picture/cqrs_cs_study_033_stale_data_warning.png)
+
 キャッシュは“昔の結果”を使うので、**更新があった直後に古い表示**になりがち。
 
 ### 事故②：キー設計ミスで違う条件が混ざる🗝️😱
+
+![Cache Key Ingredients](./picture/cqrs_cs_study_033_cache_key_ingredients.png)
 
 例：
 
@@ -221,6 +227,8 @@ public sealed class GetTodoListQueryHandler
 ---
 
 ## Step 3：事故を直す！書き込みがあったら“まとめて失効”させる🧯✨
+
+![Invalidation Stamp](./picture/cqrs_cs_study_033_invalidation_stamp.png)
 
 TTLだけだと「10秒間は古い」問題が出ます。
 なので次は、**Command（書き込み）が成功したら一覧キャッシュを消す**を入れます👍
@@ -397,6 +405,8 @@ public sealed class CreateTodoCommandHandler
 ---
 
 ## 2) HybridCache（入門の次の一手）🥷🧊
+
+![HybridCache Shield](./picture/cqrs_cs_study_033_hybrid_cache_shield.png)
 
 「メモリ＋分散」をまとめて扱える公式ライブラリで、登録も利用も簡単です。
 

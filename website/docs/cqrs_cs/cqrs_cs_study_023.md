@@ -55,6 +55,8 @@ DTOを“役割で”分けると一気にスッキリするよ✨
 
 ## 3) 命名ルールを決めると、脳みそが節約できる🧠💡
 
+![Naming Rules Puzzle](./picture/cqrs_cs_study_023_naming_puzzle.png)
+
 おすすめの固定ルール（めっちゃ効く！）👇
 
 * Request：`XxxRequest`
@@ -73,6 +75,8 @@ DTOを“役割で”分けると一気にスッキリするよ✨
 ここからは **Minimal API版** で見せるね！（Controller版も後で出すよ👍）
 
 ### 4-1. フォルダの置き場所（例）📁
+
+![Folder Structure](./picture/cqrs_cs_study_023_folder_cabinet.png)
 
 * `Api/Features/Todos/`（エンドポイントとAPIのDTO）
 * `Application/Features/Todos/`（Command/Query/Handler/Result）
@@ -130,6 +134,8 @@ public sealed record PagedResult<T>(
 
 ## 4-3. Handler（ここが“仕事する場所”🍳🔥）
 
+![Handler Workshop](./picture/cqrs_cs_study_023_handler_workshop.png)
+
 ※DB実装は章が進むともっと良くするけど、ここでは「形」を優先してOK👍
 
 ```csharp
@@ -155,6 +161,8 @@ public interface IGetTodoListHandler
 ---
 
 ## 4-4. エンドポイント（APIは“薄く”！3〜7行くらいが理想🧼✨）
+
+![API Connector](./picture/cqrs_cs_study_023_api_pipe_connector.png)
 
 ここが第23章のメイン！🎯
 **入力→変換→Handler→返す** を絶対に崩さないよ💪
@@ -241,6 +249,8 @@ public static class TodosEndpoints
 ---
 
 ## 5) エラーも“型”を揃えるとAPIがキレイになる🧯✨
+
+![Error Standardizer](./picture/cqrs_cs_study_023_error_standardizer_machine.png)
 
 APIが増えると、エラー形式がバラバラで苦しくなるよね😵
 ASP.NET Coreは **ProblemDetails** を標準で扱える流れが用意されてるよ。([Microsoft Learn][2])

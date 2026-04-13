@@ -45,6 +45,8 @@ CQRSって「読む（Query）」と「書く（Command）」を分けるけど�
 
 ## 4) Command単体テストで「何を守る？」チェックリスト✅🧠
 
+![Command Logic Scope](./picture/cqrs_cs_study_029_command_logic_scope.png)
+
 ```mermaid
 flowchart LR
   CMD[Command Request] --> V[1. Validator]
@@ -82,6 +84,8 @@ flowchart LR
 
 ### コツA：依存を「注入」して、差し替えられるようにする🔁
 
+![Testable Handler Lego](./picture/cqrs_cs_study_029_testable_handler_lego.png)
+
 * Repository（保存先）
 * 時刻（現在時刻）
 * ユーザー情報（必要なら）
@@ -107,6 +111,8 @@ flowchart LR
 ## 7) 実装（アプリ側）✍️🧩
 
 ### 7-1) Command結果（成功/失敗）🎁
+
+![Result Pattern Paths](./picture/cqrs_cs_study_029_result_pattern_paths.png)
 
 ```csharp
 namespace TodoApp;
@@ -206,6 +212,8 @@ xUnit は .NET 8 以降をサポートするよ（v3）✨ ([xUnit.net][3])
 Microsoft Learn にも xUnit での単体テスト手順があるよ📚 ([Microsoft Learn][4])
 
 ### 「時間」を固定するために FakeTimeProvider を使う⏰✨
+
+![Frozen Clock TimeProvider](./picture/cqrs_cs_study_029_frozen_clock.png)
 
 `FakeTimeProvider` を使うと、テストで時間を確定できるよ！
 これは Microsoft が提供するテスト向け実装🧡 ([Microsoft Learn][5])
@@ -370,6 +378,8 @@ dotnet test
 ---
 
 ## 13) まとめ🎀（ここだけ覚えてたら勝ち🏆）
+
+![Fast Test Runner](./picture/cqrs_cs_study_029_fast_test_runner.png)
 
 * Command は **ルールの塊** → 単体テストがいちばん効く🧪✨
 * 単体テストは **速い・安定・怖くない** を目指す🏃‍♀️💨

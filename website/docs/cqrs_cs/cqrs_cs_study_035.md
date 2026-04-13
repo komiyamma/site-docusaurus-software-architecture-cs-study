@@ -9,6 +9,7 @@
 ---
 
 ## 1) 最終的整合性ってなに？🧠💡
+![Eventual Consistency Concept](./picture/cqrs_cs_study_035_eventual_consistency_concept.png)
 
 一言でいうと…
 
@@ -27,6 +28,7 @@ CQRSは **Write（更新）** と **Read（参照）** を分けられるのが�
 ## 2) どんなときに困る？😵‍💫（困る順）
 
 ### 困りやすい😱
+![User Anxiety](./picture/cqrs_cs_study_035_user_anxiety.png)
 
 * ユーザーが「保存したのに一覧に出ない！」って不安になる📉
 * 「保存ボタンを連打」→二重登録💥（次章の冪等性につながる🔁）
@@ -314,6 +316,7 @@ app.Run();
 （MicrosoftのCQRSでも “Read storeが遅れる＝eventual consistency” って前提で考える話が出てくるよ） ([Microsoft Learn][2])
 
 ### 4-1) すぐ使える文言テンプレ（コピペOK）📄✨
+![UI Mitigation](./picture/cqrs_cs_study_035_ui_mitigation.png)
 
 **✅ 保存直後のトースト**
 
@@ -359,6 +362,7 @@ app.Run();
 ## 6) ちょい上級：本番で事故らせないための“橋渡し知識”🌉🧯
 
 ### 6-1) 「DB保存できたのにイベント送れなかった」問題💥
+![Outbox Pattern](./picture/cqrs_cs_study_035_outbox_pattern.png)
 
 デモでは即キュー投入したけど、本番ではここが地雷になりやすい…！
 

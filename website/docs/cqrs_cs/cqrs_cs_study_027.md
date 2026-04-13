@@ -16,6 +16,8 @@ CQRSだと、読み（Query）と書き（Command）で失敗の種類が増え�
 
 ## まず結論：エラー設計の“3ルール”📌✨
 
+![Three Error Rules](./picture/cqrs_cs_study_027_three_rules_signpost.png)
+
 1. **業務エラー（想定内の失敗）**は、例外にしない（throwしない）🙅‍♀️
    → `Result` で「失敗」を返す（＝通常フローとして扱う）
 
@@ -70,6 +72,8 @@ flowchart TD
 
 ## 2) “HTTPステータス”のおすすめ対応表📮✨
 
+![HTTP Status Sorting](./picture/cqrs_cs_study_027_http_status_mailbox.png)
+
 | 種類                | 例              | おすすめHTTP | ポイント                               |
 | ----------------- | -------------- | -------: | ---------------------------------- |
 | 入力エラー（Validation） | 必須未入力、桁数違い     |      400 | `ValidationProblemDetails` 相当が便利🧾 |
@@ -81,6 +85,8 @@ flowchart TD
 ---
 
 ## 3) 返すボディは ProblemDetails に統一しよ🧾✨
+
+![ProblemDetails Identity](./picture/cqrs_cs_study_027_problem_details_id.png)
 
 ### ProblemDetailsって？👀
 
@@ -111,6 +117,8 @@ ASP.NET Core は `AddProblemDetails` で `IProblemDetailsService` の既定実�
 ---
 
 ## 5) 最小の Result と Error を作る（依存なし版）🧩
+
+![Result Pattern Switch](./picture/cqrs_cs_study_027_result_track_switch.png)
 
 ### ① Errorの型を作るよ🧯
 
@@ -196,6 +204,8 @@ public sealed class CreateOrderHandler
 ---
 
 ## 7) API層で Result → ProblemDetails に変換する（Minimal API例）📮🧾
+
+![Result to HTTP Translator](./picture/cqrs_cs_study_027_translator_adapter.png)
 
 ```csharp
 static IResult ToHttpResult<T>(Result<T> result, Func<T, IResult> onSuccess)

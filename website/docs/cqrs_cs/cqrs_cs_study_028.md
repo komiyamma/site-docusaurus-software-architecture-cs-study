@@ -16,6 +16,8 @@
 
 ## 1) まずは「Validationを3種類に分ける」🧠🧹
 
+![Validation Types Chart](./picture/cqrs_cs_study_028_validation_types_chart.png)
+
 ```mermaid
 flowchart TD
   A[入力チェック] -- API入口 --> AR[形式/必須]
@@ -44,6 +46,8 @@ flowchart TD
 ---
 
 ## 2) 共通化が気持ちよく見える瞬間😇✨（そして罠）
+
+![Generic Validator Maze](./picture/cqrs_cs_study_028_generic_validator_maze.png)
 
 よくある流れ👇
 
@@ -79,6 +83,8 @@ flowchart TD
 ---
 
 ## 4) 入口（API）側：最小の入力チェックを“自動”で✨⚡
+
+![Minimal API Auto Validation](./picture/cqrs_cs_study_028_minimal_api_gate.png)
 
 ### Minimal APIを使う場合（DataAnnotationsの自動Validation）🧷
 
@@ -157,6 +163,8 @@ public sealed class CreateTodoCommandValidator : AbstractValidator<CreateTodoCom
 
 ### 6-2) 共通化は“拡張メソッド1個”から🧩✨（やりすぎ防止）
 
+![Extension Method Puzzle](./picture/cqrs_cs_study_028_extension_method_puzzle.png)
+
 たとえばページング、いろんなQueryで使うよね📄
 こういうのは共通化しやすい！
 
@@ -209,6 +217,8 @@ public sealed class SearchTodosQueryValidator : AbstractValidator<SearchTodosQue
 ---
 
 ## 7) DispatcherにValidationを差し込む📬✨（Command/Query共通で自動化！）
+
+![Dispatcher Validation Hook](./picture/cqrs_cs_study_028_dispatcher_hook.png)
 
 第24章で作ったDispatcherに、**“実行前にValidatorを探して、あれば実行する”**を足すイメージだよ😺
 
@@ -271,6 +281,8 @@ public sealed class Dispatcher
 ---
 
 ## 8) APIにきれいに返す🪄🧾（ValidationProblemでOK！）
+
+![Clean Error Response](./picture/cqrs_cs_study_028_clean_error_response.png)
 
 Minimal APIならこう👇
 

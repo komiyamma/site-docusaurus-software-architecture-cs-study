@@ -10,6 +10,8 @@ Visual Studio 2026 は 2026/01 も更新が出てる（例：2026/01/20のリリ
 
 ## 1) Dispatcherってなに？📮（超ざっくり）
 
+![Post Office Metaphor](./picture/cqrs_cs_study_024_post_office_sorting.png)
+
 ```mermaid
 flowchart LR
   CTRL[Controller] -- Send --> D[Dispatcher]
@@ -37,6 +39,8 @@ flowchart LR
 ---
 
 ## 2) 今日つくる最小Dispatcherのゴール🎯
+
+![Minimal Toolbox](./picture/cqrs_cs_study_024_minimal_toolbox.png)
 
 ### 今回のゴール（最小セット）💡
 
@@ -69,6 +73,8 @@ Featuresごとにまとめるとスッキリするよ〜🧺
 ---
 
 ## 4) まずは“型”を作る🧩（Command/Query/Handler）
+
+![Type Safety Road](./picture/cqrs_cs_study_024_type_safety_road.png)
 
 ### 4.1 Command / Query のインターフェース
 
@@ -106,6 +112,8 @@ public interface IQueryHandler<TQuery, TResult>
 ---
 
 ## 5) Dispatcher（司令塔）を作る📬✨
+
+![DI Resolution](./picture/cqrs_cs_study_024_di_mechanical_arm.png)
 
 ### 5.1 IDispatcher
 
@@ -282,6 +290,8 @@ app.Run();
 ---
 
 ## 8) よくある詰まりポイント🧯💦（あるある5連発）
+
+![Common Pitfalls](./picture/cqrs_cs_study_024_pitfall_signs.png)
 
 ### ① Handlerを登録し忘れる😇
 

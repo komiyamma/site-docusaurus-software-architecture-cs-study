@@ -37,6 +37,7 @@ Readモデル更新は、現実には **“少なくとも1回” (at-least-once
 ---
 
 ## 3) よくある「二重」の原因あるある😵‍💫📶
+![Duplicate Clicks](./picture/cqrs_cs_study_036_duplicate_clicks.png)
 
 * ユーザーの二度押し👆👆
 * ブラウザが「送ったかわからん…」で再送
@@ -58,6 +59,7 @@ flowchart TD
 ```
 
 ### 考え方（めっちゃ大事）🧠
+![Idempotency Key Flow](./picture/cqrs_cs_study_036_idempotency_key_flow.png)
 
 クライアントが **Idempotency-Key**（だいたい GUID）を付けてPOSTする
 → サーバーはそのキーで「これ前やった？」を判定
@@ -220,6 +222,7 @@ class IdempotencyEntry
 Readモデル更新は、同じイベントが2回届く前提で作るのが基本だよ😺
 
 ### 5-1) アイデア：Inboxテーブルを作る📥
+![Inbox Pattern](./picture/cqrs_cs_study_036_inbox_pattern.png)
 
 「このイベントID、処理したっけ？」を記録する台帳ね。
 
@@ -232,6 +235,7 @@ Readモデル更新は、同じイベントが2回届く前提で作るのが基
 ---
 
 ### 5-2) Projection処理の鉄板アルゴリズム（超重要）🧠🧱
+![Transaction Scope](./picture/cqrs_cs_study_036_transaction_scope.png)
 
 1. トランザクション開始🔒
 2. Inboxに `MessageId` をINSERT（重複なら即終了）📥
