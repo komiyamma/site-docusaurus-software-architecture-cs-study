@@ -30,6 +30,8 @@ DbCは「考え方」なのでバージョンに左右されにくいけど、�
 ---
 
 ## まず結論：3スタイルの使い分け早見表👀✨
+![three_styles_strength](./picture/dbc_cs_study_005_three_styles_strength.png)
+
 
 | スタイル                | 何をする？             | 強さ💪 | こんな時におすすめ🌷                   |
 | ------------------- | ----------------- | ---: | ----------------------------- |
@@ -44,6 +46,8 @@ DbCは「考え方」なのでバージョンに左右されにくいけど、�
 ---
 
 ## 今回の題材（同じルールを3方式で表現）🎨✅
+![cart_rules_visual](./picture/dbc_cs_study_005_cart_rules_visual.png)
+
 
 例として、ショッピングカートに追加する処理を考えます🛒✨
 
@@ -81,6 +85,8 @@ public sealed class CartService
 ```
 
 ### よくある落とし穴⚠️
+![comment_style_weakness](./picture/dbc_cs_study_005_comment_style_weakness.png)
+
 
 * コメントだけだと「破っても動いちゃう」😅
 * 気づいたらコメントと実装がズレる（あるある）😵‍💫
@@ -165,6 +171,8 @@ public sealed class CartService
 ---
 
 ### ②の小まとめ🧠✨
+![guard_exception_vs_result](./picture/dbc_cs_study_005_guard_exception_vs_result.png)
+
 
 * 「これは開発者のミスだよね？」→ 例外💥
 * 「これはユーザーが起こしうるよね？」→ Result📩
@@ -176,6 +184,8 @@ public sealed class CartService
 ## ③ 型（値オブジェクト等）でそもそも作れなくする（最強）💎🔒
 
 ### どうして“最強”？👑✨
+![type_style_mold](./picture/dbc_cs_study_005_type_style_mold.png)
+
 
 * ②だと、ついこうなりがち👇
 
@@ -254,6 +264,8 @@ public sealed class CartService
 ---
 
 ## 3方式を“段階導入”するテンプレ🪜✨
+![adoption_steps](./picture/dbc_cs_study_005_adoption_steps.png)
+
 
 ### ステップ1：コメントでルールを可視化📝
 

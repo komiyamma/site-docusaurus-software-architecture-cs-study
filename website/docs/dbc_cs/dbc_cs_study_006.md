@@ -7,6 +7,8 @@ DbCの「Pre（事前条件）」は、**“呼び出し側が守る約束”**�
 ---
 
 ## 6.1 まずは3つをハッキリ分けよう🧠✨
+![three_empties_visual](./picture/dbc_cs_study_006_three_empties_visual.png)
+
 
 同じ「入ってない」でも意味が違うよ👇
 
@@ -32,6 +34,8 @@ flowchart TD
 ---
 
 ## 6.2 ありがちな事故あるある😵‍💫💥
+![null_accidents](./picture/dbc_cs_study_006_null_accidents.png)
+
 
 ### ✅ 事故①：nullと空を混ぜて「なんとなく通す」
 
@@ -46,6 +50,8 @@ flowchart TD
 ---
 
 ## 6.3 “許す・許さない”を決めるミニ基準⚖️🌸
+![null_bouncer_rules](./picture/dbc_cs_study_006_null_bouncer_rules.png)
+
 
 迷ったらこのルールが便利👇
 
@@ -79,6 +85,8 @@ flowchart TD
 ---
 
 ## 6.4 ガード節の基本形：「上で弾いて下をスッキリ」🛡️📐
+![guard_clause_clean_room](./picture/dbc_cs_study_006_guard_clause_clean_room.png)
+
 
 入口チェックは、**最初にまとめて短く**が読みやすい✨
 .NET 9〜10あたりでは、ガード用のThrowIf系がかなり便利になってるよ💖
@@ -139,6 +147,8 @@ public static void UpdateMemo(string memo)
 ---
 
 ## 6.6 コレクションのPre：nullと空の意味を決める📦🧺
+![collection_empty_patterns](./picture/dbc_cs_study_006_collection_empty_patterns.png)
+
 
 コレクションはこの2パターンが多いよ👇
 
@@ -196,6 +206,8 @@ public static void UpdateProfile(string userId, string? displayName)
 ---
 
 ## 6.8 例外の選び方（Preの作法）🎭✅
+![exception_type_tools](./picture/dbc_cs_study_006_exception_type_tools.png)
+
 
 Pre違反（＝呼び出し側が契約違反）には、だいたいこの3つを使うとキレイ✨
 

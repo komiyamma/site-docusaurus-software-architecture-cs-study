@@ -13,6 +13,8 @@ C# 14 が最新で、.NET 10 と一緒に使うのが今の基本線だよ〜�
 ---
 
 ## 7.2 いちばん大事：**string** と **string?** は「契約の文章」📜💡
+![nullable_contract_badges](./picture/dbc_cs_study_007_nullable_contract_badges.png)
+
 
 * 呼ばれる側：**nullのときの振る舞い** を必ず決める（返す？代替？エラー？）🎯
 
@@ -35,6 +37,8 @@ Nullable参照型はコンパイル時に「nullかも」を追跡して警告�
 Nullable参照型は便利だけど、雑に **何でも string?** にすると、逆に設計が弱くなるの💦
 
 ### 🎀 「? を付ける前の3問」
+![nullable_checklist](./picture/dbc_cs_study_007_nullable_checklist.png)
+
 
 1. **null って“意味がある”？**（未入力・不明・省略…など）🫥
 2. **空文字（""）や空配列じゃダメ？**（意味が混ざらない？）🧺
@@ -48,6 +52,8 @@ Nullable参照型は便利だけど、雑に **何でも string?** にすると�
 ---
 
 ## 7.4 超重要：Nullableは“コンパイル時”の契約。実行時チェックもまだ必要🧯🧩
+![compile_vs_runtime_check](./picture/dbc_cs_study_007_compile_vs_runtime_check.png)
+
 
 Nullable参照型は **実行時に自動で例外を投げてくれるわけじゃない** よ⚠️
 呼ぶ側が警告を無視したり、外部入力経由だったりすると、普通に null は来る可能性があるの🥺
@@ -103,6 +109,8 @@ flowchart TD
 NullableをONにすると、よく出る警告があるよ〜！「うわっ」ってならないように、パターンで覚えよ😆✨
 
 ### ① 「nullかもを . で参照してるよ」系（例：CS8602）😱
+![warning_dot_access](./picture/dbc_cs_study_007_warning_dot_access.png)
+
 
 **原因**：string? に対してそのまま Length / Trim など
 **直し方**：ガード・分岐・代替値・例外のどれかを決める
@@ -140,6 +148,8 @@ SendEmail(input);
 ```
 
 ### ③ 「コンストラクタ抜ける時点で非nullプロパティが未初期化」系（例：CS8618）🏗️💦
+![warning_constructor_init](./picture/dbc_cs_study_007_warning_constructor_init.png)
+
 
 **原因**：非nullのはずのプロパティが、初期化されてない
 **直し方の王道**：
@@ -163,6 +173,8 @@ Nullable参照型は、標準ライブラリ側も **属性** を付けて「こ
 自分のコードでも、**Try系** と相性バツグンだよ🎯
 
 ### ✅ Tryパターンで「成功したら out は非null！」を伝える🎁
+![try_pattern_chest](./picture/dbc_cs_study_007_try_pattern_chest.png)
+
 
 ```csharp
 using System.Diagnostics.CodeAnalysis;

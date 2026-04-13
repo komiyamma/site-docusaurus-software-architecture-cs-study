@@ -10,6 +10,8 @@
 ---
 
 ## 9.1 形式チェックってなに？📧🗓️🪪
+![format_vs_reality](./picture/dbc_cs_study_009_format_vs_reality.png)
+
 
 ![形式チェックとステンシル（型抜き）のイメージ](./picture/dbc_cs_study_009_format_check.png)
 
@@ -43,6 +45,8 @@ graph TD
 ---
 
 ## 9.2 形式チェックは「まずパース」→「必要ならregex」がおすすめ🍰✅
+![parse_vs_regex_path](./picture/dbc_cs_study_009_parse_vs_regex_path.png)
+
 
 ### ① いちばん読みやすい：型に変換できるかで判定🧩✨
 
@@ -65,6 +69,8 @@ graph TD
 ## 9.3 例① メールアドレスの形式チェック📧✅
 
 ### 9.3.1 “やりすぎ厳密”は避けよう🥺
+![email_check_relaxed](./picture/dbc_cs_study_009_email_check_relaxed.png)
+
 
 メールはルールが超広いので、
 
@@ -119,6 +125,8 @@ public static partial class EmailFormat
 「入力フォーマットを固定」して `TryParseExact` が安心だよ🧯✨([Microsoft Learn][2])
 
 ### 9.4.2 DateOnlyで「日付だけ」を安全に扱う🌸
+![dateonly_clean](./picture/dbc_cs_study_009_dateonly_clean.png)
+
 
 * 誕生日・予約日・締め日…みたいに **時刻がいらない** 場面で便利🎀
 
@@ -158,6 +166,8 @@ APIやログで `2026-01-25T10:30:00+09:00` みたいにオフセット込みな
 ## 9.5 例③ ID（GUID）の形式チェック🪪✅
 
 ### 9.5.1 文字列IDは「Guidにできる？」で判定しよう✨
+![guid_format_sorter](./picture/dbc_cs_study_009_guid_format_sorter.png)
+
 
 `Guid.TryParseExact` を使うと **フォーマット指定** までできて便利だよ🧁([Microsoft Learn][3])
 
@@ -200,6 +210,8 @@ flowchart TD
 ---
 
 ## 9.6 “入口ガード節”としてまとめるテンプレ🛡️🚪
+![guard_desk_stamps](./picture/dbc_cs_study_009_guard_desk_stamps.png)
+
 
 「入力DTO → まず形式チェック → OKなら型にして次へ」って流れにすると、
 後ろのコードがスッキリするよ🧘‍♀️✨

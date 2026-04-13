@@ -11,6 +11,8 @@
 
 ## 1. エラーモデリングってなに？🤔💡
 
+![error_confusion](./picture/dbc_cs_study_022_error_confusion.png)
+
 エラーモデリングは、「失敗のパターン」を先に整理して、**実装と返し方（見せ方）を揃える**ことだよ〜🧩✨
 
 たとえば同じ“失敗”でも…
@@ -27,6 +29,8 @@
 ## 2. まずは“分類”がすべて🗂️🏷️
 
 ### 2.1 いちばん強い分類：誰が直せる？👤🔧
+
+![error_triage](./picture/dbc_cs_study_022_error_triage.png)
 
 * **契約違反（バグ）**🧨👩‍💻
   呼び出し方・使い方が間違い。直すのは開発者。
@@ -54,6 +58,8 @@ flowchart TD
 
 ### 2.2 もう1つの軸：再試行できる？🔁⏳
 
+![retry_traffic_light](./picture/dbc_cs_study_022_retry_traffic_light.png)
+
 同じ失敗でも「対処」が変わるから、ラベルを付けておくと超ラク🏷️✨
 
 | 種類       | 例             | 再試行 | 典型アクション |
@@ -66,6 +72,8 @@ flowchart TD
 ---
 
 ## 3. C#での表現：例外 vs Result 🎭⚖️
+
+![exception_vs_result](./picture/dbc_cs_study_022_exception_vs_result.png)
 
 ### 3.1 例外に向いてるもの💥
 
@@ -176,6 +184,8 @@ flowchart LR
 
 ### 6.1 Problem Detailsって？🧾
 
+![problem_details_form](./picture/dbc_cs_study_022_problem_details_form.png)
+
 HTTP APIのエラーを「決まった形」で返すための標準形式だよ✨
 最近は RFC 9457 が正式な仕様で、RFC 7807 を置き換えてるよ📘🔁 ([RFC エディタ][1])
 
@@ -222,6 +232,8 @@ app.Run();
 ---
 
 ## 7. DomainError → HTTP（Problem Details）への変換テーブル🗺️🔁
+
+![status_exchange_board](./picture/dbc_cs_study_022_status_exchange_board.png)
 
 「どのエラーを何HTTPにする？」を先に決めよう✨
 
@@ -376,6 +388,8 @@ ASP.NET Core には Problem Details を作る仕組みがあり、`AddProblemDet
 ---
 
 ## 10. ありがちな失敗と直し方😵‍💫➡️😊
+
+![bad_error_handling](./picture/dbc_cs_study_022_bad_error_handling.png)
 
 ### 失敗①：全部 Exception で返しちゃう💥
 

@@ -48,6 +48,8 @@ flowchart TD
 
 ## 14.3 例外（throw）を選ぶのはどんな時？🧯🔥
 
+![exception_fire_extinguisher](./picture/dbc_cs_study_014_exception_fire_extinguisher.png)
+
 例外は「**呼び方が間違ってる**」「**続行が危険**」に向いてます💡
 
 ### 例外が向いてるケース✅
@@ -66,6 +68,8 @@ flowchart TD
 
 ## 14.4 Resultを選ぶのはどんな時？🎁📩
 
+![result_envelope_delivery](./picture/dbc_cs_study_014_result_envelope_delivery.png)
+
 Resultは「**想定内の失敗**」を、呼び出し側が素直に分岐できる形にする考え方です😊✨
 
 ### Resultが向いてるケース✅
@@ -82,6 +86,8 @@ Resultは「**想定内の失敗**」を、呼び出し側が素直に分岐で�
 ---
 
 ## 14.5 迷ったらこれ！判断チャート🗺️✨
+
+![exception_vs_result_chart](./picture/dbc_cs_study_014_exception_vs_result_chart.png)
 
 次の順に考えると、ほぼ迷子になりません😊🌸
 
@@ -178,6 +184,8 @@ public sealed record Email
 ```
 
 ### 呼ぶ側はこうなる😊✨
+
+![result_pattern_branching](./picture/dbc_cs_study_014_result_pattern_branching.png)
 
 ```csharp
 var result = Email.TryCreate(input);
@@ -294,6 +302,8 @@ public sealed class OrderService
 ---
 
 ## 14.10 境界（UI/API）での扱い🚪🌐✨
+
+![boundary_conversion_layer](./picture/dbc_cs_study_014_boundary_conversion_layer.png)
 
 境界は「外から変なものが来る場所」なので、ここで整理するとスッキリします🧼🫧
 

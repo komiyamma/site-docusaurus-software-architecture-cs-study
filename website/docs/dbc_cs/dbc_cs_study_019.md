@@ -10,6 +10,8 @@
 
 ## 19.2 値オブジェクトの“3つの約束”📜💗
 
+![three_promises](./picture/dbc_cs_study_019_three_promises.png)
+
 値オブジェクトは、ざっくりこの3つを守れると強いよ〜😊✨
 
 1. **同じ値なら同じもの（等価性）**
@@ -27,6 +29,8 @@
 
 ## 19.3 「record class」か「record struct」か迷ったら？🤔🧭
 
+![class_vs_struct](./picture/dbc_cs_study_019_class_vs_struct.png)
+
 ### まず結論（迷子防止）🗺️✨
 
 * **迷ったら「sealed record class」**がいちばん安全でおすすめ💗
@@ -38,6 +42,8 @@
     そんなときに選ぶのが安心😊🧩
 
 ### record structの注意点⚠️🧨
+
+![default_ctor_trap](./picture/dbc_cs_study_019_default_ctor_trap.png)
 
 * 「record struct」には **既定の引数なしコンストラクタ（全部default）**があるよ〜、って仕様があるの🧊
   つまり **defaultで“変な値”が作れてしまう**可能性がある（参照型が混ざると特に）😱 ([Microsoft Learn][1])
@@ -85,6 +91,8 @@ flowchart TD
 ---
 
 ## 19.5 実装例①：EmailAddress（sealed record class）📧✨
+
+![email_validation](./picture/dbc_cs_study_019_email_validation.png)
 
 「メールアドレス」は参照型のstringを中心にするので、まずは record class が扱いやすいよ😊🌸
 
@@ -164,6 +172,8 @@ var adminEmail = EmailAddress.CreateOrThrow("admin@example.com");
 
 ## 19.6 実装例②：Money（sealed record class）💰✨
 
+![money_fusion](./picture/dbc_cs_study_019_money_fusion.png)
+
 金額は「通貨」も絡むことが多いから、まとめて1つの値として扱えると強いよ🧠💗
 
 ```csharp
@@ -231,6 +241,8 @@ public sealed record Money
 
 ## 19.7 実装例③：Percentage（readonly record struct）📏✨
 
+![percentage_gauge](./picture/dbc_cs_study_019_percentage_gauge.png)
+
 これは「intだけ」で完結して、default（0%）も意味があるので、readonly record struct にしやすい例だよ😊🌸
 
 ```csharp
@@ -275,6 +287,8 @@ public readonly record struct Percentage
 ---
 
 ## 19.8 recordの“等価性”を味方にする🍬✨
+
+![equality_balance](./picture/dbc_cs_study_019_equality_balance.png)
 
 recordの強みは「同じ中身なら同じ」と扱えること！
 比較やDictionaryのキーにも使いやすいよ😊🎀 ([Microsoft Learn][2])

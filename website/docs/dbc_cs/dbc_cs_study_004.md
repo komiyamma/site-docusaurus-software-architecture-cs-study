@@ -7,6 +7,8 @@
 ---
 
 ## 4-1. まず結論：混ぜると何が困るの？😵‍💫💥
+![mixing_chaos](./picture/dbc_cs_study_004_mixing_chaos.png)
+
 
 混ぜると、だいたいこうなります👇
 
@@ -96,6 +98,8 @@ DbCでめちゃ大事な考え方👇
 ---
 
 ## 4-5. C#での“返し方”の型（おすすめ）🧩✨
+![result_vs_exception_paths](./picture/dbc_cs_study_004_result_vs_exception_paths.png)
+
 
 ### ① 仕様エラー：Resultで返す🙂📩
 
@@ -171,6 +175,8 @@ public static int CalcDiscountRate(int age)
 ---
 
 ## 4-6. “ArgumentExceptionは仕様エラーじゃないの？”問題💭🌀
+![argument_exception_context](./picture/dbc_cs_study_004_argument_exception_context.png)
+
 
 ここ、初学者が混乱しやすいポイントです🐣🌸
 
@@ -187,6 +193,8 @@ public static int CalcDiscountRate(int age)
 ---
 
 ## 4-7. Web APIの場合：ProblemDetailsで仕様エラーを返す🧾🌐✨
+![problemdetails_format](./picture/dbc_cs_study_004_problemdetails_format.png)
+
 
 ASP.NET Core では、APIのエラーを **ProblemDetails（RFC 7807）** 形式で揃えやすいです🧩
 特に **バリデーションは ValidationProblemDetails** が便利🎯✨ ([Microsoft Learn][1])
@@ -229,6 +237,8 @@ flowchart LR
 ---
 
 ## 4-9. ミニ演習：どっち？仕分けしてみよう📋✨（超大事）
+![sorting_exercise_visual](./picture/dbc_cs_study_004_sorting_exercise_visual.png)
+
 
 次のケースを **「仕様エラー🙂📩」or「契約違反🧑‍💻💥」** に分類してね💪🌸
 

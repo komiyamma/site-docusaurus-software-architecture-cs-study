@@ -21,6 +21,8 @@
 * `name` が null/空じゃない ✍️
 
 ### 関係チェック（組み合わせてOK？）🔗✅
+![single_vs_relation_checks](./picture/dbc_cs_study_010_single_vs_relation_checks.png)
+
   * `start <= end`（開始日が終了日より後はダメ）📅
   * `min <= max`（最小が最大を超えるのはダメ）📏
   * `a + b <= limit`（合計が上限超えはダメ）🧮
@@ -44,6 +46,8 @@ flowchart TD
 ---
 
 ## 2) まずは王道パターン：開始と終了（start <= end）📅🔰
+![hotel_booking_dates](./picture/dbc_cs_study_010_hotel_booking_dates.png)
+
 
 「予約期間」を受け取るメソッドを想像してみよ〜💭✨
 例：ホテル予約の検索（開始日〜終了日）
@@ -96,6 +100,8 @@ DateOnly/TimeOnly は「日付だけ」「時刻だけ」を素直に表せる�
 ---
 
 ## 4) ありがち関係パターン集🧁✅
+![relationship_patterns_icons](./picture/dbc_cs_study_010_relationship_patterns_icons.png)
+
 
 ### A. min/max（最小 <= 最大）📏
 
@@ -150,6 +156,8 @@ public static void ApplyDiscount(decimal? rate, decimal? amount)
 ---
 
 ## 5) 「関係が複雑」になったら設計サイン✂️🚦
+![refactor_to_value_object](./picture/dbc_cs_study_010_refactor_to_value_object.png)
+
 
 関係チェックが増えてきて、こんな感じになってきたら要注意😵‍💫💦
 
@@ -189,6 +197,8 @@ flowchart LR
 ---
 
 ## 6) テストで守る：境界は“関係”にもあるよ🧪📏✨
+![testing_balance](./picture/dbc_cs_study_010_testing_balance.png)
+
 
 関係チェックで特に大事なのはこの3つ👇
 
@@ -233,6 +243,8 @@ public class HotelSearchTests
 ---
 
 ## 7) AI（Copilot/Codex）に頼むときのコツ🤖💡✨
+![ai_finding_gaps](./picture/dbc_cs_study_010_ai_finding_gaps.png)
+
 
 AIは「関係チェックの漏れ」や「テスト候補」を出すのが得意だよ🧠⚡️
 ただし、**仕様（契約）を文章で先に渡す**のがコツ📝💗

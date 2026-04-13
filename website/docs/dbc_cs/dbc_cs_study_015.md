@@ -56,6 +56,8 @@ DBのJOINや集計の途中で同じIdが2回混ざるの、めっちゃある�
 
 ## 15.3 “保証文テンプレ”を作っちゃおう📝🎀
 
+![collection_guarantee_checklist](./picture/dbc_cs_study_015_collection_guarantee_checklist.png)
+
 コレクション系は、まずこの形で書くとまとまりやすいよ✨
 
 * 戻り値は **nullではない**
@@ -77,6 +79,8 @@ DBのJOINや集計の途中で同じIdが2回混ざるの、めっちゃある�
 ---
 
 ## 15.4 実装例：検索メソッドに“3つの保証”を付ける🔍✅✅✅
+
+![search_logic_funnel](./picture/dbc_cs_study_015_search_logic_funnel.png)
 
 ここでは「商品検索」を例にして、次の3つを保証するよ📚✨
 
@@ -136,6 +140,8 @@ public sealed class ProductCatalog
 
 ### ポイント🌟
 
+![readonly_shield_list](./picture/dbc_cs_study_015_readonly_shield_list.png)
+
 * `ThenBy`で「同点のときの順序」を決めると、結果がブレなくなるよ😊✨
 * `ReadOnlyCollection`で返すと、呼び出し側がうっかり変更しにくい👍💕
 
@@ -169,6 +175,8 @@ xUnitはv3系が用意されていて、VSのTest Explorer対応アダプタもN
 ```
 
 ### テスト例：保証をそのまま検査する✅✅✅
+
+![test_assertion_ruler](./picture/dbc_cs_study_015_test_assertion_ruler.png)
 
 ```csharp
 using System;
@@ -224,6 +232,8 @@ public sealed class ProductCatalogTests
 ---
 
 ## 15.6 「表示用（読み取り）」と「更新用（書き込み）」を分ける発想🧠📌
+
+![query_vs_command_separation](./picture/dbc_cs_study_015_query_vs_command_separation.png)
 
 コレクションの保証は、**表示用（クエリ）**で特に効くよ✨
 

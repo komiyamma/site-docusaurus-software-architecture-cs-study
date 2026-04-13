@@ -71,6 +71,8 @@ graph TD
 
 ## 4. .NET 10 世代の「ThrowIf」でガード節を短くする💨✨
 
+![throwif_tools](./picture/dbc_cs_study_011_throwif_tools.png)
+
 ### 4.1 null チェックはこれでOK🕳️✅
 
 ```csharp
@@ -129,6 +131,8 @@ ThrowIf は短くて最高なんだけど、弱点もあるよ👇
 
 ### 5.1 引数同士の関係（期間チェック）⏳🔗
 
+![dateonly_check](./picture/dbc_cs_study_011_dateonly_check.png)
+
 ```csharp
 public void Reserve(DateOnly start, DateOnly end)
 {
@@ -161,6 +165,8 @@ if (maxItems is < 1 or > 1000)
 ## 6. “ガード節が汚くなる”よくある事故と対策😵‍💫🧯
 
 ### 事故①：if のネスト地獄🌋
+
+![nest_vs_guard](./picture/dbc_cs_study_011_nest_vs_guard.png)
 
 ```csharp
 // 😵‍💫読みにくい例
@@ -196,6 +202,8 @@ ArgumentException.ThrowIfNullOrWhiteSpace(customer.Name);
 ---
 
 ## 7. ガード節テンプレ（コピペ用）🧩🎀
+
+![guard_template_pattern](./picture/dbc_cs_study_011_guard_template_pattern.png)
 
 「毎回書くのめんどい！」を減らすための、超よくある形だよ😊
 
@@ -291,6 +299,8 @@ public static int CalcTotalPrice(string? couponCode, int quantity, int unitPrice
 ---
 
 ## 10. ミニ演習③：AIに“ガード節案”を出させて、人が整える🤖✍️✨
+
+![ai_guard_assistant](./picture/dbc_cs_study_011_ai_guard_assistant.png)
 
 AIは速いけど、**最終判断は人間**が握るのがコツだよ🤝🌸
 

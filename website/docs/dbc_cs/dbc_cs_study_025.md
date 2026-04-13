@@ -19,6 +19,8 @@ DbCは「全部のメソッドに一気に！」をやると、だいたい失�
 
 ### ✅ 優先度が高いのはここ（上から順におすすめ）🔝
 
+![prioritization_target](./picture/dbc_cs_study_025_prioritization_target.png)
+
 1. 外部入力に近いところ（API/画面/ファイル読み込み）📩🚪
 2. 金額・在庫・権限・日付など、ミスると痛いところ💰🔐📅
 3. 例外がよく出る・nullがよく来る・バグ履歴が多いところ🔥🐞
@@ -33,6 +35,8 @@ DbCは「全部のメソッドに一気に！」をやると、だいたい失�
 ---
 
 ## 1️⃣ 導入の“型”を決める（迷子防止テンプレ）📐🧭
+
+![template_blueprint](./picture/dbc_cs_study_025_template_blueprint.png)
 
 既存コードにDbCを入れるときは、次の「型」にすると安定します😊✨
 
@@ -57,6 +61,8 @@ flowchart TD
 
 ## 2️⃣ いきなりコードを書かず、契約を“日本語で1行”にする📝🌷
 
+![oneliner_magic](./picture/dbc_cs_study_025_oneliner_magic.png)
+
 導入がスムーズになる魔法はこれ👇✨
 **「Pre/Post/Invを、まず1行で書く」** です🪄
 
@@ -80,6 +86,8 @@ flowchart TD
 ## 3️⃣ Step1：入口（public）に“最小のPre”を入れる🚪🛡️
 
 ### 🎀 ガード節は「短く・上で弾く・下を綺麗に」
+
+![guard_clause_bouncer](./picture/dbc_cs_study_025_guard_clause_bouncer.png)
 
 * 上：入力チェック（Pre）
 * 下：本体ロジック（信頼してスッキリ）✨
@@ -124,6 +132,8 @@ public void AddItem(string productId, int quantity)
 ---
 
 ## 4️⃣ Step2：契約違反（バグ）と業務エラー（仕様）を分ける🧩🚫
+
+![violation_vs_error_sorting](./picture/dbc_cs_study_025_violation_vs_error_sorting.png)
 
 ここ、DbC導入でいちばん揉めやすいポイントです😵‍💫💥
 でも分けられると、運用がめちゃくちゃ楽になります🌈
@@ -210,6 +220,8 @@ public sealed record CartLine(string ProductId, int Quantity);
 ---
 
 ## 7️⃣ Step5：壊れやすいルールを“値オブジェクト化”する💎🔒
+
+![value_object_diamond](./picture/dbc_cs_study_025_value_object_diamond.png)
 
 DbCは、最終的にここへ進むと強いです✨
 **「不正な値が作れない」** ＝ 最強🧠💗

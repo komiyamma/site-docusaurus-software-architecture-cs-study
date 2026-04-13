@@ -36,6 +36,8 @@ flowchart TD
 
 ## 17.2 なんで「入口」が大事なの？（途中で壊れていい時間は“最小”に）⏱️🧠
 
+![safe_zone_boundary](./picture/dbc_cs_study_017_safe_zone_boundary.png)
+
 DbC 的には、こんなイメージが理想だよ🌸
 
 * **外から見えるタイミング（public の境界）では常に不変条件が成立**している🧱✅
@@ -64,6 +66,8 @@ flowchart LR
 
 ## 17.3 public setter はなぜ危険？（不変条件を素通りできちゃう）⚠️🚫
 
+![public_setter_open_door](./picture/dbc_cs_study_017_public_setter_open_door.png)
+
 例えば「残高は 0 以上」って不変条件があるとするね💰
 
 もしこうだと…👇
@@ -91,6 +95,8 @@ account.Balance = -9999m; // 不変条件が死亡😵‍💫
 ## 17.4 不変条件を守る定番パターン3つ🍡✨
 
 ### パターンA：生成は「ファクトリ」に寄せる🏭✅
+
+![factory_entry_funnel](./picture/dbc_cs_study_017_factory_entry_funnel.png)
 
 * コンストラクタを隠す（private / internal）🔒
 * `CreateOrThrow`（例外）と `TryCreate`（Result）を用意する🎭📩
@@ -203,6 +209,8 @@ public sealed class BankAccount
 
 ## 17.7 Assert を併用するとさらに安心🐞🔔（開発中に速攻で気づける）
 
+![assert_strategy_shield](./picture/dbc_cs_study_017_assert_strategy_shield.png)
+
 `Debug.Assert` は **デバッグビルドで主に動く**から、「内部の前提が壊れた」を早めに見つける用途に便利だよ🔍✨
 （Release に残したいなら `Trace.Assert` 側を検討する感じ） ([Microsoft Learn][1])
 
@@ -228,6 +236,8 @@ private void EnsureInvariants()
 ---
 
 ## 17.8 コレクション不変条件の守り方（外に List を出さない）📚🚫
+
+![collection_encapsulation_vault](./picture/dbc_cs_study_017_collection_encapsulation_vault.png)
 
 例：注文は「明細が1件以上ある」とか「明細の合計が一致する」みたいな不変条件が出がち🛒🧾✨
 

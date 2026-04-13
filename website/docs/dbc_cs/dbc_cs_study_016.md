@@ -10,6 +10,8 @@
 
 ## 16.1 まず結論：不変条件＝「そのクラスが健康でいるための最低条件」🏥🌿
 
+![invariant_foundation_stone](./picture/dbc_cs_study_016_invariant_foundation_stone.png)
+
 ![不変条件（Invariant）：クラスの健康状態を常に監視するモニター](./picture/dbc_cs_study_016_invariant_health.png)
 
 不変条件（Invariant）は一言でいうと、**「そのクラスが生きている間、ずーっと守り抜くべきルール」** だよ🛡️✨
@@ -44,6 +46,8 @@ stateDiagram-v2
 
 ## 16.2 Pre / Post / Inv の違い（ここで迷子になりがち）🗺️🐣
 
+![pre_post_inv_map](./picture/dbc_cs_study_016_pre_post_inv_map.png)
+
 ### Pre（事前条件）☎️🚪
 
 * メソッドを呼ぶ側が守る約束
@@ -69,6 +73,8 @@ stateDiagram-v2
 ## 16.3 不変条件が弱いと起きる事故😵‍💫💥（あるある）
 
 ### 事故パターン1：途中で壊れたまま放置される🧨
+
+![broken_window_risk](./picture/dbc_cs_study_016_broken_window_risk.png)
 
 「一時的に壊れてても、あとで直すから…」って設計は危険⚠️
 例：
@@ -180,6 +186,8 @@ public sealed class BankAccount
 
 ### ここが超重要ポイント💡✨
 
+![private_set_lock](./picture/dbc_cs_study_016_private_set_lock.png)
+
 * `Balance` を `private set;` にして、**勝手に外から壊せない**ようにした🔒
 * `Withdraw` で「マイナスになりそうなら拒否」して、**壊れる道を塞いだ**🚧
 * `AssertInvariants()` は Debug のときだけ動くから、開発中に即気づける🐞🔔
@@ -220,6 +228,8 @@ flowchart LR
 ---
 
 ## 16.8 ちょい難：不変条件が重い場合（合計一致とか）🧾⚖️
+
+![heavy_inv_strategy_balance](./picture/dbc_cs_study_016_heavy_inv_strategy_balance.png)
 
 例：注文クラスで
 

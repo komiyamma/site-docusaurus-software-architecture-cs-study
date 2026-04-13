@@ -31,6 +31,8 @@
 
 ### ✅テンプレ（日本語でOK）
 
+![update_checklist_template](./picture/dbc_cs_study_013_update_checklist_template.png)
+
 1. **何がどう変わる？**（例：残高は `old - amount` になる）💸
 2. **何は変わらない？**（例：口座IDや作成日は変わらない）🧱
 3. **更新後に必ず成り立つ条件は？**（＝不変条件も含む）🏥✅
@@ -124,6 +126,8 @@ flowchart TD
 
 ### ここがポイント💡🌸
 
+![snapshot_strategy](./picture/dbc_cs_study_013_snapshot_strategy.png)
+
 * Postを書くには、**更新前（old）を保持**するのが定番だよ📸✨
 * 「変わらないもの」も一緒に置くと、**思わぬ代入事故**に気づける🚨💗
 
@@ -150,6 +154,8 @@ flowchart TD
 
 ### コツ①：失敗しうるチェックは“先に全部やる”🛡️
 
+![atomic_update_flow](./picture/dbc_cs_study_013_atomic_update_flow.png)
+
 * そうすると「更新してから落ちる」が減る🌈
 
 ```mermaid
@@ -169,6 +175,8 @@ flowchart LR
 ```
 
 ### コツ②：外部副作用があるなら、境界で分ける🚪🌐
+
+![domain_vs_io_boundary](./picture/dbc_cs_study_013_domain_vs_io_boundary.png)
 
 * ドメイン（純粋な状態更新）と、DB保存やAPI呼び出しを混ぜると、Postが書きづらい😖
 * まずは「状態更新メソッドは状態だけ変える」寄りにすると、契約がキレイになる✨
@@ -197,6 +205,8 @@ Debug.Assert は便利だけど、**テストに落とす**とさらに強いよ
 なぜなら、CIで毎回守れるから🔁✅
 
 ### xUnitで「更新後」をテストする例🧪💗
+
+![test_state_verification](./picture/dbc_cs_study_013_test_state_verification.png)
 
 ```csharp
 using Xunit;

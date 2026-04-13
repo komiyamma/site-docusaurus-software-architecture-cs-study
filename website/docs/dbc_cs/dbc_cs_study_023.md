@@ -2,6 +2,8 @@
 
 ## 23.1 Assertってなに？DbC（契約）とどう違うの？🤝🧠
 
+![security_vs_sensor](./picture/dbc_cs_study_023_security_vs_sensor.png)
+
 ![警報ベルとしてのAssert：開発中のバグを爆速で見つける](./picture/dbc_cs_study_023_debug_assertion.png)
 
 **Assert（アサーション）**は、「ここまで来たなら**絶対こうなってるはず**」という**内部前提**を壊れた瞬間に見つけるための“警報ベル”だよ🔔💥
@@ -32,6 +34,8 @@ flowchart LR
 
 ## 23.2 まず結論：Assertを置く“正しい場所”ベスト5🏆✨
 
+![sensor_map](./picture/dbc_cs_study_023_sensor_map.png)
+
 Assertは「外から入ってくる入力のチェック」じゃなくて、**内部が壊れてないか**を見る用途が強いよ🧠🔧
 
 ### ✅ (1) 不変条件（Inv）が“内部操作のあと”に保たれてるか🧱💎
@@ -58,6 +62,8 @@ public境界で守った前提を、内部では「信じて簡潔に」しつ�
 
 ## 23.3 逆にNG：Assertを置かないほうがいい場所🙅‍♀️💦
 
+![no_sensors_sign](./picture/dbc_cs_study_023_no_sensors_sign.png)
+
 ### ❌ (1) public境界（外部入力の検証）🚪
 
 `public`メソッドの引数チェックは **Pre（ガード節）** 側の仕事🛡️
@@ -74,6 +80,8 @@ Assertは「バグを見つける」寄りなので、回復したいなら設�
 ---
 
 ## 23.4 Debug.Assert と Trace.Assert：超重要な違い🧨✅
+
+![debug_vs_trace](./picture/dbc_cs_study_023_debug_vs_trace.png)
 
 C#/.NET では代表的にこの2つがあるよ👇
 
@@ -101,6 +109,8 @@ Visual Studioの既定設定ではだいたいこう👇
 ## 23.5 すぐ使える！基本パターン3つ🧁✨
 
 ### パターンA：内部不変条件を Debug.Assert で守る（おすすめ）🧱🔔
+
+![internal_balance](./picture/dbc_cs_study_023_internal_balance.png)
 
 「Order の合計 `_total` は、明細の合計と必ず一致する」みたいなやつ💡
 
@@ -196,6 +206,8 @@ public sealed record OrderLine(string ProductId, int Quantity, decimal UnitPrice
 
 ### パターンC：「ここ来たらバグ！」を Debug.Fail で示す🚫🔥
 
+![dead_end_trap](./picture/dbc_cs_study_023_dead_end_trap.png)
+
 ```csharp
 using System.Diagnostics;
 
@@ -234,6 +246,8 @@ flowchart TD
 ---
 
 ## 23.6 Visual Studioでの“鳴り方”と確認ポイント🔍🪟
+
+![assert_dialog](./picture/dbc_cs_study_023_assert_dialog.png)
 
 ### ✅ Assertが失敗したらどうなる？
 

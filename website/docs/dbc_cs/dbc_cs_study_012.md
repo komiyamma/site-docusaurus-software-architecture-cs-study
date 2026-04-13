@@ -51,6 +51,8 @@ flowchart LR
 
 ### ✅ Postテンプレ（覚えやすい版）🧠💡
 
+![post_template_structure](./picture/dbc_cs_study_012_post_template_structure.png)
+
 * このメソッドは、Pre を満たす入力に対して、**必ず `◯◯` を返す**。
 * 返す値は、**常に `△△` を満たす**。
 * さらに、**`□□` である（必要なら）**。
@@ -104,6 +106,8 @@ flowchart LR
 
 ## 12.4 例題：割引価格を返すメソッドで“保証”を作る🛒💰✨
 
+![discount_calc_guarantee](./picture/dbc_cs_study_012_discount_calc_guarantee.png)
+
 ### 仕様（保証文）📝
 
 `CalculateDiscountedPrice(price, discountPercent)` は…
@@ -117,6 +121,8 @@ flowchart LR
 ## 12.5 実装：Postをコードに“落とす”🧩🛡️
 
 ### ① まずは小さな Contract（軽量DbC）を用意📌✨
+
+![debug_fail_stop](./picture/dbc_cs_study_012_debug_fail_stop.png)
 
 * Pre はガード節で止める🚪🛡️
 * Post は「**バグ検知のためにチェック**」する（まずは Debug でOK）🐞🔔
@@ -245,6 +251,8 @@ public class PriceCalculatorTests
 
 ### テストを書く順番（迷子にならない）🗺️✨
 
+![test_steps_pyramid](./picture/dbc_cs_study_012_test_steps_pyramid.png)
+
 1. まずは **代表ケース**（0%, 100%, 25%）🍞
 2. 次に **境界値**（0, 100）📏
 3. 最後に **Postの性質**をまとめて固定🎁✅
@@ -252,6 +260,8 @@ public class PriceCalculatorTests
 ---
 
 ## 12.7 「保証が書けない…」は設計を良くするチャンス👀✨
+
+![design_hint_warning](./picture/dbc_cs_study_012_design_hint_warning.png)
 
 ### ありがちな詰まりポイント😵‍💫
 

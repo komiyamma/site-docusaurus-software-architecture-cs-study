@@ -28,6 +28,8 @@ DbC的には、範囲は **Pre（事前条件）**になりやすいです🛡�
 ---
 
 ## 2) 境界値が主役な理由💥🧠
+![boundary_magnifier](./picture/dbc_cs_study_008_boundary_magnifier.png)
+
 
 範囲のバグは、だいたい「端っこ」で起きます😵‍💫💦
 
@@ -69,6 +71,8 @@ flowchart LR
 ---
 
 ## 3) よくある範囲ルールのパターン集📚✨
+![range_patterns_icons](./picture/dbc_cs_study_008_range_patterns_icons.png)
+
 
 ### パターンA：0以上（non-negative）🔢✅
 
@@ -99,6 +103,8 @@ flowchart LR
 ## 4) 実装テンプレ：短く・事故りにくく書く🛡️⚡️
 
 ### 4-1) ThrowIf 系ヘルパーで“ガード節”を短くする✨
+![throwif_gate](./picture/dbc_cs_study_008_throwif_gate.png)
+
 
 C# 14 は .NET 10 でサポートされていて、Visual Studio 2026 には .NET 10 SDK が含まれます。 ([Microsoft Learn][1])
 .NET 10 は 2025-11-11 リリースの LTS で、2026-01-13 時点の最新パッチは 10.0.2 です。 ([Microsoft][2])
@@ -164,6 +170,8 @@ public static void ValidatePageSize(int pageSize)
 ---
 
 ### 4-3) 自前 Guard を作って、読みやすさを統一する🎀🛡️
+![custom_guard_wrapper](./picture/dbc_cs_study_008_custom_guard_wrapper.png)
+
 
 プロジェクト内で「チェックの見た目」を揃えると、レビューが楽になります👀✨
 
@@ -222,6 +230,8 @@ public static void ValidateBatchSize(int batchSize)
 ---
 
 ## 6) 境界値テストの作り方🧪📌（xUnit例）
+![testing_target_edges](./picture/dbc_cs_study_008_testing_target_edges.png)
+
 
 ### 6-1) 境界値リストを先に書く📝✨
 
@@ -283,6 +293,8 @@ public class PageSizeTests
 ---
 
 ## 8) AI（Copilot/Codex）で「境界値候補」を秒速で出す🤖⚡️
+![ai_test_generator](./picture/dbc_cs_study_008_ai_test_generator.png)
+
 
 ### 8-1) 境界値の候補出しプロンプト例🪄
 

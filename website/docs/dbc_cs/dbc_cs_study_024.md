@@ -67,6 +67,8 @@ VS Codeでは、初回セットアップ時に必要拡張が自動インスト�
 
 ## 24.4 AIに頼む順番：この順が事故りにくいよ🪜🛟
 
+![safe_workflow_steps](./picture/dbc_cs_study_024_safe_workflow_steps.png)
+
 1. **契約文（Pre/Post/Inv）を書く**📝
 2. AIに **ガード節（Pre）** を作らせる🛡️
 3. AIに **テスト案（境界値・異常系）** を作らせる🧪
@@ -89,6 +91,8 @@ flowchart TD
 ---
 
 ## 24.5 コピペで使える「AIプロンプト」テンプレ集🧁💬
+
+![prompt_scrolls](./picture/dbc_cs_study_024_prompt_scrolls.png)
 
 ### テンプレA：契約文→ガード節（Pre）🛡️
 
@@ -138,6 +142,8 @@ flowchart TD
 
 ## 24.6 ガード節をAIに作らせる：良い“型”を先に渡す🎀🛡️
 
+![blueprint_for_ai](./picture/dbc_cs_study_024_blueprint_for_ai.png)
+
 AIは「チームの書き方」を渡すと、出力が安定します😊
 たとえばガード節の“型”をこれに固定👇
 
@@ -174,6 +180,8 @@ public static class Guard
 
 ## 24.7 AIで「例外メッセージ」を整えるコツ💌✨
 
+![message_editing](./picture/dbc_cs_study_024_message_editing.png)
+
 AIはメッセージ作りが得意だけど、放置するとポエムになりがち😂
 なのでルールはこれ👇
 
@@ -194,6 +202,8 @@ AIに頼むときはこう言うと良いよ👇
 
 ## 24.8 AIで「テスト候補」を増やす：境界値はAIが得意🧪✨
 
+![boundary_targeting](./picture/dbc_cs_study_024_boundary_targeting.png)
+
 AIにお願いするときは、**境界値を具体的に指定**すると強いです🎯
 
 * `min-1, min, min+1`
@@ -207,6 +217,8 @@ AIにお願いするときは、**境界値を具体的に指定**すると強�
 ---
 
 ## 24.9 Visual Studio 2026 の“新しめ便利枠”：Copilot Chat のツール機能🧰🆕
+
+![nuget_repair](./picture/dbc_cs_study_024_nuget_repair.png)
 
 Visual Studio 2026 のリリースノートでは、Copilot Chat から **NuGetのMCPサーバー**を有効化して、依存パッケージの脆弱性対応や更新提案を受けられる流れが説明されています🛡️📦 ([Microsoft Learn][7])
 

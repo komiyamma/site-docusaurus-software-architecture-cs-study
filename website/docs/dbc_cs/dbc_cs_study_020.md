@@ -11,6 +11,8 @@
 
 ## 1) そもそも、コレクションは壊れやすい📚💥
 
+![broken_collection](./picture/dbc_cs_study_020_broken_collection.png)
+
 コレクションは便利だけど、**どこからでも追加・削除・並び替え**できちゃうと、こうなりがち👇😱
 
 * 同じ商品が2行できる（重複）🌀
@@ -23,6 +25,8 @@
 ---
 
 ## 2) ダメな例：public に List を出しちゃう🙅‍♀️📛
+
+![public_list_danger](./picture/dbc_cs_study_020_public_list_danger.png)
 
 「明細がほしいから」といって、こうすると危険⚠️
 
@@ -81,6 +85,8 @@ flowchart TD
 
 ## 4) まずは “守りたい不変条件” を決める🧱📝
 
+![order_invariants](./picture/dbc_cs_study_020_order_invariants.png)
+
 例として、注文のルールをこう決めるよ👇（現場でよくあるやつ🌸）
 
 ### 注文（Order）の不変条件（Inv）🧱✨
@@ -93,6 +99,8 @@ flowchart TD
 ---
 
 ## 5) 実装の基本ルール3つ🧠✨
+
+![implementation_keys](./picture/dbc_cs_study_020_implementation_keys.png)
 
 ### ① コレクションは private に隠す🙈🔒
 
@@ -123,6 +131,8 @@ flowchart LR
 ## 6) 例：Order + OrderLine（C#）🛒✨
 
 ### (A) まずは小さめの型（値）を用意（超かんたん版）💎🧷
+
+![mini_value_objects](./picture/dbc_cs_study_020_mini_value_objects.png)
 
 「不正な値をそもそも持たない」ためのミニ値オブジェクトだよ〜😊
 
@@ -180,6 +190,8 @@ public sealed class OrderLine
 ---
 
 ### (C) Order（集約ルート）🏛️🧱
+
+![guard_checks](./picture/dbc_cs_study_020_guard_checks.png)
 
 * 明細リストは **private**
 * 外には **読み取り専用**
@@ -282,6 +294,8 @@ public sealed class Order
 ---
 
 ## 7) テストで “壊れない” を確認🧪✅（xUnit例）
+
+![crash_test](./picture/dbc_cs_study_020_crash_test.png)
 
 「不変条件はテストで守る」が超大事だよ〜🌸✨
 

@@ -18,6 +18,8 @@
 例えば👇
 
 * `string email`（メールのつもり）なのに、空文字や変な形式が入る📧💥
+
+  ![raw_vs_vo_mess](./picture/dbc_cs_study_018_raw_vs_vo_mess.png)
 * `decimal amount`（金額のつもり）なのに、通貨や小数桁やマイナスの扱いが毎回バラバラ💸🌀
 * `DateTime start/end`（期間のつもり）なのに、`start > end` が普通に作れちゃう⏳💥
 
@@ -47,6 +49,8 @@ DbCの基本は「入口で契約チェック」だよね🚪✅
 値オブジェクトにすると、こうなる👇
 
 * 「作れた時点でOK」という **強い保証**が手に入る🎁✨
+
+  ![guard_gate](./picture/dbc_cs_study_018_guard_gate.png)
 * public境界で `EmailAddress` を受け取るだけで、「形式OK」を前提にできる📧✅
 * 契約（ルール）が **1か所に集まる**から保守がラク🧹💖
 
@@ -59,6 +63,8 @@ DbCの基本は「入口で契約チェック」だよね🚪✅
 ここはまず「覚え方」だけでOK🙆‍♀️🌸
 
 ### Entity（エンティティ）🧍‍♀️🆔
+
+![entity_vs_vo](./picture/dbc_cs_study_018_entity_vs_vo.png)
 
 * **同一性（ID）で区別する**
 * 中身が変わっても「同じ人」「同じ注文」みたいに追跡する👣
@@ -95,6 +101,8 @@ graph LR
 
 ## 4. 値オブジェクトにする候補の見つけ方🔍💡
 
+![candidate_signs](./picture/dbc_cs_study_018_candidate_signs.png)
+
 次のどれかに当てはまったら、候補としてかなりアツい🔥💎
 
 ### ✅ 候補サイン1：毎回バリデーションしてる
@@ -121,6 +129,8 @@ graph LR
 
 ### 5.1 Money（お金）💰✨
 
+![money_vo](./picture/dbc_cs_study_018_money_vo.png)
+
 **なぜ候補？**
 
 * 通貨（JPY? USD?）が必要かも💱
@@ -140,6 +150,8 @@ graph LR
 
 ### 5.2 Email（メールアドレス）📧✨
 
+![email_vo](./picture/dbc_cs_study_018_email_vo.png)
+
 **なぜ候補？**
 
 * `string` のままだと何でも入る😵‍💫
@@ -155,6 +167,8 @@ graph LR
 ---
 
 ### 5.3 Period（期間）⏳✨
+
+![period_vo](./picture/dbc_cs_study_018_period_vo.png)
 
 **なぜ候補？**
 

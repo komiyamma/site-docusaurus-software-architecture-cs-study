@@ -10,6 +10,8 @@
 
 ## 21.1 なんで入口は“汚れやすい”の？🧼😵‍💫
 
+![raw_input_chaos](./picture/dbc_cs_study_021_raw_input_chaos.png)
+
 外から来るデータって、こういう特徴があるよ〜💦
 
 * 文字列で何でも来る（数値っぽい文字、日付っぽい文字…）🔤🌀
@@ -32,6 +34,8 @@ flowchart LR
 
 ## 21.2 DTOとドメインを混ぜると起きがちな事故💥😇
 
+![polluted_domain](./picture/dbc_cs_study_021_polluted_domain.png)
+
 * ドメイン型が “null / 空 / 変な値” を抱えて壊れやすくなる🧱💔
 * いろんな場所で同じ検証が増殖（コピペ地獄）🌀🌀
 * UI都合の項目（表示用の文字列等）がドメインに侵入して責務が崩れる🧟‍♀️
@@ -39,6 +43,8 @@ flowchart LR
 
 👉 解決：**DTOは境界の外側の荷物🧳、ドメインは家の中🏠**。
 家に入れる前に、汚れを落として整えてから入れる🧼✨
+
+![boundary_gate](./picture/dbc_cs_study_021_boundary_gate.png)
 
 ```mermaid
 flowchart TD
@@ -113,6 +119,8 @@ dotnet run
 
 ### 21.4.2 DTO（外から来る“荷物”）🧳📦
 
+![dto_suitcase](./picture/dbc_cs_study_021_dto_suitcase.png)
+
 ポイント：DTOは **外の都合** を許す（string多め、nullableもあり得る）🙂
 
 ```csharp
@@ -149,6 +157,8 @@ public sealed class CreateReservationRequestDto
 ---
 
 ### 21.4.3 ドメイン側（きれいな型で守る）🏠💎
+
+![result_box](./picture/dbc_cs_study_021_result_box.png)
 
 ここからは “家の中”🏠✨
 **不正な状態を作りにくくする**ため、値オブジェクトで入口を固める💎🔒
@@ -286,6 +296,8 @@ public readonly record struct DateRange
 
 ### 21.4.4 DTO → ドメインへの変換（入口で“洗う”）🧼➡️🏠
 
+![mapping_factory](./picture/dbc_cs_study_021_mapping_factory.png)
+
 DTOをそのまま渡さず、**変換メソッド**でドメイン用の型にするよ✨
 
 ```csharp
@@ -376,6 +388,8 @@ app.Run();
 ---
 
 ## 21.5 よくある設計ミス（あるある回避）🧯😵‍💫
+
+![anti_pattern_signs](./picture/dbc_cs_study_021_anti_pattern_signs.png)
 
 ### ❌ ミス1：ドメイン型に DataAnnotations を貼る
 
