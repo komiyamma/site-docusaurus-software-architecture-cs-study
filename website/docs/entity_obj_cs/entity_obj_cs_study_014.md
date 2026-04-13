@@ -6,6 +6,9 @@
 
 ## 0. 今日のゴール🎯✨
 
+![entity_obj_cs_study_014_rich_model_goal.png](./picture/entity_obj_cs_study_014_rich_model_goal.png)
+
+
 この章が終わったら、こんな状態になってるのが理想！😆💕
 
 * 「Order（注文）」が **ただのデータ箱** じゃなくて、**自分でルールを守れる存在**になってる✅
@@ -64,6 +67,9 @@ classDiagram
 
 ## 2. なにがツラいの？（カフェ注文で事故る）☕️💥
 
+![entity_obj_cs_study_014_anemic_accident.png](./picture/entity_obj_cs_study_014_anemic_accident.png)
+
+
 例：注文が **Confirmed（確定）** したあとに…
 
 * うっかり画面側のコードが `order.Lines.Add(...)` できちゃう
@@ -78,6 +84,9 @@ classDiagram
 ---
 
 ## 3. ルールの置き場所は「3段階」で考える🏠📦🧠
+
+![entity_obj_cs_study_014_rule_placement_levels.png](./picture/entity_obj_cs_study_014_rule_placement_levels.png)
+
 
 迷ったらこの順番で考えるとラクだよ〜！😆✨
 
@@ -107,6 +116,9 @@ classDiagram
 
 ### 4-1. まず「状態」をちゃんと持たせる🔁🟡🟢🔴
 
+![entity_obj_cs_study_014_order_states.png](./picture/entity_obj_cs_study_014_order_states.png)
+
+
 注文って、だいたい状態があるよね👇
 
 * Draft（下書き）🟡：カート状態
@@ -135,6 +147,8 @@ classDiagram
 ---
 
 ## 4-3. ルールをメソッドに閉じ込める🏠✨
+
+![control_panel](./picture/entity_obj_cs_study_014_control_panel.png)
 
 Orderに「やっていいこと」だけを用意する感じ！
 
@@ -320,6 +334,9 @@ public sealed class OrderLine
 
 ## 6. テストで「状態遷移」を固める🧪🔁✨
 
+![entity_obj_cs_study_014_test_lock.png](./picture/entity_obj_cs_study_014_test_lock.png)
+
+
 “ルールを置いた”ら、次は **テストで固定** しよう！💪
 （ここ、めちゃ安心感出るよ〜！😆）
 
@@ -417,6 +434,9 @@ AIが作るコードは、たまに
 ---
 
 ## 9. ありがちNG集（ここ踏むとつらい😇）
+
+![entity_obj_cs_study_014_ng_signs.png](./picture/entity_obj_cs_study_014_ng_signs.png)
+
 
 * ❌ Entityを `record` にしちゃう（同一性の扱いがブレやすい）
 * ❌ `public set;` が残ってる（いつか絶対崩れる）
