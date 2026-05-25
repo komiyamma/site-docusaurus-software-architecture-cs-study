@@ -34,8 +34,6 @@
 
 ## 学生向け📱
 
-![cap_cs_study_003_features_ui](./picture/cap_cs_study_003_features_ui.png)
-
 * メニューを見る🍛📖
 * カートに入れる🛒
 * 注文確定（受取時間も指定）🕒✅

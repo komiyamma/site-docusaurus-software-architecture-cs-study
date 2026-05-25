@@ -27,8 +27,6 @@ flowchart TD
 
 # 2.1 まずは“揃えるもの”チェックリスト✅🧾✨
 
-![cap_cs_study_002_tools_set](./picture/cap_cs_study_002_tools_set.png)
-
 * Visual Studio（.NET 10 を気持ちよく使うなら **Visual Studio 2026** がいちばんスムーズ）💡 ([Microsoft][1])
 * **.NET 10 SDK**（`dotnet` コマンドが使えるやつ）🧩 ([Microsoft][2])
 * Git（GitHubにpushするため）🐙

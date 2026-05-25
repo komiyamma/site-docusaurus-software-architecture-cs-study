@@ -10,8 +10,6 @@
 
 ## 1) 置き場所を分けると、何が嬉しいの？🧠💖
 
-![separate_houses](./picture/bc_cs_study_035_separate_houses.png)
-
 
 
 BCを分けるって、イメージは **「言葉（用語）とモデル（ルール）の世界が違う」** を守ることでしたよね🗺️✨

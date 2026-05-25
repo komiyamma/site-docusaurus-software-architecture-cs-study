@@ -96,8 +96,6 @@ flowchart TD
 
 ### ステップ②：「止まる vs ズレる」どっちがマシ？を決める⚖️😳
 
-![cap_cs_study_001_stop_vs_go](./picture/cap_cs_study_001_stop_vs_go.png)
-
 分断中に選べるのは、だいたいこの2つ👇
 
 * **止める**：返事を保留・失敗にして、ズレは起こさない（C寄り）⛔✅

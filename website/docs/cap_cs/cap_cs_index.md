@@ -25,8 +25,6 @@
 
 ## 第4章：分散が難しい理由（まずここで転ぶ）😵‍💫📡
 
-![cap_cs_index_distributed_challenges](./picture/cap_cs_index_distributed_challenges.png)
-
 * **学ぶこと**：遅い／切れる／順番が変わる／二重に来る
 * **ミニ演習**：HTTP呼び出しをわざと遅延・失敗させて挙動を見る⏱️💥
 * **AI活用**：失敗パターンの“図鑑”を作ってもらう🤖📚
