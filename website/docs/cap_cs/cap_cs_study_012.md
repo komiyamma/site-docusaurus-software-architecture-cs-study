@@ -2,7 +2,7 @@
 
 ## 12.1 「遅延」はバグじゃない。UXで“勝てる差”になる🧠✨
 
-![cap_cs_study_012_latency_ux](./picture/cap_cs_study_012_latency_ux.png)
+
 
 分散システム（最終的整合性あり）では、**「反映が遅れる」**のはわりと普通に起きます📡🐢
 だから大事なのは、遅延をゼロにするよりも――
@@ -64,7 +64,7 @@ flowchart TD
 
 ## 12.4 CampusCafeでやるなら：どこが遅れやすい？☕📱
 
-![cap_cs_study_012_progress_stages](./picture/cap_cs_study_012_progress_stages.png)
+
 
 学食モバイルオーダーは遅延ポイントが多いです🍰
 
@@ -85,7 +85,7 @@ flowchart TD
 
 ## 12.5 パターン①：処理中表示（ローディング）🌀✨
 
-![cap_cs_study_012_spinners](./picture/cap_cs_study_012_spinners.png)
+
 
 ### ✅ 使いどころ
 
@@ -167,7 +167,7 @@ FluentのSkeletonは「読み込み中のワイヤーフレーム表示」とし
 
 ## 12.9 パターン⑤：楽観的UI（先に成功っぽく見せる）😎✨
 
-![cap_cs_study_012_optimistic_ui](./picture/cap_cs_study_012_optimistic_ui.png)
+
 
 **“体感速い”**が作れる反面、**戻し方（取り消し）**が弱いと事故ります💥
 
@@ -181,7 +181,7 @@ CampusCafeなら、こんな使い分けが安全😊
 
 ## 12.10 パターン⑥：キャンセルできる設計🧯✨
 
-![cap_cs_study_012_cancel_button](./picture/cap_cs_study_012_cancel_button.png)
+
 
 “待たせる”より“逃げ道がある”方が安心感が強いです😌
 

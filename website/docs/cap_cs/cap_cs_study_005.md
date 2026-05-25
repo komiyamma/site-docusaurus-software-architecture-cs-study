@@ -1,4 +1,4 @@
-﻿# 第05章：用語の最低限（C/A/P）📘🧩
+# 第05章：用語の最低限（C/A/P）📘🧩
 
 ## この章でわかるようになること🎯✨
 
@@ -22,7 +22,7 @@
 
 ## 5-2. C（整合性）ってなに？🪞✅
 
-![cap_cs_study_005_consistency_screens](./picture/cap_cs_study_005_consistency_screens.png)
+
 
 **ひとことで：**「どこから見ても、同じ内容に見える」感じ✨
 
@@ -58,7 +58,7 @@ CampusCafeで例えると👇
 
 ## 5-4. P（分断）ってなに？🧱📡
 
-![cap_cs_study_005_partition_islands](./picture/cap_cs_study_005_partition_islands.png)
+
 
 **ひとことで：**「ネットワークが切れて、別々の島になる」感じ🏝️🏝️
 
@@ -76,7 +76,7 @@ CampusCafeでよくある分断のイメージ👇
 
 ## 5-5. 覚え方（超シンプル暗記）🧠✨
 
-![cap_cs_study_005_cap_flowchart](./picture/cap_cs_study_005_cap_flowchart.png)
+
 
 ```mermaid
 flowchart TD
@@ -102,7 +102,7 @@ flowchart TD
 
 ## 5-6. ミニ演習①：Cが欲しい？Aが欲しい？を“口で言う”🗣️✨
 
-![cap_cs_study_005_c_vs_a_buckets](./picture/cap_cs_study_005_c_vs_a_buckets.png)
+
 
 次の機能、直感でいいから **「C寄り」or「A寄り」** を言ってみてね👇（理由も1行！）
 
@@ -124,7 +124,7 @@ flowchart TD
 
 ## 5-7. ミニ演習②：超ミニC#デモで「ズレ」を見る👀🧪
 
-![cap_cs_study_005_console_drift](./picture/cap_cs_study_005_console_drift.png)
+
 
 分断が起きると、**同じ“在庫”でもA側とB側でズレる**のを体験するミニプログラムだよ📦🧱
 （わざと単純化してるから安心してね😊）

@@ -10,7 +10,7 @@
 
 ## 1) なんで“冪等キー”が必要なの？📨📨😇
 
-![cap_cs_study_019_double_nightmare](./picture/cap_cs_study_019_double_nightmare.png)
+
 
 分散・ネットワークの世界では、こういうのが日常茶飯事です🍵
 
@@ -80,7 +80,7 @@ Stripeのドキュメントでもこの名前で案内されています📌 ([S
 
 ### 4-3. “同じキー”の意味のスコープ🧭
 
-![cap_cs_study_019_key_scope](./picture/cap_cs_study_019_key_scope.png)
+
 
 サーバ側では、だいたいこういう単位で「同じ」を判定します👇
 
@@ -92,7 +92,7 @@ Stripeのドキュメントでもこの名前で案内されています📌 ([S
 
 ### 4-4. 同じキーで“違う中身”を送ってきたら？⚠️
 
-![cap_cs_study_019_content_mismatch](./picture/cap_cs_study_019_content_mismatch.png)
+
 
 これは超危険です💥
 「前回はカレー、今回はパスタ」みたいに中身が違うのにキーが同じだと、サーバが迷子になります🌀
@@ -124,7 +124,7 @@ Stripeも「同じキーでパラメータが違うとエラーになる」方�
 
 ### 5-2. “同時に2回来た”問題（並行実行）⚔️
 
-![cap_cs_study_019_race_condition](./picture/cap_cs_study_019_race_condition.png)
+
 
 連打やリトライで、**ほぼ同時に同じキー**が来ることがあります📨📨
 
@@ -138,7 +138,7 @@ Stripeも「同じキーでパラメータが違うとエラーになる」方�
 
 ## 6) 期限（TTL）と掃除（クリーンアップ）🧹🕰️
 
-![cap_cs_study_019_ttl_janitor](./picture/cap_cs_study_019_ttl_janitor.png)
+
 
 冪等キーはずっと保存すると、ストアが無限に肥大化します🍙📈
 
@@ -366,7 +366,7 @@ public static class RequestHashUtil
 
 ## 11) AI活用プロンプト例🤖📝✨
 
-![cap_cs_study_019_processing_state](./picture/cap_cs_study_019_processing_state.png)
+
 
 * 「学食注文の `Idempotency-Key` のルール（生成タイミング・再利用条件・期限）を、初心者向けに箇条書きで整理して」🍀
 * 「このテーブル設計で不足しがちなカラムやインデックス案を出して」🗃️🔍

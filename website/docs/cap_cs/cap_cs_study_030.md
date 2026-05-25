@@ -2,7 +2,7 @@
 
 ### 1. まず結論：Outboxは「二重書き（Dual Write）の地獄」を避けるための保険🛟😵‍💫
 
-![cap_cs_study_030_dual_write_hell.png](./picture/cap_cs_study_030_dual_write_hell.png)
+
 
 
 分散システムでよくあるのが、このセットです👇
@@ -20,7 +20,7 @@ Outbox（トランザクショナルOutbox）パターンは、
 
 ### 2. “ズレ問題”が起きると何がヤバい？（CampusCafeあるある）☕📱💥
 
-![cap_cs_study_030_ghost_order.png](./picture/cap_cs_study_030_ghost_order.png)
+
 
 
 ```mermaid
@@ -93,7 +93,7 @@ Microsoftのガイダンスでも、信頼できるイベント配信の方法�
 
 ### 4. じゃあOutboxテーブルに「何を保存する」の？🗃️🧩
 
-![cap_cs_study_030_outbox_schema.png](./picture/cap_cs_study_030_outbox_schema.png)
+
 
 
 第30章のミニゴールはここです👇
@@ -114,7 +114,7 @@ Microsoftのガイダンスでも、信頼できるイベント配信の方法�
 
 ### 5. まず“ダメな例”→ Outbox版へ（C#イメージ）🧠💡
 
-![cap_cs_study_030_safety_net.png](./picture/cap_cs_study_030_safety_net.png)
+
 
 
 #### ❌ ダメな例：DB保存と送信を直列にやる（落ちたらズレる）
@@ -179,7 +179,7 @@ public async Task<Guid> PlaceOrderAsync(PlaceOrderRequest req)
 
 ### 6. ミニ演習：CampusCafeのOutboxに入れる“イベント候補”を決めよう☕📚✨
 
-![cap_cs_study_030_event_selection.png](./picture/cap_cs_study_030_event_selection.png)
+
 
 
 以下の機能で、**Outboxに残すべきイベント**に丸をつけてみてね😊✅
@@ -221,7 +221,7 @@ public async Task<Guid> PlaceOrderAsync(PlaceOrderRequest req)
 
 ### 9. 小まとめ😊✨
 
-![cap_cs_study_030_firefighter.png](./picture/cap_cs_study_030_firefighter.png)
+
 
 
 Outboxが必要になる理由はただ1つ！

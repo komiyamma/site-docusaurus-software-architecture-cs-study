@@ -1,4 +1,4 @@
-﻿# 第32章：版のポイントまとめ😊✨
+# 第32章：版のポイントまとめ😊✨
 
 （題材：学食モバイルオーダー “CampusCafe” ☕🍰📱）
 
@@ -6,7 +6,7 @@
 
 ### 32.1 Sagaって何？いきなり結論からいくよ〜😊✨
 
-![cap_cs_study_032_saga_climber.png](./picture/cap_cs_study_032_saga_climber.png)
+
 
 
 Sagaはひとことで言うと、
@@ -24,7 +24,7 @@ Sagaはひとことで言うと、
 
 ### 32.2 CampusCafeで、何が“途中まで成功”になる？☕📦💳🔔
 
-![cap_cs_study_032_coffee_confusion.png](./picture/cap_cs_study_032_coffee_confusion.png)
+
 
 
 注文フローをもう一回おさらい👇
@@ -46,7 +46,7 @@ Sagaはひとことで言うと、
 
 ### 32.3 まず「CAP判断」を“仕様”として決める🎛️📘✨（ここが本題）
 
-![cap_cs_study_032_cap_territories.png](./picture/cap_cs_study_032_cap_territories.png)
+
 
 
 Sagaは実装の前に、**どこをCP寄り／AP寄りにするか**を決めないと迷子になるよ〜🧭💦
@@ -148,7 +148,7 @@ sequenceDiagram
 
 ## 演習①：Sagaの状態（State）を決める🚦🧠✨
 
-![cap_cs_study_032_state_game_board.png](./picture/cap_cs_study_032_state_game_board.png)
+
 
 
 まず注文の状態を、Sagaの進み具合として定義しよう👇
@@ -226,7 +226,7 @@ PaymentSucceeded
 
 ## 演習④：実装の骨組み（“Sagaオーケストレータ”）を作る🧑‍✈️🛠️✨
 
-![cap_cs_study_032_orchestrator_conductor.png](./picture/cap_cs_study_032_orchestrator_conductor.png)
+
 
 
 ここでは、**OrderService内に SagaOrchestrator を置く**構成にするよ😊
@@ -302,7 +302,7 @@ public class SagaOrchestrator
 
 ## 演習⑤：失敗を“わざと”起こして、肌感覚を作る💥🐢🔀✨
 
-![cap_cs_study_032_crash_test.png](./picture/cap_cs_study_032_crash_test.png)
+
 
 
 Sagaは **失敗が主役** だよ〜😇
@@ -344,7 +344,7 @@ Sagaは **失敗が主役** だよ〜😇
 
 ### 32.8 UX（ユーザーにどう見せる？）まで書いて初めて“正解”🌸💬✨
 
-![cap_cs_study_032_ux_mascot.png](./picture/cap_cs_study_032_ux_mascot.png)
+
 
 
 Sagaは裏側だけ整ってても、ユーザーが不安だと負ける😇💦

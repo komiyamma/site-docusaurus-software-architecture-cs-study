@@ -4,7 +4,7 @@
 
 ## 31.1 Outboxは「作っただけ」だとすぐ詰まるよ😵‍💫📦
 
-![cap_cs_study_031_snowball_effect.png](./picture/cap_cs_study_031_snowball_effect.png)
+
 
 
 Outbox（Transactional Outbox）は、**DB更新とイベント送信の“ズレ事故”**を避けるための定番パターンだよね📤🧾
@@ -35,7 +35,7 @@ Outbox（Transactional Outbox）は、**DB更新とイベント送信の“ズ�
 
 ## 31.3 Outboxレコードの状態設計（最重要）🚦✨
 
-![cap_cs_study_031_state_stations.png](./picture/cap_cs_study_031_state_stations.png)
+
 
 
 ```mermaid
@@ -77,7 +77,7 @@ stateDiagram-v2
 
 ### 31.4.1 再送の基本ルール🧠
 
-![cap_cs_study_031_smart_retry.png](./picture/cap_cs_study_031_smart_retry.png)
+
 
 
 * **一時的な失敗**（ネットワーク、相手が一瞬落ちた、タイムアウト）→ 再送OK✅
@@ -113,7 +113,7 @@ Outboxは「確実に送る」に強いけど、基本的に世界は **少な�
 
 ## 31.6 DLQ（Dead Letter）的な扱い：毒メッセージを隔離☠️📮
 
-![cap_cs_study_031_dead_quarantine.png](./picture/cap_cs_study_031_dead_quarantine.png)
+
 
 
 `Dead` は「捨てる箱」じゃなくて **“隔離して人が判断する箱”** だよ👀✨
@@ -137,7 +137,7 @@ Outboxは「確実に送る」に強いけど、基本的に世界は **少な�
 
 ## 31.7 掃除（Cleanup）と肥大化対策🧹🗄️
 
-![cap_cs_study_031_janitor_cleanup.png](./picture/cap_cs_study_031_janitor_cleanup.png)
+
 
 
 Outboxは放置すると増える一方📈
@@ -155,7 +155,7 @@ Outboxは放置すると増える一方📈
 
 ## 31.8 監視（Monitoring）で“詰まり”を即発見📈🚨
 
-![cap_cs_study_031_dashboard_gauges.png](./picture/cap_cs_study_031_dashboard_gauges.png)
+
 
 
 監視は「CPU/メモリ」より、まず **Outboxの健康状態**！

@@ -35,7 +35,7 @@ HTTP の世界でも「冪等」の定義があって、**同じリクエスト�
 
 ### たとえ話でつかむ🍟🎫
 
-![cap_cs_study_018_elevator_button](./picture/cap_cs_study_018_elevator_button.png)
+
 
 * エレベータの「上」ボタンを連打しても、エレベータが3台来たら困るよね？😇
   → **1回押したのと同じ結果**にしたい
@@ -46,7 +46,7 @@ HTTP の世界でも「冪等」の定義があって、**同じリクエスト�
 
 ## 18.4 CampusCafeで冪等が欲しい場所☕📱🔎
 
-![cap_cs_study_018_double_charge](./picture/cap_cs_study_018_double_charge.png)
+
 
 「2回来たら困る」操作は、だいたい冪等が必要です🛡️✨
 
@@ -76,7 +76,7 @@ HTTP の世界でも「冪等」の定義があって、**同じリクエスト�
 
 ## 18.6 ミニ演習：冪等な注文API（最小）🧩🛡️
 
-![cap_cs_study_018_key_guard](./picture/cap_cs_study_018_key_guard.png)
+
 
 ここでは「同じ操作」を見分けるために **`Idempotency-Key`** を使います🔑✨
 （詳細設計は次章でガッツリやるので、今は“概念を体に入れる”のが目的だよ😊）
@@ -171,7 +171,7 @@ Invoke-RestMethod -Method Post -Uri "http://localhost:5000/orders" `
 
 ## 18.7 “冪等っぽい”と“冪等”の違い⚠️😵‍💫
 
-![cap_cs_study_018_result_replay](./picture/cap_cs_study_018_result_replay.png)
+
 
 ```mermaid
 flowchart TD
@@ -205,7 +205,7 @@ Stripe みたいに「同じキーなら、最初のレスポンス（成功で�
 
 ## 18.8 チェックリスト✅🛡️
 
-![cap_cs_study_018_checklist](./picture/cap_cs_study_018_checklist.png)
+
 
 APIや処理を見たら、まずこれを確認します😊✨
 

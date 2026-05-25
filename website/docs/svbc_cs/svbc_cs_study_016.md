@@ -119,7 +119,7 @@ dotnet pack -c Release -p:PackageVersion=1.0.0
 
 ## 16.5 リリース②：v1.0.1（PATCH：バグ修正🐛✨）
 
-![Patch Fix Visual](./picture/svbc_cs_study_016_patch_fix_visual.png)
+
 
 ### シナリオ（よくあるやつ）😇
 

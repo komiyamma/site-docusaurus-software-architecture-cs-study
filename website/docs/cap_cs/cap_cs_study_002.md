@@ -1,4 +1,4 @@
-﻿# 第02章：開発環境の準備（Windows）🧰💻✨
+# 第02章：開発環境の準備（Windows）🧰💻✨
 
 ## この章のゴール🎯✨
 
@@ -41,7 +41,7 @@ flowchart TD
 
 ## ✅ .NET SDK が入ってるか
 
-![cap_cs_study_002_terminal_version](./picture/cap_cs_study_002_terminal_version.png)
+
 
 PowerShell（または Windows Terminal）でこれ👇
 
@@ -64,7 +64,7 @@ Visual Studio を開いて、
 
 # 2.3 Visual Studio に入れる機能（ワークロード）🧩🛠️
 
-![cap_cs_study_002_vs_workload](./picture/cap_cs_study_002_vs_workload.png)
+
 
 Visual Studio Installer を開いて、最低これだけ入ってればOK😊✨
 
@@ -139,7 +139,7 @@ app.Run();
 
 実行して、ブラウザで👇を開く✨
 
-![cap_cs_study_002_browser_health](./picture/cap_cs_study_002_browser_health.png)
+
 
 * `https://localhost:xxxx/health`
 
@@ -191,7 +191,7 @@ public class PriceCalculatorTests
 
 ## ③ テスト実行✅
 
-![cap_cs_study_002_test_success](./picture/cap_cs_study_002_test_success.png)
+
 
 ```powershell
 dotnet test
@@ -215,7 +215,7 @@ git commit -m "ch2: init solution + minimal api + xunit"
 
 ## ② GitHub にリポジトリを作る🐙✨
 
-![cap_cs_study_002_git_push](./picture/cap_cs_study_002_git_push.png)
+
 
 GitHub の Web で `CampusCafe` リポジトリを作成して、表示される手順どおりに `remote add` → `push` すればOK😊
 

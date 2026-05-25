@@ -36,7 +36,7 @@ sequenceDiagram
 
 ## 16.2 なんで順番が前後するの？📡🌀
 
-![cap_cs_study_016_reorder_causes](./picture/cap_cs_study_016_reorder_causes.png)
+
 
 よくある原因はこれ👇
 
@@ -63,7 +63,7 @@ sequenceDiagram
 
 ## 16.4 壊れる例（ナイーブ実装）😇➡️💥
 
-![cap_cs_study_016_state_flip](./picture/cap_cs_study_016_state_flip.png)
+
 
 ### ① イベント定義
 
@@ -145,7 +145,7 @@ await foreach (var ev in ch.Reader.ReadAllAsync())
 
 ## 16.5 対策パターン①：状態遷移（State Machine）で“変な遷移を拒否”🚦🛡️
 
-![cap_cs_study_016_state_shield](./picture/cap_cs_study_016_state_shield.png)
+
 
 ```mermaid
 stateDiagram-v2
@@ -220,7 +220,7 @@ public sealed class SafeNotificationService
 ## 16.6 対策パターン②：Sequence（版番号）で“並び替え or 保留”🔢⏳
 
 ![cap_cs_study_016_sequence_reorder](./picture/cap_cs_study_016_sequence_reorder.png)
-![cap_cs_study_016_buffer_room](./picture/cap_cs_study_016_buffer_room.png)
+
 
 ここでさっきの `Sequence` を使います✨
 発行元（例：注文サービス）が **「注文に関するイベントは 1,2,3… と連番」** を付けるイメージです📌
@@ -325,7 +325,7 @@ public sealed class VersionedHandler
 
 ## 16.7 対策パターン③：そもそも“順序保証”できる仕組みを使う📬🔒
 
-![cap_cs_study_016_fifo_lane](./picture/cap_cs_study_016_fifo_lane.png)
+
 
 「同じ注文（OrderId）のイベントだけは順番保証したい！」ってときは、**メッセージ基盤側の機能**を使うのも手です🙆‍♀️✨
 
@@ -359,7 +359,7 @@ public sealed class VersionedHandler
 
 ## 16.9 CampusCafeに落とす（おすすめ設計）☕📱✨
 
-![cap_cs_study_016_event_card](./picture/cap_cs_study_016_event_card.png)
+
 
 ### 注文（Order）まわりのイベントに付けるもの
 

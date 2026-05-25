@@ -10,7 +10,7 @@
 
 ## 10.1 「整合性」って、誰にとっての“正しさ”？🤔💭
 
-![cap_cs_study_010_viewpoints](./picture/cap_cs_study_010_viewpoints.png)
+
 
 同じデータでも、**見る人・見るタイミング**で「正しさ」の期待が変わるよ〜！
 
@@ -27,7 +27,7 @@
 
 ## 10.2 整合性の“期待”はグラデーション🎨🧩
 
-![cap_cs_study_010_consistency_gradient](./picture/cap_cs_study_010_consistency_gradient.png)
+
 
 ざっくり3段階で捉えるとわかりやすいよ👇
 
@@ -73,7 +73,7 @@ flowchart TD
 
 ## 10.4 覚えておくと強い！4つの“セッション保証”🧠🔑
 
-![cap_cs_study_010_session_guarantees](./picture/cap_cs_study_010_session_guarantees.png)
+
 
 難しい理論より、「ユーザー体験で困るやつ」を防ぐ道具だと思ってOK😊✨
 
@@ -101,7 +101,7 @@ flowchart TD
 
 ## 10.5 CampusCafe：画面ごとに「守りたい整合性」を決めよう🖥️✅
 
-![cap_cs_study_010_screen_types](./picture/cap_cs_study_010_screen_types.png)
+
 
 同じアプリでも画面ごとに違うよ〜！🌈
 
@@ -170,7 +170,7 @@ flowchart TD
 
 ## 10.8 ちいさなC#デモ：最終的整合っぽい“ズレ”を作ってみる🧪🐢
 
-![cap_cs_study_010_replica_lag](./picture/cap_cs_study_010_replica_lag.png)
+
 
 ここでは「レプリカ反映が遅れる」っぽい状況を **わざと**作るよ！
 （本物の分散DBじゃなくても、挙動のイメージが掴めればOK😊）

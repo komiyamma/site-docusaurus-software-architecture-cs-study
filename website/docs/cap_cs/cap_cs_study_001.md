@@ -1,4 +1,4 @@
-﻿# 第01章：この講座のゴールと“肌感覚”の作り方🎯🧠✨
+# 第01章：この講座のゴールと“肌感覚”の作り方🎯🧠✨
 
 ## 1. この講座でできるようになること（暗記じゃなく“判断”へ）💡✨
 
@@ -103,7 +103,7 @@ flowchart TD
 
 ### ステップ③：ズレるなら“見せ方（UX）”まで仕様に入れる🎨💬
 
-![cap_cs_study_001_ux_delay](./picture/cap_cs_study_001_ux_delay.png)
+
 
 最終的整合性って、「いつか揃う」だけじゃなくて…
 
@@ -270,7 +270,7 @@ Console.WriteLine("\n🎉 いずれ揃う（= 最終的整合性のイメージ�
 
 ### 見どころ👀✨
 
-![cap_cs_study_001_replica_divergence](./picture/cap_cs_study_001_replica_divergence.png)
+
 
 * 分断中：Aは2、Bは5のまま（ズレる😵‍💫）
 * 復旧後：Bが追いついて2になる（揃う🎉）
@@ -300,7 +300,7 @@ Console.WriteLine("\n🎉 いずれ揃う（= 最終的整合性のイメージ�
 
 ## 10. まとめ（この章で掴んだ“判断の芯”）🎯✨
 
-![cap_cs_study_001_cap_balance](./picture/cap_cs_study_001_cap_balance.png)
+
 
 * CAPは暗記じゃなくて、**分断（P）が起きたときの意思決定**🧠⚖️
 * その意思決定は、結局この2択になりがち👇

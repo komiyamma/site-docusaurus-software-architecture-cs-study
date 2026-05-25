@@ -17,7 +17,7 @@
 
 ### 2) CampusCafeを“同期連鎖”で作ると、何がつらい？😵‍💫📡
 
-![cap_cs_study_028_sync_chain_pain.png](./picture/cap_cs_study_028_sync_chain_pain.png)
+
 
 
 たとえば「注文確定」のAPIがこうなってたら…👇
@@ -70,7 +70,7 @@ sequenceDiagram
 
 ### 4) “イベント”って何？“コマンド”と何が違うの？🧩📨
 
-![cap_cs_study_028_event_vs_command.png](./picture/cap_cs_study_028_event_vs_command.png)
+
 
 
 ここめっちゃ大事〜！💡
@@ -103,7 +103,7 @@ sequenceDiagram
 
 ## 6) イベント設計：名前の付け方（超重要）🏷️✨
 
-![cap_cs_study_028_naming_rules.png](./picture/cap_cs_study_028_naming_rules.png)
+
 
 
 ### ✅ 命名の基本ルール（おすすめ）📌
@@ -122,7 +122,7 @@ sequenceDiagram
 
 ## 7) ペイロード設計：中身に何を入れる？🧾✨
 
-![cap_cs_study_028_payload_size.png](./picture/cap_cs_study_028_payload_size.png)
+
 
 
 ### ✅ “入れすぎ”の落とし穴💣
@@ -163,7 +163,7 @@ sequenceDiagram
 
 ## 9) C#で“最小イベント駆動”を動かす🧪✨（まずはアプリ内）
 
-![cap_cs_study_028_in_memory_channel.png](./picture/cap_cs_study_028_in_memory_channel.png)
+
 
 
 いきなり別プロセスのメッセージブローカー（RabbitMQとか）に行く前に、まずは**アプリ内（in-process）でイベント駆動の形**を体験しよう🌱
@@ -434,7 +434,7 @@ app.Run();
 
 ## 10) “疎結合”のチェックポイント✅🔌
 
-![cap_cs_study_028_loose_coupling_puzzle.png](./picture/cap_cs_study_028_loose_coupling_puzzle.png)
+
 
 
 イベント駆動らしさが出てるかは、これでチェックしてね👇
@@ -448,7 +448,7 @@ app.Run();
 
 ## 11) ちょい現実：イベント駆動は“万能”じゃない⚠️😇
 
-![cap_cs_study_028_pros_cons_scale.png](./picture/cap_cs_study_028_pros_cons_scale.png)
+
 
 
 イベント駆動は強いけど、向き不向きあるよ〜🌿

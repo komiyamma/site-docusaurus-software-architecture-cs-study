@@ -11,7 +11,7 @@
 # 1) どうして“同じのが2回来る”の？😳📡
 
 ![cap_cs_study_015_idempotency_key_logic](./picture/cap_cs_study_015_idempotency_key_logic.png)
-![cap_cs_study_015_duplicate_causes](./picture/cap_cs_study_015_duplicate_causes.png)
+
 
 結論：**ネットワーク＆リトライの世界では、重複は“仕様”です**😇
 
@@ -29,7 +29,7 @@
 
 # 2) CampusCafeでの“壊れ方”あるある💥☕️
 
-![cap_cs_study_015_double_subtraction](./picture/cap_cs_study_015_double_subtraction.png)
+
 
 例：注文POSTで、在庫を減らす処理が入ってるとします📦
 
@@ -150,7 +150,7 @@ GET {{baseUrl}}/stock/cake
 
 ## ② “自然キー＋一意制約”方式🧱
 
-![cap_cs_study_015_key_types](./picture/cap_cs_study_015_key_types.png)
+
 
 * 注文IDを **クライアント側で生成** して送る（例：OrderId = GUID）
 * DBで OrderId を UNIQUE にして、2回目は弾く
@@ -158,7 +158,7 @@ GET {{baseUrl}}/stock/cake
 
 ## ③ 状態遷移（ステートマシン）で二重適用を防ぐ🚦
 
-![cap_cs_study_015_state_guard](./picture/cap_cs_study_015_state_guard.png)
+
 
 * 「支払い済み→支払い済み」は無効、みたいに **遷移ルール** で二重適用を防ぐ
 * これはこのあと出てくる章（冪等性/状態遷移）に繋がるやつ✨
@@ -191,7 +191,7 @@ flowchart TD
 
 ## 5-1. DB（SQLite）で“キーと結果”を保存する🗃️✨
 
-![cap_cs_study_015_db_schema](./picture/cap_cs_study_015_db_schema.png)
+
 
 今回は分かりやすく SQLite を使うよ（1ファイルDBで楽ちん）💿
 （※実運用ではSQL Server等でも同じ考え方でOK）
@@ -440,7 +440,7 @@ Idempotency-Key: {{idemKey}}
 
 ## クライアント側📱
 
-![cap_cs_study_015_client_key_gen](./picture/cap_cs_study_015_client_key_gen.png)
+
 
 * [ ] タイムアウトや再送があり得る操作は **毎回キーを生成して付ける**🔑
 * [ ] リトライを使うなら、**POSTには必ず冪等設計をセット**にする🔁🧯

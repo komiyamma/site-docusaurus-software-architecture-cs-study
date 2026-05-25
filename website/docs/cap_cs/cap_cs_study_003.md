@@ -1,4 +1,4 @@
-﻿# 第03章：題材アプリの全体像（CampusCafe）☕📱🗺️
+# 第03章：題材アプリの全体像（CampusCafe）☕📱🗺️
 
 ## この章でわかること🎯✨
 
@@ -57,7 +57,7 @@
 
 ## ✅ 成功ルート（理想）
 
-![cap_cs_study_003_happy_path](./picture/cap_cs_study_003_happy_path.png)
+
 
 ```mermaid
 sequenceDiagram
@@ -90,7 +90,7 @@ sequenceDiagram
 
 # 5) システム構成（まずは地図）🗺️📡
 
-![cap_cs_study_003_system_map](./picture/cap_cs_study_003_system_map.png)
+
 
 最初は「こう分けられるよね」を地図として持っておくと、CAPの判断練習が超やりやすいよ〜🧠✨
 
@@ -113,7 +113,7 @@ sequenceDiagram
 
 # 6) “状態（データ）”はどこにある？（ズレの芽を見つける）🌱👀
 
-![cap_cs_study_003_source_of_truth](./picture/cap_cs_study_003_source_of_truth.png)
+
 
 分散で一番つらいのは、「どれが正しいの？」って迷子になること😵‍💫
 だから、最初に **“正の情報源（ソース・オブ・トゥルース）”** を決めよう✨
@@ -133,7 +133,7 @@ CampusCafeは、ここが分散ポイントになりがち👇😳
 
 ## 分断ポイント候補🧱
 
-![cap_cs_study_003_partition_points](./picture/cap_cs_study_003_partition_points.png)
+
 
 * API ↔ DB（注文DB・在庫DBが別なら、もう分散）🗃️🗃️
 * API ↔ 決済サービス（外部API）💳🌐

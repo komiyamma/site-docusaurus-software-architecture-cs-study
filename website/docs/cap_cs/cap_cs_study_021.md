@@ -47,7 +47,7 @@
 
 ---
 
-![cap_cs_study_021_error_flowchart](./picture/cap_cs_study_021_error_flowchart.png)
+
 
 ## 2. HTTPステータスでの “だいたい判定” ルール📡📘
 
@@ -93,7 +93,7 @@ HTTPはステータスコードで「何が起きたか」をざっくり伝え�
 
 ### 🔶 “条件付き”：リトライというより「手順が必要」🧩
 
-![cap_cs_study_021_conditional_retry](./picture/cap_cs_study_021_conditional_retry.png)
+
 
 * **401 Unauthorized**：
 
@@ -111,7 +111,7 @@ HTTPはステータスコードで「何が起きたか」をざっくり伝え�
 
 ## 3. CampusCafeで “どれが何？” を具体例で覚える☕📱✨
 
-![cap_cs_study_021_campus_examples](./picture/cap_cs_study_021_campus_examples.png)
+
 
 ### 注文（Order）🧾
 
@@ -165,7 +165,7 @@ HTTPはステータスコードで「何が起きたか」をざっくり伝え�
 
 ## 5. C#で “エラー分類” をコードにする（超実用）🛠️✨
 
-![cap_cs_study_021_error_kind_enum](./picture/cap_cs_study_021_error_kind_enum.png)
+
 
 ここでは「例外/HTTPレスポンス」を受け取って、**どう動くべきか**を返すミニ設計にするよ😊
 
@@ -271,7 +271,7 @@ public static class ExceptionClassifier
 
 ## 6. “リトライするなら” 最低限守る4ルール🔁🧯✨
 
-![cap_cs_study_021_retry_rules](./picture/cap_cs_study_021_retry_rules.png)
+
 
 1. 🛡️ **冪等性がある操作だけ**（POSTは冪等キー必須になりがち）
 2. ⏳ **バックオフで待つ**（すぐ連打しない）
@@ -284,7 +284,7 @@ public static class ExceptionClassifier
 
 ## 7. API側は “Problem Details” で返すと超きれい✨📦
 
-![cap_cs_study_021_problem_details](./picture/cap_cs_study_021_problem_details.png)
+
 
 エラーをクライアントが正しく分類するには、サーバーが **機械可読なエラー**を返してくれると最高だよね🫶
 そこで使うのが **Problem Details（RFC 9457）**！
@@ -297,7 +297,7 @@ RFC 9457 は、HTTP APIのエラー詳細を共通フォーマットで返す標
 
 ## 8. AI活用（Copilot / Codex / ChatGPT など）🤖✨
 
-![cap_cs_study_021_ai_classifier](./picture/cap_cs_study_021_ai_classifier.png)
+
 
 ### プロンプト例①：分類表を作る📊
 

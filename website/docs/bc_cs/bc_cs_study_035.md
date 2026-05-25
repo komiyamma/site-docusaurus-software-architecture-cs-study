@@ -1,4 +1,4 @@
-﻿# 第35章：プロジェクト構成A（まず置き場所）🏗️
+# 第35章：プロジェクト構成A（まず置き場所）🏗️
 
 ## この章のゴール🎯
 
@@ -57,7 +57,7 @@ IDE側も **Visual Studio 2026** のリリースノートが出ています🛠�
 
 ## 4) “おすすめの置き場所”テンプレ🗂️✨（ミニEC例）
 
-![folder_tree](./picture/bc_cs_study_035_folder_tree.png)
+
 
 
 
@@ -186,7 +186,7 @@ dotnet sln add src\Modules\Inventory\MiniECommerce.Inventory\MiniECommerce.Inven
 
 ## 8) “共通”の置き場所、3つの安全ライン🧯⚠️
 
-![common_dump](./picture/bc_cs_study_035_common_dump.png)
+
 
 
 

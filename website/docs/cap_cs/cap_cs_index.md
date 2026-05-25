@@ -31,7 +31,7 @@
 
 ## 第5章：用語の最低限（C/A/P）📘🧩
 
-![cap_cs_index_cap_triangle](./picture/cap_cs_index_cap_triangle.png)
+
 
 * **学ぶこと**：Consistency / Availability / Partition（ざっくりでOK）
 * **ミニ演習**：例を見て「これはCが欲しい？Aが欲しい？」を口で言う🗣️✨
@@ -59,7 +59,7 @@
 
 ## 第9章：最終的整合性って何？（まずイメージ）🕰️✨
 
-![cap_cs_index_eventual_consistency](./picture/cap_cs_index_eventual_consistency.png)
+
 
 * **学ぶこと**：今ズレてても、いずれ揃う／“揃うまでの時間”も仕様
 * **ミニ演習**：「いいね数」「在庫数」みたいな例で許容を考える👍📦
@@ -85,7 +85,7 @@
 
 ## 第13章：同期と非同期の分け方（迷ったらここ）🔀📬
 
-![cap_cs_index_sync_vs_async](./picture/cap_cs_index_sync_vs_async.png)
+
 
 * **学ぶこと**：同期＝すぐ結果／非同期＝後で揃える（でも強い）
 * **ミニ演習**：注文APIの中で「同期でやる」「非同期でやる」を線引き🧩
@@ -121,7 +121,7 @@
 
 ## 第18章：冪等性① まず概念（同じ要求でも壊れない）🛡️🔑
 
-![cap_cs_index_idempotency](./picture/cap_cs_index_idempotency.png)
+
 
 * **学ぶこと**：分散の世界は“同じことが複数回起きる”前提
 * **ミニ演習**：「同じ注文が2回来ても1回分だけ処理」方針を言語化🗣️✅
@@ -203,7 +203,7 @@
 
 ## 第30章：Outbox① なぜ必要？（DB更新と送信のズレ問題）📤🧾
 
-![cap_cs_index_outbox_pattern](./picture/cap_cs_index_outbox_pattern.png)
+
 
 * **学ぶこと**：DBだけ成功・送信だけ成功…の地獄を避ける😵‍💫
 * **ミニ演習**：Outboxテーブルに何を保存する？を決める🗃️

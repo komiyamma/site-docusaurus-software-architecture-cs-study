@@ -10,7 +10,7 @@
 
 ## 25.1 クォーラムって何？（“何人賛成ならOK”のルール）🗳️✅
 
-![cap_cs_study_025_quorum_voting](./picture/cap_cs_study_025_quorum_voting.png)
+
 
 分散システムでは、同じデータを複数台（レプリカ）にコピーして持つことが多いよね🪞🖥️
 でも、ネットワークが遅い・切れる・順番が前後する…が普通に起きる📡🐢💥
@@ -27,7 +27,7 @@
 
 ## 25.2 R / W / N の3つだけ覚えよう🔤✨
 
-![cap_cs_study_025_rwn_definition](./picture/cap_cs_study_025_rwn_definition.png)
+
 
 ### N（または RF）= レプリカの台数🖥️🖥️🖥️
 
@@ -90,7 +90,7 @@ Cassandraの公式ドキュメントでも、Dynamoの `R + W > N`（正確に�
 
 ## 25.4 でも注意：クォーラムは「万能の正しさ魔法」じゃない🪄⚠️
 
-![cap_cs_study_025_quorum_conflict_limit](./picture/cap_cs_study_025_quorum_conflict_limit.png)
+
 
 クォーラムで強くなるのは主にこういう感覚👇
 
@@ -103,7 +103,7 @@ Cassandraの公式ドキュメントでも、Dynamoの `R + W > N`（正確に�
 
 ## 25.5 “正しさ”を取りに行くほど、どうなる？⚖️🐢🧱
 
-![cap_cs_study_025_tradeoff_knobs](./picture/cap_cs_study_025_tradeoff_knobs.png)
+
 
 ざっくりトレードオフはこう👇
 
@@ -117,7 +117,7 @@ Cassandraの公式ドキュメントでも、Dynamoの `R + W > N`（正確に�
 
 ## 25.6 ミニ演習①：遅延と正しさのトレードオフ表📊🐢✅
 
-![cap_cs_study_025_rwn_race](./picture/cap_cs_study_025_rwn_race.png)
+
 
 N=3 のシステムだとして、次を埋めてみよう✍️✨
 （“速さ”＝だいたいの体感でOK！）
@@ -140,7 +140,7 @@ N=3 のシステムだとして、次を埋めてみよう✍️✨
 
 ## 25.7 CampusCafeに当てはめる（おすすめ感覚）☕📱🧩
 
-![cap_cs_study_025_tuning_board](./picture/cap_cs_study_025_tuning_board.png)
+
 
 ### ① 在庫「表示」📦👀（多少古くても許されやすい）
 
@@ -337,7 +337,7 @@ public static class Program
 
 ## 25.11 よくある落とし穴⚠️😵‍💫
 
-![cap_cs_study_025_lockout_risk](./picture/cap_cs_study_025_lockout_risk.png)
+
 
 * **R+W>N でも “同時更新の衝突” は起きる** 💥
   → 次章のコンフリクト解決へ続く🧩

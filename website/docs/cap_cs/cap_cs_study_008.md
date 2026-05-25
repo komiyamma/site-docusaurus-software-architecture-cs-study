@@ -1,4 +1,4 @@
-﻿# 第08章：あなたのアプリで“P”は起きる？起きる前提？📡😳
+# 第08章：あなたのアプリで“P”は起きる？起きる前提？📡😳
 
 ## 8.0 今日のゴール🎯✨
 
@@ -12,7 +12,7 @@
 
 ## 8.1 そもそも“P（分断）”って何？📡🧩
 
-![cap_cs_study_008_partition_definition](./picture/cap_cs_study_008_partition_definition.png)
+
 
 分断（Partition）って、ざっくり言うと👇
 **「通信できるはずの相手と、通信できない／不安定になる」** 状態のことだよ〜😵‍💫📶
@@ -49,7 +49,7 @@ CAPの文脈では「分断が起きたとき、**整合性（C）と可用性�
 
 ## 8.3 CampusCafeの“分断ポイント地図”🗺️☕
 
-![cap_cs_study_008_campuscafe_map](./picture/cap_cs_study_008_campuscafe_map.png)
+
 
 CampusCafeの流れを、境界が見える形にするとこう👇
 
@@ -84,7 +84,7 @@ CampusCafeの流れを、境界が見える形にするとこう👇
 
 ## 8.4 ミニ演習①：分断ポイント洗い出し（5分）⏱️🧠
 
-![cap_cs_study_008_checklist](./picture/cap_cs_study_008_checklist.png)
+
 
 CampusCafeを例に、次のチェックを埋めてみよう✍️✨
 
@@ -110,7 +110,7 @@ CampusCafeを例に、次のチェックを埋めてみよう✍️✨
 
 ## 8.5 ミニ演習②：ほんとにPっぽいエラーになるの？（C#で体験）🧪💻
 
-![cap_cs_study_008_connection_error](./picture/cap_cs_study_008_connection_error.png)
+
 
 ここでは **「別サービス呼び出し = P候補」** を体で覚えるよ〜😊📡
 （Minimal APIで2サービス作る✨）
@@ -245,7 +245,7 @@ curl -X POST http://localhost:5100/order/place `
 
 ## 8.7 対策案は“3段階”で考える🧯🧩
 
-![cap_cs_study_008_three_levels](./picture/cap_cs_study_008_three_levels.png)
+
 
 分断ポイントが見つかったら、対策は一気に完璧にしなくてOK🙆‍♀️
 よくあるのはこの3段階👇

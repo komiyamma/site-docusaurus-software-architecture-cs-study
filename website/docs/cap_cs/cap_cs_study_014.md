@@ -10,7 +10,7 @@
 
 ## まず超重要：メッセージングは“分散の筋トレ”🏋️‍♀️📨
 
-![cap_cs_study_014_sync_vs_messaging](./picture/cap_cs_study_014_sync_vs_messaging.png)
+
 
 HTTPで同期連鎖すると、どこかが遅い/落ちた瞬間に全体が引きずられがち…😵‍💫
 そこで **「今は依頼だけして、処理は後で」** を作れるのがメッセージングだよ📬✨
@@ -52,7 +52,7 @@ HTTPで同期連鎖すると、どこかが遅い/落ちた瞬間に全体が引
 
 ## 命名テンプレ🧩
 
-![cap_cs_study_014_naming_convention](./picture/cap_cs_study_014_naming_convention.png)
+
 
 * **コマンド**：動詞の原形（命令形っぽい）
 
@@ -69,7 +69,7 @@ HTTPで同期連鎖すると、どこかが遅い/落ちた瞬間に全体が引
 
 ## ざっくり流れ（理想形）🗺️✨
 
-![cap_cs_study_014_event_chain](./picture/cap_cs_study_014_event_chain.png)
+
 
 ```mermaid
 sequenceDiagram
@@ -128,7 +128,7 @@ sequenceDiagram
 
 # 4) “少なくとも1回届く”って何？（この講座の超大前提）📨📨😇
 
-![cap_cs_study_014_at_least_once](./picture/cap_cs_study_014_at_least_once.png)
+
 
 メッセージング基盤は、信頼性のために**再送**することがあるよ🔁
 だから **同じメッセージが2回届く** のは普通に起きる…！😳
@@ -144,7 +144,7 @@ sequenceDiagram
 
 # 5) 最低限つけたい“メッセージの封筒（エンベロープ）”✉️🧾
 
-![cap_cs_study_014_message_envelope](./picture/cap_cs_study_014_message_envelope.png)
+
 
 メッセージ本文（Payload）だけだと、運用で詰みがち😇
 まずはこのへんを持たせるのが超おすすめ👇
@@ -342,7 +342,7 @@ app.Run();
 
 # 8) “現実のクセ”予告（次章で地獄を見るやつ😇）⚠️
 
-![cap_cs_study_014_duplicate_chaos](./picture/cap_cs_study_014_duplicate_chaos.png)
+
 
 この章で作ったミニ実装でも、すでに雰囲気は出てたはず👇
 
